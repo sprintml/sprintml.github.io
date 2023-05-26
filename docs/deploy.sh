@@ -4,13 +4,13 @@ jekyll build --destination docs
 # for this private sprintml-lab repo
 git add *
 git commit -am "deploy at timestamp: ${timestamp}"
-git push origin main
+git push origin master
 
 # move the docs to the webpage public repo
-cp -r docs ../webpage
+cp -r docs ../sprintml.github.io
 
 # go to the webpage public repo and push the changes
-cd ../webpage
+cd ../sprintml.github.io
 git add *
 git commit -am "deploy at timestamp: ${timestamp}"
 git push origin main

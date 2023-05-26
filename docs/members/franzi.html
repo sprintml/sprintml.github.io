@@ -135,97 +135,7 @@
 
 <h2>Papers</h2>
 
-<ol class="bibliography"><li><b>Individualized PATE: Differentially Private Machine Learning with Individual Privacy Guarantees</b><br/>
-
-
-
-
-<a href="/members/franzi.html">Franziska Boenisch</a>,
-
-
-
-
-
-
-Christopher Mühl,
-
-
-
-
-
-
-Roy Rinberg,
-
-
-
-
-
-
-Jannis Ihrig,
-
-
-
-
-
-
-<a href="/members/adam.html">Adam Dziedzic</a>
-
-
-
-<br/>
-
-    <em></em>
-
-
-
-
-
-<p>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-pate2023pets-abstract" aria-expanded="false" aria-controls="collapse-pate2023pets-abstract">
-       Abstract
-    </button>
-    
-
-    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-pate2023pets-bibtex" aria-expanded="false" aria-controls="collapse-pate2023pets-bibtex">
-        BibTeX
-    </button>
-</p>
-
-<div class="collapse" id="collapse-pate2023pets-abstract" style="padding-bottom:1em">
-    <div class="card bg-light">
-        <div class="card-body">
-            Applying machine learning (ML) to sensitive domains requires privacy protection of the underlying training data through formal privacy frameworks, such as differential privacy (DP). Yet, usually, the privacy of the training data comes at the cost of the resulting ML models’ utility. One reason for this is that DP uses one uniform privacy budget epsilon for all training data points, which has to align with the strictest privacy requirement encountered among all data holders. In practice, different data holders have different privacy requirements and data points of data holders with lower requirements can contribute more information to the training process of the ML models. To account for this need, we propose two novel methods based on the Private Aggregation of Teacher Ensembles (PATE) framework to support the training of ML models with individualized privacy guarantees. We formally describe the methods, provide a theoretical analysis of their privacy bounds, and experimentally evaluate their effect on the final model’s utility using the MNIST, SVHN, and Adult income datasets. Our empirical results show that the individualized privacy methods yield ML models of higher accuracy than the non-individualized baseline. Thereby, we improve the privacy-utility trade-off in scenarios in which different data holders consent to contribute their sensitive data at different individual privacy levels.
-        </div>
-    </div>
-</div>
-
-<div class="collapse" id="collapse-pate2023pets-bibtex" style="padding-bottom:1em">
-    <div class="card bg-light">
-        <div class="card-body">
-            <pre style="margin-bottom:0em">@article{pate2023pets,
-  author = {Boenisch, Franziska and Mühl, Christopher and Rinberg, Roy and Ihrig, Jannis and Dziedzic, Adam},
-  title = {Individualized PATE: Differentially Private Machine Learning with Individual Privacy Guarantees},
-  booktitle = {Privacy Enhancing Technologies Symposium (PETS)},
-  year = {2023},
-  url = {https://arxiv.org/abs/2202.10517}
-}
-</pre>
-        </div>
-    </div>
-</div>
-
-</li>
-<li><b>Have it your way: Individualized Privacy Assignment for DP-SGD</b><br/>
+<ol class="bibliography"><li><b>Have it your way: Individualized Privacy Assignment for DP-SGD</b><br/>
 
 
 
@@ -265,6 +175,9 @@ Nicolas Papernot
 <br/>
 
     <em>arXiv preprint arXiv:2303.17046</em>
+
+
+    <em> 2023 </em>
 
 
 
@@ -349,6 +262,9 @@ Nicolas Papernot
     <em>arXiv preprint arXiv:2302.09183</em>
 
 
+    <em> 2023 </em>
+
+
 
 <span class="badge badge-pill badge-danger">Preprint</span>
 
@@ -389,6 +305,101 @@ Nicolas Papernot
   author = {Yaghini, Mohammad and Liu, Patty and Boenisch, Franziska and Papernot, Nicolas},
   journal = {arXiv preprint arXiv:2302.09183},
   year = {2023}
+}
+</pre>
+        </div>
+    </div>
+</div>
+
+</li>
+<li><b>Individualized PATE: Differentially Private Machine Learning with Individual Privacy Guarantees</b><br/>
+
+
+
+
+<a href="/members/franzi.html">Franziska Boenisch</a>,
+
+
+
+
+
+
+Christopher Mühl,
+
+
+
+
+
+
+Roy Rinberg,
+
+
+
+
+
+
+Jannis Ihrig,
+
+
+
+
+
+
+<a href="/members/adam.html">Adam Dziedzic</a>
+
+
+
+<br/>
+
+    <em>In Privacy Enhancing Technologies Symposium (PETS)</em>
+
+
+    <em> 2023 </em>
+
+
+
+
+
+<p>
+    
+    <a style="margin-top:0.5em" class="btn btn-primary btn-sm" href="https://arxiv.org/abs/2202.10517" target="_blank" role="button"><img src="/assets/svgs/file.svg" alt="" width="20" height="20" title="PDF"> Paper</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-pate2023pets-abstract" aria-expanded="false" aria-controls="collapse-pate2023pets-abstract">
+       Abstract
+    </button>
+    
+
+    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-pate2023pets-bibtex" aria-expanded="false" aria-controls="collapse-pate2023pets-bibtex">
+        BibTeX
+    </button>
+</p>
+
+<div class="collapse" id="collapse-pate2023pets-abstract" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            Applying machine learning (ML) to sensitive domains requires privacy protection of the underlying training data through formal privacy frameworks, such as differential privacy (DP). Yet, usually, the privacy of the training data comes at the cost of the resulting ML models’ utility. One reason for this is that DP uses one uniform privacy budget epsilon for all training data points, which has to align with the strictest privacy requirement encountered among all data holders. In practice, different data holders have different privacy requirements and data points of data holders with lower requirements can contribute more information to the training process of the ML models. To account for this need, we propose two novel methods based on the Private Aggregation of Teacher Ensembles (PATE) framework to support the training of ML models with individualized privacy guarantees. We formally describe the methods, provide a theoretical analysis of their privacy bounds, and experimentally evaluate their effect on the final model’s utility using the MNIST, SVHN, and Adult income datasets. Our empirical results show that the individualized privacy methods yield ML models of higher accuracy than the non-individualized baseline. Thereby, we improve the privacy-utility trade-off in scenarios in which different data holders consent to contribute their sensitive data at different individual privacy levels.
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse-pate2023pets-bibtex" style="padding-bottom:1em">
+    <div class="card bg-light">
+        <div class="card-body">
+            <pre style="margin-bottom:0em">@inproceedings{pate2023pets,
+  author = {Boenisch, Franziska and Mühl, Christopher and Rinberg, Roy and Ihrig, Jannis and Dziedzic, Adam},
+  title = {Individualized PATE: Differentially Private Machine Learning with Individual Privacy Guarantees},
+  booktitle = {Privacy Enhancing Technologies Symposium (PETS)},
+  year = {2023},
+  url = {https://arxiv.org/abs/2202.10517}
 }
 </pre>
         </div>
@@ -443,6 +454,9 @@ Nicolas Papernot
 <br/>
 
     <em>arXiv preprint arXiv:2301.04017</em>
+
+
+    <em> 2023 </em>
 
 
 
@@ -553,13 +567,18 @@ Nicolas Papernot
 
 <br/>
 
-    <em></em>
+    <em>In NeurIPS (Neural Information Processing Systems)</em>
+
+
+    <em> 2022 </em>
 
 
 
 
 
 <p>
+    
+    <a style="margin-top:0.5em" class="btn btn-primary btn-sm" href="https://arxiv.org/abs/2209.09024" target="_blank" role="button"><img src="/assets/svgs/file.svg" alt="" width="20" height="20" title="PDF"> Paper</a>
     
     
     
@@ -591,7 +610,7 @@ Nicolas Papernot
 <div class="collapse" id="collapse-datasetinference2022neurips-bibtex" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            <pre style="margin-bottom:0em">@article{datasetinference2022neurips,
+            <pre style="margin-bottom:0em">@inproceedings{datasetinference2022neurips,
   title = {Dataset Inference for Self-Supervised Models},
   author = {Dziedzic, Adam and Duan, Haonan and Kaleem, Muhammad Ahmad and Dhawan, Nikita and Guan, Jonas and Cattan, Yannis and Boenisch, Franziska and Papernot, Nicolas},
   booktitle = {NeurIPS (Neural Information Processing Systems)},
@@ -637,6 +656,9 @@ Borbála Tasnádi
 <br/>
 
     <em>arXiv preprint arXiv:2211.10459</em>
+
+
+    <em> 2022 </em>
 
 
 
@@ -719,7 +741,10 @@ Konstantin Böttinger
 
 <br/>
 
-    <em></em>
+    <em>In Proc. 2nd Symposium on Security and Privacy in Speech Communication (SPSC)</em>
+
+
+    <em> 2022 </em>
 
 
 
@@ -753,7 +778,7 @@ Konstantin Böttinger
 <div class="collapse" id="collapse-pizziintroducing-bibtex" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            <pre style="margin-bottom:0em">@article{pizziintroducing,
+            <pre style="margin-bottom:0em">@inproceedings{pizziintroducing,
   title = {Introducing Model Inversion Attacks on Automatic Speaker Recognition},
   author = {Pizzi, Karla and Boenisch, Franziska and Sahin, Ugur and B{\"o}ttinger, Konstantin},
   booktitle = {{Proc. 2nd Symposium on Security and Privacy in Speech Communication (SPSC)}},
@@ -799,6 +824,9 @@ Nicolas Papernot
 <br/>
 
     <em>arXiv preprint arXiv:2202.12232</em>
+
+
+    <em> 2022 </em>
 
 
 
@@ -897,6 +925,9 @@ Nicolas Papernot
     <em>arXiv preprint arXiv:2112.02918</em>
 
 
+    <em> 2021 </em>
+
+
 
 <span class="badge badge-pill badge-danger">Preprint</span>
 
@@ -915,10 +946,6 @@ Nicolas Papernot
     
     
     
-    <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-boenisch2021curious-abstract" aria-expanded="false" aria-controls="collapse-boenisch2021curious-abstract">
-       Abstract
-    </button>
-    
 
     <button style="margin-top:0.5em" class="btn btn-info btn-sm" type="button" data-toggle="collapse" data-target="#collapse-boenisch2021curious-bibtex" aria-expanded="false" aria-controls="collapse-boenisch2021curious-bibtex">
         BibTeX
@@ -928,7 +955,7 @@ Nicolas Papernot
 <div class="collapse" id="collapse-boenisch2021curious-abstract" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            In federated learning (FL), data does not leave personal devices when they are jointly training a machine learning model. Instead, these devices share gradients with a central party (e.g., a company). Because data never "leaves" personal devices, FL is presented as privacy-preserving. Yet, recently it was shown that this protection is but a thin facade, as even a passive attacker observing gradients can reconstruct data of individual users. In this paper, we argue that prior work still largely underestimates the vulnerability of FL. This is because prior efforts exclusively consider passive attackers that are honest-but-curious. Instead, we introduce an active and dishonest attacker acting as the central party, who is able to modify the shared model’s weights before users compute model gradients. We call the modified weights "trap weights". Our active attacker is able to recover user data perfectly and at near zero costs: the attack requires no complex optimization objectives. Instead, it exploits inherent data leakage from model gradients and amplifies this effect by maliciously altering the weights of the shared model. These specificities enable our attack to scale to models trained with large mini-batches of data. Where attackers from prior work require hours to recover a single data point, our method needs milliseconds to capture the full mini-batch of data from both fully-connected and convolutional deep neural networks. Finally, we consider mitigations. We observe that current implementations of differential privacy (DP) in FL are flawed, as they explicitly trust the central party with the crucial task of adding DP noise, and thus provide no protection against a malicious central party. We also consider other defenses and explain why they are similarly inadequate. A significant redesign of FL is required for it to provide any meaningful form of data privacy to users.
+            
         </div>
     </div>
 </div>
@@ -941,7 +968,6 @@ Nicolas Papernot
   author = {Boenisch, Franziska and Dziedzic, Adam and Schuster, Roei and Shamsabadi, Ali Shahin and Shumailov, Ilia and Papernot, Nicolas},
   journal = {arXiv preprint arXiv:2112.02918},
   year = {2021},
-  url = {https://arxiv.org/abs/2112.02918},
   note = {{8th IEEE European Symposium on Security and Privacy (EuroS\&P '23)}}
 }
 </pre>
@@ -996,7 +1022,10 @@ Paul Francis
 
 <br/>
 
-    <em></em>
+    <em>In Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security (CCS)</em>
+
+
+    <em> 2021 </em>
 
 
 
@@ -1030,7 +1059,7 @@ Paul Francis
 <div class="collapse" id="collapse-boenisch2021side-bibtex" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            <pre style="margin-bottom:0em">@article{boenisch2021side,
+            <pre style="margin-bottom:0em">@inproceedings{boenisch2021side,
   title = {Side-channel attacks on query-based data anonymization},
   author = {Boenisch, Franziska and Munz, Reinhard and Tiepelt, Marcel and Hanisch, Simon and Kuhn, Christiane and Francis, Paul},
   booktitle = {{Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security (CCS)}},
@@ -1055,6 +1084,9 @@ Paul Francis
 <br/>
 
     <em>Frontiers in Big Data</em>
+
+
+    <em> 2021 </em>
 
 
 
@@ -1158,6 +1190,9 @@ Matthias Rose
     <em>Mensch und Computer Workshop</em>
 
 
+    <em> 2021 </em>
+
+
 
 
 
@@ -1235,6 +1270,9 @@ Maija Poikela
 <br/>
 
 
+    <em> 2021 </em>
+
+
 
 
 
@@ -1305,6 +1343,9 @@ Konstantin Böttinger
 <br/>
 
     <em>arXiv preprint arXiv:2105.07985</em>
+
+
+    <em> 2021 </em>
 
 
 
@@ -1436,6 +1477,7 @@ Jan Sobesky,
 <br/>
 
     <em>Frontiers in Artificial Intelligence</em>
+
 
 
 

@@ -1,4 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-05-25T22:43:56-04:00</updated><id>/feed.xml</id><entry><title type="html">On stealing and defending self-supervised models</title><link href="/2023/02/23/model-extraction.html" rel="alternate" type="text/html" title="On stealing and defending self-supervised models" /><published>2023-02-23T00:00:00-05:00</published><updated>2023-02-23T00:00:00-05:00</updated><id>/2023/02/23/model-extraction</id><content type="html" xml:base="/2023/02/23/model-extraction.html"><![CDATA[<p><em>by Adam Dziedzic and Nicolas Papernot</em></p>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>SprintML Lab - On stealing and defending self-supervised models</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+    </head>
+    <body class="d-flex flex-column h-100">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-own fixed-top">
+    <div class="container">
+        <span class="navbar-brand" href="#">
+            <!-- <img src="/assets/svgs/bootstrap-solid.svg" width="50" height="50" class="d-inline-block align-center" alt=""> -->
+<!--        <a href="/" class="" alt="" style="text-decoration:none;">SprintML Lab</a>-->
+            SprintML Lab
+        </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/members.html">
+                            Members
+                        </a>
+                    </li>
+                
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/publications.html">
+                            Publications
+                        </a>
+                    </li>
+                
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/joining.html">
+                            Joining
+                        </a>
+                    </li>
+                
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/blog.html">
+                            Blog
+                        </a>
+                    </li>
+                
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/phdlife.html">
+                            PhD Life
+                        </a>
+                    </li>
+                
+<!--                <li class="nav-item">-->
+<!--                        <a class="nav-link" href="/blog.html">-->
+<!--                            Blog-->
+<!--                        </a>-->
+<!--                </li>-->
+            </ul>
+            <a href="/"><img src="/assets/images/logos/adams-logo-twitter-long-small-no-background-small2.svg" height="50" class="" alt="" style="padding-right: 0pt;"></a>
+<!--            <a href="https://cispa.de/en" target="_blank"><img src="/assets/images/logos/cispa-logo-on-dark.svg" height="50" class="" alt="" style="padding-right: 10pt;"></a>-->
+<!--            <a href="https://cispa.de/en" target="_blank"><img src="/assets/images/logos/cispa-txt-white.svg" height="50" class="" alt="" style="padding-right: 10pt;"></a>-->
+<!--            <a href="https://utoronto.ca" target="_blank"><img src="/assets/svgs/uoft-white.svg" height="50" class="" alt="" style="padding-right: 10pt;"></a>-->
+<!--            <a href="https://vectorinstitute.ai/" target="_blank"><img src="/assets/svgs/vector-white.svg" height="50" class="" style="padding-left: 10pt;" alt=""></a>-->
+        </div>
+    </div>
+</nav>
+        </header>
+        <main role="main" class="flex-shrink-0">
+            <div class="container">
+                <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">On stealing and defending self-supervised models</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-02-23T00:00:00-05:00" itemprop="datePublished">Feb 23, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><em>by Adam Dziedzic and Nicolas Papernot</em></p>
 
 <p><em>This blog post is part of a series on model stealing, check out our previous blog posts
 <a href="http://www.cleverhans.io/2021/04/28/is-this-model-mine.html">“Is this model mine?”</a>
@@ -178,4 +265,21 @@ ICML 2020.</em></p>
 
 <p><em>[9] Nicholas Frosst, Nicolas Papernot, Geoffrey
 Hinton. <strong><a href="https://proceedings.mlr.press/v97/frosst19a.html">Analyzing and Improving Representations with the Soft Nearest Neighbor Loss</a></strong>
-ICML 2020.</em></p>]]></content><author><name></name></author><category term="model" /><category term="extraction," /><category term="model" /><category term="stealing," /><category term="model" /><category term="functionality" /><category term="stealing," /><category term="self-supervised" /><category term="learning," /><category term="deep" /><category term="learning" /><summary type="html"><![CDATA[by Adam Dziedzic and Nicolas Papernot]]></summary></entry></feed>
+ICML 2020.</em></p>
+
+
+  </div><a class="u-url" href="/2023/02/23/model-extraction.html" hidden></a>
+</article>
+
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+              <span class="text-muted">© SprintML Lab 2023</span>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
