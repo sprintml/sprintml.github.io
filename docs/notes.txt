@@ -1,0 +1,19 @@
+((646ff7a1-c654-494d-87cf-004e7d8b0c40))
+
+((646ff7a1-c654-494d-87cf-004e7d8b0c40))
+
+<!--{% bibliography -f papers -q @*[author ~= {{lastname}}]* %}-->
+
+---
+title: Blog
+---
+<h1>Welcome to SprintML blog</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
