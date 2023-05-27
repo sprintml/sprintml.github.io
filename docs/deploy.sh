@@ -1,5 +1,5 @@
 timestamp=$(date "+%Y-%m-%d-%H:%M:%S")
-jekyll build --destination docs
+bundle exec jekyll build --destination docs
 
 # for this private sprintml-lab repo
 git pull
@@ -19,8 +19,9 @@ cp -r ../sprintml-lab/docs .
 
 # go to the webpage public repo and push the changes
 cd ../sprintml.github.io
+# cp -r ../sprintml-lab/docs .
 git add *
 git commit -am "deploy at timestamp: ${timestamp}"
 git push origin main
 
-cd cwd
+cd ${cwd}
