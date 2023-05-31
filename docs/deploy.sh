@@ -14,6 +14,7 @@ cwd=$(pwd)
 cd ../sprintml.github.io
 git pull
 
+rm -rf docs
 # move the docs to the webpage public repo
 cp -r ../sprintml-lab/docs .
 
