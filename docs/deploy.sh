@@ -18,9 +18,6 @@ rm -rf docs
 # move the docs to the webpage public repo
 cp -r ../sprintml-lab/docs .
 
-# go to the webpage public repo and push the changes
-cd ../sprintml.github.io
-# cp -r ../sprintml-lab/docs .
 git add *
 git commit -am "deploy at timestamp: ${timestamp}"
 git push origin main
