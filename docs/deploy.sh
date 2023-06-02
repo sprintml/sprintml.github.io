@@ -16,7 +16,7 @@ git pull
 
 rm -rf docs
 # move the docs to the webpage public repo
-cp -r ../sprintml-lab/docs .
+cp -r ../web/docs .
 
 git add *
 git commit -am "deploy at timestamp: ${timestamp}"
