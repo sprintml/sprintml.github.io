@@ -1119,116 +1119,77 @@ Nicolas Papernot
 
 <h3 id="2021">2021</h3>
 
-<ol class="bibliography"><li><b>CaPC Learning: Confidential and Private Collaborative Learning</b><br />
+<ol class="bibliography"><li><b>Gradient Masking and the Underestimated Robustness Threats of Differential Privacy in Deep Learning</b><br />
 
 
 
 
-Christopher A. Choquette-Choo,
-
-
-
-
-
-
-Natalie Dullerud,
+<a href="https://franziska-boenisch.de">Franziska Boenisch</a>,
 
 
 
 
 
 
-<a href="https://adam-dziedzic.com">Adam Dziedzic</a>,
+Philip Sperl,
 
 
 
 
 
 
-Yunxiang Zhang,
-
-
-
-
-
-
-Somesh Jha,
-
-
-
-
-
-
-Nicolas Papernot,
-
-
-
-
-
-
-Xiao Wang
+Konstantin Böttinger
 
 
 
 <br />
 
-    <em>In ICLR (International Conference on Learning Representations)</em>
+    <em>arXiv preprint arXiv:2105.07985</em>
 
 
     <em> 2021 </em>
 
 
 
+<span class="badge badge-pill badge-danger">Preprint</span>
+
 
 
 <p>
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/forum?id=h2EbJ4_wMVq" target="_blank" role="button"><img src="/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF" /> Paper</a>
     
     
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2105.07985" target="_blank" role="button"><img src="/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF" /> Paper</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-capc2021iclr-abstract" aria-expanded="false" aria-controls="collapse-capc2021iclr-abstract">
-       Abstract
-    </a>
-    
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-capc2021iclr-bibtex" aria-expanded="false" aria-controls="collapse-capc2021iclr-bibtex">
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-boenisch2021gradient-bibtex" aria-expanded="false" aria-controls="collapse-boenisch2021gradient-bibtex">
         BibTeX
     </a>
 
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/capc2.pdf" target="_blank" role="button"><img src="/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF" /> Slides</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://www.youtube.com/watch?v=0yWeY39cPLo" target="_blank" role="button"><img src="/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF" /> Video</a>
-    
-    
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/cleverhans-lab/capc-demo" target="_blank" role="button"><img src="/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF" /> Code</a>
-    
-    
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://www.cleverhans.io/2021/05/01/capc.html" target="_blank" role="button"><img src="/assets/svgs/blog.svg" alt="" width="15" height="15" title="PDF" /> Blog Post</a>
     
     
 </p>
 
-<div class="collapse" id="collapse-capc2021iclr-abstract" style="padding-bottom:1em">
+<div class="collapse" id="collapse-boenisch2021gradient-abstract" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            Machine learning benefits from large training datasets, which may not always be possible to collect by any single entity, especially when using privacy-sensitive data. In many contexts, such as healthcare and finance, separate parties may wish to collaborate and learn from each other’s data but are prevented from doing so due to privacy regulations. Some regulations prevent explicit sharing of data between parties by joining datasets in a central location (confidentiality). Others also limit implicit sharing of data, e.g., through model predictions (privacy). There is currently no method that enables machine learning in such a setting, where both confidentiality and privacy need to be preserved, to prevent both explicit and implicit sharing of data. Federated learning only provides confidentiality, not privacy, since gradients shared still contain private information. Differentially private learning assumes unreasonably large datasets. Furthermore, both of these learning paradigms produce a central model whose architecture was previously agreed upon by all parties rather than enabling collaborative learning where each party learns and improves their own local model. We introduce Confidential and Private Collaborative (CaPC) learning, the first method provably achieving both confidentiality and privacy in a collaborative setting. We leverage secure multi-party computation (MPC), homomorphic encryption (HE), and other techniques in combination with privately aggregated teacher models. We demonstrate how CaPC allows participants to collaborate without having to explicitly join their training sets or train a central model. Each party is able to improve the accuracy and fairness of their model, even in settings where each party has a model that performs well on their own dataset or when datasets are not IID and model architectures are heterogeneous across parties.
+            
         </div>
     </div>
 </div>
 
-<div class="collapse" id="collapse-capc2021iclr-bibtex" style="padding-bottom:1em">
+<div class="collapse" id="collapse-boenisch2021gradient-bibtex" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            <pre style="margin-bottom:0em">@inproceedings{capc2021iclr,
-  title = {CaPC Learning: Confidential and Private Collaborative Learning},
-  author = {Choquette-Choo, Christopher A. and Dullerud, Natalie and Dziedzic, Adam and Zhang, Yunxiang and Jha, Somesh and Papernot, Nicolas and Wang, Xiao},
-  booktitle = {ICLR (International Conference on Learning Representations)},
-  year = {2021},
-  url = {https://openreview.net/forum?id=h2EbJ4_wMVq}
+            <pre style="margin-bottom:0em">@article{boenisch2021gradient,
+  title = {Gradient Masking and the Underestimated Robustness Threats of Differential Privacy in Deep Learning},
+  author = {Boenisch, Franziska and Sperl, Philip and B{\"o}ttinger, Konstantin},
+  journal = {arXiv preprint arXiv:2105.07985},
+  year = {2021}
 }
 </pre>
         </div>
@@ -2128,77 +2089,116 @@ Maija Poikela
 </div>
 
 </li>
-<li><b>Gradient Masking and the Underestimated Robustness Threats of Differential Privacy in Deep Learning</b><br />
+<li><b>CaPC Learning: Confidential and Private Collaborative Learning</b><br />
 
 
 
 
-<a href="https://franziska-boenisch.de">Franziska Boenisch</a>,
-
-
-
-
-
-
-Philip Sperl,
+Christopher A. Choquette-Choo,
 
 
 
 
 
 
-Konstantin Böttinger
+Natalie Dullerud,
+
+
+
+
+
+
+<a href="https://adam-dziedzic.com">Adam Dziedzic</a>,
+
+
+
+
+
+
+Yunxiang Zhang,
+
+
+
+
+
+
+Somesh Jha,
+
+
+
+
+
+
+Nicolas Papernot,
+
+
+
+
+
+
+Xiao Wang
 
 
 
 <br />
 
-    <em>arXiv preprint arXiv:2105.07985</em>
+    <em>In ICLR (International Conference on Learning Representations)</em>
 
 
     <em> 2021 </em>
 
 
 
-<span class="badge badge-pill badge-danger">Preprint</span>
-
 
 
 <p>
     
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://openreview.net/forum?id=h2EbJ4_wMVq" target="_blank" role="button"><img src="/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF" /> Paper</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://arxiv.org/abs/2105.07985" target="_blank" role="button"><img src="/assets/svgs/file.svg" alt="" width="15" height="15" title="PDF" /> Paper</a>
     
     
-    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-boenisch2021gradient-bibtex" aria-expanded="false" aria-controls="collapse-boenisch2021gradient-bibtex">
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-capc2021iclr-abstract" aria-expanded="false" aria-controls="collapse-capc2021iclr-abstract">
+       Abstract
+    </a>
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" type="button" data-toggle="collapse" data-target="#collapse-capc2021iclr-bibtex" aria-expanded="false" aria-controls="collapse-capc2021iclr-bibtex">
         BibTeX
     </a>
 
     
     
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://adam-dziedzic.com/static/assets/slides/capc2.pdf" target="_blank" role="button"><img src="/assets/svgs/slides.svg" alt="" width="15" height="15" title="PDF" /> Slides</a>
     
     
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://www.youtube.com/watch?v=0yWeY39cPLo" target="_blank" role="button"><img src="/assets/svgs/video.svg" alt="" width="15" height="15" title="PDF" /> Video</a>
+    
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="https://github.com/cleverhans-lab/capc-demo" target="_blank" role="button"><img src="/assets/svgs/code.svg" alt="" width="15" height="15" title="PDF" /> Code</a>
+    
+    
+    <a style="margin-top:0.2em" class="btn btn-info btn-info-pad" href="http://www.cleverhans.io/2021/05/01/capc.html" target="_blank" role="button"><img src="/assets/svgs/blog.svg" alt="" width="15" height="15" title="PDF" /> Blog Post</a>
     
     
 </p>
 
-<div class="collapse" id="collapse-boenisch2021gradient-abstract" style="padding-bottom:1em">
+<div class="collapse" id="collapse-capc2021iclr-abstract" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            
+            Machine learning benefits from large training datasets, which may not always be possible to collect by any single entity, especially when using privacy-sensitive data. In many contexts, such as healthcare and finance, separate parties may wish to collaborate and learn from each other’s data but are prevented from doing so due to privacy regulations. Some regulations prevent explicit sharing of data between parties by joining datasets in a central location (confidentiality). Others also limit implicit sharing of data, e.g., through model predictions (privacy). There is currently no method that enables machine learning in such a setting, where both confidentiality and privacy need to be preserved, to prevent both explicit and implicit sharing of data. Federated learning only provides confidentiality, not privacy, since gradients shared still contain private information. Differentially private learning assumes unreasonably large datasets. Furthermore, both of these learning paradigms produce a central model whose architecture was previously agreed upon by all parties rather than enabling collaborative learning where each party learns and improves their own local model. We introduce Confidential and Private Collaborative (CaPC) learning, the first method provably achieving both confidentiality and privacy in a collaborative setting. We leverage secure multi-party computation (MPC), homomorphic encryption (HE), and other techniques in combination with privately aggregated teacher models. We demonstrate how CaPC allows participants to collaborate without having to explicitly join their training sets or train a central model. Each party is able to improve the accuracy and fairness of their model, even in settings where each party has a model that performs well on their own dataset or when datasets are not IID and model architectures are heterogeneous across parties.
         </div>
     </div>
 </div>
 
-<div class="collapse" id="collapse-boenisch2021gradient-bibtex" style="padding-bottom:1em">
+<div class="collapse" id="collapse-capc2021iclr-bibtex" style="padding-bottom:1em">
     <div class="card bg-light">
         <div class="card-body">
-            <pre style="margin-bottom:0em">@article{boenisch2021gradient,
-  title = {Gradient Masking and the Underestimated Robustness Threats of Differential Privacy in Deep Learning},
-  author = {Boenisch, Franziska and Sperl, Philip and B{\"o}ttinger, Konstantin},
-  journal = {arXiv preprint arXiv:2105.07985},
-  year = {2021}
+            <pre style="margin-bottom:0em">@inproceedings{capc2021iclr,
+  title = {CaPC Learning: Confidential and Private Collaborative Learning},
+  author = {Choquette-Choo, Christopher A. and Dullerud, Natalie and Dziedzic, Adam and Zhang, Yunxiang and Jha, Somesh and Papernot, Nicolas and Wang, Xiao},
+  booktitle = {ICLR (International Conference on Learning Representations)},
+  year = {2021},
+  url = {https://openreview.net/forum?id=h2EbJ4_wMVq}
 }
 </pre>
         </div>
