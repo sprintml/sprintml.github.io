@@ -13,8 +13,18 @@
     margin-left: 50px;
 }
 
+
+.people {
+    background-color: white;
+}
+
 .people .people-container {
+    background-color: white;
     padding-top: 50px
+}
+
+.people .jumbotron {
+    background-color: white;
 }
 
 .group-members a:hover .img-circle {
@@ -114,5 +124,15 @@ group-h6,
 
 .topic-links h4, .people h4 {
     font-size: 16px;
+}
+
+.jumbotron {
+    border: 0px;
+    border-radius: 0rem;
+    background-color: #fafafa;
+}
+
+.container-fluid {
+    max-width: 1200px;
 }
 
