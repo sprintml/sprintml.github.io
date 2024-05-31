@@ -25,6 +25,7 @@
 
 .people .jumbotron {
     background-color: white;
+    box-shadow: none;
 }
 
 .group-members a:hover .img-circle {
