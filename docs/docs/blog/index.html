@@ -1,97 +1,172 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SprintML Lab - Blog</title>
-    <meta name="description"
-          content="SpringML Lab -- Blog">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/group.css">
-    <link rel="canonical" href="/blog/">
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
-
-    
-
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SprintML Lab - Blog</title>
+  <meta name="description" content="Website of the SprintML lab." />
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css" />
+  <link rel="stylesheet" href="http://localhost:4000/css/group.css" />
+  <link rel="canonical" href="http://localhost:4000/blog/" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost:4000/images/favicon.ico" />
 </head>
 
-
 <body>
-
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-            <a class="navbar-brand" href="/">
-                <img
-                        src="/assets/logos/adams-logo-twitter-long-small-no-background-small2.svg" height="50"
-                        class="imgnavbar"
-                        alt="" style="padding-right: 0pt; padding-left: -20pt; margin-top: -12px;">
-            </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">Home</a></li>
-                <li><a href="/team">Team</a></li>
-<!--                <li><a href="/publications">Publications</a></li>-->
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/phdlife">PhDLife</a></li>
-            </ul>
-        </div>
+        <a class="navbar-brand" href="/">
+          <img src="/assets/logos/adams-logo-twitter-long-small-no-background-small2.svg" height="50" class="imgnavbar" alt="" style="padding-right: 0pt; padding-left: -20pt; margin-top: -12px" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://localhost:4000/">Home</a></li>
+          <li><a href="http://localhost:4000/team">Team</a></li>
+          <li><a href="http://localhost:4000/positions">Open Positions</a></li>
+          <li><a href="http://localhost:4000/blog">Blog</a></li>
+          <li><a href="http://localhost:4000/phdlife">PhDLife</a></li>
+        </ul>
+      </div>
     </div>
-</div>
+  </div>
 
+  <div class="container-fluid blog-section" style="position: relative; min-height: 100vh">
+    <div id="content-wrap" style="padding-bottom: 5.5rem">
+      <div id="textid" class="col-sm-12">
+        <h2 id="posts">Posts</h2>
 
+        <!-- Blog post 1 -->
+        <div class="blog-post">
+          <div class="post-thumbnail">
+            <img src="http://localhost:4000/assets/blog/ssl/siamese.png" alt="Thumbnail Image 1" />
+          </div>
+          <div class="post-content">
+            <p class="author">Adam Dziedzic and Nicolas Papernot</p>
+            <h3>
+              <a href="/2023/02/23/model-extraction.html">On stealing and defending self-supervised models</a>
+            </h3>
+            <p class="subtext">This blog post is part of a series on model stealing, check out our previous blog posts “Is this model mine?” for a general introduction to the problem and a new active defense against the extraction...</p>
+            <p class="date">
+              <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" />
+              Published: Feb 23, 2023
+            </p>
+          </div>
+        </div>
 
-<div class="container-fluid" style="position: relative;min-height: 100vh;">
-    <div id="content-wrap" style="padding-bottom: 5.5rem;">
-        <div id="textid" class="col-sm-12">
-  <h2 id="posts">Posts</h2>
+        <!-- Blog post 2 -->
+        <div class="blog-post">
+          <div class="post-thumbnail">
+            <img src="http://localhost:4000/assets/prompts/miaprompt.png" alt="Thumbnail Image 2" />
+          </div>
+          <div class="post-content">
+            <p class="author">Author Name</p>
+            <h3>
+              <a href="/2024/04/27/private-prompts.html">How to prompt LLMs with private data?</a>
+            </h3>
+            <p class="subtext">A brief description of the blog post goes here...</p>
+            <p class="date">
+              <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" />
+              Published: Apr 27, 2024
+            </p>
+          </div>
+        </div>
 
-<h3 id="on-stealing-and-defending-self-supervised-models"><a href="/2023/02/23/model-extraction.html">On stealing and defending self-supervised models</a></h3>
+        <!-- Blog post 3 -->
+        <div class="blog-post">
+          <div class="post-thumbnail">
+            <img src="http://placekitten.com/200/202" alt="Thumbnail Image 3" />
+          </div>
+          <div class="post-content">
+            <p class="author">Author Name</p>
+            <h3>
+              <a href="http://www.cleverhans.io/2022/04/21/pow-defense.html">How to Keep a Model Stealing Adversary Busy?</a>
+            </h3>
+            <p class="subtext">A brief description of the blog post goes here...</p>
+            <p class="date">
+              <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" />
+              Published: Apr 21, 2022
+            </p>
+          </div>
+        </div>
 
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" /> Published: Feb 23, 2023</p>
+        <!-- Blog post 4 -->
+        <div class="blog-post">
+          <div class="post-thumbnail">
+            <img src="http://placekitten.com/200/203" alt="Thumbnail Image 4" />
+          </div>
+          <div class="post-content">
+            <p class="author">Author Name</p>
+            <h3>
+              <a href="http://www.cleverhans.io/2022/04/17/fl-privacy.html">All You Need Is Matplotlib</a>
+            </h3>
+            <p class="subtext">A brief description of the blog post goes here...</p>
+            <p class="date">
+              <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" />
+              Published: Apr 17, 2022
+            </p>
+          </div>
+        </div>
 
-<h3 id="how-to-keep-a-model-stealing-adversary-busy"><a href="http://www.cleverhans.io/2022/04/21/pow-defense.html">How to Keep a Model Stealing Adversary Busy?</a></h3>
+        <!-- Blog post 5 -->
+        <div class="blog-post">
+          <div class="post-thumbnail">
+            <img src="http://placekitten.com/200/204" alt="Thumbnail Image 5" />
+          </div>
+          <div class="post-content">
+            <p class="author">Author Name</p>
+            <h3>
+              <a href="http://www.cleverhans.io/2021/05/01/capc.html">Beyond federation: collaborating in ML with confidentiality and privacy</a>
+            </h3>
+            <p class="subtext">A brief description of the blog post goes here...</p>
+            <p class="date">
+              <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" />
+              Published: May 1, 2021
+            </p>
+          </div>
+        </div>
 
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" /> Published: Apr 21, 2022</p>
+        <!-- Blog post 6 -->
+        <div class="blog-post">
+          <div class="post-thumbnail">
+            <img src="http://placekitten.com/200/205" alt="Thumbnail Image 6" />
+          </div>
+          <div class="post-content">
+            <p class="author">Author Name</p>
+            <h3>
+              <a href="http://www.cleverhans.io/2021/04/15/research-on-privacy.html">Research on Privacy-Preserving Techniques</a>
+            </h3>
+            <p class="subtext">A brief description of the blog post goes here...</p>
+            <p class="date">
+              <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" />
+              Published: Apr 15, 2021
+            </p>
+          </div>
+        </div>
 
-<h3 id="all-you-need-is-matplotlib"><a href="http://www.cleverhans.io/2022/04/17/fl-privacy.html">All You Need Is Matplotlib</a></h3>
-
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" /> Published: Apr 17, 2022</p>
-
-<h3 id="beyond-federation-collaborating-in-ml-with-confidentiality-and-privacy"><a href="http://www.cleverhans.io/2021/05/01/capc.html">Beyond federation: collaborating in ML with confidentiality and privacy</a></h3>
-
-<p><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/calendar.svg" width="15" height="15" /> Published: May 1, 2021</p>
-
-</div>
-
+      </div>
     </div>
-</div>
+  </div>
 
-<div id="footer">
+  <div id="footer">
     <div class="panel-footer">
-        <div class="container-fluid">
-            <div class="row">
-                <p>&copy 2023 SprintML Lab</p>
-            </div>
+      <div class="container-fluid">
+        <div class="row">
+          <p>&copy 2024 SprintML Lab</p>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://localhost:4000/js/bootstrap.min.js"></script>
 </body>
-
 </html>
