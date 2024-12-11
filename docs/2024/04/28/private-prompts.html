@@ -10,7 +10,7 @@
           content="by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/group.css">
-    <link rel="canonical" href="/2024/04/27/private-prompts.html">
+    <link rel="canonical" href="/2024/04/28/private-prompts.html">
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
     
@@ -59,7 +59,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">How to prompt LLMs with private data?</h1>
-    <p class="post-meta"><time datetime="2024-04-27T20:30:00+02:00" itemprop="datePublished">Apr 27, 2024</time></p>
+    <p class="post-meta"><time datetime="2024-04-28T00:00:00+02:00" itemprop="datePublished">Apr 28, 2024</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -75,8 +75,8 @@
 
 <p>A canonical type of a prompt contains a brief instruction of the task, followed by several examples of the task in the form of an input and output pair. For example, an LLM could be used to recognize whether the sentiment of a movie review was positive or negative using a prompt that looks like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Instruction: Given some text, classify whether it is positive or negative. 
-Input: the movie was great.  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Instruction: Given some text, classify whether it is positive or negative.
+Input: the movie was great.
 Output: positive
 </code></pre></div></div>
 
@@ -92,7 +92,7 @@ Output: positive
 
 <h3 id="the-privacy-risks-of-prompting">The privacy risks of prompting</h3>
 
-<p>When we started our work, little was known about the privacy implications of prompting. The first question we asked ourselves is: do LLM predictions leak sensitive information contained in their prompts?  To measure this, we carried out what is called a “membership inference attack” on model predictions. Given a particular example, this attack tries to figure out if the LLM used that example in its prompt when making predictions. This may be a very simple attack - but it can be used to construct much more sophisticated attacks like attacks that reconstruct the examples contained in prompts. Here are the results from this first experiment.</p>
+<p>When we started our work, little was known about the privacy implications of prompting. The first question we asked ourselves is: do LLM predictions leak sensitive information contained in their prompts? To measure this, we carried out what is called a “membership inference attack” on model predictions. Given a particular example, this attack tries to figure out if the LLM used that example in its prompt when making predictions. This may be a very simple attack - but it can be used to construct much more sophisticated attacks like attacks that reconstruct the examples contained in prompts. Here are the results from this first experiment.</p>
 
 <div style="text-align:center; margin-bottom:30px;">
   <p><img src="/assets/prompts/miaprompt.png" width="90%" /></p>
