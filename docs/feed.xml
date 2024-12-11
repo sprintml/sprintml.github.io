@@ -1,5 +1,198 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-02-15T21:24:52+01:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
-</subtitle><entry><title type="html">On stealing and defending self-supervised models</title><link href="/2023/02/23/model-extraction.html" rel="alternate" type="text/html" title="On stealing and defending self-supervised models" /><published>2023-02-23T00:00:00+01:00</published><updated>2023-02-23T00:00:00+01:00</updated><id>/2023/02/23/model-extraction</id><content type="html" xml:base="/2023/02/23/model-extraction.html"><![CDATA[<p><em>by Adam Dziedzic and Nicolas Papernot</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-12-10T16:02:53-08:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
+</subtitle><entry><title type="html">Private Adaptations of Open LLMs Outperform their Closed Alternatives</title><link href="/2024/12/10/open-llms.html" rel="alternate" type="text/html" title="Private Adaptations of Open LLMs Outperform their Closed Alternatives" /><published>2024-12-10T00:00:00-08:00</published><updated>2024-12-10T00:00:00-08:00</updated><id>/2024/12/10/open-llms</id><content type="html" xml:base="/2024/12/10/open-llms.html"><![CDATA[<p><em>by Adam Dziedzic and Franziska Boenisch</em></p>
+
+<p>Nowadays, Large Language Models (LLMs) perform a plethora of language tasks. OpenAI exposes its GPT4 model to perform tasks such as text generation, translation, dialog summarization, code generation, and many others. While the <em>closed LLMs</em>, like GPT4, are exposed via public APIs or web interfaces, the <em>open LLMs</em>, like Llama, are released directly their parameters and allow us to simply download their parameters and and run the model locally. While LLMs have strong zero-shot performance, they still require <em>adaptations</em>, such as prompting or fine-tuning to perform well on specialized downstream tasks. Given that downstream tasks often rely on sensitive data, we need to ensure this data’s privacy when adapting LLMs.</p>
+
+<p>In this blog post which is based on our latest <a href="https://openreview.net/forum?id=Jf40H5pRW0">NeurIPS 2024 paper</a>, <strong>we compare private adaptations for open vs. closed LLMs on multiple axes and find that by adapting open LLMs instead of closed ones, we can preserve more privacy and obtain higher performance at lower cost.</strong> On the way, we also design novel private prompting methods for generative tasks. Let’s explore how we do that.</p>
+
+<h3 id="open-llms-have-comparable-performance-to-closed-llms">Open LLMs have comparable performance to Closed LLMs</h3>
+
+<p>The closed LLMs such as GPT from OpenAI can be used via APIs whereas the open-weight models like Llama release the model parameters. The most preferable open-source LLMs like Pythia and OLMo provide us also with the data used for their training and the corresponding source code. The open LLMs have to be run on-premise or in the cloud. The most recent results from the standard benchmarks (such as MMLU that measures knowledge acquired by LLMs during pretraining) show that <strong>open-weight LLMs such as Llama 3.1 405 B closed the gap in performance with closed-source LLMs for the first time</strong>.</p>
+
+<h3 id="llm-adaptations-on-open-llms-outperform-their-closed-alternatives">LLM Adaptations on open LLMs outperform their closed alternatives</h3>
+
+<p>Pre-trained LLMs perform well on the general understanding tasks, however, they do not perform well enough on specialized downstream tasks. For example, for the DBpedia task, to classify Wikipedia articles, we observe that after adapting the LLM to the task, we can boost the performance by more than 40%. Additionally, behind the scenes, the training of the LLMs from scratch is a costly venture. Thus, instead of training the LLM on our own or using only their pre-trained versions, we adapt the LLMs to specialized downstream tasks. The adaptation of LLMs can be done in a plethora of ways and here we will present three main ones.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/openLLMs/adaptations.png" width="50%" /></p>
+</div>
+
+<p>One of the most popular ways to adapt LLMs is through prompting (denoted as 1. Input Prompt in the above figure). The input prompts can be discrete where you prepend additional natural language text to your standard input. Soft prompts are a learnable set of parameters prepended to the input embeddings. Prefix tuning is similar to the soft prompt but apart from being prepended to the input, it can also be prepended to every attention layer.</p>
+
+<p>The second approach to adapt LLMs is through inner fine-tuning (the 2nd adaptation in the figure). You can do it either through full fine-tuning, where you adjust all the parameters of your LLM, or using a low-rank adaptation, abbreviated as LoRA, where a small set of additional parameters are added to many layers inside an LLM. Finally, we can fine-tune a couple of the last layers or even add an additional layer or more layers on top of an LLM (the 3-rd type of adaptation in the above figure).</p>
+
+<p>If you want to adapt a closed LLM such as GPT4, you can use only the discrete prompts or last-layer fine-tuning, so-called weak adaptations. These adaptations are less performant than the <em>strong</em> gradient-based methods, such as prefix tuning or LoRA. Contrary to closed LLMs, the open LLMs can be adapted with any of the adaptation methods. The gradient-based adaptations used with open LLMs outperform the other approaches like discrete prompts or last-layer fine-tuning performed on closed LLMs.</p>
+
+<h3 id="more-privacy-is-leaked-through-adaptations-of-closed-vs-open-llms">More privacy is leaked through adaptations of closed vs open LLMs</h3>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/openLLMs/setup.png" width="50%" /></p>
+</div>
+
+<p>We consider two scenarios of adapting open vs closed LLMs. Let us imagine that there is a company, a data curator, which hosts private data locally on-premise.</p>
+
+<p><strong>Open LLMs.</strong> The data curator can adapt an open LLM on their private data so that it can cater to a specific downstream task. Then, a customer can query the adapted open LLM. Notice, that the customer sends the query directly to the party hosting the LLM and no third parties are involved in the process. However, the querying party might be malicious. In this case, the private information from the data curator can leak to the querying party through the returned answers of the prompted LLM.</p>
+
+<p><strong>Closed LLMs.</strong> Let us also consider the case when the data curator does not have any open LLM on-premise and would like to use a closed LLM from a model provider, for example, GPT4 exposed by the API from OpenAI. First, the closed LLM must be adapted to the private data. For the closed LLMs, this can be done by discrete prompts. However, the private data is directly released to the LLM provider (case 1 in the figure above). Second, the private queries from a customer must be routed through the LLM provider. Thus, also the private queries from the customers leak to the LLM providers (case 2). Finally, again, the answers returned to the querying party can leak information contained in the private data hosted by the data curator (case 3).</p>
+
+<p>Overall, the conceptual analysis shows that the privacy leakage is much higher when adapting closed LLMs vs open LLMs. So, for open LLMs only answers can leak some private information. On the other hand, the private data and queries leak to the provider of the closed LLM. Next, we will investigate how to prevent privacy leakage.</p>
+
+<h3 id="private-llm-adaptations-for-text-generation">Private LLM Adaptations for text generation</h3>
+
+<p>We identified that there is a lack of support for the text generation (e.g., the dialog summarization task) with the private prompts. If you want to learn more about how to provide privacy for text classification tasks with prompts, then check out our other blog post <a href="https://sprintml.com/2024/04/27/private-prompts.html">here</a>.</p>
+
+<p>To eanble private text generation with discrete prompts, we start, as in PromptPATE, with our private labeled data. We divide the data into many subsets to form prompts. Each prompt contains a disjoint set of examples or shots from the private labeled data. The disjoint subsets from the private labeled data are used to create the demonstrations for private teacher prompts. The data serves as private shots. Then, we use unlabeled public data to query the LLM with the private teacher prompts. The resulting method is called PromptDPSGDGen.</p>
+
+<p>We incorporate the DP-SGD algorithm into the training of gradient-based adaptations, such as soft prompt, prefix tuning, or LoRA. Here, we give an example with soft prompts. We start from our initial parameters for soft prompt embeddings. We also have our private data with labels. We provide a private example and embed it. The embeddings are prepended with our soft prompt embeddings. The embeddings with prepended soft prompt go as an input to the LLM. Based on the expected labels, we can compute the loss and provide gradients for our soft prompt embeddings. To make sure that the gradients do not leak information about our private data, we clip the gradients and add noise. Thus, this method for text generation, called PromptDPSGDGen obtains the input gradients from the LLM and performs DPSGD to update the soft prompt parameters while keeping the underlying LLM frozen.</p>
+
+<h3 id="private-llm-adaptations-on-open-llms-outperform-their-closed-alternatives">Private LLM Adaptations on open LLMs outperform their closed alternatives</h3>
+
+<p>We carried out an in-depth comparison of the adaptations of open vs closed LLMs considering privacy protection, performance, and cost. The <em>privacy protection</em> is assessed in terms of the leakage of private data either to the LLM provider or the querying party (a user of the adapted LLM), as well as the leakage of the users’ queries to the LLM provider. The <em>performance</em> is measured in terms of accuracy for classification tasks and the scores like Rouge or BLEU for the text generation tasks. Finally, the <em>cost</em> is the amount of money in dollars needed to adapt a given LLM with privacy.</p>
+
+<p>Overall, we analyzed 4 recent methods to adapt closed LLMs including our PromptPATEGen. All of them were designed for closed LLMs to prevent the leakage of private data to the querying party. All of them fulfill this goal. However, they leak private data and queries to the LLM provider. The only method that does not leak private data to the LLM provider is <a href="https:
+//openreview.net/forum?id=Ifz3IgsEPX">DP-OPT</a>. But DP-OPT requires the data curator to use an open LLM on-premise. Most importantly, if we privately adapt open LLMs only, then we only have to prevent the leakage of private data to the querying party. Note that any of the adaptation method can be used for open LLMs.</p>
+
+<p>We find that the adaptations of open LLMs offer high privacy protection and high performance at low cost. On the other hand, the prompt-based adaptations for closed LLMs provide lower privacy protection and lower performance at a higher cost compared to their open counterparts. We further analyze the privacy-utility trade-off for classification and generation tasks across different privacy budgets. We show that even under tight privacy constraints (ε &lt; 1.0), the privacy-preserving adaptations for open LLMs perform significantly better than the ones for closed LLMs.</p>
+
+<p>Let us analyze in detail the private adaptations for text generation tasks, such as dialog summarization. We present the result in the Table below. We use 10k queries and set the default privacy budget to 8. The metrics used are Rouge, where Rouge-1 it to assess how many unigrams in the generated text agree with the expected LLM output. Rouge-2 is similar but uses bi-grams. Rouge-L refers to the similarity of the longest common subsequence between prediction and target. The first analyzed adaptation was for closed LLMs, which is DP-ICL for discrete prompts. The cost of using DP-ICL method on GPT-4 Turbo skyrockets to 3419 dollars, while obtaining rather low performance. However, adapting Open Llama 13B using our PromptPATEGen outperforms DP-ICL at a much lower cost of less than 20 dollars. We can further lower the cost and decrease the model size using our PromptDPSGDGen. This adaptation outperforms other methods at a very low cost of only roughly 2 dollars. Then, we can boost performance if we apply private LoRA instead of PromptDPSGD on the same LLM. Finally, we can leverage one of the top-notch open LLMs, namely Mixtral 8x7B to obtain the highest performance, however, at a substantial increase in the cost to around 68 dollars.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Adaptation</th>
+      <th>LLM</th>
+      <th>Rouge-1</th>
+      <th>Rouge-2</th>
+      <th>Rouge-L</th>
+      <th>Cost ($)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DP-ICL</td>
+      <td>GPT4-Turbo</td>
+      <td>41.8</td>
+      <td>17.3</td>
+      <td>33.4</td>
+      <td>3419</td>
+    </tr>
+    <tr>
+      <td>PromptPATEGen</td>
+      <td>Open Llama 13B</td>
+      <td>43.4</td>
+      <td>19.7</td>
+      <td>34.2</td>
+      <td>19.43</td>
+    </tr>
+    <tr>
+      <td>PromptDPSGDGen</td>
+      <td>BART Large</td>
+      <td>46.1</td>
+      <td>21.3</td>
+      <td>37.4</td>
+      <td>2.13</td>
+    </tr>
+    <tr>
+      <td>Private LoRA</td>
+      <td>BART Large</td>
+      <td>48.8</td>
+      <td>23.5</td>
+      <td>39.1</td>
+      <td>3.59</td>
+    </tr>
+    <tr>
+      <td>Private LoRA</td>
+      <td>Mixtral 8x7B</td>
+      <td>52.8</td>
+      <td>29.6</td>
+      <td>44.7</td>
+      <td>67.95</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>In the blog post, we presented our novel private prompting methods that support text generation tasks. We also evaluated private adaptations for open and closed LLMs. Our key takeaways are that the adaptations of open LLMs are:</p>
+
+<ol>
+  <li>more private than closed LLM adaptations since they have significantly fewer possibilities for privacy leakage;</li>
+  <li>more performant than closed LLM adaptations: at the same privacy level, even using much smaller models, we can obtain higher performance with open LLMs due to their ability to support gradient-based adaptation methods;</li>
+  <li>more cost-effective than closed LLM adaptations that incur continuous query costs to an LLM provider.</li>
+</ol>
+
+<p>If you’d like to learn more, read our NeurIPS 2024 paper <a href="https://adam-dziedzic.com/static/assets/papers/openLLMs.pdf">“Open LLMs are Necessary for Current Private Adaptations and Outperform their Closed Alternatives”</a>. It goes into greater detail about our research on this topic.</p>]]></content><author><name></name></author><category term="private" /><category term="prompts" /><category term="LLMs" /><category term="DPSGD" /><category term="PATE" /><category term="OpenLLMs" /><category term="ClosedLLMs" /><category term="adaptations" /><summary type="html"><![CDATA[by Adam Dziedzic and Franziska Boenisch]]></summary></entry><entry><title type="html">How to prompt LLMs with private data?</title><link href="/2024/04/28/private-prompts.html" rel="alternate" type="text/html" title="How to prompt LLMs with private data?" /><published>2024-04-28T00:00:00-07:00</published><updated>2024-04-28T00:00:00-07:00</updated><id>/2024/04/28/private-prompts</id><content type="html" xml:base="/2024/04/28/private-prompts.html"><![CDATA[<p><em>by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch</em></p>
+
+<p>Over the past few years, large language models (LLMs) have gained widespread attention in both the tech industry and academia, as well as the public at large. LLMs are capable of executing a wide range of language-related tasks, such as translation, text generation, and sentiment analysis. One particularly amazing property of LLMs is that they need only minor modifications to handle new tasks, making them particularly well-suited for the rapid development of new applications.</p>
+
+<p>In many scenarios, a company might want to adapt these pretrained LLMs with data that contains sensitive information. For example, Epic, a healthcare software company in the U.S., is recently partnering with Microsoft to integrate GPT4 in managing patients’ electronic healthcare records. Adapting LLMs to this data naively could expose patients’ sensitive information. To prevent these privacy violations, we have to be careful how we construct the prompts we query the LLM with - as we will explain next.</p>
+
+<h3 id="what-is-prompting-for-llms">What is ‘prompting’ for LLMs?</h3>
+
+<p>Generally speaking, there are two standard ways to adapt LLMs to new tasks, “fine-tuning” and “prompting.” The first way, fine-tuning, updates the parameters of the LLM to better reflect the new task. The second, prompting, does not make any updates to the original LLMs. Instead, it adds examples to provide context for the input that the user submits. This is done directly when the model is asked to predict on an input from the new task.</p>
+
+<p>A canonical type of a prompt contains a brief instruction of the task, followed by several examples of the task in the form of an input and output pair. For example, an LLM could be used to recognize whether the sentiment of a movie review was positive or negative using a prompt that looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Instruction: Given some text, classify whether it is positive or negative.
+Input: the movie was great.
+Output: positive
+</code></pre></div></div>
+
+<p>To get the model’s prediction on a new movie review, we would prepend the above prompt to the new query “Input: the film was rather boring.” The model would then output the following: “Output: negative”.</p>
+
+<h3 id="why-prompting">Why prompting?</h3>
+
+<p>Prompting offers several advantages over fine-tuning. First, prompting is very storage-efficient. Storing a separate fine-tuned model for each new task can be expensive because LLMs have lots of parameters. Instead, prompt tuning only requires storing a small prompt to provide task-specific context.</p>
+
+<p>Second, the computation costs of fine-tuning become increasingly prohibitive as the models’ sizes grow. Prompting, as stated, works without tuning all of the model parameters.</p>
+
+<p>Third, many LLMs are deployed behind APIs–a restricted interface for two or more computer programs to communicate with each other. This means that the end user does not have access to the model parameters. The only way to adapt the model in this case is through prompts.</p>
+
+<h3 id="the-privacy-risks-of-prompting">The privacy risks of prompting</h3>
+
+<p>When we started our work, little was known about the privacy implications of prompting. The first question we asked ourselves is: do LLM predictions leak sensitive information contained in their prompts? To measure this, we carried out what is called a “membership inference attack” on model predictions. Given a particular example, this attack tries to figure out if the LLM used that example in its prompt when making predictions. This may be a very simple attack - but it can be used to construct much more sophisticated attacks like attacks that reconstruct the examples contained in prompts. Here are the results from this first experiment.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/prompts/miaprompt.png" width="90%" /></p>
+</div>
+
+<p>The left figure shows that the LLM is much more confident when being asked to predict on an input which it already appears in the prompt (as indicated in blue) than when it is asked to predict on an input that was not in the prompt (as indicated in orange). This means the adversary can “guess” that an example was in the prompt by looking at the examples for which the model is confident were in the prompt. The right figure shows that this guess is often a correct one. The ROC curve (receiver operating characteristic curve) of this attack demonstrates the adversary (indicated with the blue curve) is more likely to succeed than if it had guessed randomly (using a coin flip, as indicated by the red dotted line). Indeed, the further away the blue line is from the red line, the more successful the attack is.</p>
+
+<p>Put altogether, this first experiment shows that there is significant risk when one includes sensitive data in the prompts that are given to LLMs. So, we set out to find a solution.</p>
+
+<h3 id="privacy-preserving-prompts">Privacy-preserving prompts</h3>
+
+<p>To protect privacy, intuitively, we would like to ensure that none of the examples contained in the prompt “influences” the outputs of the prompt too much. This way, when the LLM makes predictions from the prompt, its output won’t reveal too much information about the particular examples that were used to construct the prompt. It turns out that the research community has developed a framework to capture this intuition more rigorously - this framework is called differential privacy (DP). If you are interested in more details on differential privacy, you are welcome to check out <a href="https://www.cleverhans.io/2021/01/14/privacy-focus-algorithms.html">our earlier blog post on the topic</a>.</p>
+
+<p>How can we construct prompts with differential privacy? First, we prompt the LLM with different prompts, each of which contains a disjoint subset of examples from the private dataset. Given an (unlabeled) input, each prompted LLM outputs a prediction based on its own prompt. Then we gather all the predictions from each prompted model and output the prediction that most models agree with. Intuitively, this “voting” process makes a prediction based on the information contained in multiple data points and reduces the influence that each data point has on the overall prediction made.</p>
+
+<p>The above process alone is almost but not quite sufficient to provide differential privacy guarantees. To rigorously protect the privacy of the examples contained in the private set, we have to add noise to the models’ votes before we output the consensus. This approach is indeed well-established in the privacy-preserving machine learning literature. It is called Private Aggregation of Teacher Ensembles (PATE). For a detailed introduction to PATE, we refer you to <a href="https://www.cleverhans.io/privacy/2018/04/29/privacy-and-machine-learning.html">our another blog post</a>.</p>
+
+<p>We then select the best pair of input and aggregated label and use that pair as the example that makes up our prompt for the LLM model. We refer to this prompt as the student prompt because this prompt was obtained by distilling the knowledge the teachers had acquired.</p>
+
+<p>The diagram below illustrates this approach.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/prompts/promptpate.png" width="90%" /></p>
+</div>
+
+<p>We implement this PATE algorithm with two popular commercial LLM APIs, GPT3 and Claude. Our results show that the method offers very strong privacy protection for data contained in prompts as well as high prediction accuracy when using our private prompts. Our method is the first privacy-preserving algorithm that can be employed with all commercial APIs.</p>
+
+<p>A subset of commercial APIs may provide additional access to the user. For instance, they may allow the user to compute gradients with respect to the inputs of the LLM being queried. When we have such access to the model, we can deploy another approach to obtain prompts that protect privacy.</p>
+
+<p>These prompts are different to the ones we described until now. So far, we used what is called discrete prompts: the prompts were made up of real words. Yet, LLMs internally represent words as vectors of numbers. This can be exploited to prompt them more precisely. We call this type of prompts soft prompts, the LLM is prompted with vectors of numbers directly (rather than real words that are then later converted into vectors of numbers).</p>
+
+<p>Since soft prompts are made of numbers, we can construct them using a search procedure that is based on gradient descent. Luckily, gradient descent is the most common way to train neural networks. Hence, the privacy community has devised numerous algorithms to make gradient descent differentially private. In particular, one algorithm stands out: differentially private stochastic gradient descent. It clips and noises gradients to make them private. Why do these extra steps protect the privacy of training data? Intuitively speaking, clipping the gradients ensures that an example cannot influence the model update too much, and adding noise obfuscates the particular updates that were applied to the model. Thus, by modifying the gradient descent procedure in training the soft prompts, the data used to train the soft prompts has a differential privacy guarantee.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/prompts/prmptdpsgd.png" width="50%" /></p>
+</div>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>Our work identifies the privacy risk of prompting and offers methods to construct discrete and soft prompts that preserve privacy. We find that prompting is a practical and efficient way to adapt LLMs with differential privacy. There are still many improvements that can be made to our algorithm. For example, it is interesting to see how to extend our approach to protect users against malicious LLM providers. We hope that our work will inspire others to work on this problem.</p>
+
+<p>If you’d like to learn more, read our NeurIPS 2023 paper <a href="https://openreview.net/forum?id=u6Xv3FuF8N">“Flocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models”</a>. It goes into greater detail about our research on this topic.</p>]]></content><author><name></name></author><category term="private" /><category term="prompts" /><category term="LLMs" /><category term="DPSGD" /><category term="PATE" /><summary type="html"><![CDATA[by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch]]></summary></entry><entry><title type="html">On stealing and defending self-supervised models</title><link href="/2023/02/23/model-extraction.html" rel="alternate" type="text/html" title="On stealing and defending self-supervised models" /><published>2023-02-23T00:00:00-08:00</published><updated>2023-02-23T00:00:00-08:00</updated><id>/2023/02/23/model-extraction</id><content type="html" xml:base="/2023/02/23/model-extraction.html"><![CDATA[<p><em>by Adam Dziedzic and Nicolas Papernot</em></p>
 
 <p><em>This blog post is part of a series on model stealing, check out our previous blog posts
 <a href="http://www.cleverhans.io/2021/04/28/is-this-model-mine.html">“Is this model mine?”</a>
