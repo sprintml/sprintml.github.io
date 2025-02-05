@@ -1,119 +1,319 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-12-10T16:02:53-08:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
-</subtitle><entry><title type="html">Private Adaptations of Open LLMs Outperform their Closed Alternatives</title><link href="/2024/12/10/open-llms.html" rel="alternate" type="text/html" title="Private Adaptations of Open LLMs Outperform their Closed Alternatives" /><published>2024-12-10T00:00:00-08:00</published><updated>2024-12-10T00:00:00-08:00</updated><id>/2024/12/10/open-llms</id><content type="html" xml:base="/2024/12/10/open-llms.html"><![CDATA[<p><em>by Adam Dziedzic and Franziska Boenisch</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-02-05T09:49:43+01:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
+</subtitle><entry><title type="html">Image AutoRegressive Models Leak More Training Data Than Diffusion Models</title><link href="/2025/02/04/iars-privacy.html" rel="alternate" type="text/html" title="Image AutoRegressive Models Leak More Training Data Than Diffusion Models" /><published>2025-02-04T00:00:00+01:00</published><updated>2025-02-04T00:00:00+01:00</updated><id>/2025/02/04/iars-privacy</id><content type="html" xml:base="/2025/02/04/iars-privacy.html"><![CDATA[<center>
+  <a href="http://antonikowalczuk.com">Antoni Kowalczuk*<sup>1</sup></a>,
+  <a href="https://scholar.google.com/citations?user=iG319iwAAAAJ&amp;hl=pl&amp;oi=ao">Jan Dubiński*<sup>2,3</sup></a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch<sup>1</sup></a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic<sup>1</sup></a>
+  <br /><br />
+  <sup>1</sup>CISPA Helmholtz Center for Information Security<br />
+  <sup>2</sup>Warsaw University of Technology<br />
+  <sup>3</sup>IDEAS NCBR<br />
+  <em>*Indicates Equal Contribution</em>
+    <br /><br />
+</center>
 
-<p>Nowadays, Large Language Models (LLMs) perform a plethora of language tasks. OpenAI exposes its GPT4 model to perform tasks such as text generation, translation, dialog summarization, code generation, and many others. While the <em>closed LLMs</em>, like GPT4, are exposed via public APIs or web interfaces, the <em>open LLMs</em>, like Llama, are released directly their parameters and allow us to simply download their parameters and and run the model locally. While LLMs have strong zero-shot performance, they still require <em>adaptations</em>, such as prompting or fine-tuning to perform well on specialized downstream tasks. Given that downstream tasks often rely on sensitive data, we need to ensure this data’s privacy when adapting LLMs.</p>
+<p>Image AutoRegressive models (IARs) have recently emerged as a powerful alternative to diffusion models (DMs), surpassing them in image generation quality, speed, and scalability. Yet, despite their advantages, the privacy risks of IARs remain completly unexplored. When trained on sensitive or copyrighted data, these models may unintentionally expose training samples, creating major security and ethical concerns.</p>
+
+<p>In this blog post, which is based on our latest research paper, we investigate privacy vulnerabilities in IARs, showing that they exhibit significantly higher privacy risks compared to DMs. We assess IARs’ privacy risks from the three perspectives of <strong>membership inference</strong>, <strong>dataset inference</strong>, and <strong>memorization</strong>, and find that IARs reveal substantially more information about their training data than DMs. Along the way, we also discuss ways to mitigate these risks. Let’s dive in!</p>
+
+<h2 id="image-autoregressive-models-a-faster-but-riskier-approach"><strong>Image AutoRegressive Models: A Faster but Riskier Approach</strong></h2>
+
+<p>IARs work like language models such as GPT, but instead of words, they generate images using tokens. Just as language tokens represent words or parts of words, image tokens represent some part of an image. This autoregressive approach allows them to scale effectively, resulting in <strong>higher quality and faster image generation</strong> compared to DMs. However, as we will show, these benefits come with severe <strong>privacy trade-offs</strong>.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/pareto1.png" width="50%" /></p>
+</div>
+
+<p>Our evaluations on privacy attacks show that IARs are much more likely to <strong>reveal whether a specific image was used in its training</strong> and even <strong>expose parts of the training data</strong>. In fact, the largest IAR models leak entire training images verbatim!</p>
+
+<h2 id="how-to-assess-privacy-risks-in-iars"><strong>How to Assess Privacy Risks in IARs</strong></h2>
+
+<p>To uncover the privacy risks of IARs, we use three attack techniques—refining existing methods and creating new ones from scratch—to measure how much these models expose their training data:</p>
+
+<ol>
+  <li><strong>Membership Inference Attacks (MIA):</strong> Determines whether a specific image was used in training.</li>
+  <li><strong>Dataset Inference (DI):</strong> Detects whether an entire dataset was part of the model’s training set.</li>
+  <li><strong>Data Extraction:</strong> Extracts full training images from IARs.</li>
+</ol>
+
+<p>These attacks help us quantify how much private data IARs unintentionally reveal compared to DMs.</p>
+
+<hr />
+
+<h3 id="membership-inference-iars-vs-dms"><strong>Membership Inference: IARs vs DMs</strong></h3>
+
+<p>The goal of MIAs is to infer whether a specific image was part of the training dataset of a given model. In our study, we first show how MIAs developed against LLMs can be applied to IARs. Then we design <strong>a novel MIA approach optimized for IARs</strong> by leveraging their classifier-free guidance mechanism.</p>
+
+<p>Our findings are striking: <strong>large IARs leak training membership information at much higher rates than diffusion models</strong>. The following figure shows the MIA success rates at a strict false positive rate (FPR) of 1%.</p>
+
+<!-- ![pareto_teaser-min](https://hackmd.io/_uploads/HkKUffltkg.png) -->
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/membershipinference.png" width="50%" /></p>
+</div>
+
+<p>As seen above, <strong>VAR-<em>d</em>30</strong>, one of the largest IARs, is highly vulnerable to MIAs, with an <strong>86.38% success rate</strong> in detecting training images. This is almost <strong>20× higher than the best MIA attack on the least private diffusion model</strong>, showing that IARs are inherently more prone to privacy attacks.</p>
+
+<!-- #### **Table 1: Membership Inference Performance (TPR@FPR=1%)**
+| Model      | Type | True Positive Rate @ 1% FPR |
+|-----------|------|--------------------------|
+| VAR-d16   | IAR  | 2.16%  |
+| VAR-d30   | IAR  | **86.38%**  |
+| RAR-XXL   | IAR  | 49.80%  |
+| MAR-H     | IAR  | 3.40%  |
+| MDTv2-XL  | DM   | **4.91%**  |
+
+As seen above, **VAR-d30**, one of the largest IARs, is highly vulnerable to MIAs, with an **86.38% success rate** in detecting training images. This is almost **20× higher than the best MIA attack on diffusion models**, showing that IARs are inherently more prone to privacy attacks.
+ -->
+
+<hr />
+
+<h3 id="dataset-inference-detecting-if-an-iar-was-trained-on-a-dataset"><strong>Dataset Inference: Detecting If an IAR Was Trained on a Dataset</strong></h3>
+
+<p>Dataset Inference (DI) extends MIAs by resolving whether an entire dataset was used in training. This is particularly important for detecting unauthorized usage of private or copyrighted datasets.</p>
+
+<p>We find that <strong>IARs require significantly fewer samples for successful DI compared to DMs</strong>, meaning they reveal more statistical information about their training datasets. The figure below summarizes the number of samples required to confirm dataset membership.</p>
+
+<!-- #### **Table 2: Dataset Inference Success Rates**
+| Model      | Type | Samples Required for DI |
+|-----------|------|----------------------|
+| VAR-d16   | IAR  | 200  |
+| VAR-d30   | IAR  | **6**  |
+| MAR-H     | IAR  | 300  |
+| RAR-XXL   | IAR  | 8  |
+| MDTv2-XL  | DM   | **200**  | -->
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/datasetinference.jpg" width="50%" /></p>
+</div>
+
+<p>For <strong>VAR-<em>d</em>30</strong>, <strong>only 6 samples</strong> are needed to determine whether a dataset was used for training. This is an <strong>order-of-magnitude lower</strong> than the number required for diffusion models, indicating a much higher privacy leakage.</p>
+
+<hr />
+
+<h3 id="extracting-training-images-from-iars"><strong>Extracting Training Images from IARs</strong></h3>
+
+<p>Beyond membership and dataset inference, we also explored whether <strong>IARs memorize and reproduce entire training images</strong>. We developed a <strong>data extraction attack</strong> that generates high-fidelity reconstructions of training images by prompting the model with a partial input.</p>
+
+<p>We successfully extracted up to <strong>698</strong> verbatim training images from <strong>VAR-<em>d</em>30</strong>, proving that large IARs memorize and regurgitate data at an alarming rate, making them vulnerable to <strong>copyright infringement, privacy violations, and dataset exposure</strong>.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/memorization.png" width="50%" /></p>
+</div>
+
+<p>The highly successful data extraction from IARs raises major privacy concerns, especially for commercial AI models trained on proprietary datasets.</p>
+
+<h3 id="privacy-vs-performance-how-to-mitigate-privacy-risks-in-iars"><strong>Privacy vs. Performance: How to Mitigate Privacy Risks in IARs</strong></h3>
+
+<p>Our findings reveal a clear <strong>privacy-utility trade-off</strong>. While IARs outperform Diffusion Models (DMs) in <strong>speed and image quality</strong>, they suffer from significantly <strong>higher privacy leakage</strong>. This presents a crucial question: can we achieve strong performance <strong>without sacrificing privacy?</strong></p>
+
+<p>Given the severe privacy vulnerabilities of IARs, we explored potential <strong>mitigation strategies</strong>. Inspired by Differential Privacy (DP) techniques and prior research on language models, we experimented with the following defenses:</p>
+
+<h4 id="1-adding-noise-to-logits"><strong>1. Adding Noise to Logits</strong></h4>
+
+<p>For models like <strong>VAR</strong> and <strong>RAR</strong>, we attempted to <strong>add small amounts of noise</strong> to their logits to obscure membership signals. While this reduced MIA success rates slightly, it also <strong>deteriorated image quality</strong>, making it an impractical solution.</p>
+
+<h4 id="2-noising-continuous-tokens-in-mar"><strong>2. Noising Continuous Tokens in MAR</strong></h4>
+
+<p>For <strong>MAR</strong>, which operates with continuous tokens, we <strong>perturbed token values</strong> post-sampling. Interestingly, this defense was <strong>more effective than logit noise</strong> and caused only a <strong>minor drop in performance</strong>.</p>
+
+<h4 id="3-leveraging-diffusion-techniques"><strong>3. Leveraging Diffusion Techniques</strong></h4>
+
+<p>Our results indicate that <strong>MAR is inherently more private than VAR and RAR</strong>, likely because it incorporates <strong>diffusion-based techniques</strong>. This suggests that <strong>hybrid IAR-DM approaches</strong> could provide a good balance between <strong>performance and privacy</strong>.</p>
+
+<hr />
+
+<h3 id="final-thoughts-are-iars-too-risky-for-deployment"><strong>Final Thoughts: Are IARs Too Risky for Deployment?</strong></h3>
+
+<p>Our study provides the first <strong>comprehensive privacy analysis</strong> of <strong>Image AutoRegressive Models (IARs)</strong>. The results are both <strong>impressive and alarming</strong>:</p>
+
+<p>✅ <strong>IARs are faster and more accurate</strong> than DMs.<br />
+🚨 <strong>IARs leak substantially more private data</strong> than DMs.</p>
+
+<p>This raises a key concern: <strong>Can IARs be deployed safely?</strong></p>
+
+<ul>
+  <li>For <strong>non-sensitive applications</strong>, IARs offer a <strong>powerful and efficient alternative</strong> to DMs.</li>
+  <li>However, for <strong>privacy-sensitive domains</strong> (e.g., medical imaging, biometric data, proprietary datasets), IARs <strong>pose severe risks</strong> unless stronger safeguards are in place.</li>
+</ul>
+
+<h3 id="conclusions"><strong>Conclusions</strong></h3>
+
+<p>Let’s summarize our findings:</p>
+
+<p>1️⃣ <strong>IARs have much higher privacy leakage than DMs</strong>, making them a riskier choice for privacy-sensitive applications.<br />
+2️⃣ <strong>The larger the IAR, the more it memorizes and leaks training data.</strong><br />
+3️⃣ <strong>Diffusion-based elements (like those in MAR) reduce privacy leakage</strong>, suggesting a potential direction for <strong>more private generative models</strong>. A promising approach is to synergize diffusion-based and autoregressive techqniques to provide high performance and lower privacy risk.<br />
+4️⃣ <strong>Existing defenses are insufficient</strong>, and new privacy-preserving techniques <strong>must be developed before IARs can be safely deployed in sensitive areas</strong>.</p>
+
+<h3 id="where-do-we-go-from-here"><strong>Where Do We Go from Here?</strong></h3>
+
+<p>As <strong>IARs continue to evolve</strong>, privacy safeguards <strong>must</strong> become a core focus. Our research shows that <strong>adopting techniques from Diffusion Models</strong> and <strong>differential privacy methods</strong> could help <strong>mitigate privacy risks</strong>.</p>
+
+<p>If you’d like to learn more, check out our full <strong>arXiv paper</strong>, where we dive deeper into <strong>membership inference attacks, dataset inference, and memorization risks</strong> in IARs.</p>
+
+<p>👉 <strong>Read the full paper: <a href="#">Privacy Attacks on Image AutoRegressive Models</a></strong></p>
+
+<h2 id="bibtex">Bibtex</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{kowalczuk2025privacyattacksimageautoregressive,
+      title={Privacy Attacks on Image AutoRegressive Models},
+      author={Antoni Kowalczuk and Jan Dubiński and Franziska Boenisch and Adam Dziedzic},
+      year={2025},
+      eprint={2502.02514},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2502.02514},
+}
+</code></pre></div></div>]]></content><author><name></name></author><category term="privacy" /><category term="image" /><category term="generative" /><category term="models" /><category term="diffusion" /><category term="models" /><category term="vision" /><category term="autoregressive" /><category term="models" /><summary type="html"><![CDATA[Antoni Kowalczuk*1, Jan Dubiński*2,3, Franziska Boenisch1, Adam Dziedzic1 1CISPA Helmholtz Center for Information Security 2Warsaw University of Technology 3IDEAS NCBR *Indicates Equal Contribution]]></summary></entry><entry><title type="html">Private Adaptations of Open LLMs Outperform their Closed Alternatives</title><link href="/2024/12/10/open-llms.html" rel="alternate" type="text/html" title="Private Adaptations of Open LLMs Outperform their Closed Alternatives" /><published>2024-12-10T00:00:00+01:00</published><updated>2024-12-10T00:00:00+01:00</updated><id>/2024/12/10/open-llms</id><content type="html" xml:base="/2024/12/10/open-llms.html"><![CDATA[<p><em>by Adam Dziedzic and Franziska Boenisch</em></p>
+
+<p>Nowadays, Large Language Models (LLMs) perform a plethora of language tasks. OpenAI exposes its GPT4 model to perform tasks, such as text generation, translation, dialog summarization, code generation, and many others. While <em>closed LLMs</em>, like GPT4, are exposed via public APIs or web interfaces, for <em>open LLMs</em>, like Llama, their parameters (i.e., their weights) are directly released and allow us to simply download them and and run the model locally. Therefore, we sometimes call these models “<em>open-weight LLMs</em>”. Both types of models, open and closed ones, even though they have strong zero-shot performance, they still require <em>adaptations</em>, such as prompting or fine-tuning to perform well on specialized downstream tasks. Given that downstream tasks often rely on sensitive data, we need to ensure this data’s privacy when adapting LLMs.</p>
 
 <p>In this blog post which is based on our latest <a href="https://openreview.net/forum?id=Jf40H5pRW0">NeurIPS 2024 paper</a>, <strong>we compare private adaptations for open vs. closed LLMs on multiple axes and find that by adapting open LLMs instead of closed ones, we can preserve more privacy and obtain higher performance at lower cost.</strong> On the way, we also design novel private prompting methods for generative tasks. Let’s explore how we do that.</p>
 
 <h3 id="open-llms-have-comparable-performance-to-closed-llms">Open LLMs have comparable performance to Closed LLMs</h3>
 
-<p>The closed LLMs such as GPT from OpenAI can be used via APIs whereas the open-weight models like Llama release the model parameters. The most preferable open-source LLMs like Pythia and OLMo provide us also with the data used for their training and the corresponding source code. The open LLMs have to be run on-premise or in the cloud. The most recent results from the standard benchmarks (such as MMLU that measures knowledge acquired by LLMs during pretraining) show that <strong>open-weight LLMs such as Llama 3.1 405 B closed the gap in performance with closed-source LLMs for the first time</strong>.</p>
+<p>The most recent results from standard benchmarks (such as MMLU that measures knowledge acquired by LLMs during pretraining) show that <strong>open-weight LLMs such as Llama 3.1 405 B closed the gap in performance with closed-source LLMs for the first time</strong>.
+This is a great starting point for our research.</p>
 
-<h3 id="llm-adaptations-on-open-llms-outperform-their-closed-alternatives">LLM Adaptations on open LLMs outperform their closed alternatives</h3>
+<h3 id="how-to-adapt-your-llm">How to Adapt your LLM</h3>
 
-<p>Pre-trained LLMs perform well on the general understanding tasks, however, they do not perform well enough on specialized downstream tasks. For example, for the DBpedia task, to classify Wikipedia articles, we observe that after adapting the LLM to the task, we can boost the performance by more than 40%. Additionally, behind the scenes, the training of the LLMs from scratch is a costly venture. Thus, instead of training the LLM on our own or using only their pre-trained versions, we adapt the LLMs to specialized downstream tasks. The adaptation of LLMs can be done in a plethora of ways and here we will present three main ones.</p>
+<p>As we mentioned above, LLMs perform well on <em>general</em> understanding tasks, however, they do not perform well enough on <em>specialized</em> downstream tasks. For example, for the DBpedia task, that aims to classify Wikipedia articles, we observe that after adapting the LLM to the task, we can boost the performance by more than 40%. This motivates the why it is important to adapt the models.
+Additionally, behind the scenes, the training of entire large LLMs from scratch is a costly venture. Hence, adaptations are a computationally reasonable alternative.
+Let’s dive into how we can adapt LLMs:</p>
 
 <div style="text-align:center; margin-bottom:30px;">
   <p><img src="/assets/blog/openLLMs/adaptations.png" width="50%" /></p>
+  <p style="margin-top:10px;">Figure 1: The different ways of adapting LLMs.</p>
 </div>
 
-<p>One of the most popular ways to adapt LLMs is through prompting (denoted as 1. Input Prompt in the above figure). The input prompts can be discrete where you prepend additional natural language text to your standard input. Soft prompts are a learnable set of parameters prepended to the input embeddings. Prefix tuning is similar to the soft prompt but apart from being prepended to the input, it can also be prepended to every attention layer.</p>
+<p>One of the most popular ways to adapt LLMs is through prompting (denoted as 1. Input Prompt in Figure 1). The input prompts can be <em>discrete</em> where you prepend additional natural language text to your standard input. On the other hand, <em>soft prompts</em> are a learnable set of parameters prepended to the input embeddings. <em>Prefix tuning</em> is similar to the soft prompt but apart from being prepended to the input, it can also be prepended to every attention layer.</p>
 
-<p>The second approach to adapt LLMs is through inner fine-tuning (the 2nd adaptation in the figure). You can do it either through full fine-tuning, where you adjust all the parameters of your LLM, or using a low-rank adaptation, abbreviated as LoRA, where a small set of additional parameters are added to many layers inside an LLM. Finally, we can fine-tune a couple of the last layers or even add an additional layer or more layers on top of an LLM (the 3-rd type of adaptation in the above figure).</p>
+<p>The second approach to adapt LLMs is through inner fine-tuning (the 2nd adaptation in Figure 1). You can do it either through full fine-tuning, where you adjust all the parameters of your LLM, or using a low-rank adaptation, abbreviated as LoRA, where a small set of additional parameters are added to many layers inside an LLM. Finally, we can fine-tune a couple of the last layers or even add an additional layer or more layers on top of an LLM (the 3-rd type of adaptation in Figure 1).</p>
 
-<p>If you want to adapt a closed LLM such as GPT4, you can use only the discrete prompts or last-layer fine-tuning, so-called weak adaptations. These adaptations are less performant than the <em>strong</em> gradient-based methods, such as prefix tuning or LoRA. Contrary to closed LLMs, the open LLMs can be adapted with any of the adaptation methods. The gradient-based adaptations used with open LLMs outperform the other approaches like discrete prompts or last-layer fine-tuning performed on closed LLMs.</p>
+<p><strong>Important!!!</strong> If you want to adapt a closed LLM such as GPT4, due to the API restrictions, you can only use discrete prompts or last-layer fine-tuning. These adaptations are less performant than gradient-based adaptations that we can use on open LLMs.</p>
 
 <h3 id="more-privacy-is-leaked-through-adaptations-of-closed-vs-open-llms">More privacy is leaked through adaptations of closed vs open LLMs</h3>
 
 <div style="text-align:center; margin-bottom:30px;">
   <p><img src="/assets/blog/openLLMs/setup.png" width="50%" /></p>
+  <p style="margin-top:10px;">Figure 2: How privacy can leak from closed LLMs.</p>
 </div>
 
-<p>We consider two scenarios of adapting open vs closed LLMs. Let us imagine that there is a company, a data curator, which hosts private data locally on-premise.</p>
+<p>When we want to reason about privacy leakage from LLM adaptations, it helps to understand the stakeholders that are involved in practice.
+We identified the data curator, e.g., a company that holds their customers’ private data. The company wants to adapt an LLM on this private data to solve a task for (potentially new) customers, i.e., querying parties. In case of a closed LLM, there is also an LLM provider, i.e., a company like OpenAI that deploys the models, such as GPT4.</p>
 
-<p><strong>Open LLMs.</strong> The data curator can adapt an open LLM on their private data so that it can cater to a specific downstream task. Then, a customer can query the adapted open LLM. Notice, that the customer sends the query directly to the party hosting the LLM and no third parties are involved in the process. However, the querying party might be malicious. In this case, the private information from the data curator can leak to the querying party through the returned answers of the prompted LLM.</p>
+<p>With these stakeholders defined, let’s now look into the difference in privacy leakage between open and closed LLMs.</p>
 
-<p><strong>Closed LLMs.</strong> Let us also consider the case when the data curator does not have any open LLM on-premise and would like to use a closed LLM from a model provider, for example, GPT4 exposed by the API from OpenAI. First, the closed LLM must be adapted to the private data. For the closed LLMs, this can be done by discrete prompts. However, the private data is directly released to the LLM provider (case 1 in the figure above). Second, the private queries from a customer must be routed through the LLM provider. Thus, also the private queries from the customers leak to the LLM providers (case 2). Finally, again, the answers returned to the querying party can leak information contained in the private data hosted by the data curator (case 3).</p>
+<p><strong>Open LLMs.</strong> The data curator can locally adapt an open LLM on their private data so that it can cater to a specific downstream task. Then, a customer can query the adapted open LLM. In this case, the customer sends the query directly to the party hosting the LLM and no third parties are involved in the process. 
+The only privacy concern arises since the querying party might be malicious. In this case, the private information from the data curator can leak to the querying party through the returned answers of the prompted LLM.</p>
 
-<p>Overall, the conceptual analysis shows that the privacy leakage is much higher when adapting closed LLMs vs open LLMs. So, for open LLMs only answers can leak some private information. On the other hand, the private data and queries leak to the provider of the closed LLM. Next, we will investigate how to prevent privacy leakage.</p>
+<p><strong>Closed LLMs.</strong> Let us also consider the case when the data curator does not have any open LLM on-premise and would like to use a closed LLM from a model provider, for example, GPT4 exposed by the API from OpenAI. First, the closed LLM must be adapted to the private data. For the closed LLMs, this can be done by discrete prompts. 
+This setup induces multiple axes of possible privacy leakage:
+For adaptation, the private data has to be directly released to the LLM provider (case 1 in Figure 2). Additionally, the private queries from a customer must be routed through the LLM provider. Thus, also the private queries from the customers leak to the LLM providers (case 2). Finally, in the same way as with open LLMs, the answers can leak information contained in the private data to the querying party (case 3).</p>
+
+<p>Overall, this conceptual analysis shows that the privacy leakage is much higher when adapting closed LLMs vs open LLMs. While for open LLMs, only answers can leak some private information, with closed LLMs, the private data and queries leak to the provider of the closed LLM.</p>
+
+<p>Next, we will investigate how to prevent privacy leakage.</p>
 
 <h3 id="private-llm-adaptations-for-text-generation">Private LLM Adaptations for text generation</h3>
 
-<p>We identified that there is a lack of support for the text generation (e.g., the dialog summarization task) with the private prompts. If you want to learn more about how to provide privacy for text classification tasks with prompts, then check out our other blog post <a href="https://sprintml.com/2024/04/27/private-prompts.html">here</a>.</p>
+<p>To obtain private LLM adaptations, we build on the mathematical framework of <a href="https://www.comp.nus.edu.sg/~tankl/cs5322/readings/dwork.pdf">Differential Privacy (DP)</a>. For LLM adaptations, DP formalizes the intuition that adaptations learned on two neighboring datasets, i.e., datasets that differ in only one data point, will induce roughly the same behavior of the adapted LLM.
+The <em>roughly</em> is expressed in a privacy budget parameter ε.</p>
 
-<p>To eanble private text generation with discrete prompts, we start, as in PromptPATE, with our private labeled data. We divide the data into many subsets to form prompts. Each prompt contains a disjoint set of examples or shots from the private labeled data. The disjoint subsets from the private labeled data are used to create the demonstrations for private teacher prompts. The data serves as private shots. Then, we use unlabeled public data to query the LLM with the private teacher prompts. The resulting method is called PromptDPSGDGen.</p>
+<p>Within all existing DP prompting methods, we identified that there is a lack of support for text generation tasks (e.g., dialog summarization). Instead, most prior work on private prompting focuses on <em>classification</em> tasks. This is a big gap since LLMs are generative models that solve inherently much more complex tasks than classification.</p>
 
-<p>We incorporate the DP-SGD algorithm into the training of gradient-based adaptations, such as soft prompt, prefix tuning, or LoRA. Here, we give an example with soft prompts. We start from our initial parameters for soft prompt embeddings. We also have our private data with labels. We provide a private example and embed it. The embeddings are prepended with our soft prompt embeddings. The embeddings with prepended soft prompt go as an input to the LLM. Based on the expected labels, we can compute the loss and provide gradients for our soft prompt embeddings. To make sure that the gradients do not leak information about our private data, we clip the gradients and add noise. Thus, this method for text generation, called PromptDPSGDGen obtains the input gradients from the LLM and performs DPSGD to update the soft prompt parameters while keeping the underlying LLM frozen.</p>
+<p>To understand our methods on private prompts for generative tasks, it might be helpful if you first check out our other blog post <a href="https://sprintml.com/2024/04/27/private-prompts.html">here</a>, where we introduced the first private prompts for LLMs.
+Here, we only give you a short intuition on how our generation methods work. If you are interested in the details, feel free to check out our paper.</p>
+
+<p>To enable private text generation with <strong>discrete prompts</strong>, we build on the differentially private PATE algorithm and introduce a privacy-preserving knowledge transfer from an ensemble of teacher prompts to a student prompt. The resulting method is called PromptDPSGDGen.
+For methods like <strong>soft prompts</strong> or <strong>prefix</strong>, we adjust the differential private stochastic gradient descent (DPSGD) algorithm.
+This method for text generation, called PromptDPSGDGen obtains the input gradients from the LLM and performs DPSGD to update the soft prompt parameters while keeping the underlying LLM frozen.</p>
 
 <h3 id="private-llm-adaptations-on-open-llms-outperform-their-closed-alternatives">Private LLM Adaptations on open LLMs outperform their closed alternatives</h3>
 
-<p>We carried out an in-depth comparison of the adaptations of open vs closed LLMs considering privacy protection, performance, and cost. The <em>privacy protection</em> is assessed in terms of the leakage of private data either to the LLM provider or the querying party (a user of the adapted LLM), as well as the leakage of the users’ queries to the LLM provider. The <em>performance</em> is measured in terms of accuracy for classification tasks and the scores like Rouge or BLEU for the text generation tasks. Finally, the <em>cost</em> is the amount of money in dollars needed to adapt a given LLM with privacy.</p>
+<p>We carried out an in-depth comparison of the adaptations of open vs closed LLMs considering 1) privacy protection, 2) performance, and 3) cost. The <em>privacy protection</em> is assessed in terms of the leakage of private data either to the LLM provider or the querying party (a user of the adapted LLM), as well as the leakage of the users’ queries to the LLM provider. The <em>performance</em> is measured in terms of accuracy for classification tasks and scores like Rouge or BLEU for text generation tasks at a given privacy budget ε. Finally, the <em>cost</em> is the amount of money in dollars needed to adapt a given LLM with privacy.</p>
 
-<p>Overall, we analyzed 4 recent methods to adapt closed LLMs including our PromptPATEGen. All of them were designed for closed LLMs to prevent the leakage of private data to the querying party. All of them fulfill this goal. However, they leak private data and queries to the LLM provider. The only method that does not leak private data to the LLM provider is <a href="https:
-//openreview.net/forum?id=Ifz3IgsEPX">DP-OPT</a>. But DP-OPT requires the data curator to use an open LLM on-premise. Most importantly, if we privately adapt open LLMs only, then we only have to prevent the leakage of private data to the querying party. Note that any of the adaptation method can be used for open LLMs.</p>
+<p>We analyzed four recent methods to adapt closed LLMs, including our PromptPATEGen. All of them were designed for closed LLMs to prevent the leakage of private data to the querying party. All of them fulfill this goal. However, they leak private data and queries to the LLM provider. The only method that does not leak private data to the LLM provider is <a href="https:
+//openreview.net/forum?id=Ifz3IgsEPX">DP-OPT</a>. But DP-OPT requires the data curator to use an additional open LLM on-premise. 
+For open LLMs, we compare private fine-tuning, soft prompts, including our PromptDPSGDGen, and private LoRA.
+When applied to an open local model, none of them leaks private data and queries to an external LLM provider.</p>
 
-<p>We find that the adaptations of open LLMs offer high privacy protection and high performance at low cost. On the other hand, the prompt-based adaptations for closed LLMs provide lower privacy protection and lower performance at a higher cost compared to their open counterparts. We further analyze the privacy-utility trade-off for classification and generation tasks across different privacy budgets. We show that even under tight privacy constraints (ε &lt; 1.0), the privacy-preserving adaptations for open LLMs perform significantly better than the ones for closed LLMs.</p>
+<p>Overall, we find that the <strong>adaptations of open LLMs offer higher privacy protection and higher performance at lower cost</strong>. On the other hand, the prompt-based adaptations for closed LLMs provide lower privacy protection and lower performance at a higher cost compared to their open counterparts. We further analyze the privacy-utility trade-off for classification and generation tasks across different privacy budgets. 
+Let’s look into some numbers: For Table 1 below, we adapted open and closed LLMs on dialog summarization (SAMSum dataset). 
+The metrics used to report performance are Rouge scores. Rouge-1 assesses how many unigrams in the generated text agree with the expected LLM output. Rouge-2 is similar but uses bi-grams. Rouge-L refers to the similarity of the longest common subsequence between prediction and target.
+In terms of cost, for <em>closed</em> LLMs, we aggregate the costs incurred by the API over adaptation and querying. 
+For <em>open</em> LLMs, we estimate the costs through costs that would be incurred by adapting and querying the LLM on cloud hardware. The cost is, hence, dependent on the time it takes to adapt and query on the cloud hardware.
+In both cases, open and closed model adaptations, for comparability, we assume 10k queries.</p>
 
-<p>Let us analyze in detail the private adaptations for text generation tasks, such as dialog summarization. We present the result in the Table below. We use 10k queries and set the default privacy budget to 8. The metrics used are Rouge, where Rouge-1 it to assess how many unigrams in the generated text agree with the expected LLM output. Rouge-2 is similar but uses bi-grams. Rouge-L refers to the similarity of the longest common subsequence between prediction and target. The first analyzed adaptation was for closed LLMs, which is DP-ICL for discrete prompts. The cost of using DP-ICL method on GPT-4 Turbo skyrockets to 3419 dollars, while obtaining rather low performance. However, adapting Open Llama 13B using our PromptPATEGen outperforms DP-ICL at a much lower cost of less than 20 dollars. We can further lower the cost and decrease the model size using our PromptDPSGDGen. This adaptation outperforms other methods at a very low cost of only roughly 2 dollars. Then, we can boost performance if we apply private LoRA instead of PromptDPSGD on the same LLM. Finally, we can leverage one of the top-notch open LLMs, namely Mixtral 8x7B to obtain the highest performance, however, at a substantial increase in the cost to around 68 dollars.</p>
+<p>In the following table, we present some insights on adaptation for closed LLMs (DP-ICL and PromptPATEGen) and open LLMs (PromptDPSGDGen and Private LoRA). For more results on all methods and various LLMs, check our paper.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Adaptation</th>
-      <th>LLM</th>
-      <th>Rouge-1</th>
-      <th>Rouge-2</th>
-      <th>Rouge-L</th>
-      <th>Cost ($)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>DP-ICL</td>
-      <td>GPT4-Turbo</td>
-      <td>41.8</td>
-      <td>17.3</td>
-      <td>33.4</td>
-      <td>3419</td>
-    </tr>
-    <tr>
-      <td>PromptPATEGen</td>
-      <td>Open Llama 13B</td>
-      <td>43.4</td>
-      <td>19.7</td>
-      <td>34.2</td>
-      <td>19.43</td>
-    </tr>
-    <tr>
-      <td>PromptDPSGDGen</td>
-      <td>BART Large</td>
-      <td>46.1</td>
-      <td>21.3</td>
-      <td>37.4</td>
-      <td>2.13</td>
-    </tr>
-    <tr>
-      <td>Private LoRA</td>
-      <td>BART Large</td>
-      <td>48.8</td>
-      <td>23.5</td>
-      <td>39.1</td>
-      <td>3.59</td>
-    </tr>
-    <tr>
-      <td>Private LoRA</td>
-      <td>Mixtral 8x7B</td>
-      <td>52.8</td>
-      <td>29.6</td>
-      <td>44.7</td>
-      <td>67.95</td>
-    </tr>
-  </tbody>
-</table>
+<div style="display: table; margin: 0 auto;">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Adaptation</th>
+        <th>LLM</th>
+        <th>Rouge-1</th>
+        <th>Rouge-2</th>
+        <th>Rouge-L</th>
+        <th>Cost ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>DP-ICL</td>
+        <td>GPT4-Turbo</td>
+        <td>41.8</td>
+        <td>17.3</td>
+        <td>33.4</td>
+        <td>3419</td>
+      </tr>
+      <tr>
+        <td>PromptPATEGen</td>
+        <td>Open Llama 13B</td>
+        <td>43.4</td>
+        <td>19.7</td>
+        <td>34.2</td>
+        <td>19.43</td>
+      </tr>
+      <tr>
+        <td>PromptDPSGDGen</td>
+        <td>BART Large</td>
+        <td>46.1</td>
+        <td>21.3</td>
+        <td>37.4</td>
+        <td>2.13</td>
+      </tr>
+      <tr>
+        <td>Private LoRA</td>
+        <td>BART Large</td>
+        <td>48.8</td>
+        <td>23.5</td>
+        <td>39.1</td>
+        <td>3.59</td>
+      </tr>
+      <tr>
+        <td>Private LoRA</td>
+        <td>Mixtral 8x7B</td>
+        <td>52.8</td>
+        <td>29.6</td>
+        <td>44.7</td>
+        <td>67.95</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top:10px;">Table 1: Comparison of private open vs closed LLM adaptations on SAMSum at a privacy budget of ε=8.</p>
+</div>
+
+<p>What is striking is that the adaptations for open LLMs achieve higher performance, expressed by higher Rouge scores, on significantly smaller models (BART with 355M parameters vs the significantly larger GPT4-Turbo and Open Llama with 13B parameters). This performance is achieved at a fraction of costs.
+If we are willing to spend slightly more money and deploy a larger open LLM, such as Mixtral, the performance gain from the adaptation of the open LLM is even more significant than for the closed adaptations.</p>
 
 <h3 id="conclusions">Conclusions</h3>
 
-<p>In the blog post, we presented our novel private prompting methods that support text generation tasks. We also evaluated private adaptations for open and closed LLMs. Our key takeaways are that the adaptations of open LLMs are:</p>
+<p>Let’s summarize the results. Open LLMs are:</p>
 
 <ol>
   <li>more private than closed LLM adaptations since they have significantly fewer possibilities for privacy leakage;</li>
@@ -121,7 +321,7 @@
   <li>more cost-effective than closed LLM adaptations that incur continuous query costs to an LLM provider.</li>
 </ol>
 
-<p>If you’d like to learn more, read our NeurIPS 2024 paper <a href="https://adam-dziedzic.com/static/assets/papers/openLLMs.pdf">“Open LLMs are Necessary for Current Private Adaptations and Outperform their Closed Alternatives”</a>. It goes into greater detail about our research on this topic.</p>]]></content><author><name></name></author><category term="private" /><category term="prompts" /><category term="LLMs" /><category term="DPSGD" /><category term="PATE" /><category term="OpenLLMs" /><category term="ClosedLLMs" /><category term="adaptations" /><summary type="html"><![CDATA[by Adam Dziedzic and Franziska Boenisch]]></summary></entry><entry><title type="html">How to prompt LLMs with private data?</title><link href="/2024/04/28/private-prompts.html" rel="alternate" type="text/html" title="How to prompt LLMs with private data?" /><published>2024-04-28T00:00:00-07:00</published><updated>2024-04-28T00:00:00-07:00</updated><id>/2024/04/28/private-prompts</id><content type="html" xml:base="/2024/04/28/private-prompts.html"><![CDATA[<p><em>by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch</em></p>
+<p>If you’d like to learn more, read our NeurIPS 2024 paper <a href="https://adam-dziedzic.com/static/assets/papers/openLLMs.pdf">“Open LLMs are Necessary for Current Private Adaptations and Outperform their Closed Alternatives”</a>. It goes into greater detail about our research on this topic.</p>]]></content><author><name></name></author><category term="private" /><category term="prompts" /><category term="LLMs" /><category term="DPSGD" /><category term="PATE" /><category term="OpenLLMs" /><category term="ClosedLLMs" /><category term="adaptations" /><summary type="html"><![CDATA[by Adam Dziedzic and Franziska Boenisch]]></summary></entry><entry><title type="html">How to prompt LLMs with private data?</title><link href="/2024/04/28/private-prompts.html" rel="alternate" type="text/html" title="How to prompt LLMs with private data?" /><published>2024-04-28T00:00:00+02:00</published><updated>2024-04-28T00:00:00+02:00</updated><id>/2024/04/28/private-prompts</id><content type="html" xml:base="/2024/04/28/private-prompts.html"><![CDATA[<p><em>by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch</em></p>
 
 <p>Over the past few years, large language models (LLMs) have gained widespread attention in both the tech industry and academia, as well as the public at large. LLMs are capable of executing a wide range of language-related tasks, such as translation, text generation, and sentiment analysis. One particularly amazing property of LLMs is that they need only minor modifications to handle new tasks, making them particularly well-suited for the rapid development of new applications.</p>
 
@@ -192,7 +392,7 @@ Output: positive
 
 <p>Our work identifies the privacy risk of prompting and offers methods to construct discrete and soft prompts that preserve privacy. We find that prompting is a practical and efficient way to adapt LLMs with differential privacy. There are still many improvements that can be made to our algorithm. For example, it is interesting to see how to extend our approach to protect users against malicious LLM providers. We hope that our work will inspire others to work on this problem.</p>
 
-<p>If you’d like to learn more, read our NeurIPS 2023 paper <a href="https://openreview.net/forum?id=u6Xv3FuF8N">“Flocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models”</a>. It goes into greater detail about our research on this topic.</p>]]></content><author><name></name></author><category term="private" /><category term="prompts" /><category term="LLMs" /><category term="DPSGD" /><category term="PATE" /><summary type="html"><![CDATA[by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch]]></summary></entry><entry><title type="html">On stealing and defending self-supervised models</title><link href="/2023/02/23/model-extraction.html" rel="alternate" type="text/html" title="On stealing and defending self-supervised models" /><published>2023-02-23T00:00:00-08:00</published><updated>2023-02-23T00:00:00-08:00</updated><id>/2023/02/23/model-extraction</id><content type="html" xml:base="/2023/02/23/model-extraction.html"><![CDATA[<p><em>by Adam Dziedzic and Nicolas Papernot</em></p>
+<p>If you’d like to learn more, read our NeurIPS 2023 paper <a href="https://openreview.net/forum?id=u6Xv3FuF8N">“Flocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models”</a>. It goes into greater detail about our research on this topic.</p>]]></content><author><name></name></author><category term="private" /><category term="prompts" /><category term="LLMs" /><category term="DPSGD" /><category term="PATE" /><summary type="html"><![CDATA[by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch]]></summary></entry><entry><title type="html">On stealing and defending self-supervised models</title><link href="/2023/02/23/model-extraction.html" rel="alternate" type="text/html" title="On stealing and defending self-supervised models" /><published>2023-02-23T00:00:00+01:00</published><updated>2023-02-23T00:00:00+01:00</updated><id>/2023/02/23/model-extraction</id><content type="html" xml:base="/2023/02/23/model-extraction.html"><![CDATA[<p><em>by Adam Dziedzic and Nicolas Papernot</em></p>
 
 <p><em>This blog post is part of a series on model stealing, check out our previous blog posts
 <a href="http://www.cleverhans.io/2021/04/28/is-this-model-mine.html">“Is this model mine?”</a>

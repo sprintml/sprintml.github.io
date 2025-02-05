@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    Image AutoRegressive Models Leak More Training Data Than Diffusion Models
+  </title>
+  <meta
+    name="description"
+    content="  Antoni Kowalczuk*1,  Jan Dubiński*2,3,  Franziska Boenisch1,  Adam Dziedzic1    1CISPA Helmholtz Center for Information Security  2Warsaw University of Tec..."
+  />
+  <link
+    rel="stylesheet"
+    href="/css/main.css"
+  />
+  <link
+    rel="stylesheet"
+    href="/css/group.css"
+  />
+  <link
+    rel="canonical"
+    href="/2025/02/04/iars-privacy.html"
+  />
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/images/favicon.ico"
+  />
+
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+
+  
+</head>
+
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                <img
+                        src="/assets/logos/adams-logo-twitter-long-small-no-background-small2.svg" height="50"
+                        class="imgnavbar"
+                        alt="" style="padding-right: 0pt; padding-left: -20pt; margin-top: -12px;">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/positions">Open Positions</a></li>
+<!--                <li><a href="/publications">Publications</a></li>-->
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/phdlife">PhDLife</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" style="position: relative;min-height: 100vh;">
+    <div id="content-wrap" style="padding-bottom: 5.5rem;">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Image AutoRegressive Models Leak More Training Data Than Diffusion Models</h1>
+    <p class="post-meta"><time datetime="2025-02-04T00:00:00+01:00" itemprop="datePublished">Feb 4, 2025</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <center>
+  <a href="http://antonikowalczuk.com">Antoni Kowalczuk*<sup>1</sup></a>,
+  <a href="https://scholar.google.com/citations?user=iG319iwAAAAJ&amp;hl=pl&amp;oi=ao">Jan Dubiński*<sup>2,3</sup></a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch<sup>1</sup></a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic<sup>1</sup></a>
+  <br /><br />
+  <sup>1</sup>CISPA Helmholtz Center for Information Security<br />
+  <sup>2</sup>Warsaw University of Technology<br />
+  <sup>3</sup>IDEAS NCBR<br />
+  <em>*Indicates Equal Contribution</em>
+    <br /><br />
+</center>
+
+<p>Image AutoRegressive models (IARs) have recently emerged as a powerful alternative to diffusion models (DMs), surpassing them in image generation quality, speed, and scalability. Yet, despite their advantages, the privacy risks of IARs remain completly unexplored. When trained on sensitive or copyrighted data, these models may unintentionally expose training samples, creating major security and ethical concerns.</p>
+
+<p>In this blog post, which is based on our latest research paper, we investigate privacy vulnerabilities in IARs, showing that they exhibit significantly higher privacy risks compared to DMs. We assess IARs’ privacy risks from the three perspectives of <strong>membership inference</strong>, <strong>dataset inference</strong>, and <strong>memorization</strong>, and find that IARs reveal substantially more information about their training data than DMs. Along the way, we also discuss ways to mitigate these risks. Let’s dive in!</p>
+
+<h2 id="image-autoregressive-models-a-faster-but-riskier-approach"><strong>Image AutoRegressive Models: A Faster but Riskier Approach</strong></h2>
+
+<p>IARs work like language models such as GPT, but instead of words, they generate images using tokens. Just as language tokens represent words or parts of words, image tokens represent some part of an image. This autoregressive approach allows them to scale effectively, resulting in <strong>higher quality and faster image generation</strong> compared to DMs. However, as we will show, these benefits come with severe <strong>privacy trade-offs</strong>.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/pareto1.png" width="50%" /></p>
+</div>
+
+<p>Our evaluations on privacy attacks show that IARs are much more likely to <strong>reveal whether a specific image was used in its training</strong> and even <strong>expose parts of the training data</strong>. In fact, the largest IAR models leak entire training images verbatim!</p>
+
+<h2 id="how-to-assess-privacy-risks-in-iars"><strong>How to Assess Privacy Risks in IARs</strong></h2>
+
+<p>To uncover the privacy risks of IARs, we use three attack techniques—refining existing methods and creating new ones from scratch—to measure how much these models expose their training data:</p>
+
+<ol>
+  <li><strong>Membership Inference Attacks (MIA):</strong> Determines whether a specific image was used in training.</li>
+  <li><strong>Dataset Inference (DI):</strong> Detects whether an entire dataset was part of the model’s training set.</li>
+  <li><strong>Data Extraction:</strong> Extracts full training images from IARs.</li>
+</ol>
+
+<p>These attacks help us quantify how much private data IARs unintentionally reveal compared to DMs.</p>
+
+<hr />
+
+<h3 id="membership-inference-iars-vs-dms"><strong>Membership Inference: IARs vs DMs</strong></h3>
+
+<p>The goal of MIAs is to infer whether a specific image was part of the training dataset of a given model. In our study, we first show how MIAs developed against LLMs can be applied to IARs. Then we design <strong>a novel MIA approach optimized for IARs</strong> by leveraging their classifier-free guidance mechanism.</p>
+
+<p>Our findings are striking: <strong>large IARs leak training membership information at much higher rates than diffusion models</strong>. The following figure shows the MIA success rates at a strict false positive rate (FPR) of 1%.</p>
+
+<!-- ![pareto_teaser-min](https://hackmd.io/_uploads/HkKUffltkg.png) -->
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/membershipinference.png" width="50%" /></p>
+</div>
+
+<p>As seen above, <strong>VAR-<em>d</em>30</strong>, one of the largest IARs, is highly vulnerable to MIAs, with an <strong>86.38% success rate</strong> in detecting training images. This is almost <strong>20× higher than the best MIA attack on the least private diffusion model</strong>, showing that IARs are inherently more prone to privacy attacks.</p>
+
+<!-- #### **Table 1: Membership Inference Performance (TPR@FPR=1%)**
+| Model      | Type | True Positive Rate @ 1% FPR |
+|-----------|------|--------------------------|
+| VAR-d16   | IAR  | 2.16%  |
+| VAR-d30   | IAR  | **86.38%**  |
+| RAR-XXL   | IAR  | 49.80%  |
+| MAR-H     | IAR  | 3.40%  |
+| MDTv2-XL  | DM   | **4.91%**  |
+
+As seen above, **VAR-d30**, one of the largest IARs, is highly vulnerable to MIAs, with an **86.38% success rate** in detecting training images. This is almost **20× higher than the best MIA attack on diffusion models**, showing that IARs are inherently more prone to privacy attacks.
+ -->
+
+<hr />
+
+<h3 id="dataset-inference-detecting-if-an-iar-was-trained-on-a-dataset"><strong>Dataset Inference: Detecting If an IAR Was Trained on a Dataset</strong></h3>
+
+<p>Dataset Inference (DI) extends MIAs by resolving whether an entire dataset was used in training. This is particularly important for detecting unauthorized usage of private or copyrighted datasets.</p>
+
+<p>We find that <strong>IARs require significantly fewer samples for successful DI compared to DMs</strong>, meaning they reveal more statistical information about their training datasets. The figure below summarizes the number of samples required to confirm dataset membership.</p>
+
+<!-- #### **Table 2: Dataset Inference Success Rates**
+| Model      | Type | Samples Required for DI |
+|-----------|------|----------------------|
+| VAR-d16   | IAR  | 200  |
+| VAR-d30   | IAR  | **6**  |
+| MAR-H     | IAR  | 300  |
+| RAR-XXL   | IAR  | 8  |
+| MDTv2-XL  | DM   | **200**  | -->
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/datasetinference.jpg" width="50%" /></p>
+</div>
+
+<p>For <strong>VAR-<em>d</em>30</strong>, <strong>only 6 samples</strong> are needed to determine whether a dataset was used for training. This is an <strong>order-of-magnitude lower</strong> than the number required for diffusion models, indicating a much higher privacy leakage.</p>
+
+<hr />
+
+<h3 id="extracting-training-images-from-iars"><strong>Extracting Training Images from IARs</strong></h3>
+
+<p>Beyond membership and dataset inference, we also explored whether <strong>IARs memorize and reproduce entire training images</strong>. We developed a <strong>data extraction attack</strong> that generates high-fidelity reconstructions of training images by prompting the model with a partial input.</p>
+
+<p>We successfully extracted up to <strong>698</strong> verbatim training images from <strong>VAR-<em>d</em>30</strong>, proving that large IARs memorize and regurgitate data at an alarming rate, making them vulnerable to <strong>copyright infringement, privacy violations, and dataset exposure</strong>.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/iars/memorization.png" width="50%" /></p>
+</div>
+
+<p>The highly successful data extraction from IARs raises major privacy concerns, especially for commercial AI models trained on proprietary datasets.</p>
+
+<h3 id="privacy-vs-performance-how-to-mitigate-privacy-risks-in-iars"><strong>Privacy vs. Performance: How to Mitigate Privacy Risks in IARs</strong></h3>
+
+<p>Our findings reveal a clear <strong>privacy-utility trade-off</strong>. While IARs outperform Diffusion Models (DMs) in <strong>speed and image quality</strong>, they suffer from significantly <strong>higher privacy leakage</strong>. This presents a crucial question: can we achieve strong performance <strong>without sacrificing privacy?</strong></p>
+
+<p>Given the severe privacy vulnerabilities of IARs, we explored potential <strong>mitigation strategies</strong>. Inspired by Differential Privacy (DP) techniques and prior research on language models, we experimented with the following defenses:</p>
+
+<h4 id="1-adding-noise-to-logits"><strong>1. Adding Noise to Logits</strong></h4>
+
+<p>For models like <strong>VAR</strong> and <strong>RAR</strong>, we attempted to <strong>add small amounts of noise</strong> to their logits to obscure membership signals. While this reduced MIA success rates slightly, it also <strong>deteriorated image quality</strong>, making it an impractical solution.</p>
+
+<h4 id="2-noising-continuous-tokens-in-mar"><strong>2. Noising Continuous Tokens in MAR</strong></h4>
+
+<p>For <strong>MAR</strong>, which operates with continuous tokens, we <strong>perturbed token values</strong> post-sampling. Interestingly, this defense was <strong>more effective than logit noise</strong> and caused only a <strong>minor drop in performance</strong>.</p>
+
+<h4 id="3-leveraging-diffusion-techniques"><strong>3. Leveraging Diffusion Techniques</strong></h4>
+
+<p>Our results indicate that <strong>MAR is inherently more private than VAR and RAR</strong>, likely because it incorporates <strong>diffusion-based techniques</strong>. This suggests that <strong>hybrid IAR-DM approaches</strong> could provide a good balance between <strong>performance and privacy</strong>.</p>
+
+<hr />
+
+<h3 id="final-thoughts-are-iars-too-risky-for-deployment"><strong>Final Thoughts: Are IARs Too Risky for Deployment?</strong></h3>
+
+<p>Our study provides the first <strong>comprehensive privacy analysis</strong> of <strong>Image AutoRegressive Models (IARs)</strong>. The results are both <strong>impressive and alarming</strong>:</p>
+
+<p>✅ <strong>IARs are faster and more accurate</strong> than DMs.<br />
+🚨 <strong>IARs leak substantially more private data</strong> than DMs.</p>
+
+<p>This raises a key concern: <strong>Can IARs be deployed safely?</strong></p>
+
+<ul>
+  <li>For <strong>non-sensitive applications</strong>, IARs offer a <strong>powerful and efficient alternative</strong> to DMs.</li>
+  <li>However, for <strong>privacy-sensitive domains</strong> (e.g., medical imaging, biometric data, proprietary datasets), IARs <strong>pose severe risks</strong> unless stronger safeguards are in place.</li>
+</ul>
+
+<h3 id="conclusions"><strong>Conclusions</strong></h3>
+
+<p>Let’s summarize our findings:</p>
+
+<p>1️⃣ <strong>IARs have much higher privacy leakage than DMs</strong>, making them a riskier choice for privacy-sensitive applications.<br />
+2️⃣ <strong>The larger the IAR, the more it memorizes and leaks training data.</strong><br />
+3️⃣ <strong>Diffusion-based elements (like those in MAR) reduce privacy leakage</strong>, suggesting a potential direction for <strong>more private generative models</strong>. A promising approach is to synergize diffusion-based and autoregressive techqniques to provide high performance and lower privacy risk.<br />
+4️⃣ <strong>Existing defenses are insufficient</strong>, and new privacy-preserving techniques <strong>must be developed before IARs can be safely deployed in sensitive areas</strong>.</p>
+
+<h3 id="where-do-we-go-from-here"><strong>Where Do We Go from Here?</strong></h3>
+
+<p>As <strong>IARs continue to evolve</strong>, privacy safeguards <strong>must</strong> become a core focus. Our research shows that <strong>adopting techniques from Diffusion Models</strong> and <strong>differential privacy methods</strong> could help <strong>mitigate privacy risks</strong>.</p>
+
+<p>If you’d like to learn more, check out our full <strong>arXiv paper</strong>, where we dive deeper into <strong>membership inference attacks, dataset inference, and memorization risks</strong> in IARs.</p>
+
+<p>👉 <strong>Read the full paper: <a href="#">Privacy Attacks on Image AutoRegressive Models</a></strong></p>
+
+<h2 id="bibtex">Bibtex</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{kowalczuk2025privacyattacksimageautoregressive,
+      title={Privacy Attacks on Image AutoRegressive Models},
+      author={Antoni Kowalczuk and Jan Dubiński and Franziska Boenisch and Adam Dziedzic},
+      year={2025},
+      eprint={2502.02514},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2502.02514},
+}
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+    </div>
+</div>
+
+<div id="footer">
+    <div class="panel-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <p>&copy 2024 SprintML Lab</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
