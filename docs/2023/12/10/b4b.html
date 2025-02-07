@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders
+  </title>
+  <meta
+    name="description"
+    content="  Jan Dubiński*2,3,  Stanisław Pawlak*2,  Franziska Boenisch*1,  Tomasz Trzciński2,3,4,  Adam Dziedzic1    1CISPA Helmholtz Center for Information Security  ..."
+  />
+  <link
+    rel="stylesheet"
+    href="/css/main.css"
+  />
+  <link
+    rel="stylesheet"
+    href="/css/group.css"
+  />
+  <link
+    rel="canonical"
+    href="/2023/12/10/b4b.html"
+  />
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/images/favicon.ico"
+  />
+
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+
+  
+</head>
+
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                <img
+                        src="/assets/logos/adams-logo-twitter-long-small-no-background-small2.svg" height="50"
+                        class="imgnavbar"
+                        alt="" style="padding-right: 0pt; padding-left: -20pt; margin-top: -12px;">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/positions">Open Positions</a></li>
+<!--                <li><a href="/publications">Publications</a></li>-->
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/phdlife">PhDLife</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" style="position: relative;min-height: 100vh;">
+    <div id="content-wrap" style="padding-bottom: 5.5rem;">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders</h1>
+    <p class="post-meta"><time datetime="2023-12-10T00:00:00+01:00" itemprop="datePublished">Dec 10, 2023</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <center>
+  <a href="https://scholar.google.com/citations?user=iG319iwAAAAJ&amp;hl=pl&amp;oi=ao">Jan Dubiński*<sup>2,3</sup></a>,
+  <a href="https://cvlab.ii.pw.edu.pl/author/stanis%C5%82aw-pawlak/">Stanisław Pawlak*<sup>2</sup></a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch*<sup>1</sup></a>,
+  <a href="https://cvlab.ii.pw.edu.pl/ttrzcins/">Tomasz Trzciński<sup>2,3,4</sup></a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic<sup>1</sup></a>
+  <br /><br />
+  <sup>1</sup>CISPA Helmholtz Center for Information Security<br />
+  <sup>2</sup>Warsaw University of Technology<br />
+  <sup>3</sup>IDEAS NCBR<br />
+  <sup>4</sup>Tooploox<br />
+  <em>*Indicates Equal Contribution</em>
+    <br /><br />
+</center>
+
+<h2 id="the-growing-risk-of-model-stealing"><strong>The Growing Risk of Model Stealing</strong></h2>
+
+<p>Machine learning models are increasingly exposed via public APIs, making them susceptible to model stealing. Attackers can systematically query these APIs, gathering enough data to reconstruct a nearly identical model at a fraction of the cost. This poses serious security risks, as stolen models can be used for unfair competition, academic plagiarism, or even malicious purposes.</p>
+
+<h2 id="understanding-encoders-why-are-they-easy-targets"><strong>Understanding Encoders: Why Are They Easy Targets?</strong></h2>
+
+<p>Encoders are a crucial component of modern AI, leveraging <strong>Self-Supervised Learning (SSL)</strong>. Unlike classification models that output simple labels, encoders generate <strong>high-dimensional feature representations</strong> that capture complex data patterns.</p>
+
+<p>This flexibility also makes them highly <strong>vulnerable to theft</strong>:</p>
+
+<ul>
+  <li>Their <strong>rich outputs leak more information</strong> compared to supervised models.</li>
+  <li>They require <strong>expensive training</strong> but can be cheaply stolen with API queries.</li>
+  <li>Attackers can efficiently <strong>replicate their functionality</strong> without needing the original training data.</li>
+</ul>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/sl_vs_ssl.png" width="50%" /></p>
+</div>
+
+<h2 id="how-model-stealing-works"><strong>How Model Stealing Works</strong></h2>
+
+<p>Model stealing attacks exploit the public accessibility of machine learning models by systematically querying them and using the returned outputs to train a substitute model. Attackers typically follow these steps:</p>
+
+<ol>
+  <li><strong>Querying the Model</strong>: The attacker sends numerous carefully crafted inputs to the target model via its API.</li>
+  <li><strong>Collecting Responses</strong>: Unlike classifiers that return class labels, encoders return rich feature representations, which reveal much more information about the model behaviour.</li>
+  <li><strong>Training a Stolen Model</strong>: The attacker trains a new model using the collected representations, similarly as in the knowledge distillation process.</li>
+</ol>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/stealing_ssl.png" width="50%" /></p>
+</div>
+
+<p>Because encoders output high-dimensional embeddings, they provide significantly more information per query than classifiers, making them even more vulnerable to extraction attacks.</p>
+
+<h2 id="key-observation-how-attackers-interact-with-encoders"><strong>Key Observation: How Attackers Interact with Encoders</strong></h2>
+
+<p>We start from a fundamental observation that attackers and legitimate users interact with the encoder in fundamentally different ways. <strong>Legitimate users</strong> typically use the encoder to solve a <strong>particular downstream task</strong>, meaning they operate within a limited and task-specific region of the embedding space. In contrast, <strong>attackers trying to steal the model must explore much larger portions of the encoder’s latent space</strong> to reconstruct its full functionality.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/legit_coverage.png" width="50%" /></p>
+</div>
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/attacker_coverage.png" width="50%" /></p>
+</div>
+
+<p>This discrepancy enables an <strong>active defense mechanism</strong>: by tracking how much of the embedding space a user explores, we can distinguish between normal usage and adversarial behavior. Attackers will necessarily have queries that span a broader distribution, covering significantly larger portions of the embedding space compared to legitimate users who remain within a specific subspace.</p>
+
+<h2 id="measuring-latent-space-coverage-to-prevent-theft">Measuring Latent Space Coverage to Prevent Theft</h2>
+
+<p>Building on our key observation, we introduce a method to quantify how much of the latent space a user explores. Instead of treating all queries equally, we <strong>divide the latent space into buckets</strong> and <strong>measure how unique buckets a user’s queries occupy</strong>.</p>
+
+<p>To achieve this, we leverage <strong>Locality-Sensitive Hashing (LSH)</strong>, a technique designed to map high-dimensional embeddings into discrete hash buckets. LSH enables us to track how broadly a user’s queries are distributed across the latent space.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/LSH.png" width="50%" /></p>
+</div>
+
+<p>We associate high latent space (buckets) coverage with an extremely high query cost and low coverage with a negligible cost.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/buckets.png" width="50%" /></p>
+</div>
+
+<h2 id="b4b-a-way-to-prevent-model-theft"><strong>B4B: A Way to Prevent Model Theft</strong></h2>
+
+<p>Now, we can describe our <strong>Bucks for Buckets</strong> end-to-end! B4B is designed to stop attackers <strong>as they attempt</strong> to steal encoders, ensuring that regular users receive high-quality outputs while making theft prohibitively expensive. It achieves this through three key mechanisms:</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/simple_overview.png" width="50%" /></p>
+</div>
+
+<ol>
+  <li><strong>Tracking Query Behavior</strong> - B4B estimates how much of the encoder’s embedding space a user is exploring using <strong>Locality-Sensitive Hashing (LSH)</strong>. Legitimate users, who focus on specific tasks, naturally stay within smaller regions, whereas adversaries trying to steal the model attempt to cover much larger areas.</li>
+</ol>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/coverage.png" width="50%" /></p>
+</div>
+
+<ol>
+  <li><strong>Dynamic Penalties</strong> - Based on the user’s query behavior, B4B gradually <strong>introduces noise</strong> to the encoder’s outputs, making it harder for attackers to reconstruct the stolen model. This penalty escalates as the adversary’s exploration of the embedding space increases.</li>
+</ol>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/cost_function.png" width="50%" /></p>
+</div>
+
+<ol>
+  <li><strong>Personalized Responses</strong> - Additionaly, to counter <strong>Sybil attacks</strong>, where an adversary creates multiple accounts to evade detection, B4B applies unique transformations to each user’s representations. This prevents attackers from merging extracted responses across accounts to reconstruct the encoder.</li>
+</ol>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/transformations.png" width="50%" /></p>
+</div>
+
+<h2 id="b4b-in-action-stopping-model-theft-without-compromising-usability"><strong>B4B in Action: Stopping Model Theft Without Compromising Usability</strong></h2>
+
+<p>We tested B4B on <strong>popular SSL models</strong>, including <strong>SimSiam</strong> and <strong>DINO</strong>, against cutting-edge stealing techniques. Our findings demonstrate that B4B:</p>
+
+<ul>
+  <li><strong>Reduces stolen model performance by up to 60%</strong>, while ensuring legitimate users experience less than a 1% drop in utility.</li>
+  <li><strong>Effectively neutralizes Sybil attacks</strong>, making it infeasible to aggregate stolen data from multiple accounts.</li>
+  <li><strong>Outperforms previous security methods</strong>, which either failed to prevent theft or significantly degraded output quality for all users.</li>
+</ul>
+
+<h2 id="enabling-more-secure-ai-apis"><strong>Enabling More Secure AI APIs</strong></h2>
+
+<p>As AI companies increasingly offer <strong>pre-trained SSL models</strong> through public APIs, solutions like <strong>B4B</strong> will be essential in protecting intellectual property. Our modular framework allows for adaptation to various security policies and evolving threats.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/b4b/overview.png" width="50%" /></p>
+</div>
+
+<hr />
+
+<p>For further details, check out
+<a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/ad1efab57a04d93f097e7fbb2d4fc054-Abstract-Conference.html" target="_blank">our full research paper presented at NeurIPS 2023.</a></p>
+
+<h2 id="bibtex">Bibtex</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{dubinski2023bucks,
+  title = {Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders},
+  author = {Dubiński, Jan and Pawlak, Stanisław and Boenisch, Franziska and Trzcinski, Tomasz and Dziedzic, Adam},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2023}
+}
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+    </div>
+</div>
+
+<div id="footer">
+    <div class="panel-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <p>&copy 2024 SprintML Lab</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
