@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-03-03T18:27:05+01:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-03-03T18:34:17+01:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
 </subtitle><entry><title type="html">Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models</title><link href="/2025/03/03/CLIPMem.html" rel="alternate" type="text/html" title="Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models" /><published>2025-03-03T00:00:00+01:00</published><updated>2025-03-03T00:00:00+01:00</updated><id>/2025/03/03/CLIPMem</id><content type="html" xml:base="/2025/03/03/CLIPMem.html"><![CDATA[<center>
   <a href="https://wenhaowang1995.github.io/">Wenhao Wang<sup>1</sup></a>,
   <a href="https://adam-dziedzic.com/">Adam Dziedzic<sup>1</sup></a>,
@@ -29,17 +29,20 @@
 <p>If the model aligns the removed pair much more strongly than the reference model, we consider it memorized. Our results show that <strong>mislabeled or atypical samples have the highest memorization</strong> (Figure 1).</p>
 
 <div style="text-align:center; margin-bottom:30px;">
-  <p><img src="/assets/blog/clipmem/fig1.png" width="50%" /></p>
+  <p><img src="/assets/blog/clipmem/fig1.png" width="80%" /></p>
 </div>
 
 <h2 id="is-the-memorization-behavior-of-clip-more-similar-to-supervised-or-self-supervised-learning">Is the memorization behavior of CLIP more similar to Supervised or Self-Supervised Learning?</h2>
 
 <p>In uni-modal models, both <strong>supervised learning (SL) and self-supervised learning (SSL)</strong> rely on memorization to improve generalization, but they have different memorization behaviors. It’s unclear how these memorization behaviors extend to CLIP, because <strong>CLIP entails elements from both</strong> – it gets supervisory signals through captions <strong>(like SL)</strong> but it also learns through the contrastive objective <strong>(like SSL)</strong>.</p>
 
-<p>Our analysis shows that CLIP’s memorization behavior falls between SL and SSL:
-✅ Like <strong>SL</strong>, CLIP memorizes mislabeled or imprecise samples.
-✅ Like <strong>SSL</strong>, CLIP memorizes atypical samples.
-✅ Neuron-level analysis shows that earlier layers behave like <strong>SL</strong>, grouping similar data points together, while later layers behave like <strong>SSL</strong>, memorizing individual data points (Figure 4).</p>
+<p>Our analysis shows that CLIP’s memorization behavior falls between SL and SSL:</p>
+
+<p>✅ Like <strong>SL</strong>, CLIP memorizes mislabeled or imprecise samples.</p>
+
+<p>✅ Like <strong>SSL</strong>, CLIP memorizes atypical samples.</p>
+
+<p>✅ Neuron-level analysis shows that earlier layers behave like <strong>SL</strong>, grouping similar data points together, while later layers behave like <strong>SSL</strong>, memorizing individual data points (Figure 4).</p>
 
 <div style="text-align:center; margin-bottom:30px;">
   <p><img src="/assets/blog/clipmem/fig2.png" width="50%" /></p>
@@ -51,9 +54,11 @@
 
 <p>CLIP has both the image encoder and the text encoder. But does one contribute more to memorization, or do they do so equally? To figure it out, we applied different augmentation strategies to see their effect on memorization.</p>
 
-<p>Table 1 summarizes the findings:
-✅ <strong>Text augmentations</strong> (multiple captions per image) were more effective at reducing memorization than <strong>image augmentations</strong> (multiple images per caption) while also improving performance.
-✅ <strong>Applying both text and image augmentations</strong> strikes the best balance – leading to the most reduction in memorization while also improving performance.</p>
+<p>Table 1 summarizes the findings:</p>
+
+<p>✅ <strong>Text augmentations</strong> (multiple captions per image) were more effective at reducing memorization than <strong>image augmentations</strong> (multiple images per caption) while also improving performance.</p>
+
+<p>✅ <strong>Applying both text and image augmentations</strong> strikes the best balance – leading to the most reduction in memorization while also improving performance.</p>
 
 <div style="text-align:center; margin-bottom:30px;">
   <p><img src="/assets/blog/clipmem/fig3.png" width="50%" /></p>
@@ -76,7 +81,7 @@
 <p>To avoid any inherent distribution shifts from augmentations, we propose to perform the “augmentations” <strong>directly in the embedding space</strong>. Adding small amounts of Gaussian noise to text embeddings during training reduced memorization while improving downstream generalization (Figure 5b).</p>
 
 <div style="text-align:center; margin-bottom:30px;">
-  <p><img src="/assets/blog/clipmem/fig4.png" width="50%" /></p>
+  <p><img src="/assets/blog/clipmem/fig4.png" width="80%" /></p>
 </div>
 
 <p>3️⃣ Removing Memorized Samples</p>
@@ -84,7 +89,7 @@
 <p>By <strong>identifying the most memorized samples</strong> via CLIPMem and <strong>removing them</strong>, we actually improved generalization (Figure 6).</p>
 
 <div style="text-align:center; margin-bottom:30px;">
-  <p><img src="/assets/blog/clipmem/fig5.png" width="50%" /></p>
+  <p><img src="/assets/blog/clipmem/fig5.png" width="80%" /></p>
 </div>
 
 <h2 id="why-is-this-important">Why is this important?</h2>
@@ -93,14 +98,17 @@
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Let’s summarize our findings:
-1️⃣ <strong>CLIPMem</strong> is our new metric that measures memorization in CLIP.
-2️⃣ The <strong>memorization behavior</strong> of CLIP falls between supervised learning and self-supervised learning.
-3️⃣ The <strong>text encoder is more responsible</strong> for memorization than the image encoder.
-4️⃣ <strong>Effective mitigation strategies</strong> include using multiple captions per image, noising text embeddings, and removing memorized samples.
-4️⃣ Unlike traditional learning paradigms, <strong>reducing memorization in CLIP can actually performance</strong>.</p>
+<p>Let’s summarize our findings:</p>
 
-<p><strong>👉 Read the full paper:</strong> <a href="https://arxiv.org/abs/2502.07830">Captured by Captions: On Memorization and its Mitigation in CLIP Models</a></p>
+<p>1️⃣ <strong>CLIPMem</strong> is our new metric that measures memorization in CLIP.</p>
+
+<p>2️⃣ The <strong>memorization behavior</strong> of CLIP falls between supervised learning and self-supervised learning.</p>
+
+<p>3️⃣ The <strong>text encoder is more responsible</strong> for memorization than the image encoder.</p>
+
+<p>4️⃣ <strong>Effective mitigation strategies</strong> include using multiple captions per image, noising text embeddings, and removing memorized samples.</p>
+
+<p>5️⃣ Unlike traditional learning paradigms, <strong>reducing memorization in CLIP can actually performance</strong>.</p>
 
 <hr />
 
