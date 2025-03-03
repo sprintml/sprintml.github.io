@@ -1,5 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-02-18T16:46:42+01:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
-</subtitle><entry><title type="html">Image AutoRegressive Models Leak More Training Data Than Diffusion Models</title><link href="/2025/02/04/iars-privacy.html" rel="alternate" type="text/html" title="Image AutoRegressive Models Leak More Training Data Than Diffusion Models" /><published>2025-02-04T00:00:00+01:00</published><updated>2025-02-04T00:00:00+01:00</updated><id>/2025/02/04/iars-privacy</id><content type="html" xml:base="/2025/02/04/iars-privacy.html"><![CDATA[<center>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-03-03T18:27:05+01:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
+</subtitle><entry><title type="html">Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models</title><link href="/2025/03/03/CLIPMem.html" rel="alternate" type="text/html" title="Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models" /><published>2025-03-03T00:00:00+01:00</published><updated>2025-03-03T00:00:00+01:00</updated><id>/2025/03/03/CLIPMem</id><content type="html" xml:base="/2025/03/03/CLIPMem.html"><![CDATA[<center>
+  <a href="https://wenhaowang1995.github.io/">Wenhao Wang<sup>1</sup></a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic<sup>1</sup></a>,
+  <a href="https://oue.gatech.edu/node/3087">Grace Kim<sup>2</sup></a>,
+  <a href="https://cispa.de/en/people/backes">Michael Backes<sup>1</sup></a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch<sup>1</sup></a>.
+  <br /><br />
+  <sup>1</sup>CISPA Helmholtz Center for Information Security<br />
+  <sup>2</sup>Georgia Institute of Technology<br />
+    <br /><br />
+</center>
+
+<p><strong>Multi-modal models</strong> like <strong>CLIP</strong> are widely used for their state-of-the-art performance on a variety of downstream tasks. But while memorization is well-studied in uni-modal models, its role in multi-modal models is underexplored.</p>
+
+<p>We focus on CLIP, as a representative multi-modal model, and analyze how much it memorizes its training data. We design a new CLIPMem metric to analyze the memorization behavior of CLIP. We observe that the memorization patterns in CLIP fall in between the ones found in <strong>supervised learning</strong> and <strong>self-supervised learning</strong> models. We also find that the <strong>text encoder</strong> in CLIP contributes more memorization than <strong>image encoder</strong>. Using these insights, we propose <strong>mitigation strategies</strong> that reduce memorization while <strong>simultaneously improving utility</strong> – which has not been observed in traditional learning paradigms.</p>
+
+<h2 id="how-to-measure-memorization-in-clip">How to measure memorization in CLIP?</h2>
+
+<p>CLIP trains an image encoder and a text encoder to map images and captions into a shared latent space. Using <strong>contrastive learning</strong>, it pulls together matching image-text pairs while pushing apart non-matching pairs. Specifically, it maximizes the similarity score between correct pairs while minimizing it for incorrect pairs.</p>
+
+<p>To measure memorization, we introduce <strong>CLIPMem</strong>, a new metric that leverages CLIP’s contrastive learning objective. CLIPMem quantifies memorization by measuring similarity scores across two models:</p>
+
+<ul>
+  <li>A model trained on the <strong>full dataset</strong>.</li>
+  <li>A <strong>reference model</strong> trained on the same dataset but with <strong>one image-text pair removed</strong>.</li>
+</ul>
+
+<p>If the model aligns the removed pair much more strongly than the reference model, we consider it memorized. Our results show that <strong>mislabeled or atypical samples have the highest memorization</strong> (Figure 1).</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/clipmem/fig1.png" width="50%" /></p>
+</div>
+
+<h2 id="is-the-memorization-behavior-of-clip-more-similar-to-supervised-or-self-supervised-learning">Is the memorization behavior of CLIP more similar to Supervised or Self-Supervised Learning?</h2>
+
+<p>In uni-modal models, both <strong>supervised learning (SL) and self-supervised learning (SSL)</strong> rely on memorization to improve generalization, but they have different memorization behaviors. It’s unclear how these memorization behaviors extend to CLIP, because <strong>CLIP entails elements from both</strong> – it gets supervisory signals through captions <strong>(like SL)</strong> but it also learns through the contrastive objective <strong>(like SSL)</strong>.</p>
+
+<p>Our analysis shows that CLIP’s memorization behavior falls between SL and SSL:
+✅ Like <strong>SL</strong>, CLIP memorizes mislabeled or imprecise samples.
+✅ Like <strong>SSL</strong>, CLIP memorizes atypical samples.
+✅ Neuron-level analysis shows that earlier layers behave like <strong>SL</strong>, grouping similar data points together, while later layers behave like <strong>SSL</strong>, memorizing individual data points (Figure 4).</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/clipmem/fig2.png" width="50%" /></p>
+</div>
+
+<p>Overall, CLIP doesn’t fully align with the memorization behavior of either SL or SSL, but instead falls somewhere in between.</p>
+
+<h2 id="is-the-text-encoder-or-image-encoder-more-responsible-for-memorization">Is the text encoder or image encoder more responsible for memorization?</h2>
+
+<p>CLIP has both the image encoder and the text encoder. But does one contribute more to memorization, or do they do so equally? To figure it out, we applied different augmentation strategies to see their effect on memorization.</p>
+
+<p>Table 1 summarizes the findings:
+✅ <strong>Text augmentations</strong> (multiple captions per image) were more effective at reducing memorization than <strong>image augmentations</strong> (multiple images per caption) while also improving performance.
+✅ <strong>Applying both text and image augmentations</strong> strikes the best balance – leading to the most reduction in memorization while also improving performance.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/clipmem/fig3.png" width="50%" /></p>
+</div>
+
+<p>Overall, these results show that <strong>the text encoder contributes more to memorization than the image encoder</strong>. This means that if we want to mitigate memorization in CLIP, we should <strong>focus more on the text domain</strong> – like increasing caption diversity or adding noise to text embeddings (detailed in the next section).</p>
+
+<h2 id="so-how-do-we-mitigate-memorization-in-clip">So how do we mitigate memorization in CLIP?</h2>
+
+<p>Based on our insights, we propose effective mitigation strategies that reduce memorization. A surprising finding from our study is that <strong>reducing memorization can actually improve downstream generalization</strong>! This is not something that’s typically observed in traditional learning paradigms, where reducing memorization often results in a decrease in utility.</p>
+
+<h3 id="mitigation-strategies">Mitigation strategies:</h3>
+
+<p>1️⃣ Using multiple captions per image</p>
+
+<p>Our result shows that <strong>increasing the number of captions used during training</strong> lowers memorization and improves downstream generalization (Figure 5a).</p>
+
+<p>2️⃣ Noising text embedings</p>
+
+<p>To avoid any inherent distribution shifts from augmentations, we propose to perform the “augmentations” <strong>directly in the embedding space</strong>. Adding small amounts of Gaussian noise to text embeddings during training reduced memorization while improving downstream generalization (Figure 5b).</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/clipmem/fig4.png" width="50%" /></p>
+</div>
+
+<p>3️⃣ Removing Memorized Samples</p>
+
+<p>By <strong>identifying the most memorized samples</strong> via CLIPMem and <strong>removing them</strong>, we actually improved generalization (Figure 6).</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <p><img src="/assets/blog/clipmem/fig5.png" width="50%" /></p>
+</div>
+
+<h2 id="why-is-this-important">Why is this important?</h2>
+
+<p>CLIP models are usually trained on <strong>large, uncurated datasets sourced from the internet</strong>, with no guarantees regarding the correctness of the image-text pairs. By using <strong>CLIPMem</strong>, we can identify and remove these problematic training examples, making CLIP both <strong>more private and more generalizable</strong>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Let’s summarize our findings:
+1️⃣ <strong>CLIPMem</strong> is our new metric that measures memorization in CLIP.
+2️⃣ The <strong>memorization behavior</strong> of CLIP falls between supervised learning and self-supervised learning.
+3️⃣ The <strong>text encoder is more responsible</strong> for memorization than the image encoder.
+4️⃣ <strong>Effective mitigation strategies</strong> include using multiple captions per image, noising text embeddings, and removing memorized samples.
+4️⃣ Unlike traditional learning paradigms, <strong>reducing memorization in CLIP can actually performance</strong>.</p>
+
+<p><strong>👉 Read the full paper:</strong> <a href="https://arxiv.org/abs/2502.07830">Captured by Captions: On Memorization and its Mitigation in CLIP Models</a></p>
+
+<hr />
+
+<p><strong>👉 Read our:</strong> <a href="https://openreview.net/pdf?id=5V0f8igznO" target="_blank"> full research paper accepted at ICLR 2025.</a></p>
+
+<h2 id="bibtex">Bibtex</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{wang2025captured,
+title={Captured by Captions: On Memorization and its Mitigation in {CLIP} Models},
+author={Wenhao Wang and Adam Dziedzic and Grace C. Kim and Michael Backes and Franziska Boenisch},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=5V0f8igznO}
+}
+</code></pre></div></div>]]></content><author><name></name></author><category term="memorization" /><category term="multi-modal" /><category term="CLIP" /><category term="SSL" /><category term="SL" /><summary type="html"><![CDATA[Wenhao Wang1, Adam Dziedzic1, Grace Kim2, Michael Backes1, Franziska Boenisch1. 1CISPA Helmholtz Center for Information Security 2Georgia Institute of Technology]]></summary></entry><entry><title type="html">Image AutoRegressive Models Leak More Training Data Than Diffusion Models</title><link href="/2025/02/04/iars-privacy.html" rel="alternate" type="text/html" title="Image AutoRegressive Models Leak More Training Data Than Diffusion Models" /><published>2025-02-04T00:00:00+01:00</published><updated>2025-02-04T00:00:00+01:00</updated><id>/2025/02/04/iars-privacy</id><content type="html" xml:base="/2025/02/04/iars-privacy.html"><![CDATA[<center>
   <a href="http://antonikowalczuk.com">Antoni Kowalczuk*<sup>1</sup></a>,
   <a href="https://scholar.google.com/citations?user=iG319iwAAAAJ&amp;hl=pl&amp;oi=ao">Jan Dubiński*<sup>2,3</sup></a>,
   <a href="https://franziska-boenisch.de/">Franziska Boenisch<sup>1</sup></a>,
