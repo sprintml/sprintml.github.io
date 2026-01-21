@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    BitMark: Watermarking Bitwise Autoregressive Image Generative Models
+  </title>
+  <meta
+    name="description"
+    content="  Louis Kerner,  Michel Meintz,  Bihe Zhao,  Franziska Boenisch,  Adam Dziedzic.    CISPA Helmholtz Center for Information Security   "
+  />
+  <link
+    rel="stylesheet"
+    href="/css/main.css"
+  />
+  <link
+    rel="stylesheet"
+    href="/css/group.css"
+  />
+  <link
+    rel="canonical"
+    href="/2025/11/30/BitMark.html"
+  />
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/images/favicon.ico"
+  />
+
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+
+  
+</head>
+
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                <img
+                        src="/assets/logos/adams-logo-twitter-long-small-no-background-small2.svg" height="50"
+                        class="imgnavbar"
+                        alt="" style="padding-right: 0pt; padding-left: -20pt; margin-top: -12px;">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/positions">Open Positions</a></li>
+<!--                <li><a href="/publications">Publications</a></li>-->
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/phdlife">PhDLife</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" style="position: relative;min-height: 100vh;">
+    <div id="content-wrap" style="padding-bottom: 5.5rem;">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">BitMark: Watermarking Bitwise Autoregressive Image Generative Models</h1>
+    <p class="post-meta"><time datetime="2025-11-30T00:00:00+01:00" itemprop="datePublished">Nov 30, 2025</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <center>
+  <a href="https://sprintml.com/">Louis Kerner</a>,
+  <a href="https://sprintml.com/">Michel Meintz</a>,
+  <a href="https://bihezhao.github.io/">Bihe Zhao</a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch</a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic</a>.
+  <br /><br />
+  CISPA Helmholtz Center for Information Security<br />
+   <br /><br />
+</center>
+
+<p>Autoregressive image models like <strong>Infinity</strong> and <strong>Instella IAR</strong> are now competitive with diffusion models for high‑quality text-to-image generation. But as generated images get reused as training data, we risk <strong>model collapse</strong>: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.</p>
+
+<p><strong>BitMark</strong> is the first watermarking framework tailored to <strong>bitwise autoregressive image models</strong>. It embeds a watermark at <strong>generation time</strong> that is:</p>
+
+<ul>
+  <li><strong>Hard to remove</strong> without degrading image quality.</li>
+  <li><strong>Efficient</strong> to generate and detect.</li>
+  <li><strong>Radioactive</strong> – its signal persists even when other models are trained on watermarked images.</li>
+</ul>
+
+<p>This radioactivity lets model owners <strong>track provenance across training cycles</strong> and avoid training future models on their own outputs.</p>
+
+<hr />
+
+<h2 id="background-bitwise-autoregressive-image-models">Background: Bitwise Autoregressive Image Models</h2>
+
+<p><strong>VAR</strong> and its extension <strong>Infinity</strong> generate images autoregressively, scale-by-scale:</p>
+
+<ul>
+  <li>Images are quantized into discrete codes and predicted as sequences.</li>
+  <li>Infinity uses <strong>bitwise prediction</strong> with a large implicit codebook and <strong>binary spherical quantization</strong>.</li>
+  <li>Random bit flipping during generation allows <strong>self-correction</strong> across scales.</li>
+</ul>
+
+<p><strong>Instella IAR</strong> also adopts a <strong>bitwise</strong> next‑patch prediction scheme, using very few tokens (e.g., 128) for a 1024×1024 image.</p>
+
+<p>These models work at the <strong>bit level</strong> internally, which is where BitMark is applied.</p>
+
+<hr />
+
+<h2 id="why-bit-level-watermarking">Why Bit-Level Watermarking?</h2>
+
+<p>Unlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity’s:</p>
+
+<ul>
+  <li><strong>Token overlap</strong> after decode–re-encode is very low (~2.4%).</li>
+  <li><strong>Bit overlap</strong> is much higher (~77%).</li>
+</ul>
+
+<p>So bits are <strong>far more stable</strong> than tokens, given the large codebook. This motivates <strong>embedding and detecting watermarks in bit space</strong>, not at the token or pixel level.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/blog/bitmark/tokens-vs-bit-overlap.png" alt="Figure showing bit-overlap is higher than token-overlap" width="33%"&gt;
+</code></pre></div>  </div>
+</div>
+
+<hr />
+
+<h2 id="the-bitmark-watermark">The BitMark Watermark</h2>
+
+<h3 id="embedding-biasing-green-bit-sequences">Embedding: Biasing Green Bit Sequences</h3>
+
+<p>BitMark follows the “green/red list” idea from LLM watermarking:</p>
+
+<ul>
+  <li>Consider all bit sequences of length <code class="language-plaintext highlighter-rouge">n</code>: <code class="language-plaintext highlighter-rouge">S = {0,1}^n</code>.</li>
+  <li>Assign them to a <strong>green</strong> list <code class="language-plaintext highlighter-rouge">G</code> and a <strong>red</strong> list <code class="language-plaintext highlighter-rouge">R</code></li>
+  <li>During autoregressive generation, whenever a bit would complete a sequence in <code class="language-plaintext highlighter-rouge">G</code>, BitMark adds a <strong>small bias</strong> <code class="language-plaintext highlighter-rouge">δ</code> to the corresponding logit before sampling.
+    <ul>
+      <li>Because only these <strong>high-entropy bits</strong> are <strong>slightly nudged</strong> and therefore influenced, image quality and semantics are essentially preserved.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Result: Watermarked images have a <strong>higher fraction of green sequences</strong> than natural or non-watermarked images.</p>
+
+<div style="text-align:center; margin-bottom:30px;">
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/blog/bitmark/bitmark-example.png" alt="How BitMark affects the image quality" width="75%"&gt;
+</code></pre></div>  </div>
+</div>
+
+<p>As can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.</p>
+<h3 id="detection-statistical-test-on-bit-sequences">Detection: Statistical Test on Bit Sequences</h3>
+
+<p>To detect the watermark:</p>
+
+<ol>
+  <li>Encode the image with the model’s <strong>private encoder/tokenizer</strong> to get bits.</li>
+  <li>Slide a window of length <code class="language-plaintext highlighter-rouge">n</code> over the bits and count how many sequences fall into <code class="language-plaintext highlighter-rouge">G</code> vs <code class="language-plaintext highlighter-rouge">R</code>.</li>
+  <li>Under the null hypothesis “this image is not watermarked,” the number of green sequences behaves like a binomial variable with known mean and variance.</li>
+  <li>Compute a <strong>z-score</strong> and reject the null if <code class="language-plaintext highlighter-rouge">z</code> exceeds a chosen threshold (e.g., corresponding to 1% FPR).</li>
+</ol>
+
+<p>Clean images produce z-scores near <strong>0</strong>; BitMark images produce <strong>large positive</strong> z‑scores.
+Since our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data.</p>
+
+<hr />
+
+<h2 id="quality-and-robustness">Quality and Robustness</h2>
+
+<p>Using <strong>Infinity-2B</strong> as the main model (MS-COCO 2014 validation set):</p>
+
+<ul>
+  <li>For practical bias strengths (e.g., <code class="language-plaintext highlighter-rouge">δ ≤ 2</code>):
+    <ul>
+      <li><strong>FID/KID</strong> are similar to non-watermarked images.</li>
+      <li><strong>CLIP score</strong> (prompt–image alignment) remains nearly unchanged.</li>
+    </ul>
+  </li>
+  <li>Generation speed overhead is modest (~10% at most).</li>
+  <li>Detection is fast (less than a second per image).</li>
+</ul>
+
+<p>BitMark is robust against:</p>
+
+<ul>
+  <li>Common transforms (noise, blur, color jitter, cropping, JPEG, flips).</li>
+  <li>Reconstruction-like attacks (encode–decode via Stable Diffusion 2.1’s VAE, regeneration attacks such as CtrlRegen+).</li>
+  <li>Strong removal attempts (e.g., “watermarks in the sand”) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.</li>
+</ul>
+
+<p>Even a custom <strong>Bit-Flipper attack</strong>—where the attacker knows the encoder, the algorithm, and the exact green/red lists—cannot erase the watermark without <strong>severe visual degradation</strong>.</p>
+
+<hr />
+<h2 id="radioactivity-tracking-your-data-across-models">Radioactivity: Tracking Your Data Across Models</h2>
+
+<h3 id="what-is-radioactivity">What is Radioactivity?</h3>
+
+<p>Radioactivity is defined here as:</p>
+
+<blockquote>
+  <p>If a model <strong>M₂</strong> is trained or fine-tuned on outputs from a watermarked model <strong>M₁</strong>, then <strong>M₂’s</strong> outputs still carry a detectable version of <strong>M₁’s watermark</strong>.</p>
+</blockquote>
+
+<p>This is crucial for <strong>data provenance</strong>:</p>
+
+<ul>
+  <li>Model owners can tell whether <strong>downstream models</strong> have trained on their generated images.</li>
+  <li>They can <strong>filter out</strong> their own generated content when training future model versions to avoid model collapse.</li>
+</ul>
+
+<h3 id="experiments-same-and-cross-modality">Experiments: Same and Cross Modality</h3>
+
+<p>The authors evaluate radioactivity as follows:</p>
+
+<ol>
+  <li>Use <strong>Infinity-2B</strong> with BitMark to generate watermarked images.</li>
+  <li>Train a second model <strong>M₂</strong> on these images:
+    <ul>
+      <li>Case 1: M₂ is another Infinity-2B (same architecture).</li>
+      <li>Case 2: M₂ is <strong>Stable Diffusion 2.1</strong> (latent diffusion model; different architecture and latent space).</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Then they run BitMark’s detector on M₂’s outputs.</p>
+
+<p>Results (TPR at 1% FPR):</p>
+
+<ul>
+  <li><strong>Infinity-2B → Infinity-2B</strong>:
+    <ul>
+      <li>Watermarked M₁ outputs: 100% TPR.</li>
+      <li>M₂ outputs: <strong>100% TPR</strong>.</li>
+    </ul>
+  </li>
+  <li><strong>Infinity-2B → Stable Diffusion 2.1</strong>:
+    <ul>
+      <li>M₂ outputs: <strong>~98.9% TPR</strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Training data source</th>
+      <th>M₂ architecture</th>
+      <th>TPR @ 1% FPR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BitMark Infinity-2B</td>
+      <td>Infinity-2B</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>BitMark Infinity-2B</td>
+      <td>Stable Diffusion 2.1</td>
+      <td>98.9%</td>
+    </tr>
+    <tr>
+      <td>BitMark Infinity-2B</td>
+      <td>VAR-d30</td>
+      <td>25.6</td>
+    </tr>
+    <tr>
+      <td>BitMark Infinity-2B</td>
+      <td>RAR-XXL</td>
+      <td>4.1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Despite encoding into a latent space and going through a noising–denoising training process, BitMark’s bit patterns are <strong>preserved</strong>.</p>
+
+<p>For VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?</p>
+
+<h3 id="how-much-watermarked-data-is-needed">How Much Watermarked Data is Needed?</h3>
+
+<p>We also vary the fraction of watermarked data used to train M₂:</p>
+
+<ul>
+  <li>Even when only <strong>10%</strong> of M₂’s training data is watermarked:
+    <ul>
+      <li>Detection at 1% FPR is clearly above chance (TPR ~22.7%).</li>
+      <li>A Mann–Whitney U test shows the z-score distribution is <strong>highly significantly shifted</strong>.</li>
+    </ul>
+  </li>
+  <li>At just <strong>5%</strong> watermarked data, the statistical test is already significant.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>% watermarked in M₂ training</th>
+      <th>TPR @ 1% FPR</th>
+      <th>Significant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10%</td>
+      <td>22.7%</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>5%</td>
+      <td>&gt; 0.5</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In other words:</p>
+
+<ul>
+  <li>You don’t need your data to dominate the training set.</li>
+  <li>Even a <strong>small fraction</strong> of watermarked examples leaves a detectable distributional footprint in M₂’s outputs.</li>
+</ul>
+
+<hr />
+
+<h2 id="why-this-matters-for-preventing-model-collapse">Why This Matters for Preventing Model Collapse</h2>
+
+<p>Modern generative models train on:</p>
+
+<ul>
+  <li><strong>Massive, mixed datasets</strong> scraped from the internet.</li>
+  <li>Growing volumes of <strong>model-generated</strong> content, often unlabeled.</li>
+</ul>
+
+<p>Without tools like BitMark, it is hard to:</p>
+
+<ul>
+  <li>Know when your own outputs reappear in somebody else’s training set.</li>
+  <li>Avoid <strong>feeding your own generated data back</strong> into later training runs.</li>
+</ul>
+
+<p>BitMark changes that:</p>
+
+<ul>
+  <li>It provides an <strong>efficient, in-generation watermark</strong> for bitwise autoregressive models.</li>
+  <li>Its <strong>radioactivity</strong> ensures the watermark signal persists through training pipelines.</li>
+  <li>Model owners can <strong>detect and exclude</strong> images derived from their own outputs, mitigating model collapse and enabling principled data governance.</li>
+</ul>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><strong>BitMark</strong> is the first watermarking framework tailored to <strong>bitwise autoregressive image models</strong> like Infinity and Instella IAR.</li>
+  <li>It embeds a watermark by <strong>softly biasing bit sequences</strong> toward a green list and detects it via a <strong>bit-level statistical test</strong>.</li>
+  <li>BitMark maintains <strong>high image quality</strong> and <strong>low overhead</strong>, while being robust to a wide range of attacks.</li>
+  <li>BitMark is <strong>highly radioactive</strong>:
+    <ul>
+      <li>Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.</li>
+      <li>This holds even when only a <strong>small fraction</strong> of the training data is watermarked.</li>
+    </ul>
+  </li>
+  <li>This radioactivity enables <strong>long-term provenance tracking</strong> and gives model owners a practical tool to <strong>avoid training on their own outputs</strong>, helping prevent model collapse.</li>
+</ol>
+
+<hr />
+
+<p><strong>👉 Read our</strong> <a href="https://openreview.net/pdf?id=VSir0FzFnP" target="_blank">research paper accepted at NeurIPS 2025.</a></p>
+
+<h2 id="bibtex">Bibtex</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{
+  kerner2025bitmark,
+  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},
+  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025},
+  url={https://openreview.net/forum?id=VSir0FzFnP}
+}
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+    </div>
+</div>
+
+<div id="footer">
+    <div class="panel-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <p>&copy 2024 SprintML Lab</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
