@@ -1,0 +1,338 @@
+[
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "find /Users/xunwang/myfile/Projects/group_website/sprintml-website -type f \\( -name \"*.json\" -o -name \"*.md\" -o -name \"*.yaml\" -o -name \"*.yml\" \\) | head -20"
+    },
+    "tool_use_id": "toolu_01MucG2Y3ACEfBsUJKx5KCpL"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml"
+    },
+    "tool_use_id": "toolu_01Qt4jbspiuycj9X3Exh75ct"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_includes/news.html"
+    },
+    "tool_use_id": "toolu_01MYMGorRVk76XuvSmp7hiUg"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "ls -la /Users/xunwang/myfile/Projects/group_website/sprintml-website/ | grep -E \"^d\""
+    },
+    "tool_use_id": "toolu_01RbEBrbceSCkm9BRLxg9LCo"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "find /Users/xunwang/myfile/Projects/group_website/sprintml-website -maxdepth 2 -type f -name \"*.yml\" -o -name \"*.yaml\""
+    },
+    "tool_use_id": "toolu_01SXHKqfiS7uxxDsRKwWo91Q"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "limit": 20
+    },
+    "tool_use_id": "toolu_01FD4qvetxYNjVxFKYenEcA3"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "old_string": "- date: November 09 2025",
+      "new_string": "- date: April 20 2026\n  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"\n\n- date: November 09 2025",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01HSx7USd9X5hWgguoX62HW8"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/chris.md"
+    },
+    "tool_use_id": "toolu_017k9ayeHEigpdoTB4Nq4zR4"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/chris.md",
+      "old_string": "email: N/A\ntwitter:\nlinkedin:",
+      "new_string": "email: christopher.rossbach@cispa.de\ntwitter:\nlinkedin: https://www.linkedin.com/in/christopher-rossbach",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01Kqw5YfvM6MScKth38E2Pj5"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown"
+    },
+    "tool_use_id": "toolu_01K4qG4YybHCc77m42L3Q6sZ"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/louis.md"
+    },
+    "tool_use_id": "toolu_01JXiufix3k3kCVfHQuQx5Fe"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/michel.md"
+    },
+    "tool_use_id": "toolu_01BDEF65fJ7qBogv8vv2vy4A"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "As can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences",
+      "new_string": "As can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n\n### Detection: Statistical Test on Bit Sequences",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01M7tHPW2mNyFWYPMHByiCWg"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "tokens-vs-bit-overlap.png",
+      "new_string": "token-vs-bit-overlap.png",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01VkUaE4zz84n3w258QfNT42"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/pdf?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "new_string": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01AgcVcmQs928o3oKeQnP2ug"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "limit": 5
+    },
+    "tool_use_id": "toolu_01B7KXnoLSrzmy1epeMfDUTG"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "old_string": "and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"",
+      "new_string": "and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a> (ORAL)!\"",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_0169V5biY1C1WCDg5tgAU67i"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "offset": 57,
+      "limit": 10
+    },
+    "tool_use_id": "toolu_01T9NkFSZKzFty7utVhQpwCk"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>",
+      "new_string": "<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\"/>",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_016s4nRMSfT4r9vi5rNAzaGq"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "offset": 76,
+      "limit": 6
+    },
+    "tool_use_id": "toolu_01NXALrY5srB2K9BfHPg6VeR"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>",
+      "new_string": "<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\"/>",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_013QGbuyxSTsH7pmYWibSaGn"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "offset": 208,
+      "limit": 10
+    },
+    "tool_use_id": "toolu_018ZHFWP625FLTtyH6zLpFJ3"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "new_string": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01PM7HCm2CbSP5CPKKPyyRyr"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PreToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+      "new_string": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://arxiv.org/abs/2506.21209).**",
+      "replace_all": false
+    },
+    "tool_use_id": "toolu_01A8XmwWSATpaQh14NCCqXrt"
+  }
+]

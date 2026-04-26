@@ -82,7 +82,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">BitMark: Watermarking Bitwise Autoregressive Image Generative Models</h1>
-    <p class="post-meta"><time datetime="2025-11-30T00:00:00+01:00" itemprop="datePublished">Nov 30, 2025</time></p>
+    <p class="post-meta"><time datetime="2025-11-30T00:00:00-03:00" itemprop="datePublished">Nov 30, 2025</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -138,10 +138,7 @@
 
 <p>So bits are <strong>far more stable</strong> than tokens, given the large codebook. This motivates <strong>embedding and detecting watermarks in bit space</strong>, not at the token or pixel level.</p>
 
-<div style="text-align:center; margin-bottom:30px;">
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/blog/bitmark/tokens-vs-bit-overlap.png" alt="Figure showing bit-overlap is higher than token-overlap" width="33%"&gt;
-</code></pre></div>  </div>
-</div>
+<p><img src="/assets/blog/bitmark/token-vs-bit-overlap.png" alt="Figure showing bit-overlap is higher than token-overlap" width="33%" /></p>
 
 <hr />
 
@@ -163,10 +160,7 @@
 
 <p>Result: Watermarked images have a <strong>higher fraction of green sequences</strong> than natural or non-watermarked images.</p>
 
-<div style="text-align:center; margin-bottom:30px;">
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/blog/bitmark/bitmark-example.png" alt="How BitMark affects the image quality" width="75%"&gt;
-</code></pre></div>  </div>
-</div>
+<p><img src="/assets/blog/bitmark/bitmark-example.png" alt="How BitMark affects the image quality" width="75%" /></p>
 
 <p>As can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.</p>
 <h3 id="detection-statistical-test-on-bit-sequences">Detection: Statistical Test on Bit Sequences</h3>
@@ -384,7 +378,7 @@ Since our goal is to avoid model collapse by training on our own generated data,
 
 <hr />
 
-<p><strong>👉 Read our</strong> <a href="https://openreview.net/pdf?id=VSir0FzFnP" target="_blank">research paper accepted at NeurIPS 2025.</a></p>
+<p><strong>👉 Read our <a href="https://arxiv.org/abs/2506.21209">research paper accepted at NeurIPS 2025</a>.</strong></p>
 
 <h2 id="bibtex">Bibtex</h2>
 

@@ -1,0 +1,1656 @@
+[
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "ToolSearch",
+    "tool_input": {
+      "query": "select:WebSearch",
+      "max_results": 1
+    },
+    "tool_response": {
+      "matches": [
+        "WebSearch"
+      ],
+      "query": "select:WebSearch",
+      "total_deferred_tools": 42
+    },
+    "tool_use_id": "toolu_01UQqHVHAmca6S2tjasYpw6x"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Glob",
+    "tool_input": {
+      "pattern": "**/*news*",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website"
+    },
+    "tool_response": {
+      "filenames": [
+        "_data/news.yml",
+        "_includes/news.html"
+      ],
+      "durationMs": 23,
+      "numFiles": 2,
+      "truncated": false
+    },
+    "tool_use_id": "toolu_01X92usfuhnZtTrcx7KDY8FU"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Glob",
+    "tool_input": {
+      "pattern": "**/*announce*",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website"
+    },
+    "tool_response": {
+      "filenames": [],
+      "durationMs": 9,
+      "numFiles": 0,
+      "truncated": false
+    },
+    "tool_use_id": "toolu_01GHFVLcRmCDGu4D1LATTLf4"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Glob",
+    "tool_input": {
+      "pattern": "**/*post*",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website"
+    },
+    "tool_response": {
+      "filenames": [
+        ".git/hooks/post-update.sample",
+        "_layouts/post.html",
+        "assets/svgs/poster.svg",
+        "docs\r/assets/svgs/poster.svg",
+        "logs/post_tool_use.json"
+      ],
+      "durationMs": 24,
+      "numFiles": 5,
+      "truncated": false
+    },
+    "tool_use_id": "toolu_01PqFkFuR3hgVC2kdJDSjV2J"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "find /Users/xunwang/myfile/Projects/group_website/sprintml-website -type f \\( -name \"*.json\" -o -name \"*.md\" -o -name \"*.yaml\" -o -name \"*.yml\" \\) | head -20"
+    },
+    "tool_response": {
+      "stdout": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/krzysztof.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/hubert.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/tymoteusz copy.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/jan2.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/piotr.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/tymoteusz.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/krzysztof2.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/filip.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members_backup/piotr copy.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/nupur.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/ossi.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/adam.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/krzysztof.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/louis.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/shayan.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/adarsh.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/bihe.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/emmanuel.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/vincent.md\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/hubert.md",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false,
+      "noOutputExpected": false
+    },
+    "tool_use_id": "toolu_01MucG2Y3ACEfBsUJKx5KCpL"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+        "content": "- date: November 09 2025\n  headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!\n\n- date: September 18 2025\n  headline: Excited to share three papers accepted to NeurIPS'25 on <a href=\"https://arxiv.org/abs/2506.21209\" target=\"_blank\">watermarking bitwise autoregressive models (BitMark)</a>, <a href=\"https://arxiv.org/abs/2508.19352\" target=\"_blank\">memorization in GNNs</a>, and <a href=\"https://arxiv.org/abs/2505.18773\" target=\"_blank\">strong membership inference attacks on massive datasets and large language models</a>!\n\n- date: May 1 2025\n  headline: Thrilled to announce three papers accepted to ICML'25 on <a href=\"https://arxiv.org/abs/2502.02514\" target=\"_blank\">privacy attacks on image autoregressive models</a>, <a href=\"https://arxiv.org/abs/2506.15271\" target=\"_blank\">dataset inference with synthetic data</a>, and <a href=\"https://arxiv.org/abs/2506.16196\" target=\"_blank\">efficient and private soft prompt transfer for LLMs</a>!\n\n- date: February 26 2025\n  headline: \"Big congrats on our paper <a href=\\\"https://arxiv.org/abs/2411.12858\\\" target=\\\"_blank\\\">CDI: Copyrighted Data Identification in Diffusion Models</a> accepted to CVPR'25! This is the first method to detect if a given dataset was used during the training of diffusion models.\"\n\n- date: January 22 2025\n  headline: SprintML has three accepted papers for ICLR'25! What a successful start of the year.\n\n- date: December 09 2024\n  headline: Our work on <a href=\"https://arxiv.org/pdf/2406.08039Differential\" target=\"_blank\">Private Prototypes</a> for efficient and private learning on unbalanced datasets was accepted to AAAI'25.\n\n- date: November 11 2024\n  headline: Our work on text editing in diffusion models got the best poster award at <a href=\"https://www.linkedin.com/posts/l-staniszewski_mlinpl-activity-7261370796386701312-5Q97?utm_source=share&utm_medium=member_desktop\" target=\"_blank\">ML in PL</a>!\n\n- date: November 01 2024\n  headline: We are extremely proud on the four papers we got in to NeurIPS'24. Happy to share the blog posts soon.\n\n- date: June 01 2024\n  headline: We have two new openings for <a href=\"positions\" target=\"_blank\">HiWi positions</a>! \n\n- date: January 16 2024\n  headline: Check our new paper accepted at ICLR 2024 on <a href=\"https://arxiv.org/pdf/2401.12233.pdf\" target=\"_blank\">memorization in self-supervised learning</a>! \n\n- date: October 29 2023\n  headline: The best poster award at MLinPL for our work on B4B (Bucks for Buckets) Active Defenses against Stealing Self-Supervised Models. \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://adam-dziedzic.com/static/assets/papers/b4b.pdf\" target=\"_blank\">active defenses against stealing of SSL encoders</a>! \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://adam-dziedzic.com/static/assets/papers/p2plearning.pdf\" target=\"_blank\">P2P collaborative learning secure against malicious servers and robust to malicious clients</a>! \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://arxiv.org/abs/2303.17046\" target=\"_blank\">individualized DP-SGD</a>!\n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://arxiv.org/abs/2305.15594\" target=\"_blank\">privacy for prompts</a>!\n\n- date: September 21 2023\n  headline: Check our 4 new papers accepted to NeurIPS.\n\n- date: May 25 2023\n  headline: Only 99 days until the SprintML lab will launch at CISPA.\n",
+        "numLines": 51,
+        "startLine": 1,
+        "totalLines": 51
+      }
+    },
+    "tool_use_id": "toolu_01Qt4jbspiuycj9X3Exh75ct"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_includes/news.html"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_includes/news.html",
+        "content": "\n<div class=\"well\" style=\"-webkit-box-shadow: inset 0 0 0\">\n<h4>News</h4>\n\n\n<ul>\n{% for article in site.data.news limit:3 %}\n<li> <i>{{ article.date }}:</i> {{ article.headline}}</li>\n{% endfor %}\n</ul>\n</div>\n\n\n    </div>",
+        "numLines": 14,
+        "startLine": 1,
+        "totalLines": 14
+      }
+    },
+    "tool_use_id": "toolu_01MYMGorRVk76XuvSmp7hiUg"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "ls -la /Users/xunwang/myfile/Projects/group_website/sprintml-website/ | grep -E \"^d\""
+    },
+    "tool_response": {
+      "stdout": "drwxr-xr-x@  4 xunwang  staff   128 Apr 20 14:58 _data\ndrwxr-xr-x@  9 xunwang  staff   288 Apr 20 14:58 _includes\ndrwxr-xr-x@ 16 xunwang  staff   512 Apr 20 14:58 _layouts\ndrwxr-xr-x@ 51 xunwang  staff  1632 Apr 20 14:58 _members\ndrwxr-xr-x@ 11 xunwang  staff   352 Apr 20 14:58 _members_backup\ndrwxr-xr-x@ 11 xunwang  staff   352 Apr 20 14:58 _pages\ndrwxr-xr-x@ 26 xunwang  staff   832 Apr 20 14:58 _phdlife\ndrwxr-xr-x@  7 xunwang  staff   224 Apr 20 14:58 _phdlifes\ndrwxr-xr-x@  3 xunwang  staff    96 Apr 20 14:58 _plugins\ndrwxr-xr-x@ 10 xunwang  staff   320 Apr 20 14:58 _posts\ndrwxr-xr-x@  5 xunwang  staff   160 Apr 20 14:58 _sass\ndrwxr-xr-x@ 28 xunwang  staff   896 Apr 20 15:06 .\ndrwxr-xr-x@  4 xunwang  staff   128 Apr 20 14:58 ..\ndrwxr-xr-x@ 12 xunwang  staff   384 Apr 20 14:58 .git\ndrwxr-xr-x@  7 xunwang  staff   224 Apr 20 14:58 assets\ndrwxr-xr-x@  3 xunwang  staff    96 Apr 20 14:58 bibliography\ndrwxr-xr-x@  4 xunwang  staff   128 Apr 20 14:58 css\ndrwxr-xr-x@ 22 xunwang  staff   704 Apr 20 14:58 docs\r\ndrwxr-xr-x@  7 xunwang  staff   224 Apr 20 14:58 fonts\ndrwxr-xr-x@  5 xunwang  staff   160 Apr 20 14:58 js\ndrwxr-xr-x@  4 xunwang  staff   128 Apr 20 15:06 logs",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false,
+      "noOutputExpected": false
+    },
+    "tool_use_id": "toolu_01RbEBrbceSCkm9BRLxg9LCo"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "agent_id": "ad675c8ab946d6d44",
+    "agent_type": "Explore",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Bash",
+    "tool_input": {
+      "command": "find /Users/xunwang/myfile/Projects/group_website/sprintml-website -maxdepth 2 -type f -name \"*.yml\" -o -name \"*.yaml\""
+    },
+    "tool_response": {
+      "stdout": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_config.yml\n/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "stderr": "",
+      "interrupted": false,
+      "isImage": false,
+      "noOutputExpected": false
+    },
+    "tool_use_id": "toolu_01SXHKqfiS7uxxDsRKwWo91Q"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Agent",
+    "tool_input": {
+      "description": "Explore website news structure",
+      "prompt": "In the directory /Users/xunwang/myfile/Projects/group_website/sprintml-website, find how news/announcements are structured. Look for news data files, news components, and any existing news entries about accepted papers. Report the file paths and show the structure of 2-3 existing news entries so I know the exact format to follow.",
+      "subagent_type": "Explore"
+    },
+    "tool_response": {
+      "status": "completed",
+      "prompt": "In the directory /Users/xunwang/myfile/Projects/group_website/sprintml-website, find how news/announcements are structured. Look for news data files, news components, and any existing news entries about accepted papers. Report the file paths and show the structure of 2-3 existing news entries so I know the exact format to follow.",
+      "agentId": "ad675c8ab946d6d44",
+      "agentType": "Explore",
+      "content": [
+        {
+          "type": "text",
+          "text": "Perfect! I have all the information you need. Here's the complete report on how news/announcements are structured:\n\n## News Structure Report\n\n### Key Files and Locations\n\n1. **News Data File**: `/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml`\n2. **News Component**: `/Users/xunwang/myfile/Projects/group_website/sprintml-website/_includes/news.html`\n\n### News Entry Format\n\nThe news system uses a Jekyll-based YAML structure. Each news entry follows this format:\n\n```yaml\n- date: [Date String]\n  headline: [HTML content with optional links]\n```\n\n### 3 Example News Entries (with Paper Acceptances)\n\n**Example 1 - AAAI'26 Acceptance:**\n```yaml\n- date: November 09 2025\n  headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!\n```\n\n**Example 2 - NeurIPS'25 Acceptance:**\n```yaml\n- date: September 18 2025\n  headline: Excited to share three papers accepted to NeurIPS'25 on <a href=\"https://arxiv.org/abs/2506.21209\" target=\"_blank\">watermarking bitwise autoregressive models (BitMark)</a>, <a href=\"https://arxiv.org/abs/2508.19352\" target=\"_blank\">memorization in GNNs</a>, and <a href=\"https://arxiv.org/abs/2505.18773\" target=\"_blank\">strong membership inference attacks on massive datasets and large language models</a>!\n```\n\n**Example 3 - ICML'25 Acceptance:**\n```yaml\n- date: May 1 2025\n  headline: Thrilled to announce three papers accepted to ICML'25 on <a href=\"https://arxiv.org/abs/2502.02514\" target=\"_blank\">privacy attacks on image autoregressive models</a>, <a href=\"https://arxiv.org/abs/2506.15271\" target=\"_blank\">dataset inference with synthetic data</a>, and <a href=\"https://arxiv.org/abs/2506.16196\" target=\"_blank\">efficient and private soft prompt transfer for LLMs</a>!\n```\n\n### Key Format Details\n\n- **Date Format**: Human-readable format (e.g., \"November 09 2025\", \"May 1 2025\")\n- **Headline Field**: Supports HTML directly, commonly using `<a>` tags with `target=\"_blank\"` for external links\n- **ArXiv Links**: Standard format is `https://arxiv.org/abs/[ID]` or `https://arxiv.org/pdf/[ID]`\n- **Display**: The news component (news.html) limits display to the 3 most recent entries via Liquid templating (`limit:3`)\n- **Entry Format**: YAML list items with `-` prefix, each with `date` and `headline` keys\n\nThis is a Jekyll-based static site, so you simply need to add a new entry at the top of the `_data/news.yml` file with the same structure to add a new news item."
+        }
+      ],
+      "totalDurationMs": 24925,
+      "totalTokens": 34620,
+      "totalToolUseCount": 8,
+      "usage": {
+        "input_tokens": 7,
+        "cache_creation_input_tokens": 990,
+        "cache_read_input_tokens": 32780,
+        "output_tokens": 843,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 990
+        },
+        "inference_geo": "",
+        "iterations": [
+          {
+            "input_tokens": 7,
+            "output_tokens": 843,
+            "cache_read_input_tokens": 32780,
+            "cache_creation_input_tokens": 990,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 990,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "toolStats": {
+        "readCount": 2,
+        "searchCount": 3,
+        "bashCount": 3,
+        "editFileCount": 0,
+        "linesAdded": 0,
+        "linesRemoved": 0,
+        "otherToolCount": 0
+      }
+    },
+    "tool_use_id": "toolu_01BCuXKhUYoBzBBYYoL6QPtG"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "Data Provenance for Image Auto-Regressive Generation ICLR 2026 openreview",
+      "allowed_domains": [
+        "openreview.net"
+      ]
+    },
+    "tool_response": {
+      "query": "Data Provenance for Image Auto-Regressive Generation ICLR 2026 openreview",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_013RnyeWHUv9ua8q5MYG7h3m",
+          "content": [
+            {
+              "title": "Data Provenance for Image Auto-Regressive Generation | OpenReview",
+              "url": "https://openreview.net/forum?id=qYu4wj7O3z"
+            },
+            {
+              "title": "DATA PROVENANCE FOR IMAGE AUTO-REGRESSIVE ...",
+              "url": "https://openreview.net/pdf/2b68d05ab02bcc7c0ca5b676bc31687c254dee85.pdf"
+            },
+            {
+              "title": "OneCat: Decoder-Only Auto-Regressive Model for Unified ...",
+              "url": "https://openreview.net/pdf/0efca60830dd888b965d4260cd0dd88f4942db86.pdf"
+            },
+            {
+              "title": "FREQUENCY AUTOREGRESSIVE IMAGE GENERATION ...",
+              "url": "https://openreview.net/pdf/13127b20e0b2a9679b5648d4dbb33cae4a6e7e8a.pdf"
+            },
+            {
+              "title": "ICLR 2026 Conference Submissions",
+              "url": "https://openreview.net/submissions?page=202&venue=ICLR.cc/2026/Conference"
+            },
+            {
+              "title": "Published as a conference paper at ICLR 2026",
+              "url": "https://openreview.net/pdf/4a526e4e282de5c724af2b2bb06043ee10b3a3f2.pdf"
+            },
+            {
+              "title": "ICLR 2026 | OpenReview",
+              "url": "https://openreview.net/group?id=ICLR.cc/2026"
+            },
+            {
+              "title": "ICLR 2026 Conference | OpenReview",
+              "url": "https://openreview.net/group?id=ICLR.cc/2026/Conference"
+            },
+            {
+              "title": "Distilled Decoding 1: One-step Sampling of Image Auto-regressive Models with Flow Matching | OpenReview",
+              "url": "https://openreview.net/forum?id=zKlFXV87Pp"
+            },
+            {
+              "title": "Exploring the Design Space of Autoregressive Models for Efficient and Scalable Image Generation | OpenReview",
+              "url": "https://openreview.net/forum?id=zfIxlvKq4u"
+            }
+          ]
+        },
+        "I found the paper you're looking for! Here's what I found:\n\n\"Data Provenance for Image Auto-Regressive Generation\" addresses the need for robust data provenance to trace IAR-generated images to their source models, which is critical to prevent the spread of misinformation, detect fraud, and attribute harmful content.\n\nThe paper is available on OpenReview at: https://openreview.net/forum?id=qYu4wj7O3z\n\nThe PDF version can be found at: https://openreview.net/pdf/2b68d05ab02bcc7c0ca5b676bc31687c254dee85.pdf\n\nExisting image provenance methods can be grouped into watermark-based, fingerprint-based, and reconstruction-based approaches. Watermark-based and fingerprint-based methods require interventions in the training or inference stage and degrade generated image quality, and cannot be performed retroactively after models are released."
+      ],
+      "durationSeconds": 5.864948040999996
+    },
+    "tool_use_id": "toolu_01AtuYsCpKab6EeK7A7ENT1G"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "Curation Leaks Membership Inference Attacks against Data Curation ICLR 2026 openreview",
+      "allowed_domains": [
+        "openreview.net"
+      ]
+    },
+    "tool_response": {
+      "query": "Curation Leaks Membership Inference Attacks against Data Curation ICLR 2026 openreview",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_0149tVNCNFdMSvBX1CpNaWdC",
+          "content": [
+            {
+              "title": "Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning | OpenReview",
+              "url": "https://openreview.net/forum?id=BzNf90Csfa"
+            },
+            {
+              "title": "CURATION LEAKS: MEMBERSHIP INFERENCE ATTACKS",
+              "url": "https://openreview.net/pdf/8130e0457d702c6d599fc09bbc0c7babc9d38060.pdf"
+            },
+            {
+              "title": "LLMs Leak Training Data Beyond Verbatim Memorization via Membership Decoding | OpenReview",
+              "url": "https://openreview.net/forum?id=ULqzEEkyxk"
+            },
+            {
+              "title": "Tab-MIA: A Benchmark Dataset for Membership Inference Attacks on Tabular Data in LLMs | OpenReview",
+              "url": "https://openreview.net/forum?id=ioYdy7aghG"
+            },
+            {
+              "title": "Under review as a conference paper at ICLR 2022",
+              "url": "https://openreview.net/pdf?id=EG5Pgd7-MY"
+            },
+            {
+              "title": "ICLR 2026 | OpenReview",
+              "url": "https://openreview.net/group?id=ICLR.cc/2026"
+            },
+            {
+              "title": "Published as a conference paper at ICLR 2024",
+              "url": "https://openreview.net/pdf?id=qo21ZlfNu6"
+            },
+            {
+              "title": "ICLR 2026 Conference Submissions",
+              "url": "https://openreview.net/submissions?page=142&venue=ICLR.cc/2026/Conference"
+            },
+            {
+              "title": "MEMBERSHIP INFERENCE ATTACK IN FACE OF DATA ...",
+              "url": "https://openreview.net/pdf?id=z_gX7gZe2cV"
+            },
+            {
+              "title": "ICLR 2026 Conference | OpenReview",
+              "url": "https://openreview.net/group?id=ICLR.cc/2026/Conference"
+            }
+          ]
+        },
+        "I found the paper you're looking for! Here are the key details:\n\n## Paper Title\nCuration Leaks: Membership Inference Attacks against Data Curation for Machine Learning\n\n## OpenReview Link\nThe paper is available on OpenReview at https://openreview.net/forum?id=BzNf90Csfa\n\n## Overview\nThe paper is under review as a conference paper at ICLR 2026. It discusses how in machine learning, data curation is used to select the most valuable data for improving both model accuracy and computational efficiency, and has recently been explored as a solution for private machine learning where private data is used only to guide the selection of useful public data.\n\n## Key Contribution\nThe authors introduce novel attacks against popular curation methods, targeting every major step: the computation of curation scores, the selection of the curated subset, and the final trained model. They demonstrate that each stage reveals information about the private dataset, and that even models trained exclusively on curated public data leak membership information about the private data that guided curation.\n\n## Significance\nThese findings highlight the inherent privacy risks in data curation that were previously overlooked, suggesting that privacy analysis must extend beyond the training procedure to include the data selection process."
+      ],
+      "durationSeconds": 7.2914428340000015
+    },
+    "tool_use_id": "toolu_01RPacmLav2TtZmsfCLRzBP7"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "SERUM Simple Efficient Robust Unifying Marking Diffusion Image Generation ICLR 2026 openreview",
+      "allowed_domains": [
+        "openreview.net"
+      ]
+    },
+    "tool_response": {
+      "query": "SERUM Simple Efficient Robust Unifying Marking Diffusion Image Generation ICLR 2026 openreview",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_016Fbeeh4UoMaTgu751KALvE",
+          "content": [
+            {
+              "title": "SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation | OpenReview",
+              "url": "https://openreview.net/forum?id=AiBUm6iKBf"
+            },
+            {
+              "title": "SERUM: SIMPLE, EFFICIENT, ROBUST, AND UNIFYING",
+              "url": "https://openreview.net/pdf/6fd936d956f9865ab648435059f90797b3a0af27.pdf"
+            },
+            {
+              "title": "ICLR 2026 Conference Submissions",
+              "url": "https://openreview.net/submissions?page=700&venue=ICLR.cc/2026/Conference"
+            },
+            {
+              "title": "Published as a conference paper at ICLR 2026",
+              "url": "https://openreview.net/pdf?id=pG0WTde3pR"
+            },
+            {
+              "title": "Denoising Diffusion Implicit Models | OpenReview",
+              "url": "https://openreview.net/forum?id=St1giarCHLP"
+            },
+            {
+              "title": "ICLR 2026 Conference | OpenReview",
+              "url": "https://openreview.net/group?id=ICLR.cc/2026/Conference"
+            },
+            {
+              "title": "Scaling In-the-Wild Training for Diffusion-based Illumination Harmonization and Editing by Imposing Consistent Light Transport | OpenReview",
+              "url": "https://openreview.net/forum?id=u1cQYxRI1H"
+            },
+            {
+              "title": "Machine Unlearning for Image-to-Image Generative Models | OpenReview",
+              "url": "https://openreview.net/forum?id=9hjVoPWPnh"
+            },
+            {
+              "title": "MARKUP-TO-IMAGE DIFFUSION MODELS",
+              "url": "https://openreview.net/pdf?id=81VJDmOE2ol"
+            },
+            {
+              "title": "Efficient Low-Rank Diffusion Model Training for Text-to-Image Generation | OpenReview",
+              "url": "https://openreview.net/forum?id=edx7LTufJF"
+            }
+          ]
+        },
+        "I found the paper you're looking for! Here are the search results:\n\n## SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation\n\nSERUM is a method for marking images generated by diffusion models that adds a unique watermark noise to the initial diffusion generation noise and trains a lightweight detector to identify watermarked images, simplifying and unifying the strengths of prior approaches.\n\n**Key Features:**\n\nSERUM provides robustness against any image augmentations or watermark removal attacks and is extremely efficient, all while maintaining negligible impact on image quality.\n\nThe method achieves remarkable performance, with the highest true positive rate (TPR) at a 1% false positive rate (FPR) in most scenarios, along with fast injection and detection and low detector training overhead.\n\n**Technical Approach:**\n\nSERUM matches the speed of tuning-based watermarking methods for both injection and detection while training only a lightweight external watermark detector and leaving the original model intact, while similar to tuning-free approaches, it adds the watermark to the initial diffusion noise, improving robustness.\n\nThe paper was published at ICLR 2026.\n\nYou can access the paper directly at: https://openreview.net/forum?id=AiBUm6iKBf"
+      ],
+      "durationSeconds": 6.942237249999991
+    },
+    "tool_use_id": "toolu_01U76xmi9DwwDDoPqfBfW4Z1"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "Benchmarking Empirical Privacy Protection Adaptations Large Language Models ICLR 2026 openreview",
+      "allowed_domains": [
+        "openreview.net"
+      ]
+    },
+    "tool_response": {
+      "query": "Benchmarking Empirical Privacy Protection Adaptations Large Language Models ICLR 2026 openreview",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_015GRDBgJgm8X4pHR3U2TgDX",
+          "content": [
+            {
+              "title": "Benchmarking Empirical Privacy Protection for Adaptations of Large Language Models | OpenReview",
+              "url": "https://openreview.net/forum?id=jY7fAo9rfK"
+            },
+            {
+              "title": "Benchmarking Empirical Privacy Protection for Adaptations ...",
+              "url": "https://openreview.net/pdf?id=IoT0PpDILA"
+            },
+            {
+              "title": "Privacy Auditing of Large Language Models | OpenReview",
+              "url": "https://openreview.net/forum?id=60Vd7QOXlM"
+            },
+            {
+              "title": "Published as a conference paper at ICLR 2022 LARGE LANGUAGE MODELS CAN BE",
+              "url": "https://openreview.net/pdf?id=bVuP3ltATMz"
+            },
+            {
+              "title": "Auditing Empirical Privacy Protection for Adaptations of Large Language Models",
+              "url": "https://openreview.net/pdf?id=vFIC8Le5UH"
+            },
+            {
+              "title": "Benchmarking Empirical Privacy Protection for Adaptations of Large Language",
+              "url": "https://openreview.net/pdf?id=m6f95cqQx2"
+            },
+            {
+              "title": "Privacy-Preserving In-Context Learning for Large Language Models | OpenReview",
+              "url": "https://openreview.net/forum?id=x4OPJ7lHVU"
+            },
+            {
+              "title": "Large Language Models Can Be Good Privacy Protection Learners | OpenReview",
+              "url": "https://openreview.net/forum?id=6JcbNMEFPw"
+            },
+            {
+              "title": "Beyond Memorization: Violating Privacy via Inference with Large Language Models | OpenReview",
+              "url": "https://openreview.net/forum?id=kmn0BhQk7p"
+            },
+            {
+              "title": "PrivacyRestore: Privacy-Preserving Inference in Large Language Models via Privacy Removal and Restoration | OpenReview",
+              "url": "https://openreview.net/forum?id=MyRcW53CCC"
+            }
+          ]
+        },
+        "I found the paper you're looking for! Here are the key details:\n\n**Paper Title:** \"Benchmarking Empirical Privacy Protection for Adaptations of Large Language Models\"\n\n**Venue:** ICLR 2026\n\n**OpenReview Link:** https://openreview.net/forum?id=jY7fAo9rfK\n\n**Key Findings:**\n\nThe paper investigates privacy risks under differential privacy (DP) adaptations in LLMs, noting that while recent work has applied DP to adapt large language models for sensitive applications with theoretical guarantees, its practical effectiveness remains unclear partly due to LLM pretraining where overlaps and interdependencies with adaptation data can undermine privacy despite DP efforts.\n\nThe authors investigate privacy risks under DP adaptations in LLMs using state-of-the-art attacks such as robust membership inference and canary data extraction.\n\nThe results show that distribution shifts strongly influence privacy vulnerability: the closer the adaptation data is to the pretraining distribution, the higher the practical privacy risk at the same theoretical guarantee, even without direct data overlap.\n\nThe paper finds that parameter-efficient fine-tuning methods, such as LoRA, achieve the highest empirical privacy protection for out-of-distribution data."
+      ],
+      "durationSeconds": 6.6759953749999985
+    },
+    "tool_use_id": "toolu_01LXZGhunaCwHhZUJ9HG6YyW"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "Natural Identifiers for Privacy and Data Audits in Large Language Models ICLR 2026 openreview",
+      "allowed_domains": [
+        "openreview.net"
+      ]
+    },
+    "tool_response": {
+      "query": "Natural Identifiers for Privacy and Data Audits in Large Language Models ICLR 2026 openreview",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_01MQvJwMyGPJkM6XgShTmV19",
+          "content": [
+            {
+              "title": "Natural Identifiers for Privacy and Data Audits in Large Language Models | OpenReview",
+              "url": "https://openreview.net/forum?id=doaAUf9Pi7"
+            },
+            {
+              "title": "NATURAL IDENTIFIERS FOR PRIVACY AND DATA ...",
+              "url": "https://openreview.net/pdf/1bfe87abebe083d58b285c4eb33ff73e8baa937f.pdf"
+            },
+            {
+              "title": "Privacy Auditing for Large Language Models with Natural Identifiers | OpenReview",
+              "url": "https://openreview.net/forum?id=jp4XlcpRIW"
+            },
+            {
+              "title": "Privacy Auditing of Large Language Models",
+              "url": "https://openreview.net/pdf?id=JlAwAMJT5P"
+            },
+            {
+              "title": "Privacy Auditing of Large Language Models | OpenReview",
+              "url": "https://openreview.net/forum?id=60Vd7QOXlM"
+            },
+            {
+              "title": "ICLR 2026 Conference Submissions",
+              "url": "https://openreview.net/submissions?page=142&venue=ICLR.cc/2026/Conference"
+            },
+            {
+              "title": "PRIVACY AUDITING FOR LARGE LANGUAGE MODELS",
+              "url": "https://openreview.net/pdf?id=jp4XlcpRIW"
+            },
+            {
+              "title": "ICLR 2026 Conference | OpenReview",
+              "url": "https://openreview.net/group?id=ICLR.cc/2026/Conference"
+            },
+            {
+              "title": "ICLR 2026 | OpenReview",
+              "url": "https://openreview.net/group?id=ICLR.cc/2026"
+            },
+            {
+              "title": "Auditing Empirical Privacy Protection for Adaptations of Large Language Models",
+              "url": "https://openreview.net/pdf?id=vFIC8Le5UH"
+            }
+          ]
+        },
+        "I found the paper on OpenReview! Here's what the search revealed:\n\n\"Natural Identifiers for Privacy and Data Audits in Large Language Models\" is an ICLR 2026 Conference submission available on OpenReview.\n\n**Overview:**\nThe paper introduces natural identifiers (NIDs) as a novel solution\u2014structured random strings, such as cryptographic hashes and shortened URLs, naturally occurring in common LLM training datasets. Their format enables the generation of unlimited additional random strings from the same distribution, which can act as alternative canaries for audits and as same-distribution held-out data for dataset inference.\n\n**Main Problem Addressed:**\nMost existing methods for auditing differential privacy require the insertion of specially crafted canary data during training, making them impractical for auditing already-trained models without costly retraining. Additionally, dataset inference, which audits whether a suspect dataset was used to train a model, is infeasible without access to a private non-member held-out dataset.\n\n**Key Results:**\nUsing NIDs enables post-hoc differential privacy auditing without any retraining and enables dataset inference for any suspect dataset containing NIDs without the need for a private non-member held-out dataset.\n\nThe paper can be accessed at: https://openreview.net/forum?id=doaAUf9Pi7"
+      ],
+      "durationSeconds": 8.883644250000012
+    },
+    "tool_use_id": "toolu_01W8wnmCtwfBkYj4X8NnsfT7"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "limit": 20
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+        "content": "- date: November 09 2025\n  headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!\n\n- date: September 18 2025\n  headline: Excited to share three papers accepted to NeurIPS'25 on <a href=\"https://arxiv.org/abs/2506.21209\" target=\"_blank\">watermarking bitwise autoregressive models (BitMark)</a>, <a href=\"https://arxiv.org/abs/2508.19352\" target=\"_blank\">memorization in GNNs</a>, and <a href=\"https://arxiv.org/abs/2505.18773\" target=\"_blank\">strong membership inference attacks on massive datasets and large language models</a>!\n\n- date: May 1 2025\n  headline: Thrilled to announce three papers accepted to ICML'25 on <a href=\"https://arxiv.org/abs/2502.02514\" target=\"_blank\">privacy attacks on image autoregressive models</a>, <a href=\"https://arxiv.org/abs/2506.15271\" target=\"_blank\">dataset inference with synthetic data</a>, and <a href=\"https://arxiv.org/abs/2506.16196\" target=\"_blank\">efficient and private soft prompt transfer for LLMs</a>!\n\n- date: February 26 2025\n  headline: \"Big congrats on our paper <a href=\\\"https://arxiv.org/abs/2411.12858\\\" target=\\\"_blank\\\">CDI: Copyrighted Data Identification in Diffusion Models</a> accepted to CVPR'25! This is the first method to detect if a given dataset was used during the training of diffusion models.\"\n\n- date: January 22 2025\n  headline: SprintML has three accepted papers for ICLR'25! What a successful start of the year.\n\n- date: December 09 2024\n  headline: Our work on <a href=\"https://arxiv.org/pdf/2406.08039Differential\" target=\"_blank\">Private Prototypes</a> for efficient and private learning on unbalanced datasets was accepted to AAAI'25.\n\n- date: November 11 2024\n  headline: Our work on text editing in diffusion models got the best poster award at <a href=\"https://www.linkedin.com/posts/l-staniszewski_mlinpl-activity-7261370796386701312-5Q97?utm_source=share&utm_medium=member_desktop\" target=\"_blank\">ML in PL</a>!",
+        "numLines": 20,
+        "startLine": 1,
+        "totalLines": 51
+      }
+    },
+    "tool_use_id": "toolu_01FD4qvetxYNjVxFKYenEcA3"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "old_string": "- date: November 09 2025",
+      "new_string": "- date: April 20 2026\n  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"\n\n- date: November 09 2025",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "oldString": "- date: November 09 2025",
+      "newString": "- date: April 20 2026\n  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"\n\n- date: November 09 2025",
+      "originalFile": "- date: November 09 2025\n  headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!\n\n- date: September 18 2025\n  headline: Excited to share three papers accepted to NeurIPS'25 on <a href=\"https://arxiv.org/abs/2506.21209\" target=\"_blank\">watermarking bitwise autoregressive models (BitMark)</a>, <a href=\"https://arxiv.org/abs/2508.19352\" target=\"_blank\">memorization in GNNs</a>, and <a href=\"https://arxiv.org/abs/2505.18773\" target=\"_blank\">strong membership inference attacks on massive datasets and large language models</a>!\n\n- date: May 1 2025\n  headline: Thrilled to announce three papers accepted to ICML'25 on <a href=\"https://arxiv.org/abs/2502.02514\" target=\"_blank\">privacy attacks on image autoregressive models</a>, <a href=\"https://arxiv.org/abs/2506.15271\" target=\"_blank\">dataset inference with synthetic data</a>, and <a href=\"https://arxiv.org/abs/2506.16196\" target=\"_blank\">efficient and private soft prompt transfer for LLMs</a>!\n\n- date: February 26 2025\n  headline: \"Big congrats on our paper <a href=\\\"https://arxiv.org/abs/2411.12858\\\" target=\\\"_blank\\\">CDI: Copyrighted Data Identification in Diffusion Models</a> accepted to CVPR'25! This is the first method to detect if a given dataset was used during the training of diffusion models.\"\n\n- date: January 22 2025\n  headline: SprintML has three accepted papers for ICLR'25! What a successful start of the year.\n\n- date: December 09 2024\n  headline: Our work on <a href=\"https://arxiv.org/pdf/2406.08039Differential\" target=\"_blank\">Private Prototypes</a> for efficient and private learning on unbalanced datasets was accepted to AAAI'25.\n\n- date: November 11 2024\n  headline: Our work on text editing in diffusion models got the best poster award at <a href=\"https://www.linkedin.com/posts/l-staniszewski_mlinpl-activity-7261370796386701312-5Q97?utm_source=share&utm_medium=member_desktop\" target=\"_blank\">ML in PL</a>!\n\n- date: November 01 2024\n  headline: We are extremely proud on the four papers we got in to NeurIPS'24. Happy to share the blog posts soon.\n\n- date: June 01 2024\n  headline: We have two new openings for <a href=\"positions\" target=\"_blank\">HiWi positions</a>! \n\n- date: January 16 2024\n  headline: Check our new paper accepted at ICLR 2024 on <a href=\"https://arxiv.org/pdf/2401.12233.pdf\" target=\"_blank\">memorization in self-supervised learning</a>! \n\n- date: October 29 2023\n  headline: The best poster award at MLinPL for our work on B4B (Bucks for Buckets) Active Defenses against Stealing Self-Supervised Models. \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://adam-dziedzic.com/static/assets/papers/b4b.pdf\" target=\"_blank\">active defenses against stealing of SSL encoders</a>! \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://adam-dziedzic.com/static/assets/papers/p2plearning.pdf\" target=\"_blank\">P2P collaborative learning secure against malicious servers and robust to malicious clients</a>! \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://arxiv.org/abs/2303.17046\" target=\"_blank\">individualized DP-SGD</a>!\n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://arxiv.org/abs/2305.15594\" target=\"_blank\">privacy for prompts</a>!\n\n- date: September 21 2023\n  headline: Check our 4 new papers accepted to NeurIPS.\n\n- date: May 25 2023\n  headline: Only 99 days until the SprintML lab will launch at CISPA.\n",
+      "structuredPatch": [
+        {
+          "oldStart": 1,
+          "oldLines": 3,
+          "newStart": 1,
+          "newLines": 6,
+          "lines": [
+            "+- date: April 20 2026",
+            "+  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"",
+            "+",
+            " - date: November 09 2025",
+            "   headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!",
+            " "
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_01HSx7USd9X5hWgguoX62HW8"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "christopher",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+      "output_mode": "files_with_matches",
+      "-i": true
+    },
+    "tool_response": {
+      "mode": "files_with_matches",
+      "filenames": [
+        "docs\r/publications/index.html",
+        "docs\r/bibliography/publications.bib",
+        "bibliography/publications.bib",
+        "_members/chris.md"
+      ],
+      "numFiles": 4
+    },
+    "tool_use_id": "toolu_01Mp5FqnttCghJKGz81TxM5D"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/chris.md"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/chris.md",
+        "content": "---\nshort_name: chris\nname: Christopher Ro\u00dfbach\nposition: Research Assistant\nactive: true\nemail: N/A\ntwitter:\nlinkedin:\ngoogle_scholar:\nwebsite_url:\ncv_url:\n---\n",
+        "numLines": 13,
+        "startLine": 1,
+        "totalLines": 13
+      }
+    },
+    "tool_use_id": "toolu_017k9ayeHEigpdoTB4Nq4zR4"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/chris.md",
+      "old_string": "email: N/A\ntwitter:\nlinkedin:",
+      "new_string": "email: christopher.rossbach@cispa.de\ntwitter:\nlinkedin: https://www.linkedin.com/in/christopher-rossbach",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/chris.md",
+      "oldString": "email: N/A\ntwitter:\nlinkedin:",
+      "newString": "email: christopher.rossbach@cispa.de\ntwitter:\nlinkedin: https://www.linkedin.com/in/christopher-rossbach",
+      "originalFile": "---\nshort_name: chris\nname: Christopher Ro\u00dfbach\nposition: Research Assistant\nactive: true\nemail: N/A\ntwitter:\nlinkedin:\ngoogle_scholar:\nwebsite_url:\ncv_url:\n---\n",
+      "structuredPatch": [
+        {
+          "oldStart": 3,
+          "oldLines": 9,
+          "newStart": 3,
+          "newLines": 9,
+          "lines": [
+            " name: Christopher Ro\u00dfbach",
+            " position: Research Assistant",
+            " active: true",
+            "-email: N/A",
+            "+email: christopher.rossbach@cispa.de",
+            " twitter:",
+            "-linkedin:",
+            "+linkedin: https://www.linkedin.com/in/christopher-rossbach",
+            " google_scholar:",
+            " website_url:",
+            " cv_url:"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_01Kqw5YfvM6MScKth38E2Pj5"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Glob",
+    "tool_input": {
+      "pattern": "_posts/**/*",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website"
+    },
+    "tool_response": {
+      "filenames": [
+        "_posts/2023-02-23-model-extraction.markdown",
+        "_posts/2023-12-10-b4b.markdown",
+        "_posts/2024-04-28-private-prompts.markdown",
+        "_posts/2024-12-10-open-llms.markdown",
+        "_posts/2025-02-04-iars-privacy.markdown",
+        "_posts/2025-03-03-CLIPMem.markdown",
+        "_posts/2025-11-30-BitMark.markdown",
+        "_posts/2026-02-27-SafeTextGen.markdown"
+      ],
+      "durationMs": 31,
+      "numFiles": 8,
+      "truncated": false
+    },
+    "tool_use_id": "toolu_01EsiUbM7GH6tSGWLtu3BrTX"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+        "content": "---\nlayout: post\ntitle: \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\ndate: 2025-11-30\ntags: watermarking image-autoregressive-model generated-content-detection radioactivity\n---\n  \n\n<center>\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Louis Kerner</a>,\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Michel Meintz</a>,\n\u00a0\u00a0<a href=\"https://bihezhao.github.io/\">Bihe Zhao</a>,\n\u00a0\u00a0<a href=\"https://franziska-boenisch.de/\">Franziska Boenisch</a>,\n\u00a0\u00a0<a href=\"https://adam-dziedzic.com/\">Adam Dziedzic</a>.\n\u00a0\u00a0<br><br>\n\u00a0\u00a0CISPA Helmholtz Center for Information Security<br>\n\u00a0\u00a0\u00a0<br><br>\n</center>\n\n  \n\nAutoregressive image models like **Infinity** and **Instella IAR** are now competitive with diffusion models for high\u2011quality text-to-image generation. But as generated images get reused as training data, we risk **model collapse**: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.\n\n**BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models**. It embeds a watermark at **generation time** that is:\n\n- **Hard to remove** without degrading image quality.\n- **Efficient** to generate and detect.\n- **Radioactive** \u2013 its signal persists even when other models are trained on watermarked images.\n\nThis radioactivity lets model owners **track provenance across training cycles** and avoid training future models on their own outputs.\n\n---\n\n## Background: Bitwise Autoregressive Image Models\n\n**VAR** and its extension **Infinity** generate images autoregressively, scale-by-scale:\n\n- Images are quantized into discrete codes and predicted as sequences.\n- Infinity uses **bitwise prediction** with a large implicit codebook and **binary spherical quantization**.\n- Random bit flipping during generation allows **self-correction** across scales.\n\n**Instella IAR** also adopts a **bitwise** next\u2011patch prediction scheme, using very few tokens (e.g., 128) for a 1024\u00d71024 image.\n\nThese models work at the **bit level** internally, which is where BitMark is applied.\n\n---\n\n## Why Bit-Level Watermarking?\n\nUnlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity\u2019s:\n\n- **Token overlap** after decode\u2013re-encode is very low (~2.4%).\n- **Bit overlap** is much higher (~77%).\n\nSo bits are **far more stable** than tokens, given the large codebook. This motivates **embedding and detecting watermarks in bit space**, not at the token or pixel level.\n\n\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/tokens-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>\n\n---\n\n## The BitMark Watermark\n\n### Embedding: Biasing Green Bit Sequences\n\nBitMark follows the \u201cgreen/red list\u201d idea from LLM watermarking:\n\n- Consider all bit sequences of length `n`: `S = {0,1}^n`.\n- Assign them to a **green** list `G` and a **red** list `R` \n- During autoregressive generation, whenever a bit would complete a sequence in `G`, BitMark adds a **small bias** `\u03b4` to the corresponding logit before sampling.\n\t- Because only these **high-entropy bits** are **slightly nudged** and therefore influenced, image quality and semantics are essentially preserved.\n\n\nResult: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences\n\nTo detect the watermark:\n\n1. Encode the image with the model\u2019s **private encoder/tokenizer** to get bits.\n2. Slide a window of length `n` over the bits and count how many sequences fall into `G` vs `R`.\n3. Under the null hypothesis \u201cthis image is not watermarked,\u201d the number of green sequences behaves like a binomial variable with known mean and variance.\n4. Compute a **z-score** and reject the null if `z` exceeds a chosen threshold (e.g., corresponding to 1% FPR).\n\nClean images produce z-scores near **0**; BitMark images produce **large positive** z\u2011scores.\nSince our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data. \n\n---\n\n## Quality and Robustness\n\nUsing **Infinity-2B** as the main model (MS-COCO 2014 validation set):\n\n- For practical bias strengths (e.g., `\u03b4 \u2264 2`):\n    - **FID/KID** are similar to non-watermarked images.\n    - **CLIP score** (prompt\u2013image alignment) remains nearly unchanged.\n- Generation speed overhead is modest (~10% at most).\n- Detection is fast (less than a second per image).\n\nBitMark is robust against:\n\n- Common transforms (noise, blur, color jitter, cropping, JPEG, flips).\n- Reconstruction-like attacks (encode\u2013decode via Stable Diffusion 2.1\u2019s VAE, regeneration attacks such as CtrlRegen+).\n- Strong removal attempts (e.g., \u201cwatermarks in the sand\u201d) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.\n\nEven a custom **Bit-Flipper attack**\u2014where the attacker knows the encoder, the algorithm, and the exact green/red lists\u2014cannot erase the watermark without **severe visual degradation**.\n\n\n---\n## Radioactivity: Tracking Your Data Across Models\n\n### What is Radioactivity?\n\nRadioactivity is defined here as:\n\n> If a model **M\u2082** is trained or fine-tuned on outputs from a watermarked model **M\u2081**, then **M\u2082\u2019s** outputs still carry a detectable version of **M\u2081\u2019s watermark**.\n\nThis is crucial for **data provenance**:\n\n- Model owners can tell whether **downstream models** have trained on their generated images.\n- They can **filter out** their own generated content when training future model versions to avoid model collapse.\n\n### Experiments: Same and Cross Modality\n\nThe authors evaluate radioactivity as follows:\n\n1. Use **Infinity-2B** with BitMark to generate watermarked images.\n2. Train a second model **M\u2082** on these images:\n    - Case 1: M\u2082 is another Infinity-2B (same architecture).\n    - Case 2: M\u2082 is **Stable Diffusion 2.1** (latent diffusion model; different architecture and latent space).\n\nThen they run BitMark\u2019s detector on M\u2082\u2019s outputs.\n\nResults (TPR at 1% FPR):\n\n- **Infinity-2B \u2192 Infinity-2B**:\n    - Watermarked M\u2081 outputs: 100% TPR.\n    - M\u2082 outputs: **100% TPR**.\n- **Infinity-2B \u2192 Stable Diffusion 2.1**:\n    - M\u2082 outputs: **~98.9% TPR**.\n\n| Training data source | M\u2082 architecture      | TPR @ 1% FPR |\n| -------------------- | -------------------- | ------------ |\n| BitMark Infinity-2B  | Infinity-2B          | 100%         |\n| BitMark Infinity-2B  | Stable Diffusion 2.1 | 98.9%        |\n| BitMark Infinity-2B  | VAR-d30              | 25.6         |\n| BitMark Infinity-2B  | RAR-XXL              | 4.1          |\n\nDespite encoding into a latent space and going through a noising\u2013denoising training process, BitMark\u2019s bit patterns are **preserved**.\n\nFor VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?\n\n### How Much Watermarked Data is Needed?\n\nWe also vary the fraction of watermarked data used to train M\u2082:\n\n- Even when only **10%** of M\u2082\u2019s training data is watermarked:\n    - Detection at 1% FPR is clearly above chance (TPR ~22.7%).\n    - A Mann\u2013Whitney U test shows the z-score distribution is **highly significantly shifted**.\n- At just **5%** watermarked data, the statistical test is already significant.\n\n| % watermarked in M\u2082 training | TPR @ 1% FPR | Significant |\n| ---------------------------- | ------------ | ----------- |\n| 10%                          | 22.7%        | \u2705           |\n| 5%                           | > 0.5        | \u2705           |\n\nIn other words:\n\n- You don\u2019t need your data to dominate the training set.\n- Even a **small fraction** of watermarked examples leaves a detectable distributional footprint in M\u2082\u2019s outputs.\n\n---\n\n## Why This Matters for Preventing Model Collapse\n\nModern generative models train on:\n\n- **Massive, mixed datasets** scraped from the internet.\n- Growing volumes of **model-generated** content, often unlabeled.\n\nWithout tools like BitMark, it is hard to:\n\n- Know when your own outputs reappear in somebody else\u2019s training set.\n- Avoid **feeding your own generated data back** into later training runs.\n\nBitMark changes that:\n\n- It provides an **efficient, in-generation watermark** for bitwise autoregressive models.\n- Its **radioactivity** ensures the watermark signal persists through training pipelines.\n- Model owners can **detect and exclude** images derived from their own outputs, mitigating model collapse and enabling principled data governance.\n\n---\n\n## Summary\n\n1. **BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models** like Infinity and Instella IAR.\n2. It embeds a watermark by **softly biasing bit sequences** toward a green list and detects it via a **bit-level statistical test**.\n3. BitMark maintains **high image quality** and **low overhead**, while being robust to a wide range of attacks.\n4. BitMark is **highly radioactive**:\n    - Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.\n    - This holds even when only a **small fraction** of the training data is watermarked.\n5. This radioactivity enables **long-term provenance tracking** and gives model owners a practical tool to **avoid training on their own outputs**, helping prevent model collapse.\n  \n\n---\n  \n\n**\ud83d\udc49 Read our** <a href=\"https://openreview.net/pdf?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n\n  \n\n## Bibtex\n\n  \n\n```\n@inproceedings{\n  kerner2025bitmark,\n  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},\n  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  url={https://openreview.net/forum?id=VSir0FzFnP}\n}\n```",
+        "numLines": 233,
+        "startLine": 1,
+        "totalLines": 233
+      }
+    },
+    "tool_use_id": "toolu_01K4qG4YybHCc77m42L3Q6sZ"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Glob",
+    "tool_input": {
+      "pattern": "_members/*.md",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website"
+    },
+    "tool_response": {
+      "filenames": [
+        "_members/adam.md",
+        "_members/adarsh.md",
+        "_members/aditya.md",
+        "_members/aditya2.md",
+        "_members/aiman.md",
+        "_members/albert.md",
+        "_members/antoni.md",
+        "_members/ayesha.md",
+        "_members/bartek.md",
+        "_members/bihe.md",
+        "_members/dariush.md",
+        "_members/emmanuel.md",
+        "_members/filip.md",
+        "_members/filip2.md",
+        "_members/franzi.md",
+        "_members/grace.md",
+        "_members/hoyong.md",
+        "_members/hubert.md",
+        "_members/ivo.md",
+        "_members/jan.md",
+        "_members/jan2.md",
+        "_members/jingxu.md",
+        "_members/jyotika.md",
+        "_members/kaif.md",
+        "_members/krzysztof.md",
+        "_members/krzysztof2.md",
+        "_members/lorenzo.md",
+        "_members/louis.md",
+        "_members/lukasz.md",
+        "_members/maitri.md",
+        "_members/michel.md",
+        "_members/nima.md",
+        "_members/nupur.md",
+        "_members/ossi.md",
+        "_members/pierre.md",
+        "_members/piotr.md",
+        "_members/shahrzad.md",
+        "_members/shayan.md",
+        "_members/stas.md",
+        "_members/tameem.md",
+        "_members/tom.md",
+        "_members/tymoteusz.md",
+        "_members/vincent.md",
+        "_members/wenhao.md",
+        "_members/xun.md",
+        "_members/youssef.md",
+        "_members/chris.md"
+      ],
+      "durationMs": 25,
+      "numFiles": 47,
+      "truncated": false
+    },
+    "tool_use_id": "toolu_01E23wJRHQb7dqgR5og7pJXH"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/louis.md"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/louis.md",
+        "content": "---\nshort_name: louis\nname: Louis Kerner\nposition: PhD student\nactive: true\nemail: louis.kerner@cispa.de\ntwitter: \nlinkedin: https://www.linkedin.com/in/louiskerner/\ngoogle_scholar: \nwebsite_url: \ncv_url: \n---\n \n\n",
+        "numLines": 15,
+        "startLine": 1,
+        "totalLines": 15
+      }
+    },
+    "tool_use_id": "toolu_01JXiufix3k3kCVfHQuQx5Fe"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/michel.md"
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_members/michel.md",
+        "content": "---\nshort_name: michel\nname: Michel Meintz\nposition: PhD student\nactive: true\nemail: mime00001@stud.uni-saarland.de\ntwitter: \nlinkedin: \ngoogle_scholar: \nwebsite_url: \ncv_url: \n---\n ",
+        "numLines": 13,
+        "startLine": 1,
+        "totalLines": 13
+      }
+    },
+    "tool_use_id": "toolu_01BDEF65fJ7qBogv8vv2vy4A"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Glob",
+    "tool_input": {
+      "pattern": "assets/blog/bitmark/**",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website"
+    },
+    "tool_response": {
+      "filenames": [
+        "assets/blog/bitmark/bitmark-example.png",
+        "assets/blog/bitmark/token-vs-bit-overlap.png"
+      ],
+      "durationMs": 17,
+      "numFiles": 2,
+      "truncated": false
+    },
+    "tool_use_id": "toolu_013wxy3ioCrnToeS7nVcimZt"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "tokens-vs-bit-overlap.png",
+      "new_string": "token-vs-bit-overlap.png",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "oldString": "tokens-vs-bit-overlap.png",
+      "newString": "token-vs-bit-overlap.png",
+      "originalFile": "---\nlayout: post\ntitle: \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\ndate: 2025-11-30\ntags: watermarking image-autoregressive-model generated-content-detection radioactivity\n---\n  \n\n<center>\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Louis Kerner</a>,\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Michel Meintz</a>,\n\u00a0\u00a0<a href=\"https://bihezhao.github.io/\">Bihe Zhao</a>,\n\u00a0\u00a0<a href=\"https://franziska-boenisch.de/\">Franziska Boenisch</a>,\n\u00a0\u00a0<a href=\"https://adam-dziedzic.com/\">Adam Dziedzic</a>.\n\u00a0\u00a0<br><br>\n\u00a0\u00a0CISPA Helmholtz Center for Information Security<br>\n\u00a0\u00a0\u00a0<br><br>\n</center>\n\n  \n\nAutoregressive image models like **Infinity** and **Instella IAR** are now competitive with diffusion models for high\u2011quality text-to-image generation. But as generated images get reused as training data, we risk **model collapse**: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.\n\n**BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models**. It embeds a watermark at **generation time** that is:\n\n- **Hard to remove** without degrading image quality.\n- **Efficient** to generate and detect.\n- **Radioactive** \u2013 its signal persists even when other models are trained on watermarked images.\n\nThis radioactivity lets model owners **track provenance across training cycles** and avoid training future models on their own outputs.\n\n---\n\n## Background: Bitwise Autoregressive Image Models\n\n**VAR** and its extension **Infinity** generate images autoregressively, scale-by-scale:\n\n- Images are quantized into discrete codes and predicted as sequences.\n- Infinity uses **bitwise prediction** with a large implicit codebook and **binary spherical quantization**.\n- Random bit flipping during generation allows **self-correction** across scales.\n\n**Instella IAR** also adopts a **bitwise** next\u2011patch prediction scheme, using very few tokens (e.g., 128) for a 1024\u00d71024 image.\n\nThese models work at the **bit level** internally, which is where BitMark is applied.\n\n---\n\n## Why Bit-Level Watermarking?\n\nUnlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity\u2019s:\n\n- **Token overlap** after decode\u2013re-encode is very low (~2.4%).\n- **Bit overlap** is much higher (~77%).\n\nSo bits are **far more stable** than tokens, given the large codebook. This motivates **embedding and detecting watermarks in bit space**, not at the token or pixel level.\n\n\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/tokens-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>\n\n---\n\n## The BitMark Watermark\n\n### Embedding: Biasing Green Bit Sequences\n\nBitMark follows the \u201cgreen/red list\u201d idea from LLM watermarking:\n\n- Consider all bit sequences of length `n`: `S = {0,1}^n`.\n- Assign them to a **green** list `G` and a **red** list `R` \n- During autoregressive generation, whenever a bit would complete a sequence in `G`, BitMark adds a **small bias** `\u03b4` to the corresponding logit before sampling.\n\t- Because only these **high-entropy bits** are **slightly nudged** and therefore influenced, image quality and semantics are essentially preserved.\n\n\nResult: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences\n\nTo detect the watermark:\n\n1. Encode the image with the model\u2019s **private encoder/tokenizer** to get bits.\n2. Slide a window of length `n` over the bits and count how many sequences fall into `G` vs `R`.\n3. Under the null hypothesis \u201cthis image is not watermarked,\u201d the number of green sequences behaves like a binomial variable with known mean and variance.\n4. Compute a **z-score** and reject the null if `z` exceeds a chosen threshold (e.g., corresponding to 1% FPR).\n\nClean images produce z-scores near **0**; BitMark images produce **large positive** z\u2011scores.\nSince our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data. \n\n---\n\n## Quality and Robustness\n\nUsing **Infinity-2B** as the main model (MS-COCO 2014 validation set):\n\n- For practical bias strengths (e.g., `\u03b4 \u2264 2`):\n    - **FID/KID** are similar to non-watermarked images.\n    - **CLIP score** (prompt\u2013image alignment) remains nearly unchanged.\n- Generation speed overhead is modest (~10% at most).\n- Detection is fast (less than a second per image).\n\nBitMark is robust against:\n\n- Common transforms (noise, blur, color jitter, cropping, JPEG, flips).\n- Reconstruction-like attacks (encode\u2013decode via Stable Diffusion 2.1\u2019s VAE, regeneration attacks such as CtrlRegen+).\n- Strong removal attempts (e.g., \u201cwatermarks in the sand\u201d) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.\n\nEven a custom **Bit-Flipper attack**\u2014where the attacker knows the encoder, the algorithm, and the exact green/red lists\u2014cannot erase the watermark without **severe visual degradation**.\n\n\n---\n## Radioactivity: Tracking Your Data Across Models\n\n### What is Radioactivity?\n\nRadioactivity is defined here as:\n\n> If a model **M\u2082** is trained or fine-tuned on outputs from a watermarked model **M\u2081**, then **M\u2082\u2019s** outputs still carry a detectable version of **M\u2081\u2019s watermark**.\n\nThis is crucial for **data provenance**:\n\n- Model owners can tell whether **downstream models** have trained on their generated images.\n- They can **filter out** their own generated content when training future model versions to avoid model collapse.\n\n### Experiments: Same and Cross Modality\n\nThe authors evaluate radioactivity as follows:\n\n1. Use **Infinity-2B** with BitMark to generate watermarked images.\n2. Train a second model **M\u2082** on these images:\n    - Case 1: M\u2082 is another Infinity-2B (same architecture).\n    - Case 2: M\u2082 is **Stable Diffusion 2.1** (latent diffusion model; different architecture and latent space).\n\nThen they run BitMark\u2019s detector on M\u2082\u2019s outputs.\n\nResults (TPR at 1% FPR):\n\n- **Infinity-2B \u2192 Infinity-2B**:\n    - Watermarked M\u2081 outputs: 100% TPR.\n    - M\u2082 outputs: **100% TPR**.\n- **Infinity-2B \u2192 Stable Diffusion 2.1**:\n    - M\u2082 outputs: **~98.9% TPR**.\n\n| Training data source | M\u2082 architecture      | TPR @ 1% FPR |\n| -------------------- | -------------------- | ------------ |\n| BitMark Infinity-2B  | Infinity-2B          | 100%         |\n| BitMark Infinity-2B  | Stable Diffusion 2.1 | 98.9%        |\n| BitMark Infinity-2B  | VAR-d30              | 25.6         |\n| BitMark Infinity-2B  | RAR-XXL              | 4.1          |\n\nDespite encoding into a latent space and going through a noising\u2013denoising training process, BitMark\u2019s bit patterns are **preserved**.\n\nFor VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?\n\n### How Much Watermarked Data is Needed?\n\nWe also vary the fraction of watermarked data used to train M\u2082:\n\n- Even when only **10%** of M\u2082\u2019s training data is watermarked:\n    - Detection at 1% FPR is clearly above chance (TPR ~22.7%).\n    - A Mann\u2013Whitney U test shows the z-score distribution is **highly significantly shifted**.\n- At just **5%** watermarked data, the statistical test is already significant.\n\n| % watermarked in M\u2082 training | TPR @ 1% FPR | Significant |\n| ---------------------------- | ------------ | ----------- |\n| 10%                          | 22.7%        | \u2705           |\n| 5%                           | > 0.5        | \u2705           |\n\nIn other words:\n\n- You don\u2019t need your data to dominate the training set.\n- Even a **small fraction** of watermarked examples leaves a detectable distributional footprint in M\u2082\u2019s outputs.\n\n---\n\n## Why This Matters for Preventing Model Collapse\n\nModern generative models train on:\n\n- **Massive, mixed datasets** scraped from the internet.\n- Growing volumes of **model-generated** content, often unlabeled.\n\nWithout tools like BitMark, it is hard to:\n\n- Know when your own outputs reappear in somebody else\u2019s training set.\n- Avoid **feeding your own generated data back** into later training runs.\n\nBitMark changes that:\n\n- It provides an **efficient, in-generation watermark** for bitwise autoregressive models.\n- Its **radioactivity** ensures the watermark signal persists through training pipelines.\n- Model owners can **detect and exclude** images derived from their own outputs, mitigating model collapse and enabling principled data governance.\n\n---\n\n## Summary\n\n1. **BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models** like Infinity and Instella IAR.\n2. It embeds a watermark by **softly biasing bit sequences** toward a green list and detects it via a **bit-level statistical test**.\n3. BitMark maintains **high image quality** and **low overhead**, while being robust to a wide range of attacks.\n4. BitMark is **highly radioactive**:\n    - Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.\n    - This holds even when only a **small fraction** of the training data is watermarked.\n5. This radioactivity enables **long-term provenance tracking** and gives model owners a practical tool to **avoid training on their own outputs**, helping prevent model collapse.\n  \n\n---\n  \n\n**\ud83d\udc49 Read our** <a href=\"https://openreview.net/pdf?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n\n  \n\n## Bibtex\n\n  \n\n```\n@inproceedings{\n  kerner2025bitmark,\n  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},\n  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  url={https://openreview.net/forum?id=VSir0FzFnP}\n}\n```",
+      "structuredPatch": [
+        {
+          "oldStart": 57,
+          "oldLines": 7,
+          "newStart": 57,
+          "newLines": 7,
+          "lines": [
+            " ",
+            " ",
+            " <div style=\"text-align:center; margin-bottom:30px;\">",
+            "-  <img src=\"{{ site.url }}/assets/blog/bitmark/tokens-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">",
+            "+  <img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">",
+            " </div>",
+            " ",
+            " ---"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_01VkUaE4zz84n3w258QfNT42"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "BitMark Watermarking Bitwise Autoregressive Image Generative Models NeurIPS 2025 openreview",
+      "allowed_domains": [
+        "openreview.net"
+      ]
+    },
+    "tool_response": {
+      "query": "BitMark Watermarking Bitwise Autoregressive Image Generative Models NeurIPS 2025 openreview",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_013kvHkYhB66BzWiVN1juxrS",
+          "content": [
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models | OpenReview",
+              "url": "https://openreview.net/forum?id=VSir0FzFnP"
+            },
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://openreview.net/pdf/124f3ab6d360baf54f30562f2630367bfa2af493.pdf"
+            },
+            {
+              "title": "Watermarking Image Autoregressive Models",
+              "url": "https://openreview.net/pdf?id=ytMPOhAYHW"
+            },
+            {
+              "title": "Watermarking Diffusion Language Models",
+              "url": "https://openreview.net/pdf?id=Iw6kgfvsaL"
+            },
+            {
+              "title": "Watermarking Autoregressive Image Generation",
+              "url": "https://openreview.net/pdf/28e86f59ca0947399f557c0cb749b81e7b66c6d5.pdf"
+            },
+            {
+              "title": "The Coding Limits of Robust Watermarking for Generative Models | OpenReview",
+              "url": "https://openreview.net/forum?id=9u8HFU6ioO"
+            },
+            {
+              "title": "Provable Robust Watermarking for AI-Generated Text Xuandong Zhao",
+              "url": "https://openreview.net/pdf?id=ucTe1eiLc6"
+            },
+            {
+              "title": "NeurIPS 2025 | OpenReview",
+              "url": "https://openreview.net/group?id=NeurIPS.cc/2025"
+            },
+            {
+              "title": "The 2024 NeurIPS Competition on Stress Testing Image ...",
+              "url": "https://openreview.net/pdf/7f3e5e4ffa6604e20010bfc8a33d1dac0e05163d.pdf"
+            },
+            {
+              "title": "ROBUST WATERMARKING FOR DIFFUSION MODELS",
+              "url": "https://openreview.net/pdf/7587fb7be7dd4ce3a2af832b85adc3bfe0b34e13.pdf"
+            }
+          ]
+        },
+        "Based on the web search results, I found the paper you're looking for:\n\n## BitMark: Watermarking Bitwise Autoregressive Image Generative Models\n\nBitMark is a robust bitwise watermarking framework that embeds a watermark directly at the bit level of the token stream during the image generation process.\n\n**Key Features:**\n\nBitMark introduces a bitwise, radioactive watermark for bitwise image generative models and shows that it remains robust against various attacks while preserving high image quality and generation speed.\n\n**Problem Addressed:**\n\nAs the outputs of state-of-the-art text-to-image models increasingly populate the Internet, they are likely to be scraped and reused as training data\u2014potentially by the very same models. This phenomenon has been shown to lead to model collapse, where repeated training on generated content causes a gradual degradation in performance.\n\n**Technical Approach:**\n\nThe bitwise watermark subtly influences the bits to preserve visual fidelity and generation speed while remaining robust against a spectrum of removal techniques. Furthermore, it exhibits high radioactivity, i.e., when watermarked generated images are used to train another image generative model, this second model's outputs will also carry the watermark.\n\n**Publication:**\n\nThe paper is a NeurIPS 2025 poster, published on September 18, 2025 (last modified December 11, 2025). The code is available at https://github.com/sprintml/BitMark."
+      ],
+      "durationSeconds": 8.855699749999912
+    },
+    "tool_use_id": "toolu_012kgcMYJvNRY61rFexkhEk8"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/pdf?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "new_string": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "oldString": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/pdf?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "newString": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "originalFile": "---\nlayout: post\ntitle: \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\ndate: 2025-11-30\ntags: watermarking image-autoregressive-model generated-content-detection radioactivity\n---\n  \n\n<center>\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Louis Kerner</a>,\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Michel Meintz</a>,\n\u00a0\u00a0<a href=\"https://bihezhao.github.io/\">Bihe Zhao</a>,\n\u00a0\u00a0<a href=\"https://franziska-boenisch.de/\">Franziska Boenisch</a>,\n\u00a0\u00a0<a href=\"https://adam-dziedzic.com/\">Adam Dziedzic</a>.\n\u00a0\u00a0<br><br>\n\u00a0\u00a0CISPA Helmholtz Center for Information Security<br>\n\u00a0\u00a0\u00a0<br><br>\n</center>\n\n  \n\nAutoregressive image models like **Infinity** and **Instella IAR** are now competitive with diffusion models for high\u2011quality text-to-image generation. But as generated images get reused as training data, we risk **model collapse**: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.\n\n**BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models**. It embeds a watermark at **generation time** that is:\n\n- **Hard to remove** without degrading image quality.\n- **Efficient** to generate and detect.\n- **Radioactive** \u2013 its signal persists even when other models are trained on watermarked images.\n\nThis radioactivity lets model owners **track provenance across training cycles** and avoid training future models on their own outputs.\n\n---\n\n## Background: Bitwise Autoregressive Image Models\n\n**VAR** and its extension **Infinity** generate images autoregressively, scale-by-scale:\n\n- Images are quantized into discrete codes and predicted as sequences.\n- Infinity uses **bitwise prediction** with a large implicit codebook and **binary spherical quantization**.\n- Random bit flipping during generation allows **self-correction** across scales.\n\n**Instella IAR** also adopts a **bitwise** next\u2011patch prediction scheme, using very few tokens (e.g., 128) for a 1024\u00d71024 image.\n\nThese models work at the **bit level** internally, which is where BitMark is applied.\n\n---\n\n## Why Bit-Level Watermarking?\n\nUnlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity\u2019s:\n\n- **Token overlap** after decode\u2013re-encode is very low (~2.4%).\n- **Bit overlap** is much higher (~77%).\n\nSo bits are **far more stable** than tokens, given the large codebook. This motivates **embedding and detecting watermarks in bit space**, not at the token or pixel level.\n\n\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>\n\n---\n\n## The BitMark Watermark\n\n### Embedding: Biasing Green Bit Sequences\n\nBitMark follows the \u201cgreen/red list\u201d idea from LLM watermarking:\n\n- Consider all bit sequences of length `n`: `S = {0,1}^n`.\n- Assign them to a **green** list `G` and a **red** list `R` \n- During autoregressive generation, whenever a bit would complete a sequence in `G`, BitMark adds a **small bias** `\u03b4` to the corresponding logit before sampling.\n\t- Because only these **high-entropy bits** are **slightly nudged** and therefore influenced, image quality and semantics are essentially preserved.\n\n\nResult: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences\n\nTo detect the watermark:\n\n1. Encode the image with the model\u2019s **private encoder/tokenizer** to get bits.\n2. Slide a window of length `n` over the bits and count how many sequences fall into `G` vs `R`.\n3. Under the null hypothesis \u201cthis image is not watermarked,\u201d the number of green sequences behaves like a binomial variable with known mean and variance.\n4. Compute a **z-score** and reject the null if `z` exceeds a chosen threshold (e.g., corresponding to 1% FPR).\n\nClean images produce z-scores near **0**; BitMark images produce **large positive** z\u2011scores.\nSince our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data. \n\n---\n\n## Quality and Robustness\n\nUsing **Infinity-2B** as the main model (MS-COCO 2014 validation set):\n\n- For practical bias strengths (e.g., `\u03b4 \u2264 2`):\n    - **FID/KID** are similar to non-watermarked images.\n    - **CLIP score** (prompt\u2013image alignment) remains nearly unchanged.\n- Generation speed overhead is modest (~10% at most).\n- Detection is fast (less than a second per image).\n\nBitMark is robust against:\n\n- Common transforms (noise, blur, color jitter, cropping, JPEG, flips).\n- Reconstruction-like attacks (encode\u2013decode via Stable Diffusion 2.1\u2019s VAE, regeneration attacks such as CtrlRegen+).\n- Strong removal attempts (e.g., \u201cwatermarks in the sand\u201d) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.\n\nEven a custom **Bit-Flipper attack**\u2014where the attacker knows the encoder, the algorithm, and the exact green/red lists\u2014cannot erase the watermark without **severe visual degradation**.\n\n\n---\n## Radioactivity: Tracking Your Data Across Models\n\n### What is Radioactivity?\n\nRadioactivity is defined here as:\n\n> If a model **M\u2082** is trained or fine-tuned on outputs from a watermarked model **M\u2081**, then **M\u2082\u2019s** outputs still carry a detectable version of **M\u2081\u2019s watermark**.\n\nThis is crucial for **data provenance**:\n\n- Model owners can tell whether **downstream models** have trained on their generated images.\n- They can **filter out** their own generated content when training future model versions to avoid model collapse.\n\n### Experiments: Same and Cross Modality\n\nThe authors evaluate radioactivity as follows:\n\n1. Use **Infinity-2B** with BitMark to generate watermarked images.\n2. Train a second model **M\u2082** on these images:\n    - Case 1: M\u2082 is another Infinity-2B (same architecture).\n    - Case 2: M\u2082 is **Stable Diffusion 2.1** (latent diffusion model; different architecture and latent space).\n\nThen they run BitMark\u2019s detector on M\u2082\u2019s outputs.\n\nResults (TPR at 1% FPR):\n\n- **Infinity-2B \u2192 Infinity-2B**:\n    - Watermarked M\u2081 outputs: 100% TPR.\n    - M\u2082 outputs: **100% TPR**.\n- **Infinity-2B \u2192 Stable Diffusion 2.1**:\n    - M\u2082 outputs: **~98.9% TPR**.\n\n| Training data source | M\u2082 architecture      | TPR @ 1% FPR |\n| -------------------- | -------------------- | ------------ |\n| BitMark Infinity-2B  | Infinity-2B          | 100%         |\n| BitMark Infinity-2B  | Stable Diffusion 2.1 | 98.9%        |\n| BitMark Infinity-2B  | VAR-d30              | 25.6         |\n| BitMark Infinity-2B  | RAR-XXL              | 4.1          |\n\nDespite encoding into a latent space and going through a noising\u2013denoising training process, BitMark\u2019s bit patterns are **preserved**.\n\nFor VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?\n\n### How Much Watermarked Data is Needed?\n\nWe also vary the fraction of watermarked data used to train M\u2082:\n\n- Even when only **10%** of M\u2082\u2019s training data is watermarked:\n    - Detection at 1% FPR is clearly above chance (TPR ~22.7%).\n    - A Mann\u2013Whitney U test shows the z-score distribution is **highly significantly shifted**.\n- At just **5%** watermarked data, the statistical test is already significant.\n\n| % watermarked in M\u2082 training | TPR @ 1% FPR | Significant |\n| ---------------------------- | ------------ | ----------- |\n| 10%                          | 22.7%        | \u2705           |\n| 5%                           | > 0.5        | \u2705           |\n\nIn other words:\n\n- You don\u2019t need your data to dominate the training set.\n- Even a **small fraction** of watermarked examples leaves a detectable distributional footprint in M\u2082\u2019s outputs.\n\n---\n\n## Why This Matters for Preventing Model Collapse\n\nModern generative models train on:\n\n- **Massive, mixed datasets** scraped from the internet.\n- Growing volumes of **model-generated** content, often unlabeled.\n\nWithout tools like BitMark, it is hard to:\n\n- Know when your own outputs reappear in somebody else\u2019s training set.\n- Avoid **feeding your own generated data back** into later training runs.\n\nBitMark changes that:\n\n- It provides an **efficient, in-generation watermark** for bitwise autoregressive models.\n- Its **radioactivity** ensures the watermark signal persists through training pipelines.\n- Model owners can **detect and exclude** images derived from their own outputs, mitigating model collapse and enabling principled data governance.\n\n---\n\n## Summary\n\n1. **BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models** like Infinity and Instella IAR.\n2. It embeds a watermark by **softly biasing bit sequences** toward a green list and detects it via a **bit-level statistical test**.\n3. BitMark maintains **high image quality** and **low overhead**, while being robust to a wide range of attacks.\n4. BitMark is **highly radioactive**:\n    - Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.\n    - This holds even when only a **small fraction** of the training data is watermarked.\n5. This radioactivity enables **long-term provenance tracking** and gives model owners a practical tool to **avoid training on their own outputs**, helping prevent model collapse.\n  \n\n---\n  \n\n**\ud83d\udc49 Read our** <a href=\"https://openreview.net/pdf?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n\n  \n\n## Bibtex\n\n  \n\n```\n@inproceedings{\n  kerner2025bitmark,\n  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},\n  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  url={https://openreview.net/forum?id=VSir0FzFnP}\n}\n```",
+      "structuredPatch": [
+        {
+          "oldStart": 213,
+          "oldLines": 7,
+          "newStart": 213,
+          "newLines": 7,
+          "lines": [
+            " ---",
+            "   ",
+            " ",
+            "-**\ud83d\udc49 Read our** <a href=\"https://openreview.net/pdf?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+            "+**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+            " ",
+            "   ",
+            " "
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_01AgcVcmQs928o3oKeQnP2ug"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "limit": 5
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+        "content": "- date: April 20 2026\n  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"\n\n- date: November 09 2025\n  headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!",
+        "numLines": 5,
+        "startLine": 1,
+        "totalLines": 54
+      }
+    },
+    "tool_use_id": "toolu_01B7KXnoLSrzmy1epeMfDUTG"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "old_string": "and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"",
+      "new_string": "and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a> (ORAL)!\"",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_data/news.yml",
+      "oldString": "and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"",
+      "newString": "and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a> (ORAL)!\"",
+      "originalFile": "- date: April 20 2026\n  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"\n\n- date: November 09 2025\n  headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!\n\n- date: September 18 2025\n  headline: Excited to share three papers accepted to NeurIPS'25 on <a href=\"https://arxiv.org/abs/2506.21209\" target=\"_blank\">watermarking bitwise autoregressive models (BitMark)</a>, <a href=\"https://arxiv.org/abs/2508.19352\" target=\"_blank\">memorization in GNNs</a>, and <a href=\"https://arxiv.org/abs/2505.18773\" target=\"_blank\">strong membership inference attacks on massive datasets and large language models</a>!\n\n- date: May 1 2025\n  headline: Thrilled to announce three papers accepted to ICML'25 on <a href=\"https://arxiv.org/abs/2502.02514\" target=\"_blank\">privacy attacks on image autoregressive models</a>, <a href=\"https://arxiv.org/abs/2506.15271\" target=\"_blank\">dataset inference with synthetic data</a>, and <a href=\"https://arxiv.org/abs/2506.16196\" target=\"_blank\">efficient and private soft prompt transfer for LLMs</a>!\n\n- date: February 26 2025\n  headline: \"Big congrats on our paper <a href=\\\"https://arxiv.org/abs/2411.12858\\\" target=\\\"_blank\\\">CDI: Copyrighted Data Identification in Diffusion Models</a> accepted to CVPR'25! This is the first method to detect if a given dataset was used during the training of diffusion models.\"\n\n- date: January 22 2025\n  headline: SprintML has three accepted papers for ICLR'25! What a successful start of the year.\n\n- date: December 09 2024\n  headline: Our work on <a href=\"https://arxiv.org/pdf/2406.08039Differential\" target=\"_blank\">Private Prototypes</a> for efficient and private learning on unbalanced datasets was accepted to AAAI'25.\n\n- date: November 11 2024\n  headline: Our work on text editing in diffusion models got the best poster award at <a href=\"https://www.linkedin.com/posts/l-staniszewski_mlinpl-activity-7261370796386701312-5Q97?utm_source=share&utm_medium=member_desktop\" target=\"_blank\">ML in PL</a>!\n\n- date: November 01 2024\n  headline: We are extremely proud on the four papers we got in to NeurIPS'24. Happy to share the blog posts soon.\n\n- date: June 01 2024\n  headline: We have two new openings for <a href=\"positions\" target=\"_blank\">HiWi positions</a>! \n\n- date: January 16 2024\n  headline: Check our new paper accepted at ICLR 2024 on <a href=\"https://arxiv.org/pdf/2401.12233.pdf\" target=\"_blank\">memorization in self-supervised learning</a>! \n\n- date: October 29 2023\n  headline: The best poster award at MLinPL for our work on B4B (Bucks for Buckets) Active Defenses against Stealing Self-Supervised Models. \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://adam-dziedzic.com/static/assets/papers/b4b.pdf\" target=\"_blank\">active defenses against stealing of SSL encoders</a>! \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://adam-dziedzic.com/static/assets/papers/p2plearning.pdf\" target=\"_blank\">P2P collaborative learning secure against malicious servers and robust to malicious clients</a>! \n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://arxiv.org/abs/2303.17046\" target=\"_blank\">individualized DP-SGD</a>!\n\n- date: September 21 2023\n  headline: Check our new paper accepted at NeurIPS 2023 on <a href=\"https://arxiv.org/abs/2305.15594\" target=\"_blank\">privacy for prompts</a>!\n\n- date: September 21 2023\n  headline: Check our 4 new papers accepted to NeurIPS.\n\n- date: May 25 2023\n  headline: Only 99 days until the SprintML lab will launch at CISPA.\n",
+      "structuredPatch": [
+        {
+          "oldStart": 1,
+          "oldLines": 5,
+          "newStart": 1,
+          "newLines": 5,
+          "lines": [
+            " - date: April 20 2026",
+            "-  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a>!\"",
+            "+  headline: \"Our most successful ICLR ever \u2014 5 accepted papers at ICLR'26! <a href=\\\"https://openreview.net/forum?id=doaAUf9Pi7\\\" target=\\\"_blank\\\">Natural identifiers for privacy and data audits in LLMs</a>, <a href=\\\"https://openreview.net/forum?id=qYu4wj7O3z\\\" target=\\\"_blank\\\">data provenance for image auto-regressive generation</a>, <a href=\\\"https://openreview.net/forum?id=BzNf90Csfa\\\" target=\\\"_blank\\\">curation leaks: membership inference attacks against data curation</a>, <a href=\\\"https://openreview.net/forum?id=AiBUm6iKBf\\\" target=\\\"_blank\\\">SERUM: simple, efficient, robust, and unifying marking for diffusion-based image generation</a>, and <a href=\\\"https://openreview.net/forum?id=jY7fAo9rfK\\\" target=\\\"_blank\\\">benchmarking empirical privacy protection for LLM adaptations</a> (ORAL)!\"",
+            " ",
+            " - date: November 09 2025",
+            "   headline: Excited to announce three papers accepted to AAAI'26! Our work on <a href=\"https://arxiv.org/pdf/2502.05066\" target=\"_blank\">mitigating unsafe text in image generative models</a>, <a href=\"https://arxiv.org/pdf/2508.12148\" target=\"_blank\">demystifying foreground and background memorization in diffusion models</a>, and our graph stealing paper which received an ORAL presentation!"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_0169V5biY1C1WCDg5tgAU67i"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Glob",
+    "tool_input": {
+      "pattern": "_posts/*.markdown",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website"
+    },
+    "tool_response": {
+      "filenames": [
+        "_posts/2023-02-23-model-extraction.markdown",
+        "_posts/2023-12-10-b4b.markdown",
+        "_posts/2024-04-28-private-prompts.markdown",
+        "_posts/2024-12-10-open-llms.markdown",
+        "_posts/2025-02-04-iars-privacy.markdown",
+        "_posts/2025-03-03-CLIPMem.markdown",
+        "_posts/2026-02-27-SafeTextGen.markdown",
+        "_posts/2025-11-30-BitMark.markdown"
+      ],
+      "durationMs": 20,
+      "numFiles": 8,
+      "truncated": false
+    },
+    "tool_use_id": "toolu_012mZtcvdXV7w8KXAy7Uz1YS"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "img src|assets/blog",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts",
+      "output_mode": "content"
+    },
+    "tool_response": {
+      "mode": "content",
+      "numFiles": 0,
+      "filenames": [],
+      "content": "_posts/2025-03-03-CLIPMem.markdown:36:<img src=\"{{ site.url }}/assets/blog/clipmem/fig1.png\" width=\"80%\"/>\n_posts/2025-03-03-CLIPMem.markdown:52:<img src=\"{{ site.url }}/assets/blog/clipmem/fig2.png\" width=\"50%\"/>\n_posts/2025-03-03-CLIPMem.markdown:68:<img src=\"{{ site.url }}/assets/blog/clipmem/fig3.png\" width=\"50%\"/>\n_posts/2025-03-03-CLIPMem.markdown:88:<img src=\"{{ site.url }}/assets/blog/clipmem/fig4.png\" width=\"80%\"/>\n_posts/2025-03-03-CLIPMem.markdown:96:<img src=\"{{ site.url }}/assets/blog/clipmem/fig5.png\" width=\"80%\"/>\n_posts/2024-04-28-private-prompts.markdown:41:<img src=\"{{ site.url }}/assets/prompts/miaprompt.png\" width=\"90%\"/>\n_posts/2024-04-28-private-prompts.markdown:61:<img src=\"{{ site.url }}/assets/prompts/promptpate.png\" width=\"90%\"/>\n_posts/2024-04-28-private-prompts.markdown:73:<img src=\"{{ site.url }}/assets/prompts/prmptdpsgd.png\" width=\"50%\"/>\n_posts/2025-02-04-iars-privacy.markdown:30:<img src=\"{{ site.url }}/assets/blog/iars/pareto1.png\" width=\"50%\"/>\n_posts/2025-02-04-iars-privacy.markdown:56:<img src=\"{{ site.url }}/assets/blog/iars/membershipinference.png\" width=\"50%\"/>\n_posts/2025-02-04-iars-privacy.markdown:91:<img src=\"{{ site.url }}/assets/blog/iars/datasetinference.jpg\" width=\"50%\"/>\n_posts/2025-02-04-iars-privacy.markdown:105:<img src=\"{{ site.url }}/assets/blog/iars/memorization.png\" width=\"50%\"/>\n_posts/2025-11-30-BitMark.markdown:60:\t<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n_posts/2025-11-30-BitMark.markdown:80:\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n_posts/2026-02-27-SafeTextGen.markdown:55:  <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/01.png\" width=\"400\"/>\n_posts/2026-02-27-SafeTextGen.markdown:63:  <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/02.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:64:  <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/03.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:65:  <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/04.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:75:  <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/05.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:77:  <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/06.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:87:  <img src=\"{{ site.url }}/assets/blog/safetextgen/07.jpg\" width=\"500\"/>\n_posts/2026-02-27-SafeTextGen.markdown:96:    <img src=\"{{ site.url }}/assets/blog/safetextgen/08.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:100:    <img src=\"{{ site.url }}/assets/blog/safetextgen/09.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:104:    <img src=\"{{ site.url }}/assets/blog/safetextgen/10.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:111:    <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/11.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:115:    <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/12.png\" width=\"200\"/>\n_posts/2026-02-27-SafeTextGen.markdown:119:    <img class=\"blur-image\" src=\"{{ site.url }}/assets/blog/safetextgen/13.png\" width=\"200\"/>\n_posts/2023-02-23-model-extraction.markdown:57:<img src=\"{{ site.url }}/assets/blog/ssl/siamese.png\" width=\"90%\"/>\n_posts/2023-02-23-model-extraction.markdown:79:<img src=\"{{ site.url }}/assets/blog/ssl/contrastive_loss.png\" width=\"90%\"/>\n_posts/2023-02-23-model-extraction.markdown:102:<img src=\"{{ site.url }}/assets/blog/ssl/watermark.png\" width=\"90%\"/>\n_posts/2023-02-23-model-extraction.markdown:131:<img src=\"{{ site.url }}/assets/blog/ssl/dataset_inference.png\" width=\"90%\"/>\n_posts/2024-12-10-open-llms.markdown:27:<img src=\"{{ site.url }}/assets/blog/openLLMs/adaptations.png\" width=\"50%\"/>\n_posts/2024-12-10-open-llms.markdown:41:<img src=\"{{ site.url }}/assets/blog/openLLMs/setup.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:38:<img src=\"{{ site.url }}/assets/blog/b4b/sl_vs_ssl.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:50:<img src=\"{{ site.url }}/assets/blog/b4b/stealing_ssl.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:60:<img src=\"{{ site.url }}/assets/blog/b4b/legit_coverage.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:63:<img src=\"{{ site.url }}/assets/blog/b4b/attacker_coverage.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:75:<img src=\"{{ site.url }}/assets/blog/b4b/LSH.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:81:<img src=\"{{ site.url }}/assets/blog/b4b/buckets.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:89:<img src=\"{{ site.url }}/assets/blog/b4b/simple_overview.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:95:<img src=\"{{ site.url }}/assets/blog/b4b/coverage.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:101:<img src=\"{{ site.url }}/assets/blog/b4b/cost_function.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:107:<img src=\"{{ site.url }}/assets/blog/b4b/transformations.png\" width=\"50%\"/>\n_posts/2023-12-10-b4b.markdown:123:<img src=\"{{ site.url }}/assets/blog/b4b/overview.png\" width=\"50%\"/>",
+      "numLines": 44
+    },
+    "tool_use_id": "toolu_01UZ8YN4vbaw5Qdp7BRhcjKN"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "offset": 57,
+      "limit": 10
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+        "content": "\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>\n\n---\n\n## The BitMark Watermark\n",
+        "numLines": 10,
+        "startLine": 57,
+        "totalLines": 233
+      }
+    },
+    "tool_use_id": "toolu_01T9NkFSZKzFty7utVhQpwCk"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>",
+      "new_string": "<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\"/>",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "oldString": "<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>",
+      "newString": "<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\"/>",
+      "originalFile": "---\nlayout: post\ntitle: \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\ndate: 2025-11-30\ntags: watermarking image-autoregressive-model generated-content-detection radioactivity\n---\n  \n\n<center>\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Louis Kerner</a>,\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Michel Meintz</a>,\n\u00a0\u00a0<a href=\"https://bihezhao.github.io/\">Bihe Zhao</a>,\n\u00a0\u00a0<a href=\"https://franziska-boenisch.de/\">Franziska Boenisch</a>,\n\u00a0\u00a0<a href=\"https://adam-dziedzic.com/\">Adam Dziedzic</a>.\n\u00a0\u00a0<br><br>\n\u00a0\u00a0CISPA Helmholtz Center for Information Security<br>\n\u00a0\u00a0\u00a0<br><br>\n</center>\n\n  \n\nAutoregressive image models like **Infinity** and **Instella IAR** are now competitive with diffusion models for high\u2011quality text-to-image generation. But as generated images get reused as training data, we risk **model collapse**: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.\n\n**BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models**. It embeds a watermark at **generation time** that is:\n\n- **Hard to remove** without degrading image quality.\n- **Efficient** to generate and detect.\n- **Radioactive** \u2013 its signal persists even when other models are trained on watermarked images.\n\nThis radioactivity lets model owners **track provenance across training cycles** and avoid training future models on their own outputs.\n\n---\n\n## Background: Bitwise Autoregressive Image Models\n\n**VAR** and its extension **Infinity** generate images autoregressively, scale-by-scale:\n\n- Images are quantized into discrete codes and predicted as sequences.\n- Infinity uses **bitwise prediction** with a large implicit codebook and **binary spherical quantization**.\n- Random bit flipping during generation allows **self-correction** across scales.\n\n**Instella IAR** also adopts a **bitwise** next\u2011patch prediction scheme, using very few tokens (e.g., 128) for a 1024\u00d71024 image.\n\nThese models work at the **bit level** internally, which is where BitMark is applied.\n\n---\n\n## Why Bit-Level Watermarking?\n\nUnlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity\u2019s:\n\n- **Token overlap** after decode\u2013re-encode is very low (~2.4%).\n- **Bit overlap** is much higher (~77%).\n\nSo bits are **far more stable** than tokens, given the large codebook. This motivates **embedding and detecting watermarks in bit space**, not at the token or pixel level.\n\n\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">\n</div>\n\n---\n\n## The BitMark Watermark\n\n### Embedding: Biasing Green Bit Sequences\n\nBitMark follows the \u201cgreen/red list\u201d idea from LLM watermarking:\n\n- Consider all bit sequences of length `n`: `S = {0,1}^n`.\n- Assign them to a **green** list `G` and a **red** list `R` \n- During autoregressive generation, whenever a bit would complete a sequence in `G`, BitMark adds a **small bias** `\u03b4` to the corresponding logit before sampling.\n\t- Because only these **high-entropy bits** are **slightly nudged** and therefore influenced, image quality and semantics are essentially preserved.\n\n\nResult: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences\n\nTo detect the watermark:\n\n1. Encode the image with the model\u2019s **private encoder/tokenizer** to get bits.\n2. Slide a window of length `n` over the bits and count how many sequences fall into `G` vs `R`.\n3. Under the null hypothesis \u201cthis image is not watermarked,\u201d the number of green sequences behaves like a binomial variable with known mean and variance.\n4. Compute a **z-score** and reject the null if `z` exceeds a chosen threshold (e.g., corresponding to 1% FPR).\n\nClean images produce z-scores near **0**; BitMark images produce **large positive** z\u2011scores.\nSince our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data. \n\n---\n\n## Quality and Robustness\n\nUsing **Infinity-2B** as the main model (MS-COCO 2014 validation set):\n\n- For practical bias strengths (e.g., `\u03b4 \u2264 2`):\n    - **FID/KID** are similar to non-watermarked images.\n    - **CLIP score** (prompt\u2013image alignment) remains nearly unchanged.\n- Generation speed overhead is modest (~10% at most).\n- Detection is fast (less than a second per image).\n\nBitMark is robust against:\n\n- Common transforms (noise, blur, color jitter, cropping, JPEG, flips).\n- Reconstruction-like attacks (encode\u2013decode via Stable Diffusion 2.1\u2019s VAE, regeneration attacks such as CtrlRegen+).\n- Strong removal attempts (e.g., \u201cwatermarks in the sand\u201d) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.\n\nEven a custom **Bit-Flipper attack**\u2014where the attacker knows the encoder, the algorithm, and the exact green/red lists\u2014cannot erase the watermark without **severe visual degradation**.\n\n\n---\n## Radioactivity: Tracking Your Data Across Models\n\n### What is Radioactivity?\n\nRadioactivity is defined here as:\n\n> If a model **M\u2082** is trained or fine-tuned on outputs from a watermarked model **M\u2081**, then **M\u2082\u2019s** outputs still carry a detectable version of **M\u2081\u2019s watermark**.\n\nThis is crucial for **data provenance**:\n\n- Model owners can tell whether **downstream models** have trained on their generated images.\n- They can **filter out** their own generated content when training future model versions to avoid model collapse.\n\n### Experiments: Same and Cross Modality\n\nThe authors evaluate radioactivity as follows:\n\n1. Use **Infinity-2B** with BitMark to generate watermarked images.\n2. Train a second model **M\u2082** on these images:\n    - Case 1: M\u2082 is another Infinity-2B (same architecture).\n    - Case 2: M\u2082 is **Stable Diffusion 2.1** (latent diffusion model; different architecture and latent space).\n\nThen they run BitMark\u2019s detector on M\u2082\u2019s outputs.\n\nResults (TPR at 1% FPR):\n\n- **Infinity-2B \u2192 Infinity-2B**:\n    - Watermarked M\u2081 outputs: 100% TPR.\n    - M\u2082 outputs: **100% TPR**.\n- **Infinity-2B \u2192 Stable Diffusion 2.1**:\n    - M\u2082 outputs: **~98.9% TPR**.\n\n| Training data source | M\u2082 architecture      | TPR @ 1% FPR |\n| -------------------- | -------------------- | ------------ |\n| BitMark Infinity-2B  | Infinity-2B          | 100%         |\n| BitMark Infinity-2B  | Stable Diffusion 2.1 | 98.9%        |\n| BitMark Infinity-2B  | VAR-d30              | 25.6         |\n| BitMark Infinity-2B  | RAR-XXL              | 4.1          |\n\nDespite encoding into a latent space and going through a noising\u2013denoising training process, BitMark\u2019s bit patterns are **preserved**.\n\nFor VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?\n\n### How Much Watermarked Data is Needed?\n\nWe also vary the fraction of watermarked data used to train M\u2082:\n\n- Even when only **10%** of M\u2082\u2019s training data is watermarked:\n    - Detection at 1% FPR is clearly above chance (TPR ~22.7%).\n    - A Mann\u2013Whitney U test shows the z-score distribution is **highly significantly shifted**.\n- At just **5%** watermarked data, the statistical test is already significant.\n\n| % watermarked in M\u2082 training | TPR @ 1% FPR | Significant |\n| ---------------------------- | ------------ | ----------- |\n| 10%                          | 22.7%        | \u2705           |\n| 5%                           | > 0.5        | \u2705           |\n\nIn other words:\n\n- You don\u2019t need your data to dominate the training set.\n- Even a **small fraction** of watermarked examples leaves a detectable distributional footprint in M\u2082\u2019s outputs.\n\n---\n\n## Why This Matters for Preventing Model Collapse\n\nModern generative models train on:\n\n- **Massive, mixed datasets** scraped from the internet.\n- Growing volumes of **model-generated** content, often unlabeled.\n\nWithout tools like BitMark, it is hard to:\n\n- Know when your own outputs reappear in somebody else\u2019s training set.\n- Avoid **feeding your own generated data back** into later training runs.\n\nBitMark changes that:\n\n- It provides an **efficient, in-generation watermark** for bitwise autoregressive models.\n- Its **radioactivity** ensures the watermark signal persists through training pipelines.\n- Model owners can **detect and exclude** images derived from their own outputs, mitigating model collapse and enabling principled data governance.\n\n---\n\n## Summary\n\n1. **BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models** like Infinity and Instella IAR.\n2. It embeds a watermark by **softly biasing bit sequences** toward a green list and detects it via a **bit-level statistical test**.\n3. BitMark maintains **high image quality** and **low overhead**, while being robust to a wide range of attacks.\n4. BitMark is **highly radioactive**:\n    - Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.\n    - This holds even when only a **small fraction** of the training data is watermarked.\n5. This radioactivity enables **long-term provenance tracking** and gives model owners a practical tool to **avoid training on their own outputs**, helping prevent model collapse.\n  \n\n---\n  \n\n**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n\n  \n\n## Bibtex\n\n  \n\n```\n@inproceedings{\n  kerner2025bitmark,\n  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},\n  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  url={https://openreview.net/forum?id=VSir0FzFnP}\n}\n```",
+      "structuredPatch": [
+        {
+          "oldStart": 56,
+          "oldLines": 9,
+          "newStart": 56,
+          "newLines": 7,
+          "lines": [
+            " ",
+            " ",
+            " ",
+            "-<div style=\"text-align:center; margin-bottom:30px;\">",
+            "-  <img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\">",
+            "-</div>",
+            "+<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\"/>",
+            " ",
+            " ---",
+            " "
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_016s4nRMSfT4r9vi5rNAzaGq"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "offset": 76,
+      "limit": 6
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+        "content": "\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.",
+        "numLines": 6,
+        "startLine": 76,
+        "totalLines": 231
+      }
+    },
+    "tool_use_id": "toolu_01NXALrY5srB2K9BfHPg6VeR"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>",
+      "new_string": "<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\"/>",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "oldString": "<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>",
+      "newString": "<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\"/>",
+      "originalFile": "---\nlayout: post\ntitle: \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\ndate: 2025-11-30\ntags: watermarking image-autoregressive-model generated-content-detection radioactivity\n---\n  \n\n<center>\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Louis Kerner</a>,\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Michel Meintz</a>,\n\u00a0\u00a0<a href=\"https://bihezhao.github.io/\">Bihe Zhao</a>,\n\u00a0\u00a0<a href=\"https://franziska-boenisch.de/\">Franziska Boenisch</a>,\n\u00a0\u00a0<a href=\"https://adam-dziedzic.com/\">Adam Dziedzic</a>.\n\u00a0\u00a0<br><br>\n\u00a0\u00a0CISPA Helmholtz Center for Information Security<br>\n\u00a0\u00a0\u00a0<br><br>\n</center>\n\n  \n\nAutoregressive image models like **Infinity** and **Instella IAR** are now competitive with diffusion models for high\u2011quality text-to-image generation. But as generated images get reused as training data, we risk **model collapse**: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.\n\n**BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models**. It embeds a watermark at **generation time** that is:\n\n- **Hard to remove** without degrading image quality.\n- **Efficient** to generate and detect.\n- **Radioactive** \u2013 its signal persists even when other models are trained on watermarked images.\n\nThis radioactivity lets model owners **track provenance across training cycles** and avoid training future models on their own outputs.\n\n---\n\n## Background: Bitwise Autoregressive Image Models\n\n**VAR** and its extension **Infinity** generate images autoregressively, scale-by-scale:\n\n- Images are quantized into discrete codes and predicted as sequences.\n- Infinity uses **bitwise prediction** with a large implicit codebook and **binary spherical quantization**.\n- Random bit flipping during generation allows **self-correction** across scales.\n\n**Instella IAR** also adopts a **bitwise** next\u2011patch prediction scheme, using very few tokens (e.g., 128) for a 1024\u00d71024 image.\n\nThese models work at the **bit level** internally, which is where BitMark is applied.\n\n---\n\n## Why Bit-Level Watermarking?\n\nUnlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity\u2019s:\n\n- **Token overlap** after decode\u2013re-encode is very low (~2.4%).\n- **Bit overlap** is much higher (~77%).\n\nSo bits are **far more stable** than tokens, given the large codebook. This motivates **embedding and detecting watermarks in bit space**, not at the token or pixel level.\n\n\n\n<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\"/>\n\n---\n\n## The BitMark Watermark\n\n### Embedding: Biasing Green Bit Sequences\n\nBitMark follows the \u201cgreen/red list\u201d idea from LLM watermarking:\n\n- Consider all bit sequences of length `n`: `S = {0,1}^n`.\n- Assign them to a **green** list `G` and a **red** list `R` \n- During autoregressive generation, whenever a bit would complete a sequence in `G`, BitMark adds a **small bias** `\u03b4` to the corresponding logit before sampling.\n\t- Because only these **high-entropy bits** are **slightly nudged** and therefore influenced, image quality and semantics are essentially preserved.\n\n\nResult: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.\n\n<div style=\"text-align:center; margin-bottom:30px;\">\n\t<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">\n</div>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences\n\nTo detect the watermark:\n\n1. Encode the image with the model\u2019s **private encoder/tokenizer** to get bits.\n2. Slide a window of length `n` over the bits and count how many sequences fall into `G` vs `R`.\n3. Under the null hypothesis \u201cthis image is not watermarked,\u201d the number of green sequences behaves like a binomial variable with known mean and variance.\n4. Compute a **z-score** and reject the null if `z` exceeds a chosen threshold (e.g., corresponding to 1% FPR).\n\nClean images produce z-scores near **0**; BitMark images produce **large positive** z\u2011scores.\nSince our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data. \n\n---\n\n## Quality and Robustness\n\nUsing **Infinity-2B** as the main model (MS-COCO 2014 validation set):\n\n- For practical bias strengths (e.g., `\u03b4 \u2264 2`):\n    - **FID/KID** are similar to non-watermarked images.\n    - **CLIP score** (prompt\u2013image alignment) remains nearly unchanged.\n- Generation speed overhead is modest (~10% at most).\n- Detection is fast (less than a second per image).\n\nBitMark is robust against:\n\n- Common transforms (noise, blur, color jitter, cropping, JPEG, flips).\n- Reconstruction-like attacks (encode\u2013decode via Stable Diffusion 2.1\u2019s VAE, regeneration attacks such as CtrlRegen+).\n- Strong removal attempts (e.g., \u201cwatermarks in the sand\u201d) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.\n\nEven a custom **Bit-Flipper attack**\u2014where the attacker knows the encoder, the algorithm, and the exact green/red lists\u2014cannot erase the watermark without **severe visual degradation**.\n\n\n---\n## Radioactivity: Tracking Your Data Across Models\n\n### What is Radioactivity?\n\nRadioactivity is defined here as:\n\n> If a model **M\u2082** is trained or fine-tuned on outputs from a watermarked model **M\u2081**, then **M\u2082\u2019s** outputs still carry a detectable version of **M\u2081\u2019s watermark**.\n\nThis is crucial for **data provenance**:\n\n- Model owners can tell whether **downstream models** have trained on their generated images.\n- They can **filter out** their own generated content when training future model versions to avoid model collapse.\n\n### Experiments: Same and Cross Modality\n\nThe authors evaluate radioactivity as follows:\n\n1. Use **Infinity-2B** with BitMark to generate watermarked images.\n2. Train a second model **M\u2082** on these images:\n    - Case 1: M\u2082 is another Infinity-2B (same architecture).\n    - Case 2: M\u2082 is **Stable Diffusion 2.1** (latent diffusion model; different architecture and latent space).\n\nThen they run BitMark\u2019s detector on M\u2082\u2019s outputs.\n\nResults (TPR at 1% FPR):\n\n- **Infinity-2B \u2192 Infinity-2B**:\n    - Watermarked M\u2081 outputs: 100% TPR.\n    - M\u2082 outputs: **100% TPR**.\n- **Infinity-2B \u2192 Stable Diffusion 2.1**:\n    - M\u2082 outputs: **~98.9% TPR**.\n\n| Training data source | M\u2082 architecture      | TPR @ 1% FPR |\n| -------------------- | -------------------- | ------------ |\n| BitMark Infinity-2B  | Infinity-2B          | 100%         |\n| BitMark Infinity-2B  | Stable Diffusion 2.1 | 98.9%        |\n| BitMark Infinity-2B  | VAR-d30              | 25.6         |\n| BitMark Infinity-2B  | RAR-XXL              | 4.1          |\n\nDespite encoding into a latent space and going through a noising\u2013denoising training process, BitMark\u2019s bit patterns are **preserved**.\n\nFor VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?\n\n### How Much Watermarked Data is Needed?\n\nWe also vary the fraction of watermarked data used to train M\u2082:\n\n- Even when only **10%** of M\u2082\u2019s training data is watermarked:\n    - Detection at 1% FPR is clearly above chance (TPR ~22.7%).\n    - A Mann\u2013Whitney U test shows the z-score distribution is **highly significantly shifted**.\n- At just **5%** watermarked data, the statistical test is already significant.\n\n| % watermarked in M\u2082 training | TPR @ 1% FPR | Significant |\n| ---------------------------- | ------------ | ----------- |\n| 10%                          | 22.7%        | \u2705           |\n| 5%                           | > 0.5        | \u2705           |\n\nIn other words:\n\n- You don\u2019t need your data to dominate the training set.\n- Even a **small fraction** of watermarked examples leaves a detectable distributional footprint in M\u2082\u2019s outputs.\n\n---\n\n## Why This Matters for Preventing Model Collapse\n\nModern generative models train on:\n\n- **Massive, mixed datasets** scraped from the internet.\n- Growing volumes of **model-generated** content, often unlabeled.\n\nWithout tools like BitMark, it is hard to:\n\n- Know when your own outputs reappear in somebody else\u2019s training set.\n- Avoid **feeding your own generated data back** into later training runs.\n\nBitMark changes that:\n\n- It provides an **efficient, in-generation watermark** for bitwise autoregressive models.\n- Its **radioactivity** ensures the watermark signal persists through training pipelines.\n- Model owners can **detect and exclude** images derived from their own outputs, mitigating model collapse and enabling principled data governance.\n\n---\n\n## Summary\n\n1. **BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models** like Infinity and Instella IAR.\n2. It embeds a watermark by **softly biasing bit sequences** toward a green list and detects it via a **bit-level statistical test**.\n3. BitMark maintains **high image quality** and **low overhead**, while being robust to a wide range of attacks.\n4. BitMark is **highly radioactive**:\n    - Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.\n    - This holds even when only a **small fraction** of the training data is watermarked.\n5. This radioactivity enables **long-term provenance tracking** and gives model owners a practical tool to **avoid training on their own outputs**, helping prevent model collapse.\n  \n\n---\n  \n\n**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n\n  \n\n## Bibtex\n\n  \n\n```\n@inproceedings{\n  kerner2025bitmark,\n  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},\n  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  url={https://openreview.net/forum?id=VSir0FzFnP}\n}\n```",
+      "structuredPatch": [
+        {
+          "oldStart": 74,
+          "oldLines": 9,
+          "newStart": 74,
+          "newLines": 7,
+          "lines": [
+            " ",
+            " Result: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.",
+            " ",
+            "-<div style=\"text-align:center; margin-bottom:30px;\">",
+            "-  <img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\">",
+            "-</div>",
+            "+<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\"/>",
+            " ",
+            " As can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.",
+            " ### Detection: Statistical Test on Bit Sequences"
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_013QGbuyxSTsH7pmYWibSaGn"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "openreview",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "output_mode": "content"
+    },
+    "tool_response": {
+      "mode": "content",
+      "numFiles": 0,
+      "filenames": [],
+      "content": "212:**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n227:  url={https://openreview.net/forum?id=VSir0FzFnP}",
+      "numLines": 2
+    },
+    "tool_use_id": "toolu_012zwESgCdiccnzfieLuSXrk"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Read",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "offset": 208,
+      "limit": 10
+    },
+    "tool_response": {
+      "type": "text",
+      "file": {
+        "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+        "content": "\n---\n  \n\n**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n\n  \n\n## Bibtex\n",
+        "numLines": 10,
+        "startLine": 208,
+        "totalLines": 229
+      }
+    },
+    "tool_use_id": "toolu_018ZHFWP625FLTtyH6zLpFJ3"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "BitMark Watermarking Bitwise Autoregressive NeurIPS 2025 site:openreview.net"
+    },
+    "tool_response": {
+      "query": "BitMark Watermarking Bitwise Autoregressive NeurIPS 2025 site:openreview.net",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_01UmJDTSa8HeH3nxDKzzfNbS",
+          "content": [
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models | OpenReview",
+              "url": "https://openreview.net/forum?id=VSir0FzFnP"
+            },
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://openreview.net/pdf/124f3ab6d360baf54f30562f2630367bfa2af493.pdf"
+            },
+            {
+              "title": "Watermarking Image Autoregressive Models",
+              "url": "https://openreview.net/pdf?id=ytMPOhAYHW"
+            },
+            {
+              "title": "First-Place Solution to NeurIPS 2024 Invisible Watermark Removal Challenge | OpenReview",
+              "url": "https://openreview.net/forum?id=wLaP37BrhE"
+            },
+            {
+              "title": "Watermarking Autoregressive Image Generation",
+              "url": "https://openreview.net/pdf/3a02cd1d93c19ca2464ad60e10cc43f9a5f521cc.pdf"
+            },
+            {
+              "title": "Watermarking Diffusion Language Models",
+              "url": "https://openreview.net/pdf?id=Iw6kgfvsaL"
+            },
+            {
+              "title": "NeurIPS 2025 | OpenReview",
+              "url": "https://openreview.net/group?id=NeurIPS.cc/2025"
+            },
+            {
+              "title": "Winning Solution to the NeurIPS 2024 Invisible Watermark ...",
+              "url": "https://openreview.net/pdf/5fd100c46f5950ece90d8332b118da6306ba7a4c.pdf"
+            },
+            {
+              "title": "The 2024 NeurIPS Competition on Stress Testing Image ...",
+              "url": "https://openreview.net/pdf/7f3e5e4ffa6604e20010bfc8a33d1dac0e05163d.pdf"
+            },
+            {
+              "title": "TimeWak: Temporal Chained-Hashing Watermark for Time Series Data Zhi Wen Soi1,\u2217",
+              "url": "https://openreview.net/pdf?id=akhhwQh6UV"
+            }
+          ]
+        },
+        "I found the paper you were looking for! Here are the key results:\n\n## BitMark: Watermarking Bitwise Autoregressive Image Generative Models\n\nBitMark is a robust bitwise watermarking framework introduced as a NeurIPS 2025 poster paper.\n\n**Overview:**\nThe work focuses on models that operate in a bitwise autoregressive manner over a discrete set of tokens that is practically infinite in size. As generated outputs increasingly populate the Internet and are scraped as training data, this can lead to model collapse, where repeated training on generated content causes performance degradation.\n\n**Key Features:**\n- The method embeds a watermark directly at the bit level of the token stream during the image generation process\n- The bitwise watermark subtly influences the bits to preserve visual fidelity and generation speed while remaining robust against removal techniques\n- It exhibits high radioactivity\u2014when watermarked generated images are used to train another image generative model, the second model's outputs will also carry the watermark, with traces remaining detectable even when fine-tuning diffusion or image autoregressive models\n\nThe paper is available on OpenReview at: https://openreview.net/forum?id=VSir0FzFnP"
+      ],
+      "durationSeconds": 7.109014999999985
+    },
+    "tool_use_id": "toolu_01K3GYPd6g15hEBYaxZ3p7Po"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Grep",
+    "tool_input": {
+      "pattern": "Read our|paper link|arxiv\\|openreview",
+      "path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts",
+      "output_mode": "content",
+      "-i": true
+    },
+    "tool_response": {
+      "mode": "content",
+      "numFiles": 0,
+      "filenames": [],
+      "content": "_posts/2024-12-10-open-llms.markdown:121:If you\u2019d like to learn more, read our NeurIPS 2024 paper [\u201cOpen LLMs are Necessary for Current Private Adaptations and Outperform their Closed Alternatives\u201d](https://adam-dziedzic.com/static/assets/papers/openLLMs.pdf). It goes into greater detail about our research on this topic.\n_posts/2024-04-28-private-prompts.markdown:80:If you\u2019d like to learn more, read our NeurIPS 2023 paper [\u201cFlocks of Stochastic Parrots: Differentially Private Prompt Learning for Large Language Models\u201d](https://openreview.net/forum?id=u6Xv3FuF8N). It goes into greater detail about our research on this topic.\n_posts/2025-11-30-BitMark.markdown:212:**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n_posts/2025-03-03-CLIPMem.markdown:119:**\ud83d\udc49 Read our:** <a href=\"https://openreview.net/pdf?id=5V0f8igznO\" target=\"_blank\"> full research paper accepted at ICLR 2025.</a>",
+      "numLines": 4
+    },
+    "tool_use_id": "toolu_018ypBr7JnouKxU7ARPRLG2T"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "ToolSearch",
+    "tool_input": {
+      "query": "select:WebFetch",
+      "max_results": 1
+    },
+    "tool_response": {
+      "matches": [
+        "WebFetch"
+      ],
+      "query": "select:WebFetch",
+      "total_deferred_tools": 42
+    },
+    "tool_use_id": "toolu_016TVUFnny8LgP6zwL1E7bAB"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebFetch",
+    "tool_input": {
+      "url": "https://arxiv.org/abs/2506.21209",
+      "prompt": "What is the title and authors of this paper?"
+    },
+    "tool_response": {
+      "bytes": 47304,
+      "code": 200,
+      "codeText": "OK",
+      "result": "# Paper Title and Authors\n\n**Title:** \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\n\n**Authors:**\n- Louis Kerner\n- Michel Meintz\n- Bihe Zhao\n- Franziska Boenisch\n- Adam Dziedzic\n\nThe paper was submitted on June 26, 2025, and accepted as a conference paper at NeurIPS 2025.",
+      "durationMs": 2286,
+      "url": "https://arxiv.org/abs/2506.21209"
+    },
+    "tool_use_id": "toolu_01QHtD6x4BGKUZjDVGKrJ5VD"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "WebSearch",
+    "tool_input": {
+      "query": "BitMark Watermarking Bitwise Autoregressive NeurIPS 2025 accepted openreview forum id"
+    },
+    "tool_response": {
+      "query": "BitMark Watermarking Bitwise Autoregressive NeurIPS 2025 accepted openreview forum id",
+      "results": [
+        {
+          "tool_use_id": "srvtoolu_01WtUf6TBUHbDHn78kSvK23p",
+          "content": [
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models | OpenReview",
+              "url": "https://openreview.net/forum?id=VSir0FzFnP"
+            },
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://openreview.net/pdf/124f3ab6d360baf54f30562f2630367bfa2af493.pdf"
+            },
+            {
+              "title": "NeurIPS Poster BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://neurips.cc/virtual/2025/loc/san-diego/poster/117685"
+            },
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://sprintml.com/2025/11/30/BitMark.html"
+            },
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://arxiv.org/pdf/2506.21209"
+            },
+            {
+              "title": "[2506.21209] BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://arxiv.org/abs/2506.21209"
+            },
+            {
+              "title": "Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://adam-dziedzic.com/static/assets/papers/BitMark.pdf"
+            },
+            {
+              "title": "BitMark: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://cispa.de/en/research/publications/104482-bitmark-watermarking-bitwise-autoregressive-image-generative-models"
+            },
+            {
+              "title": "[2506.21209v1] BitMark for Infinity: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://arxiv.org/abs/2506.21209v1"
+            },
+            {
+              "title": "BitMark for Infinity: Watermarking Bitwise Autoregressive Image Generative Models",
+              "url": "https://www.researchgate.net/publication/393066061_BitMark_for_Infinity_Watermarking_Bitwise_Autoregressive_Image_Generative_Models"
+            }
+          ]
+        },
+        "Based on the search results, BitMark is a NeurIPS 2025 poster paper, and the OpenReview forum ID is VSir0FzFnP.\n\nThe full OpenReview link is: https://openreview.net/forum?id=VSir0FzFnP\n\nThis paper presents BitMark, a robust bitwise watermarking framework that embeds a watermark directly at the bit level of the token stream during the image generation process."
+      ],
+      "durationSeconds": 5.236751082999981
+    },
+    "tool_use_id": "toolu_01JDtG71F1etaoMbUsiGNzLF"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "new_string": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "oldString": "**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+      "newString": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+      "originalFile": "---\nlayout: post\ntitle: \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\ndate: 2025-11-30\ntags: watermarking image-autoregressive-model generated-content-detection radioactivity\n---\n  \n\n<center>\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Louis Kerner</a>,\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Michel Meintz</a>,\n\u00a0\u00a0<a href=\"https://bihezhao.github.io/\">Bihe Zhao</a>,\n\u00a0\u00a0<a href=\"https://franziska-boenisch.de/\">Franziska Boenisch</a>,\n\u00a0\u00a0<a href=\"https://adam-dziedzic.com/\">Adam Dziedzic</a>.\n\u00a0\u00a0<br><br>\n\u00a0\u00a0CISPA Helmholtz Center for Information Security<br>\n\u00a0\u00a0\u00a0<br><br>\n</center>\n\n  \n\nAutoregressive image models like **Infinity** and **Instella IAR** are now competitive with diffusion models for high\u2011quality text-to-image generation. But as generated images get reused as training data, we risk **model collapse**: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.\n\n**BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models**. It embeds a watermark at **generation time** that is:\n\n- **Hard to remove** without degrading image quality.\n- **Efficient** to generate and detect.\n- **Radioactive** \u2013 its signal persists even when other models are trained on watermarked images.\n\nThis radioactivity lets model owners **track provenance across training cycles** and avoid training future models on their own outputs.\n\n---\n\n## Background: Bitwise Autoregressive Image Models\n\n**VAR** and its extension **Infinity** generate images autoregressively, scale-by-scale:\n\n- Images are quantized into discrete codes and predicted as sequences.\n- Infinity uses **bitwise prediction** with a large implicit codebook and **binary spherical quantization**.\n- Random bit flipping during generation allows **self-correction** across scales.\n\n**Instella IAR** also adopts a **bitwise** next\u2011patch prediction scheme, using very few tokens (e.g., 128) for a 1024\u00d71024 image.\n\nThese models work at the **bit level** internally, which is where BitMark is applied.\n\n---\n\n## Why Bit-Level Watermarking?\n\nUnlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity\u2019s:\n\n- **Token overlap** after decode\u2013re-encode is very low (~2.4%).\n- **Bit overlap** is much higher (~77%).\n\nSo bits are **far more stable** than tokens, given the large codebook. This motivates **embedding and detecting watermarks in bit space**, not at the token or pixel level.\n\n\n\n<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\"/>\n\n---\n\n## The BitMark Watermark\n\n### Embedding: Biasing Green Bit Sequences\n\nBitMark follows the \u201cgreen/red list\u201d idea from LLM watermarking:\n\n- Consider all bit sequences of length `n`: `S = {0,1}^n`.\n- Assign them to a **green** list `G` and a **red** list `R` \n- During autoregressive generation, whenever a bit would complete a sequence in `G`, BitMark adds a **small bias** `\u03b4` to the corresponding logit before sampling.\n\t- Because only these **high-entropy bits** are **slightly nudged** and therefore influenced, image quality and semantics are essentially preserved.\n\n\nResult: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.\n\n<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\"/>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences\n\nTo detect the watermark:\n\n1. Encode the image with the model\u2019s **private encoder/tokenizer** to get bits.\n2. Slide a window of length `n` over the bits and count how many sequences fall into `G` vs `R`.\n3. Under the null hypothesis \u201cthis image is not watermarked,\u201d the number of green sequences behaves like a binomial variable with known mean and variance.\n4. Compute a **z-score** and reject the null if `z` exceeds a chosen threshold (e.g., corresponding to 1% FPR).\n\nClean images produce z-scores near **0**; BitMark images produce **large positive** z\u2011scores.\nSince our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data. \n\n---\n\n## Quality and Robustness\n\nUsing **Infinity-2B** as the main model (MS-COCO 2014 validation set):\n\n- For practical bias strengths (e.g., `\u03b4 \u2264 2`):\n    - **FID/KID** are similar to non-watermarked images.\n    - **CLIP score** (prompt\u2013image alignment) remains nearly unchanged.\n- Generation speed overhead is modest (~10% at most).\n- Detection is fast (less than a second per image).\n\nBitMark is robust against:\n\n- Common transforms (noise, blur, color jitter, cropping, JPEG, flips).\n- Reconstruction-like attacks (encode\u2013decode via Stable Diffusion 2.1\u2019s VAE, regeneration attacks such as CtrlRegen+).\n- Strong removal attempts (e.g., \u201cwatermarks in the sand\u201d) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.\n\nEven a custom **Bit-Flipper attack**\u2014where the attacker knows the encoder, the algorithm, and the exact green/red lists\u2014cannot erase the watermark without **severe visual degradation**.\n\n\n---\n## Radioactivity: Tracking Your Data Across Models\n\n### What is Radioactivity?\n\nRadioactivity is defined here as:\n\n> If a model **M\u2082** is trained or fine-tuned on outputs from a watermarked model **M\u2081**, then **M\u2082\u2019s** outputs still carry a detectable version of **M\u2081\u2019s watermark**.\n\nThis is crucial for **data provenance**:\n\n- Model owners can tell whether **downstream models** have trained on their generated images.\n- They can **filter out** their own generated content when training future model versions to avoid model collapse.\n\n### Experiments: Same and Cross Modality\n\nThe authors evaluate radioactivity as follows:\n\n1. Use **Infinity-2B** with BitMark to generate watermarked images.\n2. Train a second model **M\u2082** on these images:\n    - Case 1: M\u2082 is another Infinity-2B (same architecture).\n    - Case 2: M\u2082 is **Stable Diffusion 2.1** (latent diffusion model; different architecture and latent space).\n\nThen they run BitMark\u2019s detector on M\u2082\u2019s outputs.\n\nResults (TPR at 1% FPR):\n\n- **Infinity-2B \u2192 Infinity-2B**:\n    - Watermarked M\u2081 outputs: 100% TPR.\n    - M\u2082 outputs: **100% TPR**.\n- **Infinity-2B \u2192 Stable Diffusion 2.1**:\n    - M\u2082 outputs: **~98.9% TPR**.\n\n| Training data source | M\u2082 architecture      | TPR @ 1% FPR |\n| -------------------- | -------------------- | ------------ |\n| BitMark Infinity-2B  | Infinity-2B          | 100%         |\n| BitMark Infinity-2B  | Stable Diffusion 2.1 | 98.9%        |\n| BitMark Infinity-2B  | VAR-d30              | 25.6         |\n| BitMark Infinity-2B  | RAR-XXL              | 4.1          |\n\nDespite encoding into a latent space and going through a noising\u2013denoising training process, BitMark\u2019s bit patterns are **preserved**.\n\nFor VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?\n\n### How Much Watermarked Data is Needed?\n\nWe also vary the fraction of watermarked data used to train M\u2082:\n\n- Even when only **10%** of M\u2082\u2019s training data is watermarked:\n    - Detection at 1% FPR is clearly above chance (TPR ~22.7%).\n    - A Mann\u2013Whitney U test shows the z-score distribution is **highly significantly shifted**.\n- At just **5%** watermarked data, the statistical test is already significant.\n\n| % watermarked in M\u2082 training | TPR @ 1% FPR | Significant |\n| ---------------------------- | ------------ | ----------- |\n| 10%                          | 22.7%        | \u2705           |\n| 5%                           | > 0.5        | \u2705           |\n\nIn other words:\n\n- You don\u2019t need your data to dominate the training set.\n- Even a **small fraction** of watermarked examples leaves a detectable distributional footprint in M\u2082\u2019s outputs.\n\n---\n\n## Why This Matters for Preventing Model Collapse\n\nModern generative models train on:\n\n- **Massive, mixed datasets** scraped from the internet.\n- Growing volumes of **model-generated** content, often unlabeled.\n\nWithout tools like BitMark, it is hard to:\n\n- Know when your own outputs reappear in somebody else\u2019s training set.\n- Avoid **feeding your own generated data back** into later training runs.\n\nBitMark changes that:\n\n- It provides an **efficient, in-generation watermark** for bitwise autoregressive models.\n- Its **radioactivity** ensures the watermark signal persists through training pipelines.\n- Model owners can **detect and exclude** images derived from their own outputs, mitigating model collapse and enabling principled data governance.\n\n---\n\n## Summary\n\n1. **BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models** like Infinity and Instella IAR.\n2. It embeds a watermark by **softly biasing bit sequences** toward a green list and detects it via a **bit-level statistical test**.\n3. BitMark maintains **high image quality** and **low overhead**, while being robust to a wide range of attacks.\n4. BitMark is **highly radioactive**:\n    - Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.\n    - This holds even when only a **small fraction** of the training data is watermarked.\n5. This radioactivity enables **long-term provenance tracking** and gives model owners a practical tool to **avoid training on their own outputs**, helping prevent model collapse.\n  \n\n---\n  \n\n**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>\n\n  \n\n## Bibtex\n\n  \n\n```\n@inproceedings{\n  kerner2025bitmark,\n  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},\n  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  url={https://openreview.net/forum?id=VSir0FzFnP}\n}\n```",
+      "structuredPatch": [
+        {
+          "oldStart": 209,
+          "oldLines": 7,
+          "newStart": 209,
+          "newLines": 7,
+          "lines": [
+            " ---",
+            "   ",
+            " ",
+            "-**\ud83d\udc49 Read our** <a href=\"https://openreview.net/forum?id=VSir0FzFnP\" target=\"_blank\">research paper accepted at NeurIPS 2025.</a>",
+            "+**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+            " ",
+            "   ",
+            " "
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_01PM7HCm2CbSP5CPKKPyyRyr"
+  },
+  {
+    "session_id": "b1d6f749-42f3-4a9f-88d9-6e72610de3a8",
+    "transcript_path": "/Users/xunwang/.claude/projects/-Users-xunwang-myfile-Projects-group-website-sprintml-website/b1d6f749-42f3-4a9f-88d9-6e72610de3a8.jsonl",
+    "cwd": "/Users/xunwang/myfile/Projects/group_website/sprintml-website",
+    "permission_mode": "default",
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "old_string": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+      "new_string": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://arxiv.org/abs/2506.21209).**",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/Users/xunwang/myfile/Projects/group_website/sprintml-website/_posts/2025-11-30-BitMark.markdown",
+      "oldString": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+      "newString": "**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://arxiv.org/abs/2506.21209).**",
+      "originalFile": "---\nlayout: post\ntitle: \"BitMark: Watermarking Bitwise Autoregressive Image Generative Models\"\ndate: 2025-11-30\ntags: watermarking image-autoregressive-model generated-content-detection radioactivity\n---\n  \n\n<center>\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Louis Kerner</a>,\n\u00a0\u00a0<a href=\"https://sprintml.com/\">Michel Meintz</a>,\n\u00a0\u00a0<a href=\"https://bihezhao.github.io/\">Bihe Zhao</a>,\n\u00a0\u00a0<a href=\"https://franziska-boenisch.de/\">Franziska Boenisch</a>,\n\u00a0\u00a0<a href=\"https://adam-dziedzic.com/\">Adam Dziedzic</a>.\n\u00a0\u00a0<br><br>\n\u00a0\u00a0CISPA Helmholtz Center for Information Security<br>\n\u00a0\u00a0\u00a0<br><br>\n</center>\n\n  \n\nAutoregressive image models like **Infinity** and **Instella IAR** are now competitive with diffusion models for high\u2011quality text-to-image generation. But as generated images get reused as training data, we risk **model collapse**: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.\n\n**BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models**. It embeds a watermark at **generation time** that is:\n\n- **Hard to remove** without degrading image quality.\n- **Efficient** to generate and detect.\n- **Radioactive** \u2013 its signal persists even when other models are trained on watermarked images.\n\nThis radioactivity lets model owners **track provenance across training cycles** and avoid training future models on their own outputs.\n\n---\n\n## Background: Bitwise Autoregressive Image Models\n\n**VAR** and its extension **Infinity** generate images autoregressively, scale-by-scale:\n\n- Images are quantized into discrete codes and predicted as sequences.\n- Infinity uses **bitwise prediction** with a large implicit codebook and **binary spherical quantization**.\n- Random bit flipping during generation allows **self-correction** across scales.\n\n**Instella IAR** also adopts a **bitwise** next\u2011patch prediction scheme, using very few tokens (e.g., 128) for a 1024\u00d71024 image.\n\nThese models work at the **bit level** internally, which is where BitMark is applied.\n\n---\n\n## Why Bit-Level Watermarking?\n\nUnlike LLMs, where decoding and re-encoding text reconstructs the exact same tokens, Infinity\u2019s:\n\n- **Token overlap** after decode\u2013re-encode is very low (~2.4%).\n- **Bit overlap** is much higher (~77%).\n\nSo bits are **far more stable** than tokens, given the large codebook. This motivates **embedding and detecting watermarks in bit space**, not at the token or pixel level.\n\n\n\n<img src=\"{{ site.url }}/assets/blog/bitmark/token-vs-bit-overlap.png\" alt=\"Figure showing bit-overlap is higher than token-overlap\" width=\"33%\"/>\n\n---\n\n## The BitMark Watermark\n\n### Embedding: Biasing Green Bit Sequences\n\nBitMark follows the \u201cgreen/red list\u201d idea from LLM watermarking:\n\n- Consider all bit sequences of length `n`: `S = {0,1}^n`.\n- Assign them to a **green** list `G` and a **red** list `R` \n- During autoregressive generation, whenever a bit would complete a sequence in `G`, BitMark adds a **small bias** `\u03b4` to the corresponding logit before sampling.\n\t- Because only these **high-entropy bits** are **slightly nudged** and therefore influenced, image quality and semantics are essentially preserved.\n\n\nResult: Watermarked images have a **higher fraction of green sequences** than natural or non-watermarked images.\n\n<img src=\"{{ site.url }}/assets/blog/bitmark/bitmark-example.png\" alt=\"How BitMark affects the image quality\" width=\"75%\"/>\n\nAs can be seen in this example of a dog above, we slightly change the content of the image (position of the dog, color of the furr, removed necklace) by keeping the overall semantics.\n### Detection: Statistical Test on Bit Sequences\n\nTo detect the watermark:\n\n1. Encode the image with the model\u2019s **private encoder/tokenizer** to get bits.\n2. Slide a window of length `n` over the bits and count how many sequences fall into `G` vs `R`.\n3. Under the null hypothesis \u201cthis image is not watermarked,\u201d the number of green sequences behaves like a binomial variable with known mean and variance.\n4. Compute a **z-score** and reject the null if `z` exceeds a chosen threshold (e.g., corresponding to 1% FPR).\n\nClean images produce z-scores near **0**; BitMark images produce **large positive** z\u2011scores.\nSince our goal is to avoid model collapse by training on our own generated data, we assume the detector (and VQ-VAE) to be private - hence, only the model owner can verify and detect watermarked data. \n\n---\n\n## Quality and Robustness\n\nUsing **Infinity-2B** as the main model (MS-COCO 2014 validation set):\n\n- For practical bias strengths (e.g., `\u03b4 \u2264 2`):\n    - **FID/KID** are similar to non-watermarked images.\n    - **CLIP score** (prompt\u2013image alignment) remains nearly unchanged.\n- Generation speed overhead is modest (~10% at most).\n- Detection is fast (less than a second per image).\n\nBitMark is robust against:\n\n- Common transforms (noise, blur, color jitter, cropping, JPEG, flips).\n- Reconstruction-like attacks (encode\u2013decode via Stable Diffusion 2.1\u2019s VAE, regeneration attacks such as CtrlRegen+).\n- Strong removal attempts (e.g., \u201cwatermarks in the sand\u201d) still leave a clearly detectable signal, at very high computational cost and image degradation within our setting.\n\nEven a custom **Bit-Flipper attack**\u2014where the attacker knows the encoder, the algorithm, and the exact green/red lists\u2014cannot erase the watermark without **severe visual degradation**.\n\n\n---\n## Radioactivity: Tracking Your Data Across Models\n\n### What is Radioactivity?\n\nRadioactivity is defined here as:\n\n> If a model **M\u2082** is trained or fine-tuned on outputs from a watermarked model **M\u2081**, then **M\u2082\u2019s** outputs still carry a detectable version of **M\u2081\u2019s watermark**.\n\nThis is crucial for **data provenance**:\n\n- Model owners can tell whether **downstream models** have trained on their generated images.\n- They can **filter out** their own generated content when training future model versions to avoid model collapse.\n\n### Experiments: Same and Cross Modality\n\nThe authors evaluate radioactivity as follows:\n\n1. Use **Infinity-2B** with BitMark to generate watermarked images.\n2. Train a second model **M\u2082** on these images:\n    - Case 1: M\u2082 is another Infinity-2B (same architecture).\n    - Case 2: M\u2082 is **Stable Diffusion 2.1** (latent diffusion model; different architecture and latent space).\n\nThen they run BitMark\u2019s detector on M\u2082\u2019s outputs.\n\nResults (TPR at 1% FPR):\n\n- **Infinity-2B \u2192 Infinity-2B**:\n    - Watermarked M\u2081 outputs: 100% TPR.\n    - M\u2082 outputs: **100% TPR**.\n- **Infinity-2B \u2192 Stable Diffusion 2.1**:\n    - M\u2082 outputs: **~98.9% TPR**.\n\n| Training data source | M\u2082 architecture      | TPR @ 1% FPR |\n| -------------------- | -------------------- | ------------ |\n| BitMark Infinity-2B  | Infinity-2B          | 100%         |\n| BitMark Infinity-2B  | Stable Diffusion 2.1 | 98.9%        |\n| BitMark Infinity-2B  | VAR-d30              | 25.6         |\n| BitMark Infinity-2B  | RAR-XXL              | 4.1          |\n\nDespite encoding into a latent space and going through a noising\u2013denoising training process, BitMark\u2019s bit patterns are **preserved**.\n\nFor VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?\n\n### How Much Watermarked Data is Needed?\n\nWe also vary the fraction of watermarked data used to train M\u2082:\n\n- Even when only **10%** of M\u2082\u2019s training data is watermarked:\n    - Detection at 1% FPR is clearly above chance (TPR ~22.7%).\n    - A Mann\u2013Whitney U test shows the z-score distribution is **highly significantly shifted**.\n- At just **5%** watermarked data, the statistical test is already significant.\n\n| % watermarked in M\u2082 training | TPR @ 1% FPR | Significant |\n| ---------------------------- | ------------ | ----------- |\n| 10%                          | 22.7%        | \u2705           |\n| 5%                           | > 0.5        | \u2705           |\n\nIn other words:\n\n- You don\u2019t need your data to dominate the training set.\n- Even a **small fraction** of watermarked examples leaves a detectable distributional footprint in M\u2082\u2019s outputs.\n\n---\n\n## Why This Matters for Preventing Model Collapse\n\nModern generative models train on:\n\n- **Massive, mixed datasets** scraped from the internet.\n- Growing volumes of **model-generated** content, often unlabeled.\n\nWithout tools like BitMark, it is hard to:\n\n- Know when your own outputs reappear in somebody else\u2019s training set.\n- Avoid **feeding your own generated data back** into later training runs.\n\nBitMark changes that:\n\n- It provides an **efficient, in-generation watermark** for bitwise autoregressive models.\n- Its **radioactivity** ensures the watermark signal persists through training pipelines.\n- Model owners can **detect and exclude** images derived from their own outputs, mitigating model collapse and enabling principled data governance.\n\n---\n\n## Summary\n\n1. **BitMark** is the first watermarking framework tailored to **bitwise autoregressive image models** like Infinity and Instella IAR.\n2. It embeds a watermark by **softly biasing bit sequences** toward a green list and detects it via a **bit-level statistical test**.\n3. BitMark maintains **high image quality** and **low overhead**, while being robust to a wide range of attacks.\n4. BitMark is **highly radioactive**:\n    - Models trained on BitMark-watermarked images (even of a different architecture) still produce outputs with a strong, detectable watermark signal.\n    - This holds even when only a **small fraction** of the training data is watermarked.\n5. This radioactivity enables **long-term provenance tracking** and gives model owners a practical tool to **avoid training on their own outputs**, helping prevent model collapse.\n  \n\n---\n  \n\n**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**\n\n  \n\n## Bibtex\n\n  \n\n```\n@inproceedings{\n  kerner2025bitmark,\n  title={BitMark: Watermarking Bitwise Autoregressive Image Generative Models},\n  author={Louis Kerner and Michel Meintz and Bihe Zhao and Franziska Boenisch and Adam Dziedzic},\n  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  url={https://openreview.net/forum?id=VSir0FzFnP}\n}\n```",
+      "structuredPatch": [
+        {
+          "oldStart": 209,
+          "oldLines": 7,
+          "newStart": 209,
+          "newLines": 7,
+          "lines": [
+            " ---",
+            "   ",
+            " ",
+            "-**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://openreview.net/forum?id=VSir0FzFnP).**",
+            "+**\ud83d\udc49 Read our [research paper accepted at NeurIPS 2025](https://arxiv.org/abs/2506.21209).**",
+            " ",
+            "   ",
+            " "
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_01A8XmwWSATpaQh14NCCqXrt"
+  }
+]
