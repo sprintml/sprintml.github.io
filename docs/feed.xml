@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-04-26T11:52:12-03:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-04-26T12:03:21-03:00</updated><id>/feed.xml</id><title type="html">SprintML Lab</title><subtitle>Website of the SprintML lab.
 </subtitle><entry><title type="html">SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation</title><link href="/2026/04/25/serum.html" rel="alternate" type="text/html" title="SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation" /><published>2026-04-25T00:00:00-03:00</published><updated>2026-04-25T00:00:00-03:00</updated><id>/2026/04/25/serum</id><content type="html" xml:base="/2026/04/25/serum.html"><![CDATA[<style>
 .blur-image {
   filter: blur(12px);
@@ -43,7 +43,7 @@
 <h3 id="the-core-idea-behind-serum">The core idea behind SERUM</h3>
 
 <div style="text-align: center;">
-  <img class="blur-image" src="/assets/blog/serum/overview.png" width="800" />
+  <img src="/assets/blog/serum/overview.png" width="800" />
 </div>
 
 <p>Diffusion models start from random Gaussian noise and gradually denoise it into an image. SERUM modifies that starting noise by adding a watermark specific noise. The key intuition is simple: if the watermark is present from the very beginning, the diffusion model naturally adds its signature into the generated image. The result is a statistical fingerprint.</p>
@@ -55,7 +55,7 @@
 <p>The headline result is strong: across Stable Diffusion 1.4, 2.0, and 2.1, SERUM is robust to standard perturbation. A quick note on metrics: TPR denotes how often watermarked images are correctly detected, and FPR represents how often clean images are incorrectly flagged. Our SERUM achieves above 99% TPR@1%FPR against standard perturbations, as shown below.</p>
 
 <div style="text-align: center;">
-  <img class="blur-image" src="/assets/blog/serum/robust.png" width="600" />
+  <img src="/assets/blog/serum/robust.png" width="600" />
 </div>
 
 <p>Compared with TrustMark, Stable Signature, RingID, and GaussMarker, SERUM is the most stable across attacks. Other methods often perform well in some cases but fail badly in others, for example, RingID collapses under crop-and-scale, while Stable Signature struggles under Gaussian noise.</p>
@@ -67,7 +67,7 @@
 <p>SRUM has a negligible impact on the image quality impact. FID increases slightly, meaning some small degradation or distribution shift, but CLIP score remains almost unchanged. Qualitatively, the examples preserve the main content and style, though details such as pose, shape, or perspective may change. We also provide a theoretical argument to explain the relatively good image fidelity of SERUM.</p>
 
 <div style="text-align: center;">
-  <img class="blur-image" src="/assets/blog/serum/quality.png" width="800" />
+  <img src="/assets/blog/serum/quality.png" width="800" />
 </div>
 
 <p>A major advantage of SERUM is speed. Because injection is just adding a fixed latent noise pattern, watermarking is essentially free. SERUM takes only 17 ms injection time for 5000 images on an NVIDIA A100 GPU. Detection takes 2.5 minutes for 5000 images. SERUM is dramatically faster than inversion-based approaches such as GaussMarker, which require almost 2 hours to detect the watermarks in the above setup. Training is also moderate: about 9.5 hours, including data generation and augmentation precomputation.</p>
@@ -115,7 +115,7 @@ Caveats</p>
 <ul>
   <li>Read the full paper: <a href="https://arxiv.org/abs/2603.13396">Arxiv</a></li>
   <li>Explore the code: <a href="https://github.com/sprintml/SERUM">GitHub</a></li>
-  <li>Poster: <a href="&quot;/assets/blog/serum/SERUM-poster.pdf&quot;">ICLR Poster</a></li>
+  <li><a href="/assets/blog/serum/SERUM-poster.pdf" target="_blank" rel="noopener">Our ICLR 2026 Poster (PDF)</a></li>
 </ul>
 
 <h2 id="bibtex">Bibtex</h2>
