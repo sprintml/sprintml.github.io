@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Privacy Attacks on Tabular Foundation Models — a four-track NeurIPS 2026 competition on attribute, membership, dataset, and property inference attacks against in-context tabular foundation models.">
+  <meta property="og:title" content="Privacy Attacks on Tabular Foundation Models"/>
+  <meta property="og:description" content="A four-track NeurIPS 2026 competition on privacy attacks against tabular foundation models."/>
+  <meta property="og:image" content="static/images/favicon.ico" />
+
+  <meta name="keywords" content="privacy, tabular foundation models, TFM, TabPFN, inference attacks, membership inference, attribute inference, dataset inference, property inference, NeurIPS 2026, competition, benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <title>Privacy Attacks on Tabular Foundation Models</title>
+</head>
+<body>
+
+  <nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation" style="border-bottom: 1px solid #ddd;">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#top">
+          <strong>Privacy Attacks on TFMs</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar" onclick="this.classList.toggle('is-active'); document.getElementById('mainNavbar').classList.toggle('is-active');">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#tracks">Tracks</a>
+          <a class="navbar-item" href="#timeline">Timeline</a>
+          <a class="navbar-item" href="#participate">How to Participate</a>
+          <a class="navbar-item" href="#faq">FAQ</a>
+          <a class="navbar-item" href="#tutorial">Tutorial</a>
+          <a class="navbar-item" href="#contact">Contact</a>
+          <a class="navbar-item" href="https://github.com/sprintml/privacy-tabular-fm" target="_blank" rel="noopener noreferrer">
+            <span class="icon"><i class="fab fa-github"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="top" style="height: 3.25rem;"></div>
+
+  <section class="hero">
+    <div class="hero-body" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div style="
+                position: relative;
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                font-family: Arial, sans-serif;
+                overflow: visible;
+            ">
+                <div style="
+                    position: relative;
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    font-size: 32px;
+                    font-weight: 900;
+                    color: black;
+                    line-height: 1.5;
+                    z-index: 20;
+                ">
+                    <span style="position: relative; display: inline-block;">
+                    Privacy Attacks on Tabular Foundation Models
+                </div>
+            </div>
+            <div class="publication-awards is-size-5 is-flex is-align-items-center is-justify-content-center" style="margin: 1rem auto; gap: 0.35rem; flex-wrap: wrap;">
+              <span class="icon">
+                <i class="fas fa-flag-checkered"></i>
+              </span>
+              <span><strong>Submitted to the NeurIPS 2026 Competition Track</strong></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Aditya Kumar<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Dariush Wahdany<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Ossi Räisä<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Ivo Hoese<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Hoyong Jeong<sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                Daniil Filienko<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Jonas Böhler<sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://jescresswell.github.io/" target="_blank">Jesse C. Cresswell</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://franziska-boenisch.de/" target="_blank">Franziska Boenisch</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://adam-dziedzic.com/" target="_blank">Adam Dziedzic</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
+              <span class="author-block"><sup>1</sup>CISPA Helmholtz Center for Information Security &nbsp;</span>
+              <span class="author-block"><sup>2</sup>University of Washington Tacoma &nbsp;</span>
+              <span class="author-block"><sup>3</sup>SAP SE &nbsp;</span>
+              <span class="author-block"><sup>4</sup>Layer 6 AI</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://github.com/sprintml/privacy-tabular-fm" class="button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="mailto:privacy-tabular-fm@cispa.de" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>Contact</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                    <span class="icon">
+                      <i class="fab fa-discord"></i>
+                    </span>
+                    <span>Discord (coming soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <p class="subtitle has-text-justified">
+              <b>TL;DR:</b> We introduce a four-track competition on privacy attacks against <strong>tabular foundation models (TFMs)</strong> in the in-context regime, covering <strong>attribute</strong>, <strong>membership</strong>, <strong>dataset</strong>, and <strong>property/distribution</strong> inference. Targets are TFMs trained on realistic medical, financial, and demographic data. All four tracks are scored on <strong>TPR @ 1% FPR</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <br>
+
+
+  <section id="tracks">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">The Four Tracks</h2>
+          <div class="content has-text-justified">
+            <p>
+              Four tracks run under a shared evaluation harness — same target TFMs, same in-context construction, same data splits. All four are scored on <strong>TPR @ 1% FPR</strong>.
+            </p>
+
+            <div class="columns is-multiline" style="margin-top: 1.5rem;">
+              <div class="column is-half">
+                <div class="box" style="height: 100%;">
+                  <h3 class="title is-5">Track 1 — Attribute Inference</h3>
+                  <p>Recover a held-out sensitive attribute of a known target record from black-box queries.</p>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="box" style="height: 100%;">
+                  <h3 class="title is-5">Track 2 — Membership Inference</h3>
+                  <p>Decide whether a candidate record was part of the hidden in-context training set.</p>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="box" style="height: 100%;">
+                  <h3 class="title is-5">Track 3 — Dataset Inference</h3>
+                  <p>Decide whether an entire suspect corpus was used as the in-context training set.</p>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="box" style="height: 100%;">
+                  <h3 class="title is-5">Track 4 — Property Inference</h3>
+                  <p>Recover a global property of the training distribution under a two-world setup (70% vs 50%).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <br><br>
+
+
+  <section id="timeline">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Timeline</h2>
+          <div class="content has-text-justified">
+            <ul>
+              <li><strong>15 June 2026</strong> — NeurIPS competition acceptance notification.</li>
+              <li><strong>29 June 2026</strong> — starting kit released (datasets, baselines, evaluation script, Docker image, agent harness).</li>
+              <li><strong>6 July 2026</strong> — starting kit frozen.</li>
+              <li><strong>20 July 2026</strong> — <strong>development phase opens</strong>: registration available, all four leaderboards live.</li>
+              <li><strong>31 October 2026</strong> — development phase closes; held-out evaluation begins.</li>
+              <li><strong>7 November 2026</strong> — final per-track and overall leaderboards published.</li>
+              <li><strong>21 November 2026</strong> — invited methods reports from top three teams per track due; top three release code.</li>
+              <li><strong>Early December 2026</strong> — in-person presentation and panel at <strong>NeurIPS 2026</strong>.</li>
+              <li><strong>March 2027</strong> — post-competition analysis paper submitted.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <br><br>
+
+
+  <section id="participate">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">How to Participate</h2>
+          <div class="content has-text-justified">
+            <p>
+              Registration opens with the development phase on <strong>20 July 2026</strong>. The pipeline runs on CPU; stronger attacks based on shadow models or supervised aggregation are feasible on a single consumer GPU.
+            </p>
+            <ol>
+              <li><strong>Register</strong> on the competition platform and agree to the rules and data use agreement.</li>
+              <li><strong>Receive your API token</strong> — used to query the target TFMs and to submit predictions. Tokens are per-team and rate-limited (one submission per track every five minutes, daily cap of five per track).</li>
+              <li><strong>Download the starting kit</strong> from the <a href="https://github.com/sprintml/privacy-tabular-fm" target="_blank">GitHub repository</a>: dataset loaders, the four reference baselines, a local evaluation script that scores predictions on the public split with the same scoring function as the server, a sample submission generator, and a Docker image that reproduces the full pipeline.</li>
+              <li><strong>Build your attack</strong> against any subset of the four tracks. You may form teams of up to five members and participate in multiple tracks (one team per track).</li>
+              <li><strong>Submit a CSV</strong> of predictions through the platform's submission endpoint. The evaluation server scores it against the public split and returns the public score immediately. The held-out score is only computed and displayed after the competition closes.</li>
+            </ol>
+            <p>
+              <strong>Final ranking</strong> is computed on the held-out 70% split, never released during the competition. The overall ranking across all four tracks is the mean of min-max-normalized per-track scores; teams that do not submit on a track receive 0 on that track for the overall ranking.
+            </p>
+            <p>
+              <strong>Top three teams per track</strong> receive an invitation to present at the NeurIPS competition track workshop, co-authorship on the post-competition analysis paper, and travel awards (contingent on sponsor support). Top three per track must release their code under a permissive open-source license.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <br><br>
+
+
+  <section id="tutorial">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Tutorial</h2>
+          <div class="content has-text-justified">
+            <p>
+              A written tutorial walks through the four reference baselines (one per track) and explains how to query the target TFMs through the platform's API. It covers: loading the public split, generating shadow in-context sets for the LiRA-style membership baseline, running the per-record loss aggregation for dataset inference, and training the black-box meta-classifier for property inference. A short white paper describes the threat models, evaluation methodology, and expected significance.
+            </p>
+            <p>
+              The tutorial and the starting kit are released together on <strong>29 June 2026</strong> and frozen on <strong>6 July 2026</strong>, so participants build against stable code.
+            </p>
+            <p style="text-align: center; margin-top: 1.5rem;">
+              <a href="https://github.com/sprintml/privacy-tabular-fm" class="button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Tutorial (available 29 June 2026)</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <br><br>
+
+
+  <section id="faq" class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">FAQ</h2>
+          <div class="content has-text-left">
+
+            <h4 class="title is-5">Who can participate?</h4>
+            <p>Anyone. Teams may have up to five members. A person may participate in at most one team per track but may participate in multiple tracks.</p>
+
+            <h4 class="title is-5">What do I submit?</h4>
+            <p>A CSV file of predictions through the platform's submission endpoint. Track 1 (attribute) and Track 2 (membership) take per-record probabilities; Track 3 (dataset) takes a probability per (target model, candidate corpus) pair; Track 4 (property) takes a probability per target model that it was trained under World A.</p>
+
+            <h4 class="title is-5">How are submissions evaluated?</h4>
+            <p>All four tracks are scored on <strong>TPR @ 1% FPR</strong>. The evaluation server returns the public score on the 30% public split immediately. The held-out score on the remaining 70% is computed only after the competition closes and determines the final ranking. Scoring is deterministic and reproducible from the submitted CSV alone.</p>
+
+            <h4 class="title is-5">Are there submission limits?</h4>
+            <p>One submission per track every five minutes, with a daily cap of five submissions per track. Only your best public score per track counts during the live phase.</p>
+
+            <h4 class="title is-5">What hardware do I need?</h4>
+            <p>The submission and querying pipeline runs on CPU. Stronger attacks based on shadow models or supervised aggregation are feasible on a single consumer GPU. Compute support is available for participants from under-resourced research groups via partner programs — contact us if this applies.</p>
+
+            <h4 class="title is-5">Is the data real?</h4>
+            <p>No. Participants only ever see synthetic tabular records sampled from a <strong>TabSyn</strong> generator trained on a public reference distribution (Folktables, UCI Adult, or Texas hospital discharge). The real records of the public datasets are seen only by the organizers, for TabSyn training and offline utility/fidelity evaluation. The held-out test split and per-model ground-truth labels are kept on organizers' servers and never released.</p>
+
+            <h4 class="title is-5">What target models do I attack?</h4>
+            <p>Tabular foundation models (TFMs) in the in-context regime: TabPFN, NanoTabPFN, and related backbones. You are told which TFM family backs each track (e.g., TabPFN v3); the hidden in-context training set and any per-model randomness are not exposed.</p>
+
+            <h4 class="title is-5">Do I have to release my code?</h4>
+            <p>Only if you finish in the top three on any track. Top-three teams per track release their code under a permissive open-source license so the organizers can re-run entries in case of suspected leakage. If your team enters the top ten on any leaderboard, you must submit a short methods description (200–1000 words) within one week of first entering the top ten.</p>
+
+            <h4 class="title is-5">Are there prizes?</h4>
+            <p>Top three teams per track receive: an invitation to present at the NeurIPS competition track workshop; co-authorship on the post-competition analysis paper as named contributors; and travel awards for the top team per track contingent on sponsor support. We are pursuing monetary prizes through CISPA and partner sponsorship.</p>
+
+            <h4 class="title is-5">How do I ask a question or report an issue?</h4>
+            <p>The public Discord server is the primary channel for questions, announcements, and strategy discussion (link coming with the starting kit on 29 June 2026). For private inquiries — registration issues, accessibility requests, disputes — email <a href="mailto:privacy-tabular-fm@cispa.de">privacy-tabular-fm@cispa.de</a>. Rule updates and deadline extensions, if any, are posted on this site, announced on Discord, and emailed to the participant list.</p>
+
+            <h4 class="title is-5">What if I find a bug in the evaluation infrastructure?</h4>
+            <p>Email the organizers immediately. The organizers reserve the right to disqualify any submission that demonstrably exploits a flaw in the evaluation infrastructure. Good-faith reports of issues are welcome and credited.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <br><br>
+
+
+  <section id="contact" class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Get Involved</h2>
+          <div class="content has-text-centered">
+            <p>
+              The starting kit and registration open <strong>20 July 2026</strong>. Until then, follow updates on the GitHub repository or reach out by email.
+            </p>
+            <div class="publication-links" style="margin-top: 1rem;">
+              <span class="link-block">
+                <a href="https://github.com/sprintml/privacy-tabular-fm" class="button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>GitHub</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="mailto:privacy-tabular-fm@cispa.de" class="button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-envelope"></i></span>
+                  <span>privacy-tabular-fm@cispa.de</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          Organized by the <a href="https://sprintml.com/" target="_blank">SprintML Lab</a> at <a href="https://cispa.de/en" target="_blank">CISPA Helmholtz Center for Information Security</a>, with collaborators at the University of Washington Tacoma, SAP SE, and Layer 6 AI.
+        </p>
+        <p style="font-size: 0.85em;">
+          Page template adapted from the <a href="https://nerfies.github.io/" target="_blank">Nerfies</a> project page.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
