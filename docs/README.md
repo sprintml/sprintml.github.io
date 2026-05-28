@@ -2,7 +2,7 @@
 
 This is the academic website of the SprintML lab at CISPA.
 
-## About the Website
+## About the Website 
 
 The template for the website was forked and adapted from
 the [Allan Lab](https://github.com/mpa139/allanlab/tree/gh-pages).
