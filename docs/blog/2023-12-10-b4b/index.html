@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82472331-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+    
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <a href="/">
+        <img
+          id="navbar-logo"
+          src="/assets/img/sprintml-logo-black.svg"
+          alt="SprintML"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      
+      <ul>
+        <li><a class="" href="/">Home</a></li>
+        
+        <li><a class="" href="/team/">Team</a></li>
+        
+        <li><a class="" href="/blog/">Blog</a></li>
+        
+        <li><a class="" href="/outreach/">Outreach</a></li>
+        
+        <li><a class="" href="/publications/">Publications</a></li>
+        
+        <li><a class="" href="/teaching/">Teaching</a></li>
+        
+        <li><a class="" href="/applications/">Applications</a></li>
+        
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    
+  </div>
+</header>
+
+
+
+    <main id="main">
+      
+
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="blog-box">
+          <h2>Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders</h2>
+          <div class="meta-box">
+            <ul>
+              <li>
+                <p>
+                  <i class="bi bi-calendar-week"></i>
+                  Dec. 10, 2023
+                </p>
+              </li>
+              <li>
+                
+                
+
+                
+                
+                
+                
+                <p>
+                  <i class="bi bi-clock"></i> 3
+                  
+                  min
+                  55
+                  
+                  sec.
+                </p>
+              </li>
+              <li>
+                <p><i class="bi bi-person"></i> SprintML</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content"><center>
+  <a href="https://scholar.google.com/citations?user=iG319iwAAAAJ&hl=pl&oi=ao">Jan Dubiński*<sup>2,3</sup></a>,
+  <a href="https://cvlab.ii.pw.edu.pl/author/stanis%C5%82aw-pawlak/">Stanisław Pawlak*<sup>2</sup></a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch*<sup>1</sup></a>,
+  <a href="https://cvlab.ii.pw.edu.pl/ttrzcins/">Tomasz Trzciński<sup>2,3,4</sup></a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic<sup>1</sup></a>
+  <br><br>
+  <sup>1</sup>CISPA Helmholtz Center for Information Security<br>
+  <sup>2</sup>Warsaw University of Technology<br>
+  <sup>3</sup>IDEAS NCBR<br>
+  <sup>4</sup>Tooploox<br>
+  <em>*Indicates Equal Contribution</em>
+    <br><br>
+</center>
+<h2 id="the-growing-risk-of-model-stealing"><strong>The Growing Risk of Model Stealing</strong></h2>
+<p>Machine learning models are increasingly exposed via public APIs, making them susceptible to model stealing. Attackers can systematically query these APIs, gathering enough data to reconstruct a nearly identical model at a fraction of the cost. This poses serious security risks, as stolen models can be used for unfair competition, academic plagiarism, or even malicious purposes.</p>
+<h2 id="understanding-encoders-why-are-they-easy-targets"><strong>Understanding Encoders: Why Are They Easy Targets?</strong></h2>
+<p>Encoders are a crucial component of modern AI, leveraging <strong>Self-Supervised Learning (SSL)</strong>. Unlike classification models that output simple labels, encoders generate <strong>high-dimensional feature representations</strong> that capture complex data patterns.</p>
+<p>This flexibility also makes them highly <strong>vulnerable to theft</strong>:</p>
+<ul>
+<li>Their <strong>rich outputs leak more information</strong> compared to supervised models.</li>
+<li>They require <strong>expensive training</strong> but can be cheaply stolen with API queries.</li>
+<li>Attackers can efficiently <strong>replicate their functionality</strong> without needing the original training data.</li>
+</ul>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/sl_vs_ssl.png" width="50%"/>
+</div>
+<h2 id="how-model-stealing-works"><strong>How Model Stealing Works</strong></h2>
+<p>Model stealing attacks exploit the public accessibility of machine learning models by systematically querying them and using the returned outputs to train a substitute model. Attackers typically follow these steps:</p>
+<ol>
+<li><strong>Querying the Model</strong>: The attacker sends numerous carefully crafted inputs to the target model via its API.</li>
+<li><strong>Collecting Responses</strong>: Unlike classifiers that return class labels, encoders return rich feature representations, which reveal much more information about the model behaviour.</li>
+<li><strong>Training a Stolen Model</strong>: The attacker trains a new model using the collected representations, similarly as in the knowledge distillation process.</li>
+</ol>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/stealing_ssl.png" width="50%"/>
+</div>
+<p>Because encoders output high-dimensional embeddings, they provide significantly more information per query than classifiers, making them even more vulnerable to extraction attacks.</p>
+<h2 id="key-observation-how-attackers-interact-with-encoders"><strong>Key Observation: How Attackers Interact with Encoders</strong></h2>
+<p>We start from a fundamental observation that attackers and legitimate users interact with the encoder in fundamentally different ways. <strong>Legitimate users</strong> typically use the encoder to solve a <strong>particular downstream task</strong>, meaning they operate within a limited and task-specific region of the embedding space. In contrast, <strong>attackers trying to steal the model must explore much larger portions of the encoder’s latent space</strong> to reconstruct its full functionality.</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/legit_coverage.png" width="50%"/>
+</div>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/attacker_coverage.png" width="50%"/>
+</div>
+<p>This discrepancy enables an <strong>active defense mechanism</strong>: by tracking how much of the embedding space a user explores, we can distinguish between normal usage and adversarial behavior. Attackers will necessarily have queries that span a broader distribution, covering significantly larger portions of the embedding space compared to legitimate users who remain within a specific subspace.</p>
+<h2 id="measuring-latent-space-coverage-to-prevent-theft">Measuring Latent Space Coverage to Prevent Theft</h2>
+<p>Building on our key observation, we introduce a method to quantify how much of the latent space a user explores. Instead of treating all queries equally, we <strong>divide the latent space into buckets</strong> and <strong>measure how unique buckets a user’s queries occupy</strong>.</p>
+<p>To achieve this, we leverage <strong>Locality-Sensitive Hashing (LSH)</strong>, a technique designed to map high-dimensional embeddings into discrete hash buckets. LSH enables us to track how broadly a user’s queries are distributed across the latent space.</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/LSH.png" width="50%"/>
+</div>
+<p>We associate high latent space (buckets) coverage with an extremely high query cost and low coverage with a negligible cost.</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/buckets.png" width="50%"/>
+</div>
+<h2 id="b4b-a-way-to-prevent-model-theft"><strong>B4B: A Way to Prevent Model Theft</strong></h2>
+<p>Now, we can describe our <strong>Bucks for Buckets</strong> end-to-end! B4B is designed to stop attackers <strong>as they attempt</strong> to steal encoders, ensuring that regular users receive high-quality outputs while making theft prohibitively expensive. It achieves this through three key mechanisms:</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/simple_overview.png" width="50%"/>
+</div>
+<ol>
+<li><strong>Tracking Query Behavior</strong> - B4B estimates how much of the encoder’s embedding space a user is exploring using <strong>Locality-Sensitive Hashing (LSH)</strong>. Legitimate users, who focus on specific tasks, naturally stay within smaller regions, whereas adversaries trying to steal the model attempt to cover much larger areas.</li>
+</ol>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/coverage.png" width="50%"/>
+</div>
+<ol start="2">
+<li><strong>Dynamic Penalties</strong> - Based on the user’s query behavior, B4B gradually <strong>introduces noise</strong> to the encoder’s outputs, making it harder for attackers to reconstruct the stolen model. This penalty escalates as the adversary’s exploration of the embedding space increases.</li>
+</ol>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/cost_function.png" width="50%"/>
+</div>
+<ol start="3">
+<li><strong>Personalized Responses</strong> - Additionaly, to counter <strong>Sybil attacks</strong>, where an adversary creates multiple accounts to evade detection, B4B applies unique transformations to each user’s representations. This prevents attackers from merging extracted responses across accounts to reconstruct the encoder.</li>
+</ol>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/transformations.png" width="50%"/>
+</div>
+<h2 id="b4b-in-action-stopping-model-theft-without-compromising-usability"><strong>B4B in Action: Stopping Model Theft Without Compromising Usability</strong></h2>
+<p>We tested B4B on <strong>popular SSL models</strong>, including <strong>SimSiam</strong> and <strong>DINO</strong>, against cutting-edge stealing techniques. Our findings demonstrate that B4B:</p>
+<ul>
+<li><strong>Reduces stolen model performance by up to 60%</strong>, while ensuring legitimate users experience less than a 1% drop in utility.</li>
+<li><strong>Effectively neutralizes Sybil attacks</strong>, making it infeasible to aggregate stolen data from multiple accounts.</li>
+<li><strong>Outperforms previous security methods</strong>, which either failed to prevent theft or significantly degraded output quality for all users.</li>
+</ul>
+<h2 id="enabling-more-secure-ai-apis"><strong>Enabling More Secure AI APIs</strong></h2>
+<p>As AI companies increasingly offer <strong>pre-trained SSL models</strong> through public APIs, solutions like <strong>B4B</strong> will be essential in protecting intellectual property. Our modular framework allows for adaptation to various security policies and evolving threats.</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/b4b/overview.png" width="50%"/>
+</div>
+<hr>
+<p>For further details, check out
+<a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/ad1efab57a04d93f097e7fbb2d4fc054-Abstract-Conference.html" target="_blank">our full research paper presented at NeurIPS 2023.</a></p>
+<h2 id="bibtex">Bibtex</h2>
+<pre tabindex="0"><code>@inproceedings{dubinski2023bucks,
+  title = {Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders},
+  author = {Dubiński, Jan and Pawlak, Stanisław and Boenisch, Franziska and Trzcinski, Tomasz and Dziedzic, Adam},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+  year = {2023}
+}
+</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Recent Blogs</h2>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Privacy Attacks on Tabular Foundation Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              May. 16, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>5
+              
+              min
+              51
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Benchmarking Empirical Privacy Protection for Adaptations of LLMs</h4>
+          <hr />
+          <p></p>
+          <a href=""
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Apr. 28, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>0
+              
+              min
+              0
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Natural Identifiers for Privacy and Data Audits</h4>
+          <hr />
+          <p></p>
+          <a href=""
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Apr. 28, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>0
+              
+              min
+              0
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <div class="row box" style="background-color: rgba(16, 11, 11, 0.3);  border-radius: 10px;">
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1912500338306793902?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423651334889493?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423195485335945?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</section>
+ 
+    </main>
+    
+
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div
+        class="col-md-9 d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          src="/assets/img/sprintml-logo-white.svg"
+          alt="SprintML"
+          class="footer-logo"
+          width="180"
+          height="60"
+        />
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://x.com/SprintML" target="_blank" aria-label="X (Twitter)">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/in/sprintml-group-at-cispa-327769397/" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="text-center">
+          <span
+            >© 2026 SprintML Lab | Developed By
+            <a href="https://sual-soft.com/" target="_blank"
+              >S U A L SOFT</a
+            ></span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+
+<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>

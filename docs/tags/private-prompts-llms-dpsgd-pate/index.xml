@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Private Prompts LLMs DPSGD PATE on SprintML</title>
+    <link>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate/</link>
+    <description>Recent content in Private Prompts LLMs DPSGD PATE on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/private-prompts-llms-dpsgd-pate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to prompt LLMs with private data?</title>
+      <link>https://sprintml.com/blog/2024-04-28-private-prompts/</link>
+      <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/blog/2024-04-28-private-prompts/</guid>
+      <description>&lt;p&gt;&lt;em&gt;by Haonan Duan, Adam Dziedzic, Nicolas Papernot, and Franziska Boenisch&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over the past few years, large language models (LLMs) have gained widespread attention in both the tech industry and academia, as well as the public at large. LLMs are capable of executing a wide range of language-related tasks, such as translation, text generation, and sentiment analysis. One particularly amazing property of LLMs is that they need only minor modifications to handle new tasks, making them particularly well-suited for the rapid development of new applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

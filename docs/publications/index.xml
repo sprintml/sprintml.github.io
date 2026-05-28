@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on SprintML</title>
+    <link>https://sprintml.com/publications/</link>
+    <description>Recent content in Publications on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publication 5</title>
+      <link>https://sprintml.com/publications/publication-5/</link>
+      <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/publications/publication-5/</guid>
+      <description>&lt;p&gt;We are searching for a student assistant to support the project coordination of a project on large language model privacy. The responsibilities include&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Maintaining the project website&lt;/li&gt;&#xA;&lt;li&gt;Coordinating and attending monthly project meetings&lt;/li&gt;&#xA;&lt;li&gt;Performing independent literature research on large language models and their privacy&lt;/li&gt;&#xA;&lt;li&gt;Contributing to the project reports&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Qualifications&lt;/strong&gt;: We are looking for Bachelor or Master students in the area of computer science or related fields. The candidate should be well organized, self-driven, have good grades in their study program, and, in the best case, would bring some experience in project work. Since the main language of this project’s meetings and the written reports is German, candidates are required to hold a B2 or above level in German.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

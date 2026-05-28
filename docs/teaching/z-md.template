@@ -1,0 +1,74 @@
+---
+title: Privacy Enhancing Technologies
+date: 2020-07-19
+semester: Summer 2024
+---
+
+**Summer 2024**
+
+**Instructor:** [Prof. Florian Tramèr](https://floriantramer.com/)
+
+**Contact:** [florian.tramer@inf.ethz.ch
+
+[](mailto:florian.tramer@inf.ethz.ch)
+**Lectures:** Monday 10:15-12:00, HG E 7
+
+**Exercise Sessions:** Tuesday 17:15-18:00, CAB G 51, and Thursday 17:15-18:00, CAB H 52
+**[Course catalog](https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2024W&ansicht=ALLE&lerneinheitId=186378&lang=en)**
+
+------
+
+[Moodle](https://moodle-app2.let.ethz.ch/course/view.php?id=23158)  –  [Gradescope](https://www.gradescope.com/courses/806864)  –  [Schedule & notes](https://spylab.ai/teaching/pets-f24/#schedule)  –  [Homework assignments](https://spylab.ai/teaching/pets-f24/#assignments)
+
+------
+
+## Description
+
+Privacy is a fundamental human right! And yet, technological advances (in particular in computer science) can often undermine privacy. In this class we will see how to formalize various notions of privacy and how to build systems that preserve privacy, by combining techniques from cryptography and statistics. The later parts of the course will focus on applications to machine learning.
+
+## Assignments
+
+You **must** use LaTeX to write up your problem set. You must use the provided [template](https://spylab.ai/teaching/pets-f24/hws/template.tex) to typset your assignment (the provided [preamble](https://spylab.ai/teaching/pets-f24/hws/latexdefs.tex) can be handy for common notations).
+
+You must submit your problem set via [Gradescope](https://www.gradescope.com/courses/806864). Please use the course code provided on Moodle to sign up. **Do not forget to add your Student ID to your Gradescope account (the one that looks like 11-111-111 and is on your Legi card)**. Note that Gradescope requires that the solution to each problem starts on a **new page**.
+
+Please read the **collaboration policy!**
+
+- [Problem Set 1](https://spylab.ai/teaching/pets-f24/hws/hw1.pdf) ([source](https://spylab.ai/teaching/pets-f24/hws/hw1.tex), [preamble](https://spylab.ai/teaching/pets-f24/hws/latexdefs.tex)) – due Friday, Oct 18 (out: Sep 23)
+- [Problem Set 2](https://spylab.ai/teaching/pets-f24/hws/hw2.pdf) ([source](https://spylab.ai/teaching/pets-f24/hws/hw2.tex), [preamble](https://spylab.ai/teaching/pets-f24/hws/latexdefs.tex)) – due Friday, Nov 8 (out: Oct 21)
+- [Problem Set 3](https://spylab.ai/teaching/pets-f24/hws/hw3.pdf) ([source](https://spylab.ai/teaching/pets-f24/hws/hw3.tex), [preamble](https://spylab.ai/teaching/pets-f24/hws/latexdefs.tex)) – due Friday, Nov 29 (out: Nov 11)
+- [Problem Set 4](https://spylab.ai/teaching/pets-f24/hws/hw4.pdf) ([source](https://spylab.ai/teaching/pets-f24/hws/hw4.tex), [preamble](https://spylab.ai/teaching/pets-f24/hws/latexdefs.tex)) – due Friday, Dec 20 (out: Dec 2)
+
+## Schedule
+
+| Date       | Topic                                                        | Optional Readings                                            |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Mo, Sep 23 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture1_intro.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture1_notes.pdf)LogisticsCommitment schemes | [“The Moral Character of Cryptographic Work”](https://eprint.iacr.org/2015/1162.pdf) [Rogaway, 2015][Boneh-Shoup](https://toc.cryptobook.us/book.pdf) (§3.12, §8.10.2)[Refresher](https://spylab.ai/teaching/pets-f24/notes/background.pdf) on complexity theory, cryptography, and probability theory which will be helpful for the course. |
+| Mo, Sep 30 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture2_mpc.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture2_notes.pdf)Secret SharingSecure Multiparty Computation | [“How to Share a Secret”](http://paloma.eng.tau.ac.il/~yash/infosec-seminar/2005/shamir79.pdf) [Shamir, CACM'79]Chapters 2 and 3 of [“A Pragmatic Introduction to Secure Multi-Party Computation”](https://www.cs.virginia.edu/~evans/pragmaticmpc/pragmaticmpc.pdf) [Evans et al., 2018] |
+| Mo, Oct 7  | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture3_zk.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture3_notes.pdf)Zero-Knowledge ProofsNon-interactive and succinct proofs | [Boneh-Shoup](https://toc.cryptobook.us/book.pdf) (§20.1-20.3)Susan Hohenberger’s [lecture notes on Fiat-Shamir](https://www.cs.jhu.edu/~susan/600.641/scribes/lecture11.pdf)Vitalik Buterin on [“applications of ZK-SNARKs for preserving privacy”](https://vitalik.eth.limo/general/2022/06/15/using_snarks.html) |
+| Mo, Oct 14 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture4_snargs.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture4_notes.pdf)Polynomial IOPsThe PLONK SNARG | [“Interactive Oracle Proofs”](https://eprint.iacr.org/2016/116) [Ben-Sasson et al., TCC'16]Vitalik Buterin’s [“explainer on PLONK”](https://vitalik.eth.limo/general/2019/09/22/plonk.html) |
+| Fr, Oct 18 | **Problem Set 1 Due at 11:59pm via Gradescope**              |                                                              |
+| Mo, Oct 21 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture5_pir.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture5_notes.pdf)Private Information Retrieval | [“A Survey of Single-Database PIR”](https://eprint.iacr.org/2007/059.pdf) [Ostrovsky and Skeith, 2007][“Private Information Retrieval with Sublinear Online Time”](https://eprint.iacr.org/2019/1075.pdf) [Corrigan-Gibbs and Kogan, EUROCRYPT'22][“Apple’s deployment of PIR in production”](https://machinelearning.apple.com/research/homomorphic-encryption) |
+| Mo, Oct 28 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture6_oram.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture6_notes.pdf)Oblivious RAM | [The original Goldreich-Ostrovsky paper](https://class.ece.iastate.edu/tyagi/cpre681/papers/p431-goldreich.pdf)Elaine Shi’s [lecture notes](http://elaineshi.com/docs/oramlecture.pdf) |
+| Mo, Nov 4  | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture7_private_stats.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture7_notes.pdf)Computing Private StatisticsLinear PCPs | Henry Corrigan Gibbs’ [PhD Defense](https://people.csail.mit.edu/henrycg/files/academic/pres/stanford19defense-slides.pdf) which describes PRIO.Deployment notes by [Mozilla](https://blog.mozilla.org/security/2019/06/06/next-steps-in-privacy-preserving-telemetry-with-prio/) and [Apple & Google](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ENPA_White_Paper.pdf) |
+| Fr, Nov 8  | **Problem Set 2 Due at 11:59pm via Gradescope**              |                                                              |
+| Mo, Nov 11 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture8_recons.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture8_notes.pdf)Data PrivacyData Reconstruction Attacks | [“Linear Program Reconstruction in Practice”](https://journalprivacyconfidentiality.org/index.php/jpc/article/view/711) [Cohen & Nissim, TPDP'18]Section 8.1 of [Dwork and Roth](https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf)A [Tweet thread](https://twitter.com/john_abowd/status/1114942180278272000) by John Abowd on reconstruction attacks on the US Census |
+| Mo, Nov 18 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture9_dp.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture9_notes.pdf)Randomized ResponseDifferential Privacy | [“RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response”](https://arxiv.org/abs/1407.6981) [Erlingsson et al., CCS'14]Slides on the use of [“DP in US 2020 Census”](https://www2.census.gov/about/policies/2020-03-05-differential-privacy.pdf)Chapter 1 of Dwork and Roth, [“The Promise of Differential Privacy”](https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf) |
+| Mo, Nov 25 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture10_dp2.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture10_notes.pdf)Laplace MechanismApproximate Differential Privacy | Damien Desfontaines’ blog on the [“Privacy Loss Random Variable”](https://desfontain.es/blog/privacy-loss-random-variable.html) and [“Why not differential privacy”](https://desfontain.es/blog/why-not-differential-privacy.html)Rogaway’s critique of DP in [“The Moral Character of Cryptographic Work”](https://eprint.iacr.org/2015/1162.pdf) |
+| Fr, Nov 29 | **Problem Set 3 Due at 11:59pm via Gradescope**              |                                                              |
+| Mo, Dec 2  | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture11_dpsgd.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture11_notes.pdf)Private learningDP-SGD | Frank McSherry on [“Statistical inference considered harmful”](https://github.com/frankmcsherry/blog/blob/master/posts/2016-06-14.md)Papernot and Goodfellow on [“Privacy and machine learning: two unexpected allies?”](https://cleverhans-lab.github.io/privacy/2018/04/29/privacy-and-machine-learning.html) |
+| Mo, Dec 9  | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture12_mi.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture12_notes.pdf)Membership Inference AttacksDP lower bounds from Membership Inference | The [Homer et al. paper](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1000167) on identifying individuals in genetic data[“The composition theorem for differential privacy”](https://arxiv.org/abs/1311.0776) [Kairouz et al., ICML'15]Chapter 5 of Vadhan, [“The Complexity of Differential Privacy”](https://privacytools.seas.harvard.edu/files/complexityprivacy_1.pdf) |
+| Mo, Dec 16 | [Lecture Notes](https://spylab.ai/teaching/pets-f24/notes/lecture13_mi2.pdf), [Class Notes](https://spylab.ai/teaching/pets-f24/notes/lecture13_notes.pdf)Membership Inference for deep learning modelsAuditing private learning | [“Membership Inference Attacks From First Principles”](https://arxiv.org/abs/2112.03570) [Carlini et al., IEEE S&P'22][“Debugging Differential Privacy: A Case Study for Privacy Auditing”](https://arxiv.org/abs/2202.12219) [Tramèr et al., 2022] |
+| Fr, Dec 20 | **Problem Set 4 Due at 11:59pm via Gradescope**              |                                                              |
+
+## Feedback
+
+This is the first time we teach this class, so we would love to get feedback on how to improve it! You can use [this](https://docs.google.com/forms/d/e/1FAIpQLScX2hs8HVzhaJ8IVxooEO9AZoO0YycmydpYNeIB4Gi0LgYfpQ/viewform) form to give us anonymous feedback throughout the semester. You can fill it out as often as you want. And we make mistakes! If something looks wrong or impossible, please let us know.
+
+## Course Staff
+
+- [Jie Zhang](mailto:jie.zhang@inf.ethz.ch) (Head TA)
+- [Laura Hetz](mailto:laura.hetz@inf.ethz.ch) (1st course half on crypto)
+- [Daniel Paleka](mailto:daniel.paleka@inf.ethz.ch) (1st course half on crypto)
+- [Michael Aerni](mailto:michael.aerni@inf.ethz.ch) (2nd course half on DP)
+- [Hana Farid](mailto:hfarid@student.ethz.ch)

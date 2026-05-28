@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82472331-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+    
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <a href="/">
+        <img
+          id="navbar-logo"
+          src="/assets/img/sprintml-logo-black.svg"
+          alt="SprintML"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      
+      <ul>
+        <li><a class="" href="/">Home</a></li>
+        
+        <li><a class="" href="/team/">Team</a></li>
+        
+        <li><a class="" href="/blog/">Blog</a></li>
+        
+        <li><a class="" href="/outreach/">Outreach</a></li>
+        
+        <li><a class="" href="/publications/">Publications</a></li>
+        
+        <li><a class="" href="/teaching/">Teaching</a></li>
+        
+        <li><a class="" href="/applications/">Applications</a></li>
+        
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    
+  </div>
+</header>
+
+
+
+    <main id="main">
+      
+
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="blog-box">
+          <h2>SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation</h2>
+          <div class="meta-box">
+            <ul>
+              <li>
+                <p>
+                  <i class="bi bi-calendar-week"></i>
+                  Apr. 25, 2026
+                </p>
+              </li>
+              <li>
+                
+                
+
+                
+                
+                
+                
+                <p>
+                  <i class="bi bi-clock"></i> 4
+                  
+                  min
+                  45
+                  
+                  sec.
+                </p>
+              </li>
+              <li>
+                <p><i class="bi bi-person"></i> SprintML</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content"><style>
+.blur-image {
+  filter: blur(12px);
+  transition: filter 0.3s;
+  cursor: pointer;
+}
+.blur-image:hover {
+  filter: none;
+}
+.blur-group .blur-image {
+  filter: blur(12px);
+  transition: filter 0.3s;
+  cursor: pointer;
+}
+.blur-group:hover .blur-image {
+  filter: none;
+}
+</style>
+<center>
+  Jan Kociszewski*, Hubert Jastrzębski*, Tymoteusz Stępkowski*, Filip Manijak*, Krzysztof Rojek*,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch<sup>1</sup></a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic</a>
+  <br><br>
+  CISPA Helmholtz Center for Information Security<br>
+  <em>*Indicates Equal Contribution</em>
+    <br><br>
+</center>
+<p>AI image generators create high quality content which makes it often impossible to distinguish between <em>real</em> human-created vs. <em>synthetic</em> AI-generated content. That creates practical problems: deepfakes, copyright disputes, misinformation, and even <em>model collapse</em> when next generative models are trained on scraped synthetic images generated by previous models. One of the solutions to these problems is watermarking, which adds an imperceptible signal in generated content so it can later be detected algorithmically.</p>
+<p>Our SERUM method proposes a simple watermarking method for diffusion models. Instead of editing the final image or fine-tuning the generator, SERUM adds a watermark noise pattern at the very start of generation and trains a lightweight detector to detect the watermark.</p>
+<h3 id="the-problem-with-existing-watermarks">The problem with existing watermarks</h3>
+<p>Traditional post-processing watermarks modify the final image, often in pixel or frequency space. They are fast, but can be fragile: cropping, compression, rotation, noise, or generative “washing” attacks can remove them.</p>
+<p>Newer diffusion-specific methods embed watermarks inside the generation process. These are usually more robust, but often come with a cost. Some require fine-tuning parts of the large generative model. Others, such as Tree-Ring, watermark the initial diffusion noise but then require expensive diffusion inversion to detect the watermark, essentially trying to reconstruct the original noise from the final image.</p>
+<p>SERUM tries to get the best of both worlds. We add the watermark signal at the initial noise stage. We avoid diffusion inversion for speed and keep the original generator unchanged. We train only a lighweight external watermakr detector.</p>
+<h3 id="the-core-idea-behind-serum">The core idea behind SERUM</h3>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/serum/overview.png" width="800"/>
+</div>
+<p>Diffusion models start from random Gaussian noise and gradually denoise it into an image. SERUM modifies that starting noise by adding a watermark specific noise. The key intuition is simple: if the watermark is present from the very beginning, the diffusion model naturally adds its signature into the generated image. The result is a statistical fingerprint.</p>
+<p>To detect the watermark, we do not invert the diffusion process. Instead, we encode the image back into the latent space using the diffusion model’s encoder and feed that latent into a lightweight watermark detector. The detector outputs a watermark score. To make the watmark detector robust, we train it with many image transformations, including: rotation, JPEG compression, and crop and scale, among others. We also use a dynamic augmentation sampler inspired by prioritized experience replay. This results in the training process paying more attention to transformations that currently fool the detector. This helps the detector learn robustness where it is weakest.</p>
+<h3 id="experimental-results">Experimental Results</h3>
+<p>The headline result is strong: across Stable Diffusion 1.4, 2.0, and 2.1, SERUM is robust to standard perturbation. A quick note on metrics: TPR denotes how often watermarked images are correctly detected, and FPR represents how often clean images are incorrectly flagged. Our SERUM achieves above 99% TPR@1%FPR against standard perturbations, as shown below.</p>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/serum/robust.png" width="600"/>
+</div>
+<p>Compared with TrustMark, Stable Signature, RingID, and GaussMarker, SERUM is the most stable across attacks. Other methods often perform well in some cases but fail badly in others, for example, RingID collapses under crop-and-scale, while Stable Signature struggles under Gaussian noise.</p>
+<p>SERUM also performs well against stronger watermark removal attacks based on generative models. We evaluated attacks such as VAE regeneration, diffusion regeneration, Rinse, CtrlRegen, and image-to-video transformation. SERUM reaches an average 90.87% TPR@1%FPR, outperforming RingID and GaussMarker in this benchmark. The hardest case is image-to-video, where SERUM achieves 58.20% TPR—not perfect, but still better than the compared baselines.</p>
+<h4 id="quality-and-efficiency">Quality and Efficiency</h4>
+<p>SERUM has a negligible impact on the image quality impact. FID increases slightly, meaning some small degradation or distribution shift, but CLIP score remains almost unchanged. Qualitatively, the examples preserve the main content and style, though details such as pose, shape, or perspective may change. We also provide a theoretical argument to explain the relatively good image fidelity of SERUM.</p>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/serum/quality.png" width="800"/>
+</div>
+<p>A major advantage of SERUM is speed. Because injection is just adding a fixed latent noise pattern, watermarking is essentially free. SERUM takes only 17 ms injection time for 5000 images on an NVIDIA A100 GPU. Detection takes 2.5 minutes for 5000 images. SERUM is dramatically faster than inversion-based approaches such as GaussMarker, which require almost 2 hours to detect the watermarks in the above setup. Training is also moderate: about 9.5 hours, including data generation and augmentation precomputation.</p>
+<h4 id="multi-user-watermarking">Multi-user watermarking</h4>
+<p>SERUM can also support many users. The idea is to assign each user a unique combination of noise patterns. The detector checks which pattern combination is present. We use 135 base patterns and assign pairs of them to users, supporting 9045 users. At that scale, SERUM maintains strong detection and user identification accuracy, even under many perturbations. This makes the method useful not only for <em>was this image generated</em> but also for <em>which model owner, customer, or account generated the image</em>.</p>
+<h4 id="radioactivity-the-watermark-survives-training-new-models">Radioactivity: the watermark survives training new models</h4>
+<p>One of the most interesting findings is that SERUM is radioactive. In watermarking, radioactivity means the signal can survive when watermarked images are used to train or fine-tune another model. We fine-tune models on SERUM-watermarked images and then check whether outputs from those adapted models still contain the watemark signal.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Adapted Model</th>
+          <th>TPR@1%FPR</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SD 1.4 (LoRA)</td>
+          <td>52.30%</td>
+      </tr>
+      <tr>
+          <td>SD 1.4 (FFT)</td>
+          <td>77.12%</td>
+      </tr>
+      <tr>
+          <td>SANA-0.6B (FFT)</td>
+          <td>96.76%</td>
+      </tr>
+  </tbody>
+</table>
+<p>This shows that SERUM enables tracing data provenance through model training pipelines, especially as synthetic data becomes more common.
+Caveats</p>
+<h3 id="summary">Summary</h3>
+<p>SERUM’s appeal is its simplicity. Add a fixed normalized noise pattern to the initial diffusion noise, generate the image, and train a small watermark detector to recognize the resulting fingerprint. This combination gives SERUM several strengths at once: high robustness, fast injection, fast detection compared with inversion-based methods, low image-quality impact, multi-user support, and even radioactive persistence through downstream training. For watermarking diffusion-generated images, SERUM is a strong example of a method where the simplest idea may also be the most practical.</p>
+<h2 id="learn-more">Learn More</h2>
+<ul>
+<li>Read the full paper: <a href="https://arxiv.org/abs/2603.13396">Arxiv</a></li>
+<li>Explore the code: <a href="https://github.com/sprintml/SERUM">GitHub</a></li>
+<li><a href="assets/blog/serum/SERUM-poster.pdf" target="_blank" rel="noopener">Our ICLR 2026 Poster (PDF)</a></li>
+</ul>
+<h2 id="bibtex">Bibtex</h2>
+<pre tabindex="0"><code>@inproceedings{
+kociszewski2026serum,
+title={SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation},
+author={Jan Kociszewski and Hubert Jastrz{\k{e}}bski and Tymoteusz St{\k{e}}pkowski and Filip Manijak and Krzysztof Rojek and Franziska Boenisch and Adam Dziedzic},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=AiBUm6iKBf}
+}
+</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Recent Blogs</h2>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Privacy Attacks on Tabular Foundation Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              May. 16, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>5
+              
+              min
+              51
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Benchmarking Empirical Privacy Protection for Adaptations of LLMs</h4>
+          <hr />
+          <p></p>
+          <a href=""
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Apr. 28, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>0
+              
+              min
+              0
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Natural Identifiers for Privacy and Data Audits</h4>
+          <hr />
+          <p></p>
+          <a href=""
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Apr. 28, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>0
+              
+              min
+              0
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <div class="row box" style="background-color: rgba(16, 11, 11, 0.3);  border-radius: 10px;">
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1912500338306793902?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423651334889493?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423195485335945?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</section>
+ 
+    </main>
+    
+
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div
+        class="col-md-9 d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          src="/assets/img/sprintml-logo-white.svg"
+          alt="SprintML"
+          class="footer-logo"
+          width="180"
+          height="60"
+        />
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://x.com/SprintML" target="_blank" aria-label="X (Twitter)">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/in/sprintml-group-at-cispa-327769397/" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="text-center">
+          <span
+            >© 2026 SprintML Lab | Developed By
+            <a href="https://sual-soft.com/" target="_blank"
+              >S U A L SOFT</a
+            ></span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+
+<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>

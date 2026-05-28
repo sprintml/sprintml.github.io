@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Model Extraction, Model Stealing, Model Functionality Stealing, Self-Supervised Learning, Deep Learning, B4b, Stealing Encoders on SprintML</title>
+    <link>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning-b4b-stealing-encoders/</link>
+    <description>Recent content in Model Extraction, Model Stealing, Model Functionality Stealing, Self-Supervised Learning, Deep Learning, B4b, Stealing Encoders on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning-b4b-stealing-encoders/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bucks for Buckets (B4B): Active Defenses Against Stealing Encoders</title>
+      <link>https://sprintml.com/blog/2023-12-10-b4b/</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/blog/2023-12-10-b4b/</guid>
+      <description>&lt;center&gt;&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=iG319iwAAAAJ&amp;hl=pl&amp;oi=ao&#34;&gt;Jan Dubiński*&lt;sup&gt;2,3&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://cvlab.ii.pw.edu.pl/author/stanis%C5%82aw-pawlak/&#34;&gt;Stanisław Pawlak*&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch*&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://cvlab.ii.pw.edu.pl/ttrzcins/&#34;&gt;Tomasz Trzciński&lt;sup&gt;2,3,4&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security&lt;br&gt;&#xA;  &lt;sup&gt;2&lt;/sup&gt;Warsaw University of Technology&lt;br&gt;&#xA;  &lt;sup&gt;3&lt;/sup&gt;IDEAS NCBR&lt;br&gt;&#xA;  &lt;sup&gt;4&lt;/sup&gt;Tooploox&lt;br&gt;&#xA;  &lt;em&gt;*Indicates Equal Contribution&lt;/em&gt;&#xA;    &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;h2 id=&#34;the-growing-risk-of-model-stealing&#34;&gt;&lt;strong&gt;The Growing Risk of Model Stealing&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Machine learning models are increasingly exposed via public APIs, making them susceptible to model stealing. Attackers can systematically query these APIs, gathering enough data to reconstruct a nearly identical model at a fraction of the cost. This poses serious security risks, as stolen models can be used for unfair competition, academic plagiarism, or even malicious purposes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

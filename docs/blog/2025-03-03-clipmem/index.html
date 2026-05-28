@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82472331-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+    
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <a href="/">
+        <img
+          id="navbar-logo"
+          src="/assets/img/sprintml-logo-black.svg"
+          alt="SprintML"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      
+      <ul>
+        <li><a class="" href="/">Home</a></li>
+        
+        <li><a class="" href="/team/">Team</a></li>
+        
+        <li><a class="" href="/blog/">Blog</a></li>
+        
+        <li><a class="" href="/outreach/">Outreach</a></li>
+        
+        <li><a class="" href="/publications/">Publications</a></li>
+        
+        <li><a class="" href="/teaching/">Teaching</a></li>
+        
+        <li><a class="" href="/applications/">Applications</a></li>
+        
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    
+  </div>
+</header>
+
+
+
+    <main id="main">
+      
+
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="blog-box">
+          <h2>Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models</h2>
+          <div class="meta-box">
+            <ul>
+              <li>
+                <p>
+                  <i class="bi bi-calendar-week"></i>
+                  Mar. 3, 2025
+                </p>
+              </li>
+              <li>
+                
+                
+
+                
+                
+                
+                
+                <p>
+                  <i class="bi bi-clock"></i> 4
+                  
+                  min
+                  1
+                  
+                  sec.
+                </p>
+              </li>
+              <li>
+                <p><i class="bi bi-person"></i> SprintML</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content"><center>
+  <a href="https://wenhaowang1995.github.io/">Wenhao Wang<sup>1</sup></a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic<sup>1</sup></a>,
+  <a href="https://oue.gatech.edu/node/3087">Grace Kim<sup>2</sup></a>,
+  <a href="https://cispa.de/en/people/backes">Michael Backes<sup>1</sup></a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch<sup>1</sup></a>.
+  <br><br>
+  <sup>1</sup>CISPA Helmholtz Center for Information Security<br>
+  <sup>2</sup>Georgia Institute of Technology<br>
+    <br><br>
+</center>
+<p><strong>Multi-modal models</strong> like <strong>CLIP</strong> are widely used for their state-of-the-art performance on a variety of downstream tasks. But while memorization is well-studied in uni-modal models, its role in multi-modal models is underexplored.</p>
+<p>We focus on CLIP, as a representative multi-modal model, and analyze how much it memorizes its training data. We design a new CLIPMem metric to analyze the memorization behavior of CLIP. We observe that the memorization patterns in CLIP fall in between the ones found in <strong>supervised learning</strong> and <strong>self-supervised learning</strong> models. We also find that the <strong>text encoder</strong> in CLIP contributes more memorization than <strong>image encoder</strong>. Using these insights, we propose <strong>mitigation strategies</strong> that reduce memorization while <strong>simultaneously improving utility</strong> – which has not been observed in traditional learning paradigms.</p>
+<h2 id="how-to-measure-memorization-in-clip">How to measure memorization in CLIP?</h2>
+<p>CLIP trains an image encoder and a text encoder to map images and captions into a shared latent space. Using <strong>contrastive learning</strong>, it pulls together matching image-text pairs while pushing apart non-matching pairs. Specifically, it maximizes the similarity score between correct pairs while minimizing it for incorrect pairs.</p>
+<p>To measure memorization, we introduce <strong>CLIPMem</strong>, a new metric that leverages CLIP’s contrastive learning objective. CLIPMem quantifies memorization by measuring similarity scores across two models:</p>
+<ul>
+<li>A model trained on the <strong>full dataset</strong>.</li>
+<li>A <strong>reference model</strong> trained on the same dataset but with <strong>one image-text pair removed</strong>.</li>
+</ul>
+<p>If the model aligns the removed pair much more strongly than the reference model, we consider it memorized. Our results show that <strong>mislabeled or atypical samples have the highest memorization</strong> (Figure 1).</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/clipmem/fig1.png" width="80%"/>
+</div>
+<h2 id="is-the-memorization-behavior-of-clip-more-similar-to-supervised-or-self-supervised-learning">Is the memorization behavior of CLIP more similar to Supervised or Self-Supervised Learning?</h2>
+<p>In uni-modal models, both <strong>supervised learning (SL) and self-supervised learning (SSL)</strong> rely on memorization to improve generalization, but they have different memorization behaviors. It&rsquo;s unclear how these memorization behaviors extend to CLIP, because <strong>CLIP entails elements from both</strong> &ndash; it gets supervisory signals through captions <strong>(like SL)</strong> but it also learns through the contrastive objective <strong>(like SSL)</strong>.</p>
+<p>Our analysis shows that CLIP’s memorization behavior falls between SL and SSL:</p>
+<p>✅ Like <strong>SL</strong>, CLIP memorizes mislabeled or imprecise samples.</p>
+<p>✅ Like <strong>SSL</strong>, CLIP memorizes atypical samples.</p>
+<p>✅ Neuron-level analysis shows that earlier layers behave like <strong>SL</strong>, grouping similar data points together, while later layers behave like <strong>SSL</strong>, memorizing individual data points (Figure 4).</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/clipmem/fig2.png" width="50%"/>
+</div>
+<p>Overall, CLIP doesn&rsquo;t fully align with the memorization behavior of either SL or SSL, but instead falls somewhere in between.</p>
+<h2 id="is-the-text-encoder-or-image-encoder-more-responsible-for-memorization">Is the text encoder or image encoder more responsible for memorization?</h2>
+<p>CLIP has both the image encoder and the text encoder. But does one contribute more to memorization, or do they do so equally? To figure it out, we applied different augmentation strategies to see their effect on memorization.</p>
+<p>Table 1 summarizes the findings:</p>
+<p>✅ <strong>Text augmentations</strong> (multiple captions per image) were more effective at reducing memorization than <strong>image augmentations</strong> (multiple images per caption) while also improving performance.</p>
+<p>✅ <strong>Applying both text and image augmentations</strong> strikes the best balance – leading to the most reduction in memorization while also improving performance.</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/clipmem/fig3.png" width="50%"/>
+</div>
+<p>Overall, these results show that <strong>the text encoder contributes more to memorization than the image encoder</strong>. This means that if we want to mitigate memorization in CLIP, we should <strong>focus more on the text domain</strong> – like increasing caption diversity or adding noise to text embeddings (detailed in the next section).</p>
+<h2 id="so-how-do-we-mitigate-memorization-in-clip">So how do we mitigate memorization in CLIP?</h2>
+<p>Based on our insights, we propose effective mitigation strategies that reduce memorization. A surprising finding from our study is that <strong>reducing memorization can actually improve downstream generalization</strong>! This is not something that’s typically observed in traditional learning paradigms, where reducing memorization often results in a decrease in utility.</p>
+<h3 id="mitigation-strategies">Mitigation strategies:</h3>
+<p>1️⃣ Using multiple captions per image</p>
+<p>Our result shows that <strong>increasing the number of captions used during training</strong> lowers memorization and improves downstream generalization (Figure 5a).</p>
+<p>2️⃣ Noising text embedings</p>
+<p>To avoid any inherent distribution shifts from augmentations, we propose to perform the &ldquo;augmentations&rdquo; <strong>directly in the embedding space</strong>. Adding small amounts of Gaussian noise to text embeddings during training reduced memorization while improving downstream generalization (Figure 5b).</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/clipmem/fig4.png" width="80%"/>
+</div>
+<p>3️⃣ Removing Memorized Samples</p>
+<p>By <strong>identifying the most memorized samples</strong> via CLIPMem and <strong>removing them</strong>, we actually improved generalization (Figure 6).</p>
+<div style="text-align:center; margin-bottom:30px;">
+<img src="/assets/blog/clipmem/fig5.png" width="80%"/>
+</div>
+<h2 id="why-is-this-important">Why is this important?</h2>
+<p>CLIP models are usually trained on <strong>large, uncurated datasets sourced from the internet</strong>, with no guarantees regarding the correctness of the image-text pairs. By using <strong>CLIPMem</strong>, we can identify and remove these problematic training examples, making CLIP both <strong>more private and more generalizable</strong>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Let’s summarize our findings:</p>
+<p>1️⃣ <strong>CLIPMem</strong> is our new metric that measures memorization in CLIP.</p>
+<p>2️⃣ The <strong>memorization behavior</strong> of CLIP falls between supervised learning and self-supervised learning.</p>
+<p>3️⃣ The <strong>text encoder is more responsible</strong> for memorization than the image encoder.</p>
+<p>4️⃣ <strong>Effective mitigation strategies</strong> include using multiple captions per image, noising text embeddings, and removing memorized samples.</p>
+<p>5️⃣ Unlike traditional learning paradigms, <strong>reducing memorization in CLIP can actually performance</strong>.</p>
+<hr>
+<p><strong>👉 Read our:</strong> <a href="https://openreview.net/pdf?id=5V0f8igznO" target="_blank"> full research paper accepted at ICLR 2025.</a></p>
+<h2 id="bibtex">Bibtex</h2>
+<pre tabindex="0"><code>@inproceedings{wang2025captured,
+title={Captured by Captions: On Memorization and its Mitigation in {CLIP} Models},
+author={Wenhao Wang and Adam Dziedzic and Grace C. Kim and Michael Backes and Franziska Boenisch},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=5V0f8igznO}
+}
+</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Recent Blogs</h2>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Privacy Attacks on Tabular Foundation Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              May. 16, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>5
+              
+              min
+              51
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Benchmarking Empirical Privacy Protection for Adaptations of LLMs</h4>
+          <hr />
+          <p></p>
+          <a href=""
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Apr. 28, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>0
+              
+              min
+              0
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Natural Identifiers for Privacy and Data Audits</h4>
+          <hr />
+          <p></p>
+          <a href=""
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Apr. 28, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>0
+              
+              min
+              0
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <div class="row box" style="background-color: rgba(16, 11, 11, 0.3);  border-radius: 10px;">
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1912500338306793902?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423651334889493?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423195485335945?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</section>
+ 
+    </main>
+    
+
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div
+        class="col-md-9 d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          src="/assets/img/sprintml-logo-white.svg"
+          alt="SprintML"
+          class="footer-logo"
+          width="180"
+          height="60"
+        />
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://x.com/SprintML" target="_blank" aria-label="X (Twitter)">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/in/sprintml-group-at-cispa-327769397/" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="text-center">
+          <span
+            >© 2026 SprintML Lab | Developed By
+            <a href="https://sual-soft.com/" target="_blank"
+              >S U A L SOFT</a
+            ></span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+
+<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>
