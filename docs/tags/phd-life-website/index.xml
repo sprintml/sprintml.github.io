@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phd Life, Website on SprintML</title>
+    <link>https://sprintml.com/tags/phd-life-website/</link>
+    <description>Recent content in Phd Life, Website on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/phd-life-website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>88 days to go: How to set up your academic website?</title>
+      <link>https://sprintml.com/phd_life/2023-06-06-academic-website/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/phd_life/2023-06-06-academic-website/</guid>
+      <description>&lt;p&gt;Now that you’ve entered the world of academia, you’ll want to make sure that people can find you easily. This is helpful to find internships, establish research collaborations, and get noticed. Here’s where to start.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Setting up a website: Even though setting up a website sounds scary, it is actually no magic trick. The easiest way we found is to use a template, for example from github, such as &lt;a href=&#34;https://academicpages.github.io&#34;&gt;https://academicpages.github.io&lt;/a&gt;. It lets you customize your page while already providing the features and pages you’ll need. Take a look at our pages for how it can turn out: &lt;a href=&#34;https://franziska-boenisch.de&#34;&gt;https://franziska-boenisch.de&lt;/a&gt; and &lt;a href=&#34;https://adam-dziedzic.com&#34;&gt;https://adam-dziedzic.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

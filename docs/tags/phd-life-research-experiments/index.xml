@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phd Life, Research Experiments on SprintML</title>
+    <link>https://sprintml.com/tags/phd-life-research-experiments/</link>
+    <description>Recent content in Phd Life, Research Experiments on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/phd-life-research-experiments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>77 days to go: How to design research experiments?</title>
+      <link>https://sprintml.com/phd_life/2023-06-17-run-experiments/</link>
+      <pubDate>Sat, 17 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/phd_life/2023-06-17-run-experiments/</guid>
+      <description>&lt;p&gt;Now that you started your Ph.D., found a topic that interests you, and are about to start your own research, you are probably wondering how to identify which research experiments you should run next, and how to design your experiments. We’ve got some general tips for you.&lt;/p&gt;&#xA;&lt;p&gt;What are research experiments for? In short, they are there to validate (or disprove) some hypothesis that you should formulate beforehand. You have to consider what the objective of your experiment is and what the expected outcome is. In some cases, once you have enough experience, you might be able to run this experiment in your head instead of on a machine, which is way faster. A good experiment doesn&amp;rsquo;t have to run long or require you to run a lot of code. Especially at initial stages of a project, you might want to implement a prototype and quickly check how it performs. This will give you a good understanding if the idea is worth pursuing further.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

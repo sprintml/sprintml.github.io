@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phd Life, Research, Arxiv Submission on SprintML</title>
+    <link>https://sprintml.com/tags/phd-life-research-arxiv-submission/</link>
+    <description>Recent content in Phd Life, Research, Arxiv Submission on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/phd-life-research-arxiv-submission/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>76 days to go: How to submit your paper to ArXiv?</title>
+      <link>https://sprintml.com/phd_life/2023-06-18-submit-to-arxiv/</link>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/phd_life/2023-06-18-submit-to-arxiv/</guid>
+      <description>&lt;p&gt;A paper is more than a research idea and experiments, unfortunately. You also have to give talks about your research, publish your code, paper, and promote your work. In this post, we focus on the bread-and-butter of ML researchers, namely, on &amp;ldquo;how to submit your paper to ArXiv?&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;First of all, we assume that you have your paper in the LaTex format on overleaf. Before publishing, you might also want to first add the authors (since the submission is often double-blinded), their affiliations, then you can add ackonwledgements, pointer to your code, etc. Next, download your files as a zip file and then use the cleaning tool to remove all the comments. This is an important step since you might not want to publish the work on ArXiv that someone else can get the LaTex source of and see all your comments, previous versions of your paragraphs, etc. If this is not desirable, and even more, this is not intended to be read by anoone else, then use the &lt;a href=&#34;https://github.com/google-research/arxiv-latex-cleaner&#34;&gt;arxiv-latex-cleaner tool&lt;/a&gt;. Our favorite command is simply &lt;code&gt;arxiv_latex_cleaner --keep_bib folder_from_overleaf&lt;/code&gt;. Then, copy to a different location and rename the produced folder to the original name (to preserve the references from LaTex). If your figure files or images were deleted from the cleaned version, simply add the images from the original version. You might also select which images you want to publish but double check that all images referenced in the text are present in the folder for figures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
