@@ -6,8 +6,15 @@
     <description>Recent content in Blog on SprintML</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sprintml.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding DoRI: Discovery of Retained Images in Diffusion Models</title>
+      <link>https://sprintml.com/blog/2026-06-24-finding-dori/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/blog/2026-06-24-finding-dori/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;https://sprintml.com/assets/blog/dori/icml-logo.png&#34; alt=&#34;ICML logo&#34; width=&#34;178&#34;&gt;&#xA;  &lt;br&gt;&#xA;  &lt;strong&gt;Accepted at ICML 2026&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;h1 align=&#34;center&#34;&gt;&#xA;  Finding DoRI &lt;img src=&#34;https://sprintml.com/assets/blog/dori/figures/dory_wo_bg.png&#34; alt=&#34;DoRI icon&#34; width=&#34;64&#34;&gt;: Discovery of&lt;br&gt;&#xA;  Retained Images in&lt;br&gt;&#xA;  Diffusion Models&#xA;&lt;/h1&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  Antoni Kowalczuk&lt;sup&gt;1,*&lt;/sup&gt;,&#xA;  Dominik Hintersdorf&lt;sup&gt;2,3,*&lt;/sup&gt;,&#xA;  Lukas Struppek&lt;sup&gt;6,*,&amp;dagger;&lt;/sup&gt;&lt;br&gt;&#xA;  Kristian Kersting&lt;sup&gt;2,3,4,5&lt;/sup&gt;,&#xA;  Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;,&#xA;  Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&#xA;&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;sup&gt;1&lt;/sup&gt; CISPA Helmholtz Center for Information Security &amp;nbsp;&amp;nbsp;&#xA;  &lt;sup&gt;2&lt;/sup&gt; German Research Center for Artificial Intelligence (DFKI)&lt;br&gt;&#xA;  &lt;sup&gt;3&lt;/sup&gt; Technical University of Darmstadt &amp;nbsp;&amp;nbsp;&#xA;  &lt;sup&gt;4&lt;/sup&gt; Hessian Center for AI (Hessian.AI)&lt;br&gt;&#xA;  &lt;sup&gt;5&lt;/sup&gt; Centre for Cognitive Science, Technical University of Darmstadt &amp;nbsp;&amp;nbsp;&#xA;  &lt;sup&gt;6&lt;/sup&gt; Far.AI&#xA;&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;sup&gt;*&lt;/sup&gt; Equal contribution. &amp;nbsp;&amp;nbsp;&#xA;  &lt;sup&gt;&amp;dagger;&lt;/sup&gt; Work mainly done at DFKI/Technical University of Darmstadt.&#xA;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Privacy Attacks on Tabular Foundation Models</title>
       <link>https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/</link>

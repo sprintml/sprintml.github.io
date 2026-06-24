@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Finding DoRI: Discovery of Retained Images in Diffusion Models</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82472331-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+    
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <a href="/">
+        <img
+          id="navbar-logo"
+          src="/assets/img/sprintml-logo-black.svg"
+          alt="SprintML"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      
+      <ul>
+        <li><a class="" href="/">Home</a></li>
+        
+        <li><a class="" href="/team/">Team</a></li>
+        
+        <li><a class="" href="/blog/">Blog</a></li>
+        
+        <li><a class="" href="/phd_life/">PhD Life</a></li>
+        
+        <li><a class="" href="/outreach/">Outreach</a></li>
+        
+        <li><a class="" href="/publications/">Publications</a></li>
+        
+        <li><a class="" href="/teaching/">Teaching</a></li>
+        
+        <li><a class="" href="/applications/">Applications</a></li>
+        
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    
+  </div>
+</header>
+
+
+
+    <main id="main">
+      
+
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="blog-box">
+          <h2>Finding DoRI: Discovery of Retained Images in Diffusion Models</h2>
+          <div class="meta-box">
+            <ul>
+              <li>
+                <p>
+                  <i class="bi bi-calendar-week"></i>
+                  Jun. 24, 2026
+                </p>
+              </li>
+              <li>
+                
+                
+
+                
+                
+                
+                
+                <p>
+                  <i class="bi bi-clock"></i> 6
+                  
+                  min
+                  39
+                  
+                  sec.
+                </p>
+              </li>
+              <li>
+                <p><i class="bi bi-person"></i> SprintML</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content"><p align="center">
+  <img src="/assets/blog/dori/icml-logo.png" alt="ICML logo" width="178">
+  <br>
+  <strong>Accepted at ICML 2026</strong>
+</p>
+<h1 align="center">
+  Finding DoRI <img src="/assets/blog/dori/figures/dory_wo_bg.png" alt="DoRI icon" width="64">: Discovery of<br>
+  Retained Images in<br>
+  Diffusion Models
+</h1>
+<p align="center">
+  Antoni Kowalczuk<sup>1,*</sup>,
+  Dominik Hintersdorf<sup>2,3,*</sup>,
+  Lukas Struppek<sup>6,*,&dagger;</sup><br>
+  Kristian Kersting<sup>2,3,4,5</sup>,
+  Adam Dziedzic<sup>1</sup>,
+  Franziska Boenisch<sup>1</sup>
+</p>
+<p align="center">
+  <sup>1</sup> CISPA Helmholtz Center for Information Security &nbsp;&nbsp;
+  <sup>2</sup> German Research Center for Artificial Intelligence (DFKI)<br>
+  <sup>3</sup> Technical University of Darmstadt &nbsp;&nbsp;
+  <sup>4</sup> Hessian Center for AI (Hessian.AI)<br>
+  <sup>5</sup> Centre for Cognitive Science, Technical University of Darmstadt &nbsp;&nbsp;
+  <sup>6</sup> Far.AI
+</p>
+<p align="center">
+  <sup>*</sup> Equal contribution. &nbsp;&nbsp;
+  <sup>&dagger;</sup> Work mainly done at DFKI/Technical University of Darmstadt.
+</p>
+<p align="center">
+  <strong><a href="https://arxiv.org/abs/2507.16880">Paper</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://github.com/sprintml/finding_dori">Code</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://icml.cc/media/PosterPDFs/ICML%202026/65291.png?t=1780993196.6111858">Poster</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://icml.cc/media/icml-2026/Slides/65291.pdf">Slides</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://recorder-v3.slideslive.com/?share=110303&amp;s=72157554-1d57-485a-a4c4-f0dd9232710c">Recording</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="#citation">BibTeX</a></strong>
+</p>
+<h2 id="on-this-page">On This Page</h2>
+<p><a href="#overview">Overview</a> ·
+<a href="#main-finding">Main Finding</a> ·
+<a href="#problem">Problem</a> ·
+<a href="#key-idea">Key Idea</a> ·
+<a href="#our-method">Our Method</a> ·
+<a href="#locality-evidence">Locality Evidence</a> ·
+<a href="#results">Results</a> ·
+<a href="#mitigation-tradeoffs">Mitigation Tradeoffs</a> ·
+<a href="#take-aways">Take-Aways</a> ·
+<a href="#citation">Citation</a></p>
+<h2 id="overview">Overview</h2>
+<p>We study whether memorized training images in text-to-image diffusion models are actually removed by pruning-based mitigation methods. The central finding is that these methods can suppress replication for the original prompt while leaving alternative text embeddings that still recover the same image.</p>
+<p>DoRI searches directly in continuous text-embedding space for such adversarial triggers. The experiments suggest that memorization is not localized in a small set of weights or limited to one prompt or one activation pattern, and that robust mitigation should be evaluated against diverse replication triggers.</p>
+<p align="center">
+  <img src="/assets/blog/dori/figures/adv_examples_overview.png" alt="Overview diagram showing mitigation, adversarial embedding search, and recovered retained images." width="920">
+  <br>
+  <em>The central failure mode: pruning changes the generation for the original prompt, but DoRI finds adversarial embeddings that retrieve the retained image again.</em>
+</p>
+<h2 id="main-finding">Main Finding</h2>
+<p>Text-to-image diffusion models (DMs) have achieved remarkable success in image generation. However, concerns about data privacy and intellectual property remain due to their ability to inadvertently memorize and replicate training data. Recent mitigation efforts have focused on identifying and pruning weights responsible for triggering verbatim training data replication, based on the assumption that memorization can be localized. We challenge this assumption and demonstrate that, even after such pruning, small perturbations to the text embeddings of previously mitigated prompts can re-trigger data replication, revealing the fragility of such methods.</p>
+<p>Our analysis provides multiple indications that memorization is not inherently local in diffusion models: (1) replication triggers for memorized images are distributed throughout text embedding space; (2) embeddings yielding the same replicated image produce divergent model activations; and (3) different pruning methods identify inconsistent sets of memorization-related weights for the same image. Finally, we show that bypassing the locality assumption enables more robust mitigation through adversarial fine-tuning. These findings provide new insights into the fundamental nature of memorization in text-to-image DMs and inform the future development of more reliable mitigation methods against DM memorization.</p>
+<h2 id="problem">Problem: Pruning can hide replication without removing memorization</h2>
+<p>Verbatim data replication in text-to-image diffusion models creates privacy and intellectual-property risks, especially for open-weight models. Existing mitigation methods such as NeMo and WANDA identify weights associated with memorized prompts and prune them. This can stop the original caption from reproducing the training image, which makes the mitigation appear successful under standard prompt-based evaluation.</p>
+<p>The paper asks whether that apparent success means the memorized image has been removed from the model. This distinction matters: deployment filters or single-prompt pruning can reduce one access path, but model release requires confidence that the retained image cannot be recovered through nearby or alternative inputs.</p>
+<h2 id="key-idea">Key Idea: Search beyond natural-language prompts</h2>
+<p>DoRI treats the text conditioning vector itself as the search variable. Starting from the memorized prompt embedding, it optimizes an adversarial embedding with the diffusion training loss for a known memorized image. Noise and denoising timesteps are resampled during the optimization so that the final embedding is not tied to a single sampling trajectory.</p>
+<p>If a pruned model still generates the target training image from this optimized embedding, then the pruning did not erase the memorized content. It only disrupted the original retrieval path.</p>
+<p align="center">
+  <span style="display: inline-block; width: 720px; max-width: 100%; aspect-ratio: 4 / 3; overflow: hidden;">
+    <img src="/assets/blog/dori/figures/wanda_mitigation_and_adv_compressed.jpg" alt="WANDA mitigation examples where adversarial embeddings recover visually similar memorized images." style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; margin: 0;">
+  </span>
+  <br>
+  <em>After WANDA mitigation, standard generations move away from the original image, while adversarial embeddings can steer generation back toward close replicas.</em>
+</p>
+<h2 id="our-method">Our Method: Adversarial embeddings expose retained images</h2>
+<p>The method assumes a model developer has already identified a memorized image and its prompt. After applying NeMo or WANDA, DoRI optimizes a continuous text embedding against the target image under the pruned model. The optimized embedding is then used as the conditioning input for generation.</p>
+<p>The analysis goes beyond showing that we can re-generate memorized images after the pruning methods. We also probe whether memorization is local in text-embedding space, internal activations, and selected weights. Across these views, the evidence points away from a local mechanism of memorization in diffusion models and toward a distributed retention pattern.</p>
+<h2 id="locality-evidence">Locality Evidence: Retained images are not tied to one local trigger</h2>
+<p>We test locality from three angles.</p>
+<p>In <strong>embedding space</strong>, optimized triggers for a single memorized image remain widely distributed. Randomly initialized or non-memorized prompt embeddings can be optimized into successful triggers, so retrieval is not confined to the original caption neighborhood. In general, adversarial triggers are widely scattered in text-embedding space.</p>
+<p>For <strong>activations</strong>, triggers for the same retained image do not converge to one consistent activation pattern, weakening activation-localization assumptions. Successful triggers for the same image can produce divergent activations.</p>
+<p><strong>Finally</strong>, different pruning procedures identify inconsistent memorization weights for the same image, which makes small-subset removal brittle. Low agreement between selected weights undermines local pruning.</p>
+<table>
+  <thead>
+      <tr>
+          <th>View</th>
+          <th>What we check</th>
+          <th>Main implication</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Embedding space</strong></td>
+          <td>Randomly initialized or non-memorized prompt embeddings can be optimized into successful triggers.</td>
+          <td>Retrieval is not confined to the original caption neighborhood.</td>
+      </tr>
+      <tr>
+          <td><strong>Activations</strong></td>
+          <td>Triggers for the same retained image do not converge to one consistent activation pattern.</td>
+          <td>Activation-localization assumptions are weak.</td>
+      </tr>
+      <tr>
+          <td><strong>Weights</strong></td>
+          <td>Different pruning procedures identify inconsistent memorization weights for the same image.</td>
+          <td>Small-subset removal is brittle.</td>
+      </tr>
+  </tbody>
+</table>
+<p align="center">
+  <img src="/assets/blog/dori/figures/tsne_embeddings_main_wider.png" alt="T-SNE visualization showing scattered adversarial embeddings in text embedding space." width="760">
+  <br>
+  <em>Adversarial triggers are widely scattered in text-embedding space.</em>
+</p>
+<p align="center">
+  <img src="/assets/blog/dori/figures/memorization_not_localized_activation_discrepancy.png" alt="Activation discrepancy plot for adversarial embeddings that recover the same memorized image." width="760">
+  <br>
+  <em>Successful triggers for the same image can produce divergent activations.</em>
+</p>
+<p align="center">
+  <img src="/assets/blog/dori/figures/memorization_not_localized_weight_agreement.png" alt="Weight agreement plot showing low agreement between memorization-related weights." width="760">
+  <br>
+  <em>Low agreement between selected weights undermines local pruning.</em>
+</p>
+<h2 id="results">Key empirical findings</h2>
+<p>We show that NeMo and WANDA reduce replication under the original memorized prompts, but adversarial embeddings recover a high <strong>Memorization Rate</strong> (MR) after pruning. In the main table below, NeMo with DoRI reaches MR 0.99 and WANDA with DoRI reaches MR 0.72 for verbatim memorized samples. Additionally, we report <strong>SSCD<sub>Orig</sub></strong>, which is a mean cosine similarity of feature embeddings from the SSCD model between the original image and the image generated by the model. Values above <strong>0.7</strong> indicate replication.</p>
+<p>For Stable Diffusion v2.0, the same pattern appears: pruning lowers standard prompt replication, while DoRI adversarial embeddings recover high similarity to the memorized target.</p>
+<p align="center">
+  <img src="/assets/blog/dori/figures/memorization_rate_vs_steps_new.png" alt="Line chart showing memorization rate versus optimization steps for non-memorized images, NeMo, and WANDA." width="720">
+  <br>
+  <em>Memorization rate rises quickly for adversarial embeddings targeting memorized images, while the non-memorized baseline remains near zero.</em>
+</p>
+<table width="100%" style="width: 100%;">
+  <thead>
+    <tr>
+      <th align="left">Setting</th>
+      <th align="right">&darr; SSCD<sub>Orig</sub></th>
+      <th align="right">&darr; MR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Memorized prompts</td>
+      <td align="right"><strong>0.90 &plusmn; 0.04</strong></td>
+      <td align="right">0.98</td>
+    </tr>
+    <tr>
+      <td>Non-memorized prompts</td>
+      <td align="right">0.17 &plusmn; 0.05</td>
+      <td align="right">0.00</td>
+    </tr>
+    <tr>
+      <td><strong>Non-memorized prompts + DoRI</strong></td>
+      <td align="right"><strong>0.48 &plusmn; 0.06</strong></td>
+      <td align="right"><strong>0.00</strong></td>
+    </tr>
+    <tr>
+      <td>NeMo</td>
+      <td align="right">0.33 &plusmn; 0.18</td>
+      <td align="right">0.20</td>
+    </tr>
+    <tr>
+      <td><strong>NeMo + DoRI</strong></td>
+      <td align="right"><strong>0.91 &plusmn; 0.03</strong></td>
+      <td align="right"><strong>0.99</strong></td>
+    </tr>
+    <tr>
+      <td>WANDA</td>
+      <td align="right">0.20 &plusmn; 0.08</td>
+      <td align="right">0.00</td>
+    </tr>
+    <tr>
+      <td><strong>WANDA + DoRI</strong></td>
+      <td align="right"><strong>0.76 &plusmn; 0.05</strong></td>
+      <td align="right"><strong>0.72</strong></td>
+    </tr>
+  </tbody>
+</table>
+<p align="center">
+  <span style="display: inline-block; width: 780px; max-width: 100%; aspect-ratio: 4 / 2.7; overflow: hidden;">
+    <img src="/assets/blog/dori/figures/dori_qualitative_reconstruction_compressed.jpg" alt="Qualitative comparison of DoRI optimization steps for non-memorized and memorized examples." style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; margin: 0;">
+  </span>
+  <br>
+  <em>DoRI optimization does not reproduce non-memorized examples in the same way, but it can recover memorized examples after NeMo or WANDA pruning as optimization steps increase.</em>
+</p>
+<h2 id="mitigation-tradeoffs">Mitigation Tradeoffs: Robust removal needs more than pruning</h2>
+<p>Simply increasing WANDA sparsity can make DoRI fail, but this is due to large concept-quality degradation on related prompts. In contrast, adversarial fine-tuning updates the full model with diverse adversarial embeddings and surrogate images, reducing replication while preserving general image generation quality more effectively.</p>
+<p align="center">
+  <span style="display: inline-block; width: 720px; max-width: 100%; aspect-ratio: 4 / 3; overflow: hidden;">
+    <img src="/assets/blog/dori/figures/finetuning_mitigation_and_adv.jpg" alt="Qualitative examples after adversarial fine-tuning, with mitigated and adversarial-embedding generations." style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; margin: 0;">
+  </span>
+  <br>
+  <em>After adversarial fine-tuning, adversarial embeddings no longer recover close replicas in the same way as after pruning.</em>
+</p>
+<p align="center">
+  <span style="display: inline-block; width: 760px; max-width: 100%; aspect-ratio: 4 / 2.675; overflow: hidden;">
+    <img src="/assets/blog/dori/figures/wanda_concepts_vm_compressed.jpg" alt="Qualitative examples showing concept damage after WANDA 10 percent sparsity." style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; margin: 0;">
+  </span>
+  <br>
+  <em>WANDA at 10 percent sparsity can suppress retrieval, but the paper shows visible damage on semantically related concept prompts.</em>
+</p>
+<table>
+  <thead>
+      <tr>
+          <th>Setting</th>
+          <th style="text-align: right">↓ SSCD<sub>Orig</sub></th>
+          <th style="text-align: right">↓ MR</th>
+          <th>Additional signal</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ESD + DoRI</td>
+          <td style="text-align: right">0.90 ± 0.04</td>
+          <td style="text-align: right">0.98</td>
+          <td>Concept-removal transfer still fails under DoRI.</td>
+      </tr>
+      <tr>
+          <td>Concept Ablation + DoRI</td>
+          <td style="text-align: right">0.91 ± 0.04</td>
+          <td style="text-align: right">0.97</td>
+          <td>Also remains vulnerable to adversarial embeddings.</td>
+      </tr>
+      <tr>
+          <td><strong>Our mitigation + DoRI</strong></td>
+          <td style="text-align: right"><strong>0.36 ± 0.14</strong></td>
+          <td style="text-align: right"><strong>0.02</strong></td>
+          <td>Five-epoch adversarial fine-tuning result in the main paper.</td>
+      </tr>
+      <tr>
+          <td>SD v2: NeMo + DoRI</td>
+          <td style="text-align: right">0.87 ± 0.02</td>
+          <td style="text-align: right">1.00</td>
+          <td>Failure mode generalizes beyond Stable Diffusion v1.4.</td>
+      </tr>
+      <tr>
+          <td><strong>SD v2: Our mitigation + DoRI</strong></td>
+          <td style="text-align: right"><strong>0.14 ± 0.06</strong></td>
+          <td style="text-align: right"><strong>0.06</strong></td>
+          <td>Adversarial fine-tuning remains effective on SD v2.</td>
+      </tr>
+      <tr>
+          <td>WANDA 10% + DoRI</td>
+          <td style="text-align: right">0.40 ± 0.13</td>
+          <td style="text-align: right">0.01</td>
+          <td>A<sub>Concept</sub> drops to 0.33; FID<sub>Concept</sub> is 80.70.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="take-aways">What Are the Main Take-Aways?</h2>
+<ul>
+<li>Single-prompt evaluation can overstate whether memorization has been removed.</li>
+<li>Replication triggers can exist outside the original natural-language prompt.</li>
+<li>Different successful triggers can produce divergent activations for the same retained image.</li>
+<li>Pruning-based localization does not identify a set of memorization weights.</li>
+<li>Mitigation should be tested against diverse adversarial retrieval paths, not only the original caption.</li>
+</ul>
+<h2 id="citation">BibTeX</h2>
+<p>
+  <button class="copy-button" type="button" data-copy-bibtex>Copy BibTeX</button>
+</p>
+<pre id="bibtex" tabindex="0" role="button" aria-label="Copy BibTeX citation" title="Click to copy BibTeX"><code>@inproceedings{kowalczuk2026findingdori,
+  title = {Finding DoRI: Discovery of Retained Images in Diffusion Models},
+  author = {Kowalczuk, Antoni and Hintersdorf, Dominik and Struppek, Lukas and Kersting, Kristian and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {Proceedings of the International Conference on Machine Learning},
+  year = {2026},
+  note = {Accepted at ICML 2026},
+  url = {https://arxiv.org/abs/2507.16880}
+}</code></pre>
+<script>
+(() => {
+  const target = document.getElementById("bibtex");
+  const copyButton = document.querySelector("[data-copy-bibtex]");
+
+  if (!target || !copyButton) {
+    return;
+  }
+
+  const resetButton = () => {
+    window.setTimeout(() => {
+      copyButton.textContent = "Copy BibTeX";
+    }, 1600);
+  };
+
+  const copyBibtex = async () => {
+    const text = target.innerText.trim();
+
+    try {
+      await navigator.clipboard.writeText(text);
+      copyButton.textContent = "Copied";
+      resetButton();
+    } catch {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(target);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      copyButton.textContent = "Selected";
+      resetButton();
+    }
+  };
+
+  copyButton.addEventListener("click", copyBibtex);
+  target.addEventListener("click", copyBibtex);
+  target.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      copyBibtex();
+    }
+  });
+})();
+</script>
+<hr>
+<p align="center">
+  Finding DoRI: Discovery of Retained Images in Diffusion Models. ICML 2026.
+  <br>
+  <a href="https://arxiv.org/abs/2507.16880">Paper</a>
+  &nbsp;|&nbsp;
+  <a href="https://github.com/sprintml/finding_dori">Code</a>
+  &nbsp;|&nbsp;
+  <a href="https://icml.cc/media/PosterPDFs/ICML%202026/65291.png?t=1780993196.6111858">Poster</a>
+  &nbsp;|&nbsp;
+  <a href="https://icml.cc/media/icml-2026/Slides/65291.pdf">Slides</a>
+  &nbsp;|&nbsp;
+  <a href="https://recorder-v3.slideslive.com/?share=110303&amp;s=72157554-1d57-485a-a4c4-f0dd9232710c">Recording</a>
+</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Recent Blogs</h2>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Finding DoRI: Discovery of Retained Images in Diffusion Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-06-24-finding-dori/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jun. 24, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>6
+              
+              min
+              39
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Privacy Attacks on Tabular Foundation Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              May. 16, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>5
+              
+              min
+              51
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Benchmarking Empirical Privacy Protection for Adaptations of LLMs</h4>
+          <hr />
+          <p></p>
+          <a href=""
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Apr. 28, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>0
+              
+              min
+              0
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <div class="row box" style="background-color: rgba(16, 11, 11, 0.3);  border-radius: 10px;">
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1912500338306793902?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423651334889493?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423195485335945?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</section>
+ 
+    </main>
+    
+
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div
+        class="col-md-9 d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          src="/assets/img/sprintml-logo-white.svg"
+          alt="SprintML"
+          class="footer-logo"
+          width="180"
+          height="60"
+        />
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://x.com/SprintML" target="_blank" aria-label="X (Twitter)">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/in/sprintml-group-at-cispa-327769397/" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.youtube.com/@SprintML-Lab" target="_blank" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="text-center">
+          <span
+            >© 2026 SprintML Lab | Developed By
+            <a href="https://sual-soft.com/" target="_blank"
+              >S U A L SOFT</a
+            ></span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+
+<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>
