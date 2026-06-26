@@ -141,7 +141,7 @@
             </ul>
           </div>
           <div class="content"><p align="center">
-  <img src="/assets/blog/multimem/ECCV.jpg" alt="ECCV logo" width="178">
+  <img src="/assets/blog/Multimem/ECCV.jpg" alt="ECCV logo" width="178">
   <br>
   <strong>Accepted at ECCV 2026</strong>
 </p>
@@ -329,15 +329,15 @@
 <p>Our analysis revealed three main findings:</p>
 <p><strong>Global memorization differs from pairwise memorization.</strong> Multi-modal models show higher overall memorization than any single modality pair, indicating that memorization is driven by interactions across all modalities—not by individual modality quality.</p>
 <p align="center">
-  <img src="/assets/blog/multimem/fig1.jpg" alt="distribution for 3-mod and 2-mod" width="680">
+  <img src="/assets/blog/Multimem/fig1.jpg" alt="distribution for 3-mod and 2-mod" width="680">
 </p>
 <p><strong>Semantic misalignment is the primary driver.</strong> Unlike CLIP (where mislabeled captions cause high memorization), in multi-modal models the most memorized samples have contradictory information across all modalities. Examples include dark videos with text describing motion, or audio unrelated to visual content. The model must memorize these inconsistencies rather than learn generalizable patterns.</p>
 <p align="center">
-  <img src="/assets/blog/multimem/fig2.jpg" alt="most memorized sample" width="680">
+  <img src="/assets/blog/Multimem/fig2.jpg" alt="most memorized sample" width="680">
 </p>
 <p><strong>Text dominates but all modalities matter.</strong> We ranked modalities by their contribution to memorization: <strong>text &gt; video &gt; image &gt; audio</strong>. However, removing any single modality still leaves significant memorization, showing that multi-modal models truly require all-modality measurement.</p>
 <p align="center">
-  <img src="/assets/blog/multimem/fig3.jpg" alt="Memorization table" width="680">
+  <img src="/assets/blog/Multimem/fig3.jpg" alt="Memorization table" width="680">
 </p>
 <h2 id="mitigation-strategies">Mitigation Strategies</h2>
 <p>A new finding for multi-modal contrastive learning: <strong>reducing memorization actually improves downstream generalization.</strong> This is remarkable because it contradicts traditional learning theory. We propose two strategies to mitigate memorization while preserving utility.</p>
@@ -443,9 +443,6 @@
 <li>Targeted augmentations can reduce memorization by up to 20% while improving downstream tasks by 4–10%.</li>
 </ul>
 <h2 id="citation">BibTeX</h2>
-<p>
-  <button class="copy-button" type="button" data-copy-bibtex>Copy BibTeX</button>
-</p>
 <pre id="bibtex" tabindex="0" role="button" aria-label="Copy BibTeX citation" title="Click to copy BibTeX"><code>@inproceedings{wang2026multimem,
   title = {MultiMem: Measuring and Mitigating Memorization in Multi-Modal Contrastive Learning},
   author = {Wang, Wenhao and Boenisch, Franziska and Backes, Michael and Dziedzic, Adam},
