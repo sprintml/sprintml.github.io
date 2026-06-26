@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Phd Life, Decision, Phd, Reference Letter on SprintML</title>
-    <link>https://sprintml.com/tags/phd-life-decision-phd-reference-letter/</link>
-    <description>Recent content in Phd Life, Decision, Phd, Reference Letter on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/phd-life-decision-phd-reference-letter/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>92 days to go: How to ask for a reference letter?</title>
-      <link>https://sprintml.com/phd_life/2023-06-02-reference-letter/</link>
-      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/phd_life/2023-06-02-reference-letter/</guid>
-      <description>&lt;p&gt;You wrote your statement of purpose. Now, you need reference letters. The main purpose is to provide the person who wants to hire you with an impression of your work through the perspective of people you have worked with in the past.&lt;/p&gt;&#xA;&lt;p&gt;Ask your previous advisors, managers, mentors, or even professors who taught the courses where you performed very well and whose content is aligned with your future topics of interest. If you have already written a thesis (Bachelor or Master), you should also definitely ask your advisor because they probably had enough interactions with you to know you well enough for such a letter.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Phd Life, Decision, Phd, Reference Letter on SprintML</title>
+		<link>https://sprintml.com/tags/phd-life-decision-phd-reference-letter/</link>
+		<description>Recent content in Phd Life, Decision, Phd, Reference Letter on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/phd-life-decision-phd-reference-letter/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>92 days to go: How to ask for a reference letter?</title>
+				<link>https://sprintml.com/phd_life/2023-06-02-reference-letter/</link>
+				<pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/phd_life/2023-06-02-reference-letter/</guid>
+				<description>&lt;p&gt;You wrote your statement of purpose. Now, you need reference letters. The main purpose is to provide the person who wants to hire you with an impression of your work through the perspective of people you have worked with in the past.&lt;/p&gt;&#xA;&lt;p&gt;Ask your previous advisors, managers, mentors, or even professors who taught the courses where you performed very well and whose content is aligned with your future topics of interest. If you have already written a thesis (Bachelor or Master), you should also definitely ask your advisor because they probably had enough interactions with you to know you well enough for such a letter.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

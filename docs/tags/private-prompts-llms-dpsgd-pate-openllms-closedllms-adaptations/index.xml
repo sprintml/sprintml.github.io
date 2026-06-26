@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Private Prompts LLMs DPSGD PATE OpenLLMs ClosedLLMs Adaptations on SprintML</title>
-    <link>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/</link>
-    <description>Recent content in Private Prompts LLMs DPSGD PATE OpenLLMs ClosedLLMs Adaptations on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Private Adaptations of Open LLMs Outperform their Closed Alternatives</title>
-      <link>https://sprintml.com/blog/2024-12-10-open-llms/</link>
-      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/blog/2024-12-10-open-llms/</guid>
-      <description>&lt;p&gt;&lt;em&gt;by Adam Dziedzic and Franziska Boenisch&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nowadays, Large Language Models (LLMs) perform a plethora of language tasks. OpenAI exposes its GPT4 model to perform tasks, such as text generation, translation, dialog summarization, code generation, and many others. While &lt;em&gt;closed LLMs&lt;/em&gt;, like GPT4, are exposed via public APIs or web interfaces, for &lt;em&gt;open LLMs&lt;/em&gt;, like Llama, their parameters (i.e., their weights) are directly released and allow us to simply download them and and run the model locally. Therefore, we sometimes call these models &amp;ldquo;&lt;em&gt;open-weight LLMs&lt;/em&gt;&amp;rdquo;. Both types of models, open and closed ones, even though they have strong zero-shot performance, they still require &lt;em&gt;adaptations&lt;/em&gt;, such as prompting or fine-tuning to perform well on specialized downstream tasks. Given that downstream tasks often rely on sensitive data, we need to ensure this data’s privacy when adapting LLMs.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Private Prompts LLMs DPSGD PATE OpenLLMs ClosedLLMs Adaptations on SprintML</title>
+		<link>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/</link>
+		<description>Recent content in Private Prompts LLMs DPSGD PATE OpenLLMs ClosedLLMs Adaptations on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Private Adaptations of Open LLMs Outperform their Closed Alternatives</title>
+				<link>https://sprintml.com/blog/2024-12-10-open-llms/</link>
+				<pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2024-12-10-open-llms/</guid>
+				<description>&lt;p&gt;&lt;em&gt;by Adam Dziedzic and Franziska Boenisch&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nowadays, Large Language Models (LLMs) perform a plethora of language tasks. OpenAI exposes its GPT4 model to perform tasks, such as text generation, translation, dialog summarization, code generation, and many others. While &lt;em&gt;closed LLMs&lt;/em&gt;, like GPT4, are exposed via public APIs or web interfaces, for &lt;em&gt;open LLMs&lt;/em&gt;, like Llama, their parameters (i.e., their weights) are directly released and allow us to simply download them and and run the model locally. Therefore, we sometimes call these models &amp;ldquo;&lt;em&gt;open-weight LLMs&lt;/em&gt;&amp;rdquo;. Both types of models, open and closed ones, even though they have strong zero-shot performance, they still require &lt;em&gt;adaptations&lt;/em&gt;, such as prompting or fine-tuning to perform well on specialized downstream tasks. Given that downstream tasks often rely on sensitive data, we need to ensure this data’s privacy when adapting LLMs.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

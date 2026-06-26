@@ -1,264 +1,276 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on SprintML</title>
-    <link>https://sprintml.com/tags/</link>
-    <description>Recent content in Tags on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Text-to-Image Diffusion Models Memorization</title>
-      <link>https://sprintml.com/tags/text-to-image-diffusion-models-memorization/</link>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/text-to-image-diffusion-models-memorization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Privacy Tabular-Foundation-Models Membership-Inference Competition Neurips</title>
-      <link>https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/</link>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Text-to-Image Diffusion Models Watermarks</title>
-      <link>https://sprintml.com/tags/text-to-image-diffusion-models-watermarks/</link>
-      <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/text-to-image-diffusion-models-watermarks/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Text-to-Image Diffusion Models Safety NSFW</title>
-      <link>https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/</link>
-      <pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Watermarking Image-Autoregressive-Model Generated-Content-Detection Radioactivity</title>
-      <link>https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/</link>
-      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Memorization Multi-Modal CLIP SSL SL</title>
-      <link>https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/</link>
-      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Privacy Image Generative Models Diffusion Models Vision Autoregressive Models</title>
-      <link>https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/</link>
-      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Private Prompts LLMs DPSGD PATE OpenLLMs ClosedLLMs Adaptations</title>
-      <link>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/</link>
-      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Private Prompts LLMs DPSGD PATE</title>
-      <link>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate/</link>
-      <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Model Extraction, Model Stealing, Model Functionality Stealing, Self-Supervised Learning, Deep Learning, B4b, Stealing Encoders</title>
-      <link>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning-b4b-stealing-encoders/</link>
-      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning-b4b-stealing-encoders/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Research, Arxiv Submission</title>
-      <link>https://sprintml.com/tags/phd-life-research-arxiv-submission/</link>
-      <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-research-arxiv-submission/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Research Experiments</title>
-      <link>https://sprintml.com/tags/phd-life-research-experiments/</link>
-      <pubDate>Sat, 17 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-research-experiments/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Meetings</title>
-      <link>https://sprintml.com/tags/phd-life-meetings/</link>
-      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-meetings/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Community, Engagement</title>
-      <link>https://sprintml.com/tags/phd-life-community-engagement/</link>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-community-engagement/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Research, Courses</title>
-      <link>https://sprintml.com/tags/phd-life-research-courses/</link>
-      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-research-courses/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Meaningful Milestones, Accountability</title>
-      <link>https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/</link>
-      <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Time Management</title>
-      <link>https://sprintml.com/tags/phd-life-time-management/</link>
-      <pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-time-management/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Papers, Research Ideas</title>
-      <link>https://sprintml.com/tags/phd-life-papers-research-ideas/</link>
-      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-papers-research-ideas/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Papers, Keep Track</title>
-      <link>https://sprintml.com/tags/phd-life-papers-keep-track/</link>
-      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-papers-keep-track/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Papers, Peer Review</title>
-      <link>https://sprintml.com/tags/phd-life-papers-peer-review/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-papers-peer-review/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Related Work, Papers, Trustworthy Papers</title>
-      <link>https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/</link>
-      <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Related Work, Papers</title>
-      <link>https://sprintml.com/tags/phd-life-related-work-papers/</link>
-      <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-related-work-papers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Website</title>
-      <link>https://sprintml.com/tags/phd-life-website/</link>
-      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-website/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Application, Todos</title>
-      <link>https://sprintml.com/tags/phd-life-application-todos/</link>
-      <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-application-todos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Application, Submitting</title>
-      <link>https://sprintml.com/tags/phd-life-application-submitting/</link>
-      <pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-application-submitting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Decision, Phd, Exams, Gre, Toefl</title>
-      <link>https://sprintml.com/tags/phd-life-decision-phd-exams-gre-toefl/</link>
-      <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-decision-phd-exams-gre-toefl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Decision, Phd, Reference Letter</title>
-      <link>https://sprintml.com/tags/phd-life-decision-phd-reference-letter/</link>
-      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-decision-phd-reference-letter/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Decision, Phd, Statement of Purpose</title>
-      <link>https://sprintml.com/tags/phd-life-decision-phd-statement-of-purpose/</link>
-      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-decision-phd-statement-of-purpose/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Decision, Advisor, Lab Culture</title>
-      <link>https://sprintml.com/tags/phd-life-decision-advisor-lab-culture/</link>
-      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-decision-advisor-lab-culture/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Decision, Advisor</title>
-      <link>https://sprintml.com/tags/phd-life-decision-advisor/</link>
-      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-decision-advisor/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Decision, Advisor, Junior vs Senior</title>
-      <link>https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/</link>
-      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life, Decision, Motivation, Place</title>
-      <link>https://sprintml.com/tags/phd-life-decision-motivation-place/</link>
-      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life-decision-motivation-place/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Decision</title>
-      <link>https://sprintml.com/tags/decision/</link>
-      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/decision/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Motivation</title>
-      <link>https://sprintml.com/tags/motivation/</link>
-      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/motivation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Phd Life</title>
-      <link>https://sprintml.com/tags/phd-life/</link>
-      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/phd-life/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Model Extraction, Model Stealing, Model Functionality Stealing, Self-Supervised Learning, Deep Learning</title>
-      <link>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning/</link>
-      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning/</guid>
-      <description></description>
-    </item>
-  </channel>
+	<channel>
+		<title>Tags on SprintML</title>
+		<link>https://sprintml.com/tags/</link>
+		<description>Recent content in Tags on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Memorization, Multi-Modal Learning, Contrastive Learning, CLIP, AudioCLIP, Privacy</title>
+				<link>https://sprintml.com/tags/memorization-multi-modal-learning-contrastive-learning-clip-audioclip-privacy/</link>
+				<pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/memorization-multi-modal-learning-contrastive-learning-clip-audioclip-privacy/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Text-to-Image Diffusion Models Memorization</title>
+				<link>https://sprintml.com/tags/text-to-image-diffusion-models-memorization/</link>
+				<pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/text-to-image-diffusion-models-memorization/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Privacy Tabular-Foundation-Models Membership-Inference Competition Neurips</title>
+				<link>https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/</link>
+				<pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Text-to-Image Diffusion Models Watermarks</title>
+				<link>https://sprintml.com/tags/text-to-image-diffusion-models-watermarks/</link>
+				<pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/text-to-image-diffusion-models-watermarks/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Text-to-Image Diffusion Models Safety NSFW</title>
+				<link>https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/</link>
+				<pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Watermarking Image-Autoregressive-Model Generated-Content-Detection Radioactivity</title>
+				<link>https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/</link>
+				<pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Memorization Multi-Modal CLIP SSL SL</title>
+				<link>https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/</link>
+				<pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Privacy Image Generative Models Diffusion Models Vision Autoregressive Models</title>
+				<link>https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/</link>
+				<pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Private Prompts LLMs DPSGD PATE OpenLLMs ClosedLLMs Adaptations</title>
+				<link>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/</link>
+				<pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate-openllms-closedllms-adaptations/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Private Prompts LLMs DPSGD PATE</title>
+				<link>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate/</link>
+				<pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/private-prompts-llms-dpsgd-pate/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Model Extraction, Model Stealing, Model Functionality Stealing, Self-Supervised Learning, Deep Learning, B4b, Stealing Encoders</title>
+				<link>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning-b4b-stealing-encoders/</link>
+				<pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning-b4b-stealing-encoders/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Research, Arxiv Submission</title>
+				<link>https://sprintml.com/tags/phd-life-research-arxiv-submission/</link>
+				<pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-research-arxiv-submission/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Research Experiments</title>
+				<link>https://sprintml.com/tags/phd-life-research-experiments/</link>
+				<pubDate>Sat, 17 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-research-experiments/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Meetings</title>
+				<link>https://sprintml.com/tags/phd-life-meetings/</link>
+				<pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-meetings/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Community, Engagement</title>
+				<link>https://sprintml.com/tags/phd-life-community-engagement/</link>
+				<pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-community-engagement/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Research, Courses</title>
+				<link>https://sprintml.com/tags/phd-life-research-courses/</link>
+				<pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-research-courses/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Meaningful Milestones, Accountability</title>
+				<link>https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/</link>
+				<pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Time Management</title>
+				<link>https://sprintml.com/tags/phd-life-time-management/</link>
+				<pubDate>Mon, 12 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-time-management/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Papers, Research Ideas</title>
+				<link>https://sprintml.com/tags/phd-life-papers-research-ideas/</link>
+				<pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-papers-research-ideas/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Papers, Keep Track</title>
+				<link>https://sprintml.com/tags/phd-life-papers-keep-track/</link>
+				<pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-papers-keep-track/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Papers, Peer Review</title>
+				<link>https://sprintml.com/tags/phd-life-papers-peer-review/</link>
+				<pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-papers-peer-review/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Related Work, Papers, Trustworthy Papers</title>
+				<link>https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/</link>
+				<pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Related Work, Papers</title>
+				<link>https://sprintml.com/tags/phd-life-related-work-papers/</link>
+				<pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-related-work-papers/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Website</title>
+				<link>https://sprintml.com/tags/phd-life-website/</link>
+				<pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-website/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Application, Todos</title>
+				<link>https://sprintml.com/tags/phd-life-application-todos/</link>
+				<pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-application-todos/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Application, Submitting</title>
+				<link>https://sprintml.com/tags/phd-life-application-submitting/</link>
+				<pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-application-submitting/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Decision, Phd, Exams, Gre, Toefl</title>
+				<link>https://sprintml.com/tags/phd-life-decision-phd-exams-gre-toefl/</link>
+				<pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-decision-phd-exams-gre-toefl/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Decision, Phd, Reference Letter</title>
+				<link>https://sprintml.com/tags/phd-life-decision-phd-reference-letter/</link>
+				<pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-decision-phd-reference-letter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Decision, Phd, Statement of Purpose</title>
+				<link>https://sprintml.com/tags/phd-life-decision-phd-statement-of-purpose/</link>
+				<pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-decision-phd-statement-of-purpose/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Decision, Advisor, Lab Culture</title>
+				<link>https://sprintml.com/tags/phd-life-decision-advisor-lab-culture/</link>
+				<pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-decision-advisor-lab-culture/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Decision, Advisor</title>
+				<link>https://sprintml.com/tags/phd-life-decision-advisor/</link>
+				<pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-decision-advisor/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Decision, Advisor, Junior vs Senior</title>
+				<link>https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/</link>
+				<pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life, Decision, Motivation, Place</title>
+				<link>https://sprintml.com/tags/phd-life-decision-motivation-place/</link>
+				<pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life-decision-motivation-place/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Decision</title>
+				<link>https://sprintml.com/tags/decision/</link>
+				<pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/decision/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Motivation</title>
+				<link>https://sprintml.com/tags/motivation/</link>
+				<pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/motivation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Phd Life</title>
+				<link>https://sprintml.com/tags/phd-life/</link>
+				<pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/phd-life/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Model Extraction, Model Stealing, Model Functionality Stealing, Self-Supervised Learning, Deep Learning</title>
+				<link>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning/</link>
+				<pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/tags/model-extraction-model-stealing-model-functionality-stealing-self-supervised-learning-deep-learning/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

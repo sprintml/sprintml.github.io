@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Phd Life, Decision, Motivation, Place on SprintML</title>
-    <link>https://sprintml.com/tags/phd-life-decision-motivation-place/</link>
-    <description>Recent content in Phd Life, Decision, Motivation, Place on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/phd-life-decision-motivation-place/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>98 days to go: Where should I do my Ph.D.?</title>
-      <link>https://sprintml.com/phd_life/2023-05-27-place/</link>
-      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/phd_life/2023-05-27-place/</guid>
-      <description>&lt;p&gt;Congrats, you figured out that you actually want to do a Ph.D. But now the question is where? Here is our take on that. We’re happy to hear what made people choose the places for their Ph.D.s?&lt;/p&gt;&#xA;&lt;p&gt;To answer the question on where to do your Ph.D., we think that it is most helpful if you know your goals. What is the most likely thing you’re gonna do after your Ph.D.? Where do you want to live? Do you want to stay in academia or go to industry? In academia, do you prefer to do the latest research, do you like teaching more, or do you want to combine both?&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Phd Life, Decision, Motivation, Place on SprintML</title>
+		<link>https://sprintml.com/tags/phd-life-decision-motivation-place/</link>
+		<description>Recent content in Phd Life, Decision, Motivation, Place on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/phd-life-decision-motivation-place/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>98 days to go: Where should I do my Ph.D.?</title>
+				<link>https://sprintml.com/phd_life/2023-05-27-place/</link>
+				<pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/phd_life/2023-05-27-place/</guid>
+				<description>&lt;p&gt;Congrats, you figured out that you actually want to do a Ph.D. But now the question is where? Here is our take on that. We’re happy to hear what made people choose the places for their Ph.D.s?&lt;/p&gt;&#xA;&lt;p&gt;To answer the question on where to do your Ph.D., we think that it is most helpful if you know your goals. What is the most likely thing you’re gonna do after your Ph.D.? Where do you want to live? Do you want to stay in academia or go to industry? In academia, do you prefer to do the latest research, do you like teaching more, or do you want to combine both?&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

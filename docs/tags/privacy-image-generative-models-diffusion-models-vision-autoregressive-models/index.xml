@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Privacy Image Generative Models Diffusion Models Vision Autoregressive Models on SprintML</title>
-    <link>https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/</link>
-    <description>Recent content in Privacy Image Generative Models Diffusion Models Vision Autoregressive Models on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Image AutoRegressive Models Leak More Training Data Than Diffusion Models</title>
-      <link>https://sprintml.com/blog/2025-02-04-iars-privacy/</link>
-      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/blog/2025-02-04-iars-privacy/</guid>
-      <description>&lt;center&gt;&#xA;  &lt;a href=&#34;http://antonikowalczuk.com&#34;&gt;Antoni Kowalczuk*&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=iG319iwAAAAJ&amp;hl=pl&amp;oi=ao&#34;&gt;Jan Dubiński*&lt;sup&gt;2,3&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security&lt;br&gt;&#xA;  &lt;sup&gt;2&lt;/sup&gt;Warsaw University of Technology&lt;br&gt;&#xA;  &lt;sup&gt;3&lt;/sup&gt;IDEAS NCBR&lt;br&gt;&#xA;  &lt;em&gt;*Indicates Equal Contribution&lt;/em&gt;&#xA;    &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;p&gt;Image AutoRegressive models (IARs) have recently emerged as a powerful alternative to diffusion models (DMs), surpassing them in image generation quality, speed, and scalability. Yet, despite their advantages, the privacy risks of IARs remain completly unexplored. When trained on sensitive or copyrighted data, these models may unintentionally expose training samples, creating major security and ethical concerns.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Privacy Image Generative Models Diffusion Models Vision Autoregressive Models on SprintML</title>
+		<link>https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/</link>
+		<description>Recent content in Privacy Image Generative Models Diffusion Models Vision Autoregressive Models on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/privacy-image-generative-models-diffusion-models-vision-autoregressive-models/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Image AutoRegressive Models Leak More Training Data Than Diffusion Models</title>
+				<link>https://sprintml.com/blog/2025-02-04-iars-privacy/</link>
+				<pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2025-02-04-iars-privacy/</guid>
+				<description>&lt;center&gt;&#xD;&#xA;  &lt;a href=&#34;http://antonikowalczuk.com&#34;&gt;Antoni Kowalczuk*&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=iG319iwAAAAJ&amp;hl=pl&amp;oi=ao&#34;&gt;Jan Dubiński*&lt;sup&gt;2,3&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;2&lt;/sup&gt;Warsaw University of Technology&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;3&lt;/sup&gt;IDEAS NCBR&lt;br&gt;&#xD;&#xA;  &lt;em&gt;*Indicates Equal Contribution&lt;/em&gt;&#xD;&#xA;    &lt;br&gt;&lt;br&gt;&#xD;&#xA;&lt;/center&gt;&#xD;&#xA;&lt;p&gt;Image AutoRegressive models (IARs) have recently emerged as a powerful alternative to diffusion models (DMs), surpassing them in image generation quality, speed, and scalability. Yet, despite their advantages, the privacy risks of IARs remain completly unexplored. When trained on sensitive or copyrighted data, these models may unintentionally expose training samples, creating major security and ethical concerns.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

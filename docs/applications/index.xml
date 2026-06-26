@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Applications on SprintML</title>
-    <link>https://sprintml.com/applications/</link>
-    <description>Recent content in Applications on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://sprintml.com/applications/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PhD Position</title>
-      <link>https://sprintml.com/applications/phd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/applications/phd/</guid>
-      <description>&lt;p&gt;We are searching for a PhD student to collaborate with us on research projects in the area of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Secure and Robust Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Privacy-Preserving Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Distributed and Federated Learning&lt;/li&gt;&#xA;&lt;li&gt;Machine Learning Model Confidentiality&lt;/li&gt;&#xA;&lt;li&gt;Trustworthy Language Processing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can find more information about the PhD position &lt;a href=&#34;https://cispa.de/en/career/phd-at-cispa&#34;&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Postdoctoral Researcher</title>
-      <link>https://sprintml.com/applications/postdoc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/applications/postdoc/</guid>
-      <description>&lt;p&gt;We are searching for a postdoctoral researcher to collaborate with us on research projects in the area of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Secure and Robust Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Privacy-Preserving Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Distributed and Federated Learning&lt;/li&gt;&#xA;&lt;li&gt;Machine Learning Model Confidentiality&lt;/li&gt;&#xA;&lt;li&gt;Trustworthy Language Processing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can find more information about the postdoctoral researcher position &lt;a href=&#34;https://cispa.de/en/career/postdoc-at-cispa&#34;&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Research Intern</title>
-      <link>https://sprintml.com/applications/intern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/applications/intern/</guid>
-      <description>&lt;p&gt;We are searching for a research interns to collaborate with us on research projects in the area of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Secure and Robust Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Privacy-Preserving Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Distributed and Federated Learning&lt;/li&gt;&#xA;&lt;li&gt;Machine Learning Model Confidentiality&lt;/li&gt;&#xA;&lt;li&gt;Trustworthy Language Processing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Qualifications&lt;/strong&gt;: We are looking for Bachelor or Master students in the area of computer science or related fields. The candidate should be well organized, self-driven, have good grades in their study program, and, in the best case, would bring some experience in project work.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Student Assistant (HiWi, 10h/week) Project Coordination Large Language Model Privacy</title>
-      <link>https://sprintml.com/applications/hiwi-10/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/applications/hiwi-10/</guid>
-      <description>&lt;p&gt;We are searching for a student assistant to support the project coordination of a project on large language model privacy. The responsibilities include&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Maintaining the project website&lt;/li&gt;&#xA;&lt;li&gt;Coordinating and attending monthly project meetings&lt;/li&gt;&#xA;&lt;li&gt;Performing independent literature research on large language models and their privacy&lt;/li&gt;&#xA;&lt;li&gt;Contributing to the project reports&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Qualifications&lt;/strong&gt;: We are looking for Bachelor or Master students in the area of computer science or related fields. The candidate should be well organized, self-driven, have good grades in their study program, and, in the best case, would bring some experience in project work. Since the main language of this project’s meetings and the written reports is German, candidates are required to hold a B2 or above level in German.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Student Assistant (HiWi, 19h/week) Privacy of Vision Foundation Models in the Medical Domain</title>
-      <link>https://sprintml.com/applications/hiwi-19/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/applications/hiwi-19/</guid>
-      <description>&lt;p&gt;We are searching for a student assistant to support the project coordination of a project on large language model privacy. The responsibilities include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Performing independent literature research on privacy and vision foundation models.&lt;/li&gt;&#xA;&lt;li&gt;Implementing research ideas and running experiments in pytorch.&lt;/li&gt;&#xA;&lt;li&gt;Contributing independent writing to the project reports.&lt;/li&gt;&#xA;&lt;li&gt;Attending the bi-weekly project meetings.&lt;/li&gt;&#xA;&lt;li&gt;Maintaining the project website.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Qualifications&lt;/strong&gt;: We are looking for a Master’s students in the area of computer science or related fields. The candidate should have a thorough expertise in Python programming (including pytorch), strong interest in research, abilities to perform independent work, and good grades from their Bachelor’s program and current Master’s courses.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Applications on SprintML</title>
+		<link>https://sprintml.com/applications/</link>
+		<description>Recent content in Applications on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="https://sprintml.com/applications/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>PhD Position</title>
+				<link>https://sprintml.com/applications/phd/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/applications/phd/</guid>
+				<description>&lt;p&gt;We are searching for a PhD student to collaborate with us on research projects in the area of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Secure and Robust Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Privacy-Preserving Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Distributed and Federated Learning&lt;/li&gt;&#xA;&lt;li&gt;Machine Learning Model Confidentiality&lt;/li&gt;&#xA;&lt;li&gt;Trustworthy Language Processing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can find more information about the PhD position &lt;a href=&#34;https://cispa.de/en/career/phd-at-cispa&#34;&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Postdoctoral Researcher</title>
+				<link>https://sprintml.com/applications/postdoc/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/applications/postdoc/</guid>
+				<description>&lt;p&gt;We are searching for a postdoctoral researcher to collaborate with us on research projects in the area of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Secure and Robust Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Privacy-Preserving Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Distributed and Federated Learning&lt;/li&gt;&#xA;&lt;li&gt;Machine Learning Model Confidentiality&lt;/li&gt;&#xA;&lt;li&gt;Trustworthy Language Processing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can find more information about the postdoctoral researcher position &lt;a href=&#34;https://cispa.de/en/career/postdoc-at-cispa&#34;&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Research Intern</title>
+				<link>https://sprintml.com/applications/intern/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/applications/intern/</guid>
+				<description>&lt;p&gt;We are searching for a research interns to collaborate with us on research projects in the area of&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Secure and Robust Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Privacy-Preserving Machine Learning&lt;/li&gt;&#xA;&lt;li&gt;Distributed and Federated Learning&lt;/li&gt;&#xA;&lt;li&gt;Machine Learning Model Confidentiality&lt;/li&gt;&#xA;&lt;li&gt;Trustworthy Language Processing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Qualifications&lt;/strong&gt;: We are looking for Bachelor or Master students in the area of computer science or related fields. The candidate should be well organized, self-driven, have good grades in their study program, and, in the best case, would bring some experience in project work.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Student Assistant (HiWi, 10h/week) Project Coordination Large Language Model Privacy</title>
+				<link>https://sprintml.com/applications/hiwi-10/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/applications/hiwi-10/</guid>
+				<description>&lt;p&gt;We are searching for a student assistant to support the project coordination of a project on large language model privacy. The responsibilities include&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Maintaining the project website&lt;/li&gt;&#xA;&lt;li&gt;Coordinating and attending monthly project meetings&lt;/li&gt;&#xA;&lt;li&gt;Performing independent literature research on large language models and their privacy&lt;/li&gt;&#xA;&lt;li&gt;Contributing to the project reports&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Qualifications&lt;/strong&gt;: We are looking for Bachelor or Master students in the area of computer science or related fields. The candidate should be well organized, self-driven, have good grades in their study program, and, in the best case, would bring some experience in project work. Since the main language of this project’s meetings and the written reports is German, candidates are required to hold a B2 or above level in German.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Student Assistant (HiWi, 19h/week) Privacy of Vision Foundation Models in the Medical Domain</title>
+				<link>https://sprintml.com/applications/hiwi-19/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/applications/hiwi-19/</guid>
+				<description>&lt;p&gt;We are searching for a student assistant to support the project coordination of a project on large language model privacy. The responsibilities include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Performing independent literature research on privacy and vision foundation models.&lt;/li&gt;&#xA;&lt;li&gt;Implementing research ideas and running experiments in pytorch.&lt;/li&gt;&#xA;&lt;li&gt;Contributing independent writing to the project reports.&lt;/li&gt;&#xA;&lt;li&gt;Attending the bi-weekly project meetings.&lt;/li&gt;&#xA;&lt;li&gt;Maintaining the project website.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Qualifications&lt;/strong&gt;: We are looking for a Master’s students in the area of computer science or related fields. The candidate should have a thorough expertise in Python programming (including pytorch), strong interest in research, abilities to perform independent work, and good grades from their Bachelor’s program and current Master’s courses.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

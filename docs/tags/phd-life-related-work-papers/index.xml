@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Phd Life, Related Work, Papers on SprintML</title>
-    <link>https://sprintml.com/tags/phd-life-related-work-papers/</link>
-    <description>Recent content in Phd Life, Related Work, Papers on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/phd-life-related-work-papers/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>87 days to go: How to navigate the paper jungle?</title>
-      <link>https://sprintml.com/phd_life/2023-06-07-relevant-work/</link>
-      <pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/phd_life/2023-06-07-relevant-work/</guid>
-      <description>&lt;p&gt;We all know, there are many papers out there and it is hard to find the right ones. We have some tips and tricks on how you can find good papers on your new research topic.&#xA;Note that the following insights are probably a bit tailored to our field, namely machine learning, but we hope that Ph.D. students from other fields can also get something out of it.&lt;/p&gt;&#xA;&lt;p&gt;Forward and backward search on Google Scholar or arXiv: In the best case, you have some initial pointers for papers from your advisor. If you want to move on from there, all you’ll need to do is to look at &lt;em&gt;citations&lt;/em&gt;. They can help you identify both research that is in the past of the papers to provide you with a more thorough background, and research that is in the future of the paper, leading you towards the newest developments (for example, check arXiv -&amp;gt; Bibliographic Tools -&amp;gt;  Bibliographic Explorer). You’ll find the past work by looking at the citations at the bottom of your current paper. By looking the referenced titles up on &lt;a href=&#34;https://scholar.google.com&#34;&gt;Google Scholar&lt;/a&gt;, you can easily identify relevant background and read more to deepen your understanding. When it comes to finding work that was done based on the paper you are currently looking at, you can search for the title on Google Scholar and click on the “cited by” button. This will lead you to a list of all papers that have cited (and thereby potentially built on) your current paper.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Phd Life, Related Work, Papers on SprintML</title>
+		<link>https://sprintml.com/tags/phd-life-related-work-papers/</link>
+		<description>Recent content in Phd Life, Related Work, Papers on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/phd-life-related-work-papers/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>87 days to go: How to navigate the paper jungle?</title>
+				<link>https://sprintml.com/phd_life/2023-06-07-relevant-work/</link>
+				<pubDate>Wed, 07 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/phd_life/2023-06-07-relevant-work/</guid>
+				<description>&lt;p&gt;We all know, there are many papers out there and it is hard to find the right ones. We have some tips and tricks on how you can find good papers on your new research topic.&#xA;Note that the following insights are probably a bit tailored to our field, namely machine learning, but we hope that Ph.D. students from other fields can also get something out of it.&lt;/p&gt;&#xA;&lt;p&gt;Forward and backward search on Google Scholar or arXiv: In the best case, you have some initial pointers for papers from your advisor. If you want to move on from there, all you’ll need to do is to look at &lt;em&gt;citations&lt;/em&gt;. They can help you identify both research that is in the past of the papers to provide you with a more thorough background, and research that is in the future of the paper, leading you towards the newest developments (for example, check arXiv -&amp;gt; Bibliographic Tools -&amp;gt;  Bibliographic Explorer). You’ll find the past work by looking at the citations at the bottom of your current paper. By looking the referenced titles up on &lt;a href=&#34;https://scholar.google.com&#34;&gt;Google Scholar&lt;/a&gt;, you can easily identify relevant background and read more to deepen your understanding. When it comes to finding work that was done based on the paper you are currently looking at, you can search for the title on Google Scholar and click on the “cited by” button. This will lead you to a list of all papers that have cited (and thereby potentially built on) your current paper.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

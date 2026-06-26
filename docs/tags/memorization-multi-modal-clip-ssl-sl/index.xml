@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Memorization Multi-Modal CLIP SSL SL on SprintML</title>
-    <link>https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/</link>
-    <description>Recent content in Memorization Multi-Modal CLIP SSL SL on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models</title>
-      <link>https://sprintml.com/blog/2025-03-03-clipmem/</link>
-      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/blog/2025-03-03-clipmem/</guid>
-      <description>&lt;center&gt;&#xA;  &lt;a href=&#34;https://wenhaowang1995.github.io/&#34;&gt;Wenhao Wang&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://oue.gatech.edu/node/3087&#34;&gt;Grace Kim&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://cispa.de/en/people/backes&#34;&gt;Michael Backes&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security&lt;br&gt;&#xA;  &lt;sup&gt;2&lt;/sup&gt;Georgia Institute of Technology&lt;br&gt;&#xA;    &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;p&gt;&lt;strong&gt;Multi-modal models&lt;/strong&gt; like &lt;strong&gt;CLIP&lt;/strong&gt; are widely used for their state-of-the-art performance on a variety of downstream tasks. But while memorization is well-studied in uni-modal models, its role in multi-modal models is underexplored.&lt;/p&gt;&#xA;&lt;p&gt;We focus on CLIP, as a representative multi-modal model, and analyze how much it memorizes its training data. We design a new CLIPMem metric to analyze the memorization behavior of CLIP. We observe that the memorization patterns in CLIP fall in between the ones found in &lt;strong&gt;supervised learning&lt;/strong&gt; and &lt;strong&gt;self-supervised learning&lt;/strong&gt; models. We also find that the &lt;strong&gt;text encoder&lt;/strong&gt; in CLIP contributes more memorization than &lt;strong&gt;image encoder&lt;/strong&gt;. Using these insights, we propose &lt;strong&gt;mitigation strategies&lt;/strong&gt; that reduce memorization while &lt;strong&gt;simultaneously improving utility&lt;/strong&gt; – which has not been observed in traditional learning paradigms.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Memorization Multi-Modal CLIP SSL SL on SprintML</title>
+		<link>https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/</link>
+		<description>Recent content in Memorization Multi-Modal CLIP SSL SL on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/memorization-multi-modal-clip-ssl-sl/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Captured by Captions: On Memorization and its Mitigation in Multi-Modal Models</title>
+				<link>https://sprintml.com/blog/2025-03-03-clipmem/</link>
+				<pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2025-03-03-clipmem/</guid>
+				<description>&lt;center&gt;&#xD;&#xA;  &lt;a href=&#34;https://wenhaowang1995.github.io/&#34;&gt;Wenhao Wang&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://oue.gatech.edu/node/3087&#34;&gt;Grace Kim&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://cispa.de/en/people/backes&#34;&gt;Michael Backes&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;2&lt;/sup&gt;Georgia Institute of Technology&lt;br&gt;&#xD;&#xA;    &lt;br&gt;&lt;br&gt;&#xD;&#xA;&lt;/center&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Multi-modal models&lt;/strong&gt; like &lt;strong&gt;CLIP&lt;/strong&gt; are widely used for their state-of-the-art performance on a variety of downstream tasks. But while memorization is well-studied in uni-modal models, its role in multi-modal models is underexplored.&lt;/p&gt;&#xA;&lt;p&gt;We focus on CLIP, as a representative multi-modal model, and analyze how much it memorizes its training data. We design a new CLIPMem metric to analyze the memorization behavior of CLIP. We observe that the memorization patterns in CLIP fall in between the ones found in &lt;strong&gt;supervised learning&lt;/strong&gt; and &lt;strong&gt;self-supervised learning&lt;/strong&gt; models. We also find that the &lt;strong&gt;text encoder&lt;/strong&gt; in CLIP contributes more memorization than &lt;strong&gt;image encoder&lt;/strong&gt;. Using these insights, we propose &lt;strong&gt;mitigation strategies&lt;/strong&gt; that reduce memorization while &lt;strong&gt;simultaneously improving utility&lt;/strong&gt; – which has not been observed in traditional learning paradigms.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

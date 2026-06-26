@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Watermarking Image-Autoregressive-Model Generated-Content-Detection Radioactivity on SprintML</title>
-    <link>https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/</link>
-    <description>Recent content in Watermarking Image-Autoregressive-Model Generated-Content-Detection Radioactivity on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>BitMark: Watermarking Bitwise Autoregressive Image Generative Models</title>
-      <link>https://sprintml.com/blog/2025-11-30-bitmark/</link>
-      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/blog/2025-11-30-bitmark/</guid>
-      <description>&lt;center&gt;&#xA;  &lt;a href=&#34;https://sprintml.com/&#34;&gt;Louis Kerner&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://sprintml.com/&#34;&gt;Michel Meintz&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://bihezhao.github.io/&#34;&gt;Bihe Zhao&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;/a&gt;.&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  CISPA Helmholtz Center for Information Security&lt;br&gt;&#xA;   &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;p&gt;Autoregressive image models like &lt;strong&gt;Infinity&lt;/strong&gt; and &lt;strong&gt;Instella IAR&lt;/strong&gt; are now competitive with diffusion models for high‑quality text-to-image generation. But as generated images get reused as training data, we risk &lt;strong&gt;model collapse&lt;/strong&gt;: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;BitMark&lt;/strong&gt; is the first watermarking framework tailored to &lt;strong&gt;bitwise autoregressive image models&lt;/strong&gt;. It embeds a watermark at &lt;strong&gt;generation time&lt;/strong&gt; that is:&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Watermarking Image-Autoregressive-Model Generated-Content-Detection Radioactivity on SprintML</title>
+		<link>https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/</link>
+		<description>Recent content in Watermarking Image-Autoregressive-Model Generated-Content-Detection Radioactivity on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/watermarking-image-autoregressive-model-generated-content-detection-radioactivity/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>BitMark: Watermarking Bitwise Autoregressive Image Generative Models</title>
+				<link>https://sprintml.com/blog/2025-11-30-bitmark/</link>
+				<pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2025-11-30-bitmark/</guid>
+				<description>&lt;center&gt;&#xD;&#xA;  &lt;a href=&#34;https://sprintml.com/&#34;&gt;Louis Kerner&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://sprintml.com/&#34;&gt;Michel Meintz&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://bihezhao.github.io/&#34;&gt;Bihe Zhao&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;/a&gt;.&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;  CISPA Helmholtz Center for Information Security&lt;br&gt;&#xD;&#xA;   &lt;br&gt;&lt;br&gt;&#xD;&#xA;&lt;/center&gt;&#xD;&#xA;&lt;p&gt;Autoregressive image models like &lt;strong&gt;Infinity&lt;/strong&gt; and &lt;strong&gt;Instella IAR&lt;/strong&gt; are now competitive with diffusion models for high‑quality text-to-image generation. But as generated images get reused as training data, we risk &lt;strong&gt;model collapse&lt;/strong&gt;: models increasingly train on their own outputs, amplifying artifacts and drifting from natural data.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;BitMark&lt;/strong&gt; is the first watermarking framework tailored to &lt;strong&gt;bitwise autoregressive image models&lt;/strong&gt;. It embeds a watermark at &lt;strong&gt;generation time&lt;/strong&gt; that is:&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

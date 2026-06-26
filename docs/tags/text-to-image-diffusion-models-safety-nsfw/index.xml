@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Text-to-Image Diffusion Models Safety NSFW on SprintML</title>
-    <link>https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/</link>
-    <description>Recent content in Text-to-Image Diffusion Models Safety NSFW on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 08 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Beautiful Images, Toxic Words: Understanding and Addressing Offensive Text in AI-Generated Images</title>
-      <link>https://sprintml.com/blog/2026-02-27-safetextgen/</link>
-      <pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/blog/2026-02-27-safetextgen/</guid>
-      <description>&lt;style&gt;&#xA;.blur-image {&#xA;  filter: blur(12px);&#xA;  transition: filter 0.3s;&#xA;  cursor: pointer;&#xA;}&#xA;.blur-image:hover {&#xA;  filter: none;&#xA;}&#xA;.blur-group .blur-image {&#xA;  filter: blur(12px);&#xA;  transition: filter 0.3s;&#xA;  cursor: pointer;&#xA;}&#xA;.blur-group:hover .blur-image {&#xA;  filter: none;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;center&gt;&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=Qs3KLiAAAAAJ&amp;hl=en&#34;&gt;Aditya Kumar*&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=qjgD4n4AAAAJ&amp;hl=en&#34;&gt;Tom Blanchard*&lt;sup&gt;2,3&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security&lt;br&gt;&#xA;  &lt;sup&gt;2&lt;/sup&gt;University of Toronto&lt;br&gt;&#xA;  &lt;sup&gt;3&lt;/sup&gt;Vector Institute&lt;br&gt;&#xA;  &lt;em&gt;*Indicates Equal Contribution&lt;/em&gt;&#xA;    &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;div markdown=&#34;0&#34; style=&#34;border: 1px solid #f5c2c7; background-color: #f8d7da; padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 0.95rem;&#34;&gt;&#xA;  ⚠️ &lt;strong&gt;Content Warning:&lt;/strong&gt; This post contains images with offensive language rendered by AI models.&lt;br&gt;&#xA;  To reduce accidental exposure, all such images are blurred by default.&lt;br&gt;&#xA;  &lt;strong&gt;Hover over an image to reveal it.&lt;/strong&gt;&#xA;&lt;/div&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Text-to-image diffusion models have become remarkably good at generating images. With the right prompt, these models can generate photorealistic scenes, stylized illustrations, and even readable text rendered into signs, storefronts, posters, or clothing. But with this new capability comes a risk that has received surprisingly little attention. We are the first to uncover a new safety threat: state-of-the-art text-to-image models can embed NSFW language directly within the images they generate.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Text-to-Image Diffusion Models Safety NSFW on SprintML</title>
+		<link>https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/</link>
+		<description>Recent content in Text-to-Image Diffusion Models Safety NSFW on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 08 Mar 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/text-to-image-diffusion-models-safety-nsfw/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Beautiful Images, Toxic Words: Understanding and Addressing Offensive Text in AI-Generated Images</title>
+				<link>https://sprintml.com/blog/2026-02-27-safetextgen/</link>
+				<pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2026-02-27-safetextgen/</guid>
+				<description>&lt;style&gt;&#xD;&#xA;.blur-image {&#xD;&#xA;  filter: blur(12px);&#xD;&#xA;  transition: filter 0.3s;&#xD;&#xA;  cursor: pointer;&#xD;&#xA;}&#xD;&#xA;.blur-image:hover {&#xD;&#xA;  filter: none;&#xD;&#xA;}&#xD;&#xA;.blur-group .blur-image {&#xD;&#xA;  filter: blur(12px);&#xD;&#xA;  transition: filter 0.3s;&#xD;&#xA;  cursor: pointer;&#xD;&#xA;}&#xD;&#xA;.blur-group:hover .blur-image {&#xD;&#xA;  filter: none;&#xD;&#xA;}&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;center&gt;&#xD;&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=Qs3KLiAAAAAJ&amp;hl=en&#34;&gt;Aditya Kumar*&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=qjgD4n4AAAAJ&amp;hl=en&#34;&gt;Tom Blanchard*&lt;sup&gt;2,3&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;2&lt;/sup&gt;University of Toronto&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;3&lt;/sup&gt;Vector Institute&lt;br&gt;&#xD;&#xA;  &lt;em&gt;*Indicates Equal Contribution&lt;/em&gt;&#xD;&#xA;    &lt;br&gt;&lt;br&gt;&#xD;&#xA;&lt;/center&gt;&#xD;&#xA;&lt;div markdown=&#34;0&#34; style=&#34;border: 1px solid #f5c2c7; background-color: #f8d7da; padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 0.95rem;&#34;&gt;&#xD;&#xA;  ⚠️ &lt;strong&gt;Content Warning:&lt;/strong&gt; This post contains images with offensive language rendered by AI models.&lt;br&gt;&#xD;&#xA;  To reduce accidental exposure, all such images are blurred by default.&lt;br&gt;&#xD;&#xA;  &lt;strong&gt;Hover over an image to reveal it.&lt;/strong&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Text-to-image diffusion models have become remarkably good at generating images. With the right prompt, these models can generate photorealistic scenes, stylized illustrations, and even readable text rendered into signs, storefronts, posters, or clothing. But with this new capability comes a risk that has received surprisingly little attention. We are the first to uncover a new safety threat: state-of-the-art text-to-image models can embed NSFW language directly within the images they generate.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

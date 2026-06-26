@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Phd Life, Meaningful Milestones, Accountability on SprintML</title>
-    <link>https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/</link>
-    <description>Recent content in Phd Life, Meaningful Milestones, Accountability on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jun 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>81 days to go: How to set meaningful milestones?</title>
-      <link>https://sprintml.com/phd_life/2023-06-13-accountability-milestones/</link>
-      <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/phd_life/2023-06-13-accountability-milestones/</guid>
-      <description>&lt;p&gt;We have talked about day-to-day time management. But how about the bigger picture? How can you hold yourself accountable for your Ph.D. work and how can you set meaningful milestones?&lt;/p&gt;&#xA;&lt;p&gt;Even if you manage your daily time, show up in the office regularly, and spend time working on your research, sometimes things seem to stagnate and progress seems hard to track. What might help you is to set clear goals (long and short term), and to hold yourself accountable for reaching them.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Phd Life, Meaningful Milestones, Accountability on SprintML</title>
+		<link>https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/</link>
+		<description>Recent content in Phd Life, Meaningful Milestones, Accountability on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 13 Jun 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/phd-life-meaningful-milestones-accountability/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>81 days to go: How to set meaningful milestones?</title>
+				<link>https://sprintml.com/phd_life/2023-06-13-accountability-milestones/</link>
+				<pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/phd_life/2023-06-13-accountability-milestones/</guid>
+				<description>&lt;p&gt;We have talked about day-to-day time management. But how about the bigger picture? How can you hold yourself accountable for your Ph.D. work and how can you set meaningful milestones?&lt;/p&gt;&#xA;&lt;p&gt;Even if you manage your daily time, show up in the office regularly, and spend time working on your research, sometimes things seem to stagnate and progress seems hard to track. What might help you is to set clear goals (long and short term), and to hold yourself accountable for reaching them.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
