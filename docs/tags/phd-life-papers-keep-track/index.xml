@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Phd Life, Papers, Keep Track on SprintML</title>
-		<link>https://sprintml.com/tags/phd-life-papers-keep-track/</link>
-		<description>Recent content in Phd Life, Papers, Keep Track on SprintML</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="https://sprintml.com/tags/phd-life-papers-keep-track/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>84 days to go: How to keep track of the papers you read?</title>
-				<link>https://sprintml.com/phd_life/2023-06-10-keep-track-papers/</link>
-				<pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
-				<guid>https://sprintml.com/phd_life/2023-06-10-keep-track-papers/</guid>
-				<description>&lt;p&gt;You will read a lot of papers during your Ph.D. Hence, it becomes important to manage and organize the knowledge you gain from the papers you read in an efficient way. To be clear, there is no right way of managing papers, so we’ll just present some strategies that we have observed to work in the past.&lt;/p&gt;&#xA;&lt;p&gt;There are some tools that help you organize your papers. One of our favorites is the free tool &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; that does not only come with a handy browser plug-in to help you import papers’ citations directly into your database. It has also plenty of functionalities, such as direct bib-tex export, annotation of papers, and keyword assignment. One drawback when working with Zotero over time that we observed is that you might use outdated versions of papers in your citation exports. This happens, for example, if you import a new paper from arXiv, this paper then gets accepted to a conference, but you do not update your database because you already have an entry for the paper. Also, once you have a few hundred papers in your Zotero, it requires some discipline to assign keywords consistently. Otherwise, you might have problems navigating through your own database over time.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Phd Life, Papers, Keep Track on SprintML</title>
+    <link>https://sprintml.com/tags/phd-life-papers-keep-track/</link>
+    <description>Recent content in Phd Life, Papers, Keep Track on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/phd-life-papers-keep-track/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>84 days to go: How to keep track of the papers you read?</title>
+      <link>https://sprintml.com/phd_life/2023-06-10-keep-track-papers/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/phd_life/2023-06-10-keep-track-papers/</guid>
+      <description>&lt;p&gt;You will read a lot of papers during your Ph.D. Hence, it becomes important to manage and organize the knowledge you gain from the papers you read in an efficient way. To be clear, there is no right way of managing papers, so we’ll just present some strategies that we have observed to work in the past.&lt;/p&gt;&#xA;&lt;p&gt;There are some tools that help you organize your papers. One of our favorites is the free tool &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; that does not only come with a handy browser plug-in to help you import papers’ citations directly into your database. It has also plenty of functionalities, such as direct bib-tex export, annotation of papers, and keyword assignment. One drawback when working with Zotero over time that we observed is that you might use outdated versions of papers in your citation exports. This happens, for example, if you import a new paper from arXiv, this paper then gets accepted to a conference, but you do not update your database because you already have an entry for the paper. Also, once you have a few hundred papers in your Zotero, it requires some discipline to assign keywords consistently. Otherwise, you might have problems navigating through your own database over time.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

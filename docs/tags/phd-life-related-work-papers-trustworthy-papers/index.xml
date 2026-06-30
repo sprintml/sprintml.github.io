@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Phd Life, Related Work, Papers, Trustworthy Papers on SprintML</title>
-		<link>https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/</link>
-		<description>Recent content in Phd Life, Related Work, Papers, Trustworthy Papers on SprintML</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 08 Jun 2023 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>86 days to go: How to identify a trustworthy paper?</title>
-				<link>https://sprintml.com/phd_life/2023-06-08-trustwothy-paper/</link>
-				<pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
-				<guid>https://sprintml.com/phd_life/2023-06-08-trustwothy-paper/</guid>
-				<description>&lt;p&gt;There are many papers on the web but: how to find the trustworthy ones? There are many ways how to filter papers that are worth reading: (1) the easiest approach is to go through the list of papers published at top conferences, (2) search for highly influential (and cited) papers that have not been accepted to any conference, (3) or use the heuristics like list of authors with high reputation or very recent papers from your area that describe novel ideas.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Phd Life, Related Work, Papers, Trustworthy Papers on SprintML</title>
+    <link>https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/</link>
+    <description>Recent content in Phd Life, Related Work, Papers, Trustworthy Papers on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/phd-life-related-work-papers-trustworthy-papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>86 days to go: How to identify a trustworthy paper?</title>
+      <link>https://sprintml.com/phd_life/2023-06-08-trustwothy-paper/</link>
+      <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/phd_life/2023-06-08-trustwothy-paper/</guid>
+      <description>&lt;p&gt;There are many papers on the web but: how to find the trustworthy ones? There are many ways how to filter papers that are worth reading: (1) the easiest approach is to go through the list of papers published at top conferences, (2) search for highly influential (and cited) papers that have not been accepted to any conference, (3) or use the heuristics like list of authors with high reputation or very recent papers from your area that describe novel ideas.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

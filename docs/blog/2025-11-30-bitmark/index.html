@@ -262,35 +262,35 @@ Since our goal is to avoid model collapse by training on our own generated data,
 </li>
 </ul>
 <table>
-	<thead>
-			<tr>
-					<th>Training data source</th>
-					<th>M₂ architecture</th>
-					<th>TPR @ 1% FPR</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>BitMark Infinity-2B</td>
-					<td>Infinity-2B</td>
-					<td>100%</td>
-			</tr>
-			<tr>
-					<td>BitMark Infinity-2B</td>
-					<td>Stable Diffusion 2.1</td>
-					<td>98.9%</td>
-			</tr>
-			<tr>
-					<td>BitMark Infinity-2B</td>
-					<td>VAR-d30</td>
-					<td>25.6</td>
-			</tr>
-			<tr>
-					<td>BitMark Infinity-2B</td>
-					<td>RAR-XXL</td>
-					<td>4.1</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Training data source</th>
+          <th>M₂ architecture</th>
+          <th>TPR @ 1% FPR</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>BitMark Infinity-2B</td>
+          <td>Infinity-2B</td>
+          <td>100%</td>
+      </tr>
+      <tr>
+          <td>BitMark Infinity-2B</td>
+          <td>Stable Diffusion 2.1</td>
+          <td>98.9%</td>
+      </tr>
+      <tr>
+          <td>BitMark Infinity-2B</td>
+          <td>VAR-d30</td>
+          <td>25.6</td>
+      </tr>
+      <tr>
+          <td>BitMark Infinity-2B</td>
+          <td>RAR-XXL</td>
+          <td>4.1</td>
+      </tr>
+  </tbody>
 </table>
 <p>Despite encoding into a latent space and going through a noising–denoising training process, BitMark’s bit patterns are <strong>preserved</strong>.</p>
 <p>For VAR and RAR, radioactivity decreases. This is most likely because the resolution of VAR- and RAR-generated images is only 256x256, whereas BitMark is always detected at a resolution of 1024x1024 for Infinity-2B, hence huge upscaling is applied here. A more interesting question is why RAR is less radioactive than VAR here. Maybe it is because RAR has a very limited codebook size (i.e., 1024) compared to VAR (i.e., 4096), and further uses fewer tokens per image - which might reduce capabilities to learn the (finegrained) watermark?</p>
@@ -306,25 +306,25 @@ Since our goal is to avoid model collapse by training on our own generated data,
 <li>At just <strong>5%</strong> watermarked data, the statistical test is already significant.</li>
 </ul>
 <table>
-	<thead>
-			<tr>
-					<th>% watermarked in M₂ training</th>
-					<th>TPR @ 1% FPR</th>
-					<th>Significant</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>10%</td>
-					<td>22.7%</td>
-					<td>✅</td>
-			</tr>
-			<tr>
-					<td>5%</td>
-					<td>&gt; 0.5</td>
-					<td>✅</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>% watermarked in M₂ training</th>
+          <th>TPR @ 1% FPR</th>
+          <th>Significant</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>10%</td>
+          <td>22.7%</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td>5%</td>
+          <td>&gt; 0.5</td>
+          <td>✅</td>
+      </tr>
+  </tbody>
 </table>
 <p>In other words:</p>
 <ul>

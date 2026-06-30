@@ -196,58 +196,58 @@ In both cases, open and closed model adaptations, for comparability, we assume 1
 <p>In the following table, we present some insights on adaptation for closed LLMs (DP-ICL and PromptPATEGen) and open LLMs (PromptDPSGDGen and Private LoRA). For more results on all methods and various LLMs, check our paper.</p>
 <div style="display: table; margin: 0 auto;">
 <table>
-	<thead>
-			<tr>
-					<th>Adaptation</th>
-					<th>LLM</th>
-					<th>Rouge-1</th>
-					<th>Rouge-2</th>
-					<th>Rouge-L</th>
-					<th>Cost ($)</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>DP-ICL</td>
-					<td>GPT4-Turbo</td>
-					<td>41.8</td>
-					<td>17.3</td>
-					<td>33.4</td>
-					<td>3419</td>
-			</tr>
-			<tr>
-					<td>PromptPATEGen</td>
-					<td>Open Llama 13B</td>
-					<td>43.4</td>
-					<td>19.7</td>
-					<td>34.2</td>
-					<td>19.43</td>
-			</tr>
-			<tr>
-					<td>PromptDPSGDGen</td>
-					<td>BART Large</td>
-					<td>46.1</td>
-					<td>21.3</td>
-					<td>37.4</td>
-					<td>2.13</td>
-			</tr>
-			<tr>
-					<td>Private LoRA</td>
-					<td>BART Large</td>
-					<td>48.8</td>
-					<td>23.5</td>
-					<td>39.1</td>
-					<td>3.59</td>
-			</tr>
-			<tr>
-					<td>Private LoRA</td>
-					<td>Mixtral 8x7B</td>
-					<td>52.8</td>
-					<td>29.6</td>
-					<td>44.7</td>
-					<td>67.95</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Adaptation</th>
+          <th>LLM</th>
+          <th>Rouge-1</th>
+          <th>Rouge-2</th>
+          <th>Rouge-L</th>
+          <th>Cost ($)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DP-ICL</td>
+          <td>GPT4-Turbo</td>
+          <td>41.8</td>
+          <td>17.3</td>
+          <td>33.4</td>
+          <td>3419</td>
+      </tr>
+      <tr>
+          <td>PromptPATEGen</td>
+          <td>Open Llama 13B</td>
+          <td>43.4</td>
+          <td>19.7</td>
+          <td>34.2</td>
+          <td>19.43</td>
+      </tr>
+      <tr>
+          <td>PromptDPSGDGen</td>
+          <td>BART Large</td>
+          <td>46.1</td>
+          <td>21.3</td>
+          <td>37.4</td>
+          <td>2.13</td>
+      </tr>
+      <tr>
+          <td>Private LoRA</td>
+          <td>BART Large</td>
+          <td>48.8</td>
+          <td>23.5</td>
+          <td>39.1</td>
+          <td>3.59</td>
+      </tr>
+      <tr>
+          <td>Private LoRA</td>
+          <td>Mixtral 8x7B</td>
+          <td>52.8</td>
+          <td>29.6</td>
+          <td>44.7</td>
+          <td>67.95</td>
+      </tr>
+  </tbody>
 </table>
 <p style="margin-top:10px;">Table 1: Comparison of private open vs closed LLM adaptations on SAMSum at a privacy budget of ε=8.</p>
 </div>

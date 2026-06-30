@@ -227,30 +227,30 @@
 <p>For <strong>activations</strong>, triggers for the same retained image do not converge to one consistent activation pattern, weakening activation-localization assumptions. Successful triggers for the same image can produce divergent activations.</p>
 <p><strong>Finally</strong>, different pruning procedures identify inconsistent memorization weights for the same image, which makes small-subset removal brittle. Low agreement between selected weights undermines local pruning.</p>
 <table>
-	<thead>
-			<tr>
-					<th>View</th>
-					<th>What we check</th>
-					<th>Main implication</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>Embedding space</strong></td>
-					<td>Randomly initialized or non-memorized prompt embeddings can be optimized into successful triggers.</td>
-					<td>Retrieval is not confined to the original caption neighborhood.</td>
-			</tr>
-			<tr>
-					<td><strong>Activations</strong></td>
-					<td>Triggers for the same retained image do not converge to one consistent activation pattern.</td>
-					<td>Activation-localization assumptions are weak.</td>
-			</tr>
-			<tr>
-					<td><strong>Weights</strong></td>
-					<td>Different pruning procedures identify inconsistent memorization weights for the same image.</td>
-					<td>Small-subset removal is brittle.</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>View</th>
+          <th>What we check</th>
+          <th>Main implication</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Embedding space</strong></td>
+          <td>Randomly initialized or non-memorized prompt embeddings can be optimized into successful triggers.</td>
+          <td>Retrieval is not confined to the original caption neighborhood.</td>
+      </tr>
+      <tr>
+          <td><strong>Activations</strong></td>
+          <td>Triggers for the same retained image do not converge to one consistent activation pattern.</td>
+          <td>Activation-localization assumptions are weak.</td>
+      </tr>
+      <tr>
+          <td><strong>Weights</strong></td>
+          <td>Different pruning procedures identify inconsistent memorization weights for the same image.</td>
+          <td>Small-subset removal is brittle.</td>
+      </tr>
+  </tbody>
 </table>
 <p align="center">
   <img src="/assets/blog/dori/figures/tsne_embeddings_main_wider.png" alt="T-SNE visualization showing scattered adversarial embeddings in text embedding space." width="760">
@@ -345,52 +345,52 @@
   <em>WANDA at 10 percent sparsity can suppress retrieval, but the paper shows visible damage on semantically related concept prompts.</em>
 </p>
 <table>
-	<thead>
-			<tr>
-					<th>Setting</th>
-					<th style="text-align: right">↓ SSCD<sub>Orig</sub></th>
-					<th style="text-align: right">↓ MR</th>
-					<th>Additional signal</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>ESD + DoRI</td>
-					<td style="text-align: right">0.90 ± 0.04</td>
-					<td style="text-align: right">0.98</td>
-					<td>Concept-removal transfer still fails under DoRI.</td>
-			</tr>
-			<tr>
-					<td>Concept Ablation + DoRI</td>
-					<td style="text-align: right">0.91 ± 0.04</td>
-					<td style="text-align: right">0.97</td>
-					<td>Also remains vulnerable to adversarial embeddings.</td>
-			</tr>
-			<tr>
-					<td><strong>Our mitigation + DoRI</strong></td>
-					<td style="text-align: right"><strong>0.36 ± 0.14</strong></td>
-					<td style="text-align: right"><strong>0.02</strong></td>
-					<td>Five-epoch adversarial fine-tuning result in the main paper.</td>
-			</tr>
-			<tr>
-					<td>SD v2: NeMo + DoRI</td>
-					<td style="text-align: right">0.87 ± 0.02</td>
-					<td style="text-align: right">1.00</td>
-					<td>Failure mode generalizes beyond Stable Diffusion v1.4.</td>
-			</tr>
-			<tr>
-					<td><strong>SD v2: Our mitigation + DoRI</strong></td>
-					<td style="text-align: right"><strong>0.14 ± 0.06</strong></td>
-					<td style="text-align: right"><strong>0.06</strong></td>
-					<td>Adversarial fine-tuning remains effective on SD v2.</td>
-			</tr>
-			<tr>
-					<td>WANDA 10% + DoRI</td>
-					<td style="text-align: right">0.40 ± 0.13</td>
-					<td style="text-align: right">0.01</td>
-					<td>A<sub>Concept</sub> drops to 0.33; FID<sub>Concept</sub> is 80.70.</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Setting</th>
+          <th style="text-align: right">↓ SSCD<sub>Orig</sub></th>
+          <th style="text-align: right">↓ MR</th>
+          <th>Additional signal</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ESD + DoRI</td>
+          <td style="text-align: right">0.90 ± 0.04</td>
+          <td style="text-align: right">0.98</td>
+          <td>Concept-removal transfer still fails under DoRI.</td>
+      </tr>
+      <tr>
+          <td>Concept Ablation + DoRI</td>
+          <td style="text-align: right">0.91 ± 0.04</td>
+          <td style="text-align: right">0.97</td>
+          <td>Also remains vulnerable to adversarial embeddings.</td>
+      </tr>
+      <tr>
+          <td><strong>Our mitigation + DoRI</strong></td>
+          <td style="text-align: right"><strong>0.36 ± 0.14</strong></td>
+          <td style="text-align: right"><strong>0.02</strong></td>
+          <td>Five-epoch adversarial fine-tuning result in the main paper.</td>
+      </tr>
+      <tr>
+          <td>SD v2: NeMo + DoRI</td>
+          <td style="text-align: right">0.87 ± 0.02</td>
+          <td style="text-align: right">1.00</td>
+          <td>Failure mode generalizes beyond Stable Diffusion v1.4.</td>
+      </tr>
+      <tr>
+          <td><strong>SD v2: Our mitigation + DoRI</strong></td>
+          <td style="text-align: right"><strong>0.14 ± 0.06</strong></td>
+          <td style="text-align: right"><strong>0.06</strong></td>
+          <td>Adversarial fine-tuning remains effective on SD v2.</td>
+      </tr>
+      <tr>
+          <td>WANDA 10% + DoRI</td>
+          <td style="text-align: right">0.40 ± 0.13</td>
+          <td style="text-align: right">0.01</td>
+          <td>A<sub>Concept</sub> drops to 0.33; FID<sub>Concept</sub> is 80.70.</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="take-aways">What Are the Main Take-Aways?</h2>
 <ul>

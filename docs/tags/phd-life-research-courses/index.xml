@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Phd Life, Research, Courses on SprintML</title>
-		<link>https://sprintml.com/tags/phd-life-research-courses/</link>
-		<description>Recent content in Phd Life, Research, Courses on SprintML</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="https://sprintml.com/tags/phd-life-research-courses/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>80 days to go: What are the (right) courses to take during your PhD?</title>
-				<link>https://sprintml.com/phd_life/2023-06-14-courses/</link>
-				<pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
-				<guid>https://sprintml.com/phd_life/2023-06-14-courses/</guid>
-				<description>&lt;p&gt;Ph.D. is the time to carry out research but many universities require you to take courses. The coursework can be turned from an obligation to an opportunity. How can you leverage the courses so that what you learn there contributes to your PhD?&lt;/p&gt;&#xA;&lt;p&gt;First, let’s start with a typical structure of coursework. For your program, you might have to complete even up to 9 courses. Many times these are divided into two primary groups: theory and systems. The theory courses are intended to give you good foundations that your research can build on top of and the systems courses are usually giving you more hands-on experience with overview of a specific field (e.g., database systems or distributed systems) and a project to complete. The overarching idea is that you should be a “well-rounded” student after taking such courses and also have broad knowledge of computer science beyond your area of expertise. In many cases, you have a main guideline on what courses are recommended with some freedom of specific courses that fall into one of the required groups. The question is how to approach this so that your research can benefit from it.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Phd Life, Research, Courses on SprintML</title>
+    <link>https://sprintml.com/tags/phd-life-research-courses/</link>
+    <description>Recent content in Phd Life, Research, Courses on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/phd-life-research-courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>80 days to go: What are the (right) courses to take during your PhD?</title>
+      <link>https://sprintml.com/phd_life/2023-06-14-courses/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/phd_life/2023-06-14-courses/</guid>
+      <description>&lt;p&gt;Ph.D. is the time to carry out research but many universities require you to take courses. The coursework can be turned from an obligation to an opportunity. How can you leverage the courses so that what you learn there contributes to your PhD?&lt;/p&gt;&#xA;&lt;p&gt;First, let’s start with a typical structure of coursework. For your program, you might have to complete even up to 9 courses. Many times these are divided into two primary groups: theory and systems. The theory courses are intended to give you good foundations that your research can build on top of and the systems courses are usually giving you more hands-on experience with overview of a specific field (e.g., database systems or distributed systems) and a project to complete. The overarching idea is that you should be a “well-rounded” student after taking such courses and also have broad knowledge of computer science beyond your area of expertise. In many cases, you have a main guideline on what courses are recommended with some freedom of specific courses that fall into one of the required groups. The question is how to approach this so that your research can benefit from it.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

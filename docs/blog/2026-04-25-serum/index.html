@@ -197,26 +197,26 @@
 <h4 id="radioactivity-the-watermark-survives-training-new-models">Radioactivity: the watermark survives training new models</h4>
 <p>One of the most interesting findings is that SERUM is radioactive. In watermarking, radioactivity means the signal can survive when watermarked images are used to train or fine-tune another model. We fine-tune models on SERUM-watermarked images and then check whether outputs from those adapted models still contain the watemark signal.</p>
 <table>
-	<thead>
-			<tr>
-					<th>Adapted Model</th>
-					<th>TPR@1%FPR</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>SD 1.4 (LoRA)</td>
-					<td>52.30%</td>
-			</tr>
-			<tr>
-					<td>SD 1.4 (FFT)</td>
-					<td>77.12%</td>
-			</tr>
-			<tr>
-					<td>SANA-0.6B (FFT)</td>
-					<td>96.76%</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Adapted Model</th>
+          <th>TPR@1%FPR</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SD 1.4 (LoRA)</td>
+          <td>52.30%</td>
+      </tr>
+      <tr>
+          <td>SD 1.4 (FFT)</td>
+          <td>77.12%</td>
+      </tr>
+      <tr>
+          <td>SANA-0.6B (FFT)</td>
+          <td>96.76%</td>
+      </tr>
+  </tbody>
 </table>
 <p>This shows that SERUM enables tracing data provenance through model training pipelines, especially as synthetic data becomes more common.
 Caveats</p>

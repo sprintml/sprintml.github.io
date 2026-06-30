@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Privacy Tabular-Foundation-Models Membership-Inference Competition Neurips on SprintML</title>
-		<link>https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/</link>
-		<description>Recent content in Privacy Tabular-Foundation-Models Membership-Inference Competition Neurips on SprintML</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Privacy Attacks on Tabular Foundation Models</title>
-				<link>https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/</link>
-				<pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-				<guid>https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/</guid>
-				<description>&lt;center&gt;&#xD;&#xA;  &lt;strong&gt;Submitted to the NeurIPS 2026 Competition Track&lt;/strong&gt;&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;  Aditya Kumar&lt;sup&gt;1&lt;/sup&gt;, Dariush Wahdany&lt;sup&gt;1&lt;/sup&gt;, Ossi Räisä&lt;sup&gt;1&lt;/sup&gt;, Ivo Hoese&lt;sup&gt;1&lt;/sup&gt;, Hoyong Jeong&lt;sup&gt;1&lt;/sup&gt;,&#xD;&#xA;  &lt;br&gt;&#xD;&#xA;  Daniil Filienko&lt;sup&gt;2&lt;/sup&gt;, Jonas Böhler&lt;sup&gt;3&lt;/sup&gt;,&#xD;&#xA;  &lt;a href=&#34;https://jescresswell.github.io/&#34;&gt;Jesse C. Cresswell&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xD;&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security &amp;nbsp;&#xD;&#xA;  &lt;sup&gt;2&lt;/sup&gt;University of Washington Tacoma &amp;nbsp;&#xD;&#xA;  &lt;sup&gt;3&lt;/sup&gt;SAP SE &amp;nbsp;&#xD;&#xA;  &lt;sup&gt;4&lt;/sup&gt;Layer 6 AI&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;  &lt;a href=&#34;https://github.com/sprintml/privacy-tabular-fm&#34;&gt;GitHub&lt;/a&gt; &amp;nbsp;·&amp;nbsp;&#xD;&#xA;  &lt;a href=&#34;mailto:privacy-tabular-fm@cispa.de&#34;&gt;Contact&lt;/a&gt; &amp;nbsp;·&amp;nbsp;&#xD;&#xA;  Discord (coming soon)&#xD;&#xA;  &lt;br&gt;&lt;br&gt;&#xD;&#xA;&lt;/center&gt;&#xD;&#xA;&lt;p&gt;Tabular foundation models (TFMs) such as TabPFN solve a new tabular task at inference time by conditioning on a training set provided in context, without any gradient updates. That in-context training set is private data, and it raises a question we do not yet have good answers to: how much does a TFM leak about the records it was conditioned on? This competition turns that question into a shared benchmark.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Privacy Tabular-Foundation-Models Membership-Inference Competition Neurips on SprintML</title>
+    <link>https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/</link>
+    <description>Recent content in Privacy Tabular-Foundation-Models Membership-Inference Competition Neurips on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/privacy-tabular-foundation-models-membership-inference-competition-neurips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy Attacks on Tabular Foundation Models</title>
+      <link>https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/</link>
+      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/</guid>
+      <description>&lt;center&gt;&#xA;  &lt;strong&gt;Submitted to the NeurIPS 2026 Competition Track&lt;/strong&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  Aditya Kumar&lt;sup&gt;1&lt;/sup&gt;, Dariush Wahdany&lt;sup&gt;1&lt;/sup&gt;, Ossi Räisä&lt;sup&gt;1&lt;/sup&gt;, Ivo Hoese&lt;sup&gt;1&lt;/sup&gt;, Hoyong Jeong&lt;sup&gt;1&lt;/sup&gt;,&#xA;  &lt;br&gt;&#xA;  Daniil Filienko&lt;sup&gt;2&lt;/sup&gt;, Jonas Böhler&lt;sup&gt;3&lt;/sup&gt;,&#xA;  &lt;a href=&#34;https://jescresswell.github.io/&#34;&gt;Jesse C. Cresswell&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  &lt;sup&gt;1&lt;/sup&gt;CISPA Helmholtz Center for Information Security &amp;nbsp;&#xA;  &lt;sup&gt;2&lt;/sup&gt;University of Washington Tacoma &amp;nbsp;&#xA;  &lt;sup&gt;3&lt;/sup&gt;SAP SE &amp;nbsp;&#xA;  &lt;sup&gt;4&lt;/sup&gt;Layer 6 AI&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  &lt;a href=&#34;https://github.com/sprintml/privacy-tabular-fm&#34;&gt;GitHub&lt;/a&gt; &amp;nbsp;·&amp;nbsp;&#xA;  &lt;a href=&#34;mailto:privacy-tabular-fm@cispa.de&#34;&gt;Contact&lt;/a&gt; &amp;nbsp;·&amp;nbsp;&#xA;  Discord (coming soon)&#xA;  &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;p&gt;Tabular foundation models (TFMs) such as TabPFN solve a new tabular task at inference time by conditioning on a training set provided in context, without any gradient updates. That in-context training set is private data, and it raises a question we do not yet have good answers to: how much does a TFM leak about the records it was conditioned on? This competition turns that question into a shared benchmark.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

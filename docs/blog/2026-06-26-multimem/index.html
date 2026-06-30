@@ -190,30 +190,30 @@
 </ul>
 <p>By measuring and mitigating memorization, we can identify and remove problematic samples, making models both more private and more generalizable.</p>
 <table>
-	<thead>
-			<tr>
-					<th>Challenge</th>
-					<th>Traditional Metrics</th>
-					<th>MultiMem</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>Scope</strong></td>
-					<td>Measure pairwise modality interactions (e.g., image-text)</td>
-					<td>Measure global consistency across all modalities</td>
-			</tr>
-			<tr>
-					<td><strong>Limitation</strong></td>
-					<td>Miss memorization driven by multi-modal interactions</td>
-					<td>Capture full extent of model alignment</td>
-			</tr>
-			<tr>
-					<td><strong>Application</strong></td>
-					<td>Insufficient for accurate assessment</td>
-					<td>Enables reliable mitigation strategies</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Challenge</th>
+          <th>Traditional Metrics</th>
+          <th>MultiMem</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Scope</strong></td>
+          <td>Measure pairwise modality interactions (e.g., image-text)</td>
+          <td>Measure global consistency across all modalities</td>
+      </tr>
+      <tr>
+          <td><strong>Limitation</strong></td>
+          <td>Miss memorization driven by multi-modal interactions</td>
+          <td>Capture full extent of model alignment</td>
+      </tr>
+      <tr>
+          <td><strong>Application</strong></td>
+          <td>Insufficient for accurate assessment</td>
+          <td>Enables reliable mitigation strategies</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="how-multimem-works">How Does MultiMem Work?</h2>
 <p>MultiMem extends the leave-one-out framework (used in prior work on SL and SSL) to multi-modal contrastive learning. The metric is computed in three steps:</p>
@@ -277,54 +277,54 @@
 </ol>
 <p>This approach is robust to dataset splits and held-out set composition, and reveals patterns hidden by partial memorization metrics.</p>
 <table>
-	<thead>
-			<tr>
-					<th>Property</th>
-					<th>Details</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>Robustness to held-out set</strong></td>
-					<td>Performs consistently across random, balanced, and out-of-distribution held-out samples</td>
-			</tr>
-			<tr>
-					<td><strong>Robustness to dataset splits</strong></td>
-					<td>Memorization level remains stable across different SC/SI ratio configurations</td>
-			</tr>
-			<tr>
-					<td><strong>Generality</strong></td>
-					<td>Applicable to any number and type of modalities</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Details</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Robustness to held-out set</strong></td>
+          <td>Performs consistently across random, balanced, and out-of-distribution held-out samples</td>
+      </tr>
+      <tr>
+          <td><strong>Robustness to dataset splits</strong></td>
+          <td>Memorization level remains stable across different SC/SI ratio configurations</td>
+      </tr>
+      <tr>
+          <td><strong>Generality</strong></td>
+          <td>Applicable to any number and type of modalities</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="what-drives-memorization">What Causes Memorization in Multi-Modal Models?</h2>
 <p>We tested MultiMem on three models across different modal combinations:</p>
 <table>
-	<thead>
-			<tr>
-					<th>Model</th>
-					<th>Modalities</th>
-					<th>Dataset</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>AudioCLIP</strong></td>
-					<td>Audio, Image, Text</td>
-					<td>UrbanSound8K</td>
-			</tr>
-			<tr>
-					<td><strong>AVT-CLIP</strong></td>
-					<td>Audio, Video, Text</td>
-					<td>MSR-VTT</td>
-			</tr>
-			<tr>
-					<td><strong>AVIT-CLIP</strong></td>
-					<td>Audio, Video, Image, Text</td>
-					<td>MSR-VTT + COCO</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Modalities</th>
+          <th>Dataset</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>AudioCLIP</strong></td>
+          <td>Audio, Image, Text</td>
+          <td>UrbanSound8K</td>
+      </tr>
+      <tr>
+          <td><strong>AVT-CLIP</strong></td>
+          <td>Audio, Video, Text</td>
+          <td>MSR-VTT</td>
+      </tr>
+      <tr>
+          <td><strong>AVIT-CLIP</strong></td>
+          <td>Audio, Video, Image, Text</td>
+          <td>MSR-VTT + COCO</td>
+      </tr>
+  </tbody>
 </table>
 <p>Our analysis revealed three main findings:</p>
 <p><strong>Global memorization differs from pairwise memorization.</strong> Multi-modal models show higher overall memorization than any single modality pair, indicating that memorization is driven by interactions across all modalities—not by individual modality quality.</p>
@@ -352,71 +352,71 @@
 </p>
 <h4 id="in-training-mitigation-audioclip">In-Training Mitigation (AudioCLIP)</h4>
 <table>
-	<thead>
-			<tr>
-					<th>Metric</th>
-					<th>Baseline</th>
-					<th>In-Training</th>
-					<th>Improvement</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><strong>Memorization (↓)</strong></td>
-					<td>0.332</td>
-					<td>0.262</td>
-					<td>20.8% reduction</td>
-			</tr>
-			<tr>
-					<td><strong>Retrieval T@5 (↑)</strong></td>
-					<td>36.9%</td>
-					<td>43.3%</td>
-					<td>+6.7%</td>
-			</tr>
-			<tr>
-					<td><strong>Linear Probing (↑)</strong></td>
-					<td>76.7%</td>
-					<td>80.8%</td>
-					<td>+4.1%</td>
-			</tr>
-			<tr>
-					<td><strong>Zero-Shot (↑)</strong></td>
-					<td>25.4%</td>
-					<td>35.1%</td>
-					<td>+9.7%</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>Baseline</th>
+          <th>In-Training</th>
+          <th>Improvement</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Memorization (↓)</strong></td>
+          <td>0.332</td>
+          <td>0.262</td>
+          <td>20.8% reduction</td>
+      </tr>
+      <tr>
+          <td><strong>Retrieval T@5 (↑)</strong></td>
+          <td>36.9%</td>
+          <td>43.3%</td>
+          <td>+6.7%</td>
+      </tr>
+      <tr>
+          <td><strong>Linear Probing (↑)</strong></td>
+          <td>76.7%</td>
+          <td>80.8%</td>
+          <td>+4.1%</td>
+      </tr>
+      <tr>
+          <td><strong>Zero-Shot (↑)</strong></td>
+          <td>25.4%</td>
+          <td>35.1%</td>
+          <td>+9.7%</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="post-training-mitigation-audioclip">Post-Training Mitigation (AudioCLIP)</h4>
 <table>
-	<thead>
-			<tr>
-					<th>Setting</th>
-					<th style="text-align: right">Memorization Reduction</th>
-					<th style="text-align: right">Retrieval Improvement</th>
-					<th style="text-align: right">Zero-Shot Improvement</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>Removing 150 samples</td>
-					<td style="text-align: right">12.5%</td>
-					<td style="text-align: right">+2.2%</td>
-					<td style="text-align: right">+4.4%</td>
-			</tr>
-			<tr>
-					<td><strong>Removing 200 samples</strong></td>
-					<td style="text-align: right"><strong>13.9%</strong></td>
-					<td style="text-align: right"><strong>+2.4%</strong></td>
-					<td style="text-align: right"><strong>+5.1%</strong></td>
-			</tr>
-			<tr>
-					<td>Removing 250 samples</td>
-					<td style="text-align: right">12.9%</td>
-					<td style="text-align: right">+1.9%</td>
-					<td style="text-align: right">+4.9%</td>
-			</tr>
-	</tbody>
+  <thead>
+      <tr>
+          <th>Setting</th>
+          <th style="text-align: right">Memorization Reduction</th>
+          <th style="text-align: right">Retrieval Improvement</th>
+          <th style="text-align: right">Zero-Shot Improvement</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Removing 150 samples</td>
+          <td style="text-align: right">12.5%</td>
+          <td style="text-align: right">+2.2%</td>
+          <td style="text-align: right">+4.4%</td>
+      </tr>
+      <tr>
+          <td><strong>Removing 200 samples</strong></td>
+          <td style="text-align: right"><strong>13.9%</strong></td>
+          <td style="text-align: right"><strong>+2.4%</strong></td>
+          <td style="text-align: right"><strong>+5.1%</strong></td>
+      </tr>
+      <tr>
+          <td>Removing 250 samples</td>
+          <td style="text-align: right">12.9%</td>
+          <td style="text-align: right">+1.9%</td>
+          <td style="text-align: right">+4.9%</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="comparison-in-training-vs-post-training">Comparison: In-Training vs Post-Training</h4>
 <p>In-training mitigation achieves greater memorization reduction and performance gains, while post-training is more practical for already-trained models. Both approaches are more effective than random removal or gradient-based methods.</p>
