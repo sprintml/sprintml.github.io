@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text-to-Image Diffusion Models Concept-Removal Unlearning Safety on SprintML</title>
+    <link>https://sprintml.com/tags/text-to-image-diffusion-models-concept-removal-unlearning-safety/</link>
+    <description>Recent content in Text-to-Image Diffusion Models Concept-Removal Unlearning Safety on SprintML</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sprintml.com/tags/text-to-image-diffusion-models-concept-removal-unlearning-safety/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concept Removal for Frontier Image Generative Models</title>
+      <link>https://sprintml.com/blog/2026-07-06-block-concept-removal/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://sprintml.com/blog/2026-07-06-block-concept-removal/</guid>
+      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;strong&gt;Accepted at ICML 2026&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;center&gt;&#xA;  Aditya Kumar,&#xA;  Pierre Joly,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;/a&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  CISPA Helmholtz Center for Information Security&#xA;  &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2606.25548&#34;&gt;Paper&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://github.com/sprintml/block-concept-removal&#34;&gt;Code&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;#bibtex&#34;&gt;BibTeX&lt;/a&gt;&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Modern text-to-image models such as &lt;a href=&#34;https://arxiv.org/abs/2403.03206&#34;&gt;SD3.5&lt;/a&gt;, &lt;a href=&#34;https://github.com/black-forest-labs/flux&#34;&gt;FLUX&lt;/a&gt;, and &lt;a href=&#34;https://arxiv.org/abs/2412.04431&#34;&gt;Infinity&lt;/a&gt; can generate photorealistic images from text prompts. They are trained on massive datasets collected from the internet. These datasets contain concepts that we may not want the models to reproduce. Examples include unique artistic styles, copyrighted characters, and explicit content.&lt;/p&gt;&#xA;&lt;p&gt;Removing such concepts after training is difficult. Retraining a model from scratch without the unwanted data is usually impractical since these systems contain billions of parameters and require enormous computational resources. We therefore need a method that can block a target concept without retraining the model.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

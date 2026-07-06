@@ -77,6 +77,27 @@ Body text goes here. You can use **bold**, _italic_, and [links](https://example
 ---
 
 <!-- ============================================================
+     LATEX MATH
+     Blog pages load MathJax automatically. Do not add a MathJax
+     <script> tag inside a post.
+
+     Inline math: use \( ... \), not single dollar signs.
+     Example: The model \(\mathcal{M}\) is trained on \(G_M\).
+
+     Display math: use $$ ... $$ on its own block, with blank lines
+     before and after the block.
+     ============================================================ -->
+
+Inline math example: the model \(\mathcal{M}\) is trained on \(G_M\).
+
+$$
+\operatorname{TPR@1\%FPR}
+  = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FN}}
+$$
+
+---
+
+<!-- ============================================================
      IMAGES
      All images go in: static/assets/blog/yourfolder/
      Reference them with an absolute path starting with /

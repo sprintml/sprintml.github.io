@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Concept Removal for Frontier Image Generative Models</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  
+<script>
+  window.MathJax = {
+    tex: {
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"]
+      ],
+      inlineMath: [["\\(", "\\)"]],
+      processEscapes: true
+    },
+    svg: {
+      fontCache: "global"
+    }
+  };
+</script>
+<script
+  defer
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+></script>
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82472331-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+    
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <a href="/">
+        <img
+          id="navbar-logo"
+          src="/assets/img/sprintml-logo-black.svg"
+          alt="SprintML"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      
+      <ul>
+        <li><a class="" href="/">Home</a></li>
+        
+        <li><a class="" href="/team/">Team</a></li>
+        
+        <li><a class="" href="/blog/">Blog</a></li>
+        
+        <li><a class="" href="/phd_life/">PhD Life</a></li>
+        
+        <li><a class="" href="/outreach/">Outreach</a></li>
+        
+        <li><a class="" href="/publications/">Publications</a></li>
+        
+        <li><a class="" href="/teaching/">Teaching</a></li>
+        
+        <li><a class="" href="/applications/">Applications</a></li>
+        
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    
+  </div>
+</header>
+
+
+
+    <main id="main">
+      
+
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="blog-box">
+          <h2>Concept Removal for Frontier Image Generative Models</h2>
+          <div class="meta-box">
+            <ul>
+              <li>
+                <p>
+                  <i class="bi bi-calendar-week"></i>
+                  Jul. 6, 2026
+                </p>
+              </li>
+              <li>
+                
+                
+
+                
+                
+                
+                
+                <p>
+                  <i class="bi bi-clock"></i> 8
+                  
+                  min
+                  41
+                  
+                  sec.
+                </p>
+              </li>
+              <li>
+                <p><i class="bi bi-person"></i> SprintML</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content"><p align="center">
+  <strong>Accepted at ICML 2026</strong>
+</p>
+<center>
+  Aditya Kumar,
+  Pierre Joly,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic</a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch</a>
+  <br><br>
+  CISPA Helmholtz Center for Information Security
+  <br><br>
+</center>
+<p align="center">
+  <strong><a href="https://arxiv.org/abs/2606.25548">Paper</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://github.com/sprintml/block-concept-removal">Code</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="#bibtex">BibTeX</a></strong>
+</p>
+<hr>
+<p>Modern text-to-image models such as <a href="https://arxiv.org/abs/2403.03206">SD3.5</a>, <a href="https://github.com/black-forest-labs/flux">FLUX</a>, and <a href="https://arxiv.org/abs/2412.04431">Infinity</a> can generate photorealistic images from text prompts. They are trained on massive datasets collected from the internet. These datasets contain concepts that we may not want the models to reproduce. Examples include unique artistic styles, copyrighted characters, and explicit content.</p>
+<p>Removing such concepts after training is difficult. Retraining a model from scratch without the unwanted data is usually impractical since these systems contain billions of parameters and require enormous computational resources. We therefore need a method that can block a target concept without retraining the model.</p>
+<p>To address this challenge, we introduce BLOCK (Bottleneck-Layer-Oriented Concept Knockout). Our method leaves almost the entire model unchanged because it targets one narrow point: the transformation layers that connect the text encoder to the image-generating backbone, through which every prompt must pass. BLOCK replaces these layers with an editable module called a <a href="https://arxiv.org/abs/2406.11944">transcoder</a>. The transcoder suppresses the target concept while the generator itself remains untouched. Our modification is integrated directly into the model, so it cannot be easily removed or bypassed.</p>
+<h2 id="why-existing-methods-fall-short">Why existing methods fall short</h2>
+<p>Existing concept-removal methods fall into two categories, and each has a weakness that BLOCK avoids.</p>
+<p><strong>Internal methods</strong> modify the model&rsquo;s weights, which are learned during training. <em>Training-based</em> approaches retrain the model so that it no longer produces the target concept. This process is expensive and requires a curated set of example images. <em>Closed-form</em> approaches avoid retraining and instead apply a direct update to the weights. The size of this update creates a trade-off. Small changes leave traces of the concept, while large changes degrade unrelated generations. Both classes of internal methods also suffer under repeated use because each edit builds on the last and the errors accumulate.</p>
+<p><strong>External methods</strong> leave the weights untouched and suppress the concept from outside the model. They do this either during generation or through a separate filtering module. The underlying model still retains the concept. Since the filter is detachable, anyone with access to the model can remove it and restore the original behavior. This limitation is especially important for open-weight models whose parameters are publicly available.</p>
+<p>BLOCK combines the advantages of both approaches. Like an external method, it is cheap to apply. Like an internal method, it is integrated into the model itself and cannot be detached without modifying the model.</p>
+<h2 id="the-bottleneck">The Bottleneck</h2>
+<p>To understand where BLOCK intervenes, consider how a prompt moves through the model. First, a text encoder converts the prompt into an embedding, a numerical representation that captures its semantic meaning. This embedding is then used to condition the generative backbone, the large neural network responsible for producing the final image.</p>
+<p>Before the embedding can reach the backbone, it passes through one or two narrow transformation layers that map it into the form the backbone expects. We call this the <em>bottleneck</em> layer, because every concept carried by the text embedding passes through it. SD3.5 and FLUX have two such layers, and Infinity has one. BLOCK operates at these layers.</p>
+<p>The bottleneck is the ideal place to intervene: if a concept never passes through it, the backbone can never render it. A direct edit is still impossible, because the units inside this layer are <em>polysemantic</em>, meaning each one responds to many unrelated concepts. There is no single unit for &ldquo;Van Gogh&rdquo; to disable. The concept is spread across many units that also represent other concepts, so disabling one would damage everything else that depends on it.</p>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/block/bottleneck.png" width="800"/>
+</div>
+<center><em>How a prompt becomes an image, passing through the bottleneck layer where BLOCK intervenes.</em></center>
+<h2 id="our-intervention">Our Intervention</h2>
+<p>We replace this bottleneck layer with the transcoder: a small neural network that reproduces what the original layer computed but re-expresses the information so that its internal units become <em>monosemantic</em>. We call these units latents. This separation comes from a <a href="https://arxiv.org/abs/2406.04093">TopK activation</a>, which keeps only the K most strongly responding latents active for any prompt (K is a small fixed number) and sets the rest to zero. Since only a few latents can be active at once, the transcoder is forced to give each concept its own latents. As a result, &ldquo;Van Gogh&rdquo; is represented by a small set of identifiable latents rather than spread across the whole layer.</p>
+<p>We build the transcoder without retraining the image generator. Its training data is a set of prompts taken from open source datasets. We forward each prompt through the model&rsquo;s text encoder to obtain the transcoder&rsquo;s inputs, and pass those through the original bottleneck layer to obtain the matching outputs. The transcoder is trained on these input-output pairs to reproduce the original layer while keeping its latents sparse. No gradients propagate through the backbone, which keeps the procedure inexpensive. We then insert the trained transcoder in place of the original layer.</p>
+<p>Removing a concept then requires no further training. We identify the latents that activate for the concept&rsquo;s tokens (for &ldquo;Van Gogh&rdquo;, the latents for &ldquo;Van&rdquo; and &ldquo;Gogh&rdquo;) and redirect them to reproduce the output of the empty token, the input that represents a prompt with no text. The concept is intercepted at the bottleneck and never reaches the backbone, while every other concept is unaffected. This change is to weights <em>inside</em> the model, so it cannot be detached like an external filter, and it survives even if the text encoder in front of it is replaced.</p>
+<p>The figure below contrasts the two cases. In the original model (top), the bottleneck passes the concept through to the backbone. With BLOCK (bottom), the transcoder redirects the concept to the empty token, so the backbone never receives it.</p>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/block/block_overview.png" width="800"/>
+</div>
+<center><em>Overview of BLOCK. The model's bottleneck layer (top, "Without BLOCK") is replaced by a transcoder (bottom, "With BLOCK") that isolates the target concept and redirects it to the empty token, removing it from the generated image while the rest of the scene is preserved.</em></center>
+<h2 id="results">Results</h2>
+<p>We test BLOCK on <a href="https://arxiv.org/abs/2402.11846">UnlearnCanvas</a>, a standard benchmark for measuring how well a method removes a concept while leaving everything else intact. We evaluate it on two Diffusion Models (SD3.5 and FLUX) and two Image AutoRegressive models (Infinity-2B and Infinity-8B), covering both dominant model families. The benchmark targets two kinds of concepts: an artistic <em>style</em> (such as Pop Art or Cubism) and an <em>object</em> (such as a butterfly).</p>
+<p>We compare BLOCK against two main baselines, <a href="https://arxiv.org/abs/2308.14761">UCE</a> and <a href="https://arxiv.org/abs/2310.13730">LOCOEDIT</a>. We chose these two because they are the most relevant internal methods that, like BLOCK, apply to both Diffusion Models and Image AutoRegressive models. UCE was the strongest prior method for the removal task itself, and LOCOEDIT makes a small localized edit that preserves the rest of the model. In the paper we additionally compare against more baselines, such as EraseAnything and SAeUron. BLOCK outperforms all of them.</p>
+<p>We evaluate with three standard metrics. <strong>Unlearning accuracy (UA)</strong> is how often the target concept is successfully removed. <strong>In-domain retain accuracy (IRA)</strong> is how well the model keeps other concepts of the same kind, for example other objects when removing an object. <strong>Cross-domain retain accuracy (CRA)</strong> is how well it keeps concepts of the other kind, for example styles when removing an object.</p>
+<p>Across both model families and both kinds of target, BLOCK removes the concept more thoroughly than these baselines while better preserving unrelated content. On SD3.5, for example, it improves style UA by about 8 percentage points over the best baseline.</p>
+<p><strong>Style removal</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Method</th>
+          <th>UA ↑</th>
+          <th>IRA ↑</th>
+          <th>CRA ↑</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>SD3.5</strong></td>
+          <td>LOCOEDIT</td>
+          <td>41.5</td>
+          <td>59.2</td>
+          <td>84.6</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>UCE</td>
+          <td>61.8</td>
+          <td>61.9</td>
+          <td>83.5</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td><strong>BLOCK</strong></td>
+          <td><strong>69.6</strong></td>
+          <td><strong>67.3</strong></td>
+          <td><strong>92.6</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Infinity-8B</strong></td>
+          <td>LOCOEDIT</td>
+          <td>80.1</td>
+          <td>59.6</td>
+          <td>63.5</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>UCE</td>
+          <td>76.8</td>
+          <td>58.8</td>
+          <td>68.7</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td><strong>BLOCK</strong></td>
+          <td><strong>85.4</strong></td>
+          <td><strong>63.7</strong></td>
+          <td><strong>95.5</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Object removal</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Method</th>
+          <th>UA ↑</th>
+          <th>IRA ↑</th>
+          <th>CRA ↑</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>SD3.5</strong></td>
+          <td>LOCOEDIT</td>
+          <td>37.9</td>
+          <td>85.8</td>
+          <td>58.9</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>UCE</td>
+          <td><strong>84.5</strong></td>
+          <td>82.2</td>
+          <td>60.9</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td><strong>BLOCK</strong></td>
+          <td>68.0</td>
+          <td><strong>93.0</strong></td>
+          <td><strong>67.5</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Infinity-8B</strong></td>
+          <td>LOCOEDIT</td>
+          <td>88.7</td>
+          <td>70.5</td>
+          <td>57.4</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>UCE</td>
+          <td>75.4</td>
+          <td>69.4</td>
+          <td>56.6</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td><strong>BLOCK</strong></td>
+          <td><strong>90.2</strong></td>
+          <td><strong>95.7</strong></td>
+          <td><strong>61.4</strong></td>
+      </tr>
+  </tbody>
+</table>
+<center><em>Style and object removal on the UnlearnCanvas benchmark.</em></center>
+<p>In practice we rarely remove just one concept. A useful method must support <em>sequential removal</em>, where concepts are removed one at a time, without degrading the model. This is where the internal-method baselines struggle most. Each removal is a separate edit to the model&rsquo;s weights, and every edit introduces a small error. These errors accumulate as more concepts are removed, progressively degrading the model.</p>
+<p>BLOCK does not have this problem. Each concept is represented by its own separate set of transcoder features, so removing ten concepts amounts to redirecting ten independent sets of features, with no interference between them. The outcome is identical whether the concepts are removed together or one at a time. The plots below show the result: BLOCK remains stable as more concepts are removed, while the baselines decline.</p>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/block/plots.jpg" width="800"/>
+</div>
+<center><em>Sequential removal for SD3.5 (top) and Infinity-8B (bottom), on styles (left) and objects (right). The score combines removal and retention, so higher is better. The baselines degrade as more concepts are removed, while BLOCK stays stable.</em></center>
+<p>A removed concept is only truly gone if it cannot be recovered through clever prompting. Adversarial prompting is the practice of deliberately constructing unusual prompts that cause a model to produce content the removal was meant to prevent. A determined user will not simply type &ldquo;Van Gogh&rdquo;. Instead, they will search for alternative wordings that evade the removal, and a removal method is only trustworthy if it remains robust.</p>
+<p>We test this with <a href="https://arxiv.org/abs/2310.10012">Ring-A-Bell</a>, an established attack that automatically searches for prompts which reintroduce a suppressed concept. We chose it because it is a widely used, model-agnostic attack designed specifically to evaluate concept-removal methods. Ring-A-Bell operates in a black-box setting: it searches only over prompts and does not access the model&rsquo;s internals. The table below reports the attack success rate, the percentage of adversarial prompts that succeed in recovering the concept. BLOCK achieves the lowest attack success rate on every model.</p>
+<center><em>Ring-A-Bell attack success rate (%), the share of adversarial prompts that bring the removed concept back. "Original" is the unmodified model.</em></center>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>SD3.5 ↓</th>
+          <th>FLUX ↓</th>
+          <th>Infinity-8B ↓</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Original</td>
+          <td>58.1</td>
+          <td>28.4</td>
+          <td>56.3</td>
+      </tr>
+      <tr>
+          <td>LOCOEDIT</td>
+          <td>57.4</td>
+          <td>26.3</td>
+          <td>22.6</td>
+      </tr>
+      <tr>
+          <td>UCE</td>
+          <td>43.4</td>
+          <td>24.5</td>
+          <td>24.4</td>
+      </tr>
+      <tr>
+          <td><strong>BLOCK</strong></td>
+          <td><strong>25.2</strong></td>
+          <td><strong>15.6</strong></td>
+          <td><strong>19.8</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p>Finally, we can see the effect directly: in each pair below, BLOCK removes the targeted concept while the rest of the image is preserved.</p>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/block/quali.jpg" width="800"/>
+</div>
+<center><em>For each pair, the left image is the original model output and the right image is the output after BLOCK. Top row: removing the object (the butterfly) while keeping the style (Cubism). Bottom row: removing the style (Pop Art) while keeping the object (the person). Shown for SD3.5 and Infinity-8B.</em></center>
+<h2 id="conclusion">Conclusion</h2>
+<p>As image-generation models become more capable and more widely deployed, the ability to reliably remove specific concepts is becoming a practical requirement rather than a research curiosity. The existing approaches each fall short in a specific way. Internal methods modify the model broadly and degrade as more concepts are removed. External methods leave the model intact and can be detached. BLOCK avoids both failures at once. It turns a single bottleneck layer into a precise and permanent mechanism for removing concepts that works across both model families.</p>
+<p>We hope BLOCK offers a practical foundation for safer and more controllable deployment of frontier image-generation models.</p>
+<h2 id="learn-more">Learn more</h2>
+<ul>
+<li>Read the full paper: <a href="https://arxiv.org/abs/2606.25548">Arxiv</a></li>
+<li>Explore the code: <a href="https://github.com/sprintml/block-concept-removal">GitHub</a></li>
+</ul>
+<h2 id="bibtex">BibTeX</h2>
+<pre tabindex="0"><code>@inproceedings{kumar2026concept,
+  title = {Concept Removal for Frontier Image Generative Models},
+  author = {Kumar, Aditya and Joly, Pierre and Dziedzic, Adam and Boenisch, Franziska},
+  booktitle = {Forty-third International Conference on Machine Learning (ICML)},
+  year = {2026}
+}
+</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Recent Blogs</h2>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Concept Removal for Frontier Image Generative Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-06-block-concept-removal/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 6, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>8
+              
+              min
+              41
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>MGI: Member vs Generated Inference</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-04-mgi/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 4, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>7
+              
+              min
+              7
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>MultiMem: Measuring and Mitigating Memorization in Multi-Modal Contrastive Learning</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-06-26-multimem/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jun. 25, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>6
+              
+              min
+              56
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <div class="row box" style="background-color: rgba(16, 11, 11, 0.3);  border-radius: 10px;">
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1912500338306793902?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423651334889493?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423195485335945?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</section>
+ 
+    </main>
+    
+
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div
+        class="col-md-9 d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          src="/assets/img/sprintml-logo-white.svg"
+          alt="SprintML"
+          class="footer-logo"
+          width="180"
+          height="60"
+        />
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://x.com/SprintML" target="_blank" aria-label="X (Twitter)">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/in/sprintml-group-at-cispa-327769397/" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.youtube.com/@SprintML-Lab" target="_blank" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="text-center">
+          <span
+            >© 2026 SprintML Lab | Developed By
+            <a href="https://sual-soft.com/" target="_blank"
+              >S U A L SOFT</a
+            ></span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+
+<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>

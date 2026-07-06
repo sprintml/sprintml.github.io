@@ -41,6 +41,30 @@
   <link href="/assets/css/style.css" rel="stylesheet" />
 
   
+<script>
+  window.MathJax = {
+    tex: {
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"]
+      ],
+      inlineMath: [["\\(", "\\)"]],
+      processEscapes: true
+    },
+    svg: {
+      fontCache: "global"
+    }
+  };
+</script>
+<script
+  defer
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+></script>
+
+
+
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
 
   
@@ -180,17 +204,17 @@ victim encoder.</p>
 dog (in the diagram below), we generate two augmentations by applying vertical flip and grayscale transformation.
 Then, we query the victim encoder with the first augmentation and our stolen copy with the second augmentation. To steal
 the victim encoder, we train the stolen encoder to minimize the loss between representations obtained from the victim
-encoder $$y_1$$ shown in blue, and representations from our stolen copy $$𝑦_2$$ shown in red.</p>
+encoder \(y_1\) shown in blue, and representations from our stolen copy \(𝑦_2\) shown in red.</p>
 <div style="text-align:center; margin-bottom:30px;">
 <img src="/assets/blog/ssl/siamese.png" width="90%"/>
 </div> 
 <p>To this end, we apply contrastive loss functions (see the image below). In the representation space, before stealing,
 the positive pairs (two
-augmentations of the same image $$y_1^+$$ and $$y_2^+$$) from
+augmentations of the same image \(y_1^+\) and \(y_2^+\)) from
 the victim and stolen encoders are far
 from each other. After stealing, the positive pairs are close to each other. Thus, the stolen encoder replicates the
 behavior of the victim encoder. The crucial point of contrastive loss functions is that the positive pairs stay close to
-each other but also the negative examples ($$y_1^+$$ and $$y_3^-$$) coming from different inputs are far from the
+each other but also the negative examples (\(y_1^+\) and \(y_3^-\)) coming from different inputs are far from the
 positive pairs.
 The selection of the loss function is one of the most important hyper-parameter for stealing encoders. We compared
 standard losses as well as modern batch contrastive losses. The standard loss like Mean Squared Error is used to
@@ -309,6 +333,70 @@ ICML 2020.</em></p>
       
       <div class="col-lg-4 col-md-4 col-12">
         <div class="card">
+          <h4>Concept Removal for Frontier Image Generative Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-06-block-concept-removal/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 6, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>8
+              
+              min
+              41
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>MGI: Member vs Generated Inference</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-04-mgi/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 4, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>7
+              
+              min
+              7
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
           <h4>MultiMem: Measuring and Mitigating Memorization in Multi-Modal Contrastive Learning</h4>
           <hr />
           <p></p>
@@ -332,70 +420,6 @@ ICML 2020.</em></p>
               
               min
               56
-              
-              sec.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 col-md-4 col-12">
-        <div class="card">
-          <h4>Finding DoRI: Discovery of Retained Images in Diffusion Models</h4>
-          <hr />
-          <p></p>
-          <a href="https://sprintml.com/blog/2026-06-24-finding-dori/"
-            >Read More <i class="bi bi-arrow-right"></i
-          ></a>
-          <div class="meta-content">
-            <p>
-              <i class="bi bi-calendar-week"></i>
-              Jun. 24, 2026
-            </p>
-            
-            
-
-            
-            
-            
-            
-            <p>
-              <i class="bi bi-clock"></i>6
-              
-              min
-              39
-              
-              sec.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-4 col-md-4 col-12">
-        <div class="card">
-          <h4>Privacy Attacks on Tabular Foundation Models</h4>
-          <hr />
-          <p></p>
-          <a href="https://sprintml.com/blog/2026-05-16-privacy-tabular-fm/"
-            >Read More <i class="bi bi-arrow-right"></i
-          ></a>
-          <div class="meta-content">
-            <p>
-              <i class="bi bi-calendar-week"></i>
-              May. 16, 2026
-            </p>
-            
-            
-
-            
-            
-            
-            
-            <p>
-              <i class="bi bi-clock"></i>5
-              
-              min
-              51
               
               sec.
             </p>
