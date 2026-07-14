@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Outreach on SprintML</title>
-    <link>https://sprintml.com/outreach/</link>
-    <description>Recent content in Outreach on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 22 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/outreach/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>CISPA European Cybersecurity &amp; AI Hackathon Championship</title>
-      <link>https://sprintml.com/outreach/hackathon_2025-26/</link>
-      <pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/outreach/hackathon_2025-26/</guid>
-      <description>&lt;p&gt;CISPA, one of Europe’s leading research centers in cybersecurity and AI, is launching this initiative to strengthen Europe’s position as a global hub for digital excellence. This bold initiative invests in the next generation of researchers by promoting cybersecurity skills, fostering interest in AI, and raising awareness of the need for trustworthy technologies. Through a Europe-wide series of regional competitions in France, Austria, Sweden, Spain, and Poland, the Championship brings together young talent from across the continent to develop the skills and capacities needed to address our grand challenges in cybersecurity and AI. By inspiring collaboration and innovation, CISPA is helping to create Europe’s future AI workforce and laying the foundation for a secure digital future.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Outreach on SprintML</title>
+		<link>https://sprintml.com/outreach/</link>
+		<description>Recent content in Outreach on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 22 Nov 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/outreach/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CISPA European Cybersecurity &amp; AI Hackathon Championship</title>
+				<link>https://sprintml.com/outreach/hackathon_2025-26/</link>
+				<pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/outreach/hackathon_2025-26/</guid>
+				<description>&lt;p&gt;CISPA, one of Europe’s leading research centers in cybersecurity and AI, is launching this initiative to strengthen Europe’s position as a global hub for digital excellence. This bold initiative invests in the next generation of researchers by promoting cybersecurity skills, fostering interest in AI, and raising awareness of the need for trustworthy technologies. Through a Europe-wide series of regional competitions in France, Austria, Sweden, Spain, and Poland, the Championship brings together young talent from across the continent to develop the skills and capacities needed to address our grand challenges in cybersecurity and AI. By inspiring collaboration and innovation, CISPA is helping to create Europe’s future AI workforce and laying the foundation for a secure digital future.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

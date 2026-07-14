@@ -225,158 +225,158 @@ by proceeding in three stages: (1) an autoencoder-based filtering step that iden
 <p>Under this new setting of generative models, we analyze the performance of the original MIAs and image attribution methods for IARs (Image AutoRegressive Models) in the Table below and report the TPR@1%FPR. We find that while existing MIAs are able to separate the natural members from the natural non-members, they break when the generated data is introduced. Our DCB however achieves near 100% TPR@1%FPR under the generated vs natural setting and improves the average performance by over 36% (LlamaGen). Under the MGI task DCB benefits from combining multiple signals leading to a consistent performance across detections.</p>
 <p>The table below shows TPR@1%FPR for IARs (Image AutoRegressive Models) in the direct training setting. Only DCB achieves consistent performance across all comparisons and models. LG denotes the LlamaGen model.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Method</th>
-          <th style="text-align: right">RAR <code>M/G</code></th>
-          <th style="text-align: right">RAR <code>N/G</code></th>
-          <th style="text-align: right">RAR <code>M/N</code></th>
-          <th style="text-align: right">RAR Avg</th>
-          <th style="text-align: right">VAR <code>M/G</code></th>
-          <th style="text-align: right">VAR <code>N/G</code></th>
-          <th style="text-align: right">VAR <code>M/N</code></th>
-          <th style="text-align: right">VAR Avg</th>
-          <th style="text-align: right">LG <code>M/G</code></th>
-          <th style="text-align: right">LG <code>N/G</code></th>
-          <th style="text-align: right">LG <code>M/N</code></th>
-          <th style="text-align: right">LG Avg</th>
-          <th style="text-align: right">Overall</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>PIAR</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">99.5</td>
-          <td style="text-align: right">62.6</td>
-          <td style="text-align: right">54.0</td>
-          <td style="text-align: right">58.6</td>
-          <td style="text-align: right">11.5</td>
-          <td style="text-align: right">91.7</td>
-          <td style="text-align: right">53.9</td>
-          <td style="text-align: right">0.5</td>
-          <td style="text-align: right">17.7</td>
-          <td style="text-align: right">6.7</td>
-          <td style="text-align: right">8.3</td>
-          <td style="text-align: right">38.8</td>
-      </tr>
-      <tr>
-          <td>ICAS</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">99.7</td>
-          <td style="text-align: right">72.5</td>
-          <td style="text-align: right">57.4</td>
-          <td style="text-align: right">61.9</td>
-          <td style="text-align: right">33.9</td>
-          <td style="text-align: right"><strong>98.7</strong></td>
-          <td style="text-align: right">64.8</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">89.6</td>
-          <td style="text-align: right"><strong>17.2</strong></td>
-          <td style="text-align: right">35.6</td>
-          <td style="text-align: right">52.6</td>
-      </tr>
-      <tr>
-          <td>PRADA</td>
-          <td style="text-align: right">62.7</td>
-          <td style="text-align: right"><strong>100.0</strong></td>
-          <td style="text-align: right"><strong>81.3</strong></td>
-          <td style="text-align: right">81.3</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">24.8</td>
-          <td style="text-align: right">96.9</td>
-          <td style="text-align: right">40.6</td>
-          <td style="text-align: right">9.3</td>
-          <td style="text-align: right">68.8</td>
-          <td style="text-align: right">7.1</td>
-          <td style="text-align: right">28.4</td>
-          <td style="text-align: right">50.1</td>
-      </tr>
-      <tr>
-          <td>Ours</td>
-          <td style="text-align: right"><strong>99.9</strong></td>
-          <td style="text-align: right">99.9</td>
-          <td style="text-align: right">72.5</td>
-          <td style="text-align: right"><strong>90.8</strong></td>
-          <td style="text-align: right"><strong>99.3</strong></td>
-          <td style="text-align: right"><strong>99.5</strong></td>
-          <td style="text-align: right"><strong>98.7</strong></td>
-          <td style="text-align: right"><strong>99.2</strong></td>
-          <td style="text-align: right"><strong>100.0</strong></td>
-          <td style="text-align: right"><strong>100.0</strong></td>
-          <td style="text-align: right"><strong>17.2</strong></td>
-          <td style="text-align: right"><strong>72.4</strong></td>
-          <td style="text-align: right"><strong>87.4</strong></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Method</th>
+					<th style="text-align: right">RAR <code>M/G</code></th>
+					<th style="text-align: right">RAR <code>N/G</code></th>
+					<th style="text-align: right">RAR <code>M/N</code></th>
+					<th style="text-align: right">RAR Avg</th>
+					<th style="text-align: right">VAR <code>M/G</code></th>
+					<th style="text-align: right">VAR <code>N/G</code></th>
+					<th style="text-align: right">VAR <code>M/N</code></th>
+					<th style="text-align: right">VAR Avg</th>
+					<th style="text-align: right">LG <code>M/G</code></th>
+					<th style="text-align: right">LG <code>N/G</code></th>
+					<th style="text-align: right">LG <code>M/N</code></th>
+					<th style="text-align: right">LG Avg</th>
+					<th style="text-align: right">Overall</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>PIAR</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">99.5</td>
+					<td style="text-align: right">62.6</td>
+					<td style="text-align: right">54.0</td>
+					<td style="text-align: right">58.6</td>
+					<td style="text-align: right">11.5</td>
+					<td style="text-align: right">91.7</td>
+					<td style="text-align: right">53.9</td>
+					<td style="text-align: right">0.5</td>
+					<td style="text-align: right">17.7</td>
+					<td style="text-align: right">6.7</td>
+					<td style="text-align: right">8.3</td>
+					<td style="text-align: right">38.8</td>
+			</tr>
+			<tr>
+					<td>ICAS</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">99.7</td>
+					<td style="text-align: right">72.5</td>
+					<td style="text-align: right">57.4</td>
+					<td style="text-align: right">61.9</td>
+					<td style="text-align: right">33.9</td>
+					<td style="text-align: right"><strong>98.7</strong></td>
+					<td style="text-align: right">64.8</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">89.6</td>
+					<td style="text-align: right"><strong>17.2</strong></td>
+					<td style="text-align: right">35.6</td>
+					<td style="text-align: right">52.6</td>
+			</tr>
+			<tr>
+					<td>PRADA</td>
+					<td style="text-align: right">62.7</td>
+					<td style="text-align: right"><strong>100.0</strong></td>
+					<td style="text-align: right"><strong>81.3</strong></td>
+					<td style="text-align: right">81.3</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">24.8</td>
+					<td style="text-align: right">96.9</td>
+					<td style="text-align: right">40.6</td>
+					<td style="text-align: right">9.3</td>
+					<td style="text-align: right">68.8</td>
+					<td style="text-align: right">7.1</td>
+					<td style="text-align: right">28.4</td>
+					<td style="text-align: right">50.1</td>
+			</tr>
+			<tr>
+					<td>Ours</td>
+					<td style="text-align: right"><strong>99.9</strong></td>
+					<td style="text-align: right">99.9</td>
+					<td style="text-align: right">72.5</td>
+					<td style="text-align: right"><strong>90.8</strong></td>
+					<td style="text-align: right"><strong>99.3</strong></td>
+					<td style="text-align: right"><strong>99.5</strong></td>
+					<td style="text-align: right"><strong>98.7</strong></td>
+					<td style="text-align: right"><strong>99.2</strong></td>
+					<td style="text-align: right"><strong>100.0</strong></td>
+					<td style="text-align: right"><strong>100.0</strong></td>
+					<td style="text-align: right"><strong>17.2</strong></td>
+					<td style="text-align: right"><strong>72.4</strong></td>
+					<td style="text-align: right"><strong>87.4</strong></td>
+			</tr>
+	</tbody>
 </table>
 <p>We additionally analyze the MGI task on diffusion models in the Table below, following CLiD and fine-tuning the models on natural MS-COCO data to obtain natural members and non-members. Our results show that, similar as for the IARs above, while the baseline methods are able to distinguish non-members and members, they fail when the generated data is introduced. Only DCB, which takes the full generative pipeline into account, can distinguish the generated data from the natural data.</p>
 <p>The table below shows TPR@1%FPR for diffusion models in the direct training setting. Only DCB achieves consistent performance across all comparisons and models.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Method</th>
-          <th style="text-align: right">SD1.4 <code>M/G</code></th>
-          <th style="text-align: right">SD1.4 <code>N/G</code></th>
-          <th style="text-align: right">SD1.4 <code>M/N</code></th>
-          <th style="text-align: right">SD1.4 Avg</th>
-          <th style="text-align: right">SD2.1 <code>M/G</code></th>
-          <th style="text-align: right">SD2.1 <code>N/G</code></th>
-          <th style="text-align: right">SD2.1 <code>M/N</code></th>
-          <th style="text-align: right">SD2.1 Avg</th>
-          <th style="text-align: right">Overall</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>CLiD</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">88.2</td>
-          <td style="text-align: right"><strong>36.2</strong></td>
-          <td style="text-align: right">41.5</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">82.2</td>
-          <td style="text-align: right"><strong>31.5</strong></td>
-          <td style="text-align: right">37.9</td>
-          <td style="text-align: right">39.7</td>
-      </tr>
-      <tr>
-          <td>ICAS</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">87.8</td>
-          <td style="text-align: right">35.7</td>
-          <td style="text-align: right">41.2</td>
-          <td style="text-align: right">0.0</td>
-          <td style="text-align: right">82.1</td>
-          <td style="text-align: right"><strong>31.5</strong></td>
-          <td style="text-align: right">37.9</td>
-          <td style="text-align: right">39.5</td>
-      </tr>
-      <tr>
-          <td>PRADA</td>
-          <td style="text-align: right">0.7</td>
-          <td style="text-align: right">0.4</td>
-          <td style="text-align: right">0.4</td>
-          <td style="text-align: right">0.5</td>
-          <td style="text-align: right">0.7</td>
-          <td style="text-align: right">0.3</td>
-          <td style="text-align: right">0.4</td>
-          <td style="text-align: right">0.4</td>
-          <td style="text-align: right">0.5</td>
-      </tr>
-      <tr>
-          <td>Ours</td>
-          <td style="text-align: right"><strong>99.9</strong></td>
-          <td style="text-align: right"><strong>99.8</strong></td>
-          <td style="text-align: right">35.7</td>
-          <td style="text-align: right"><strong>78.5</strong></td>
-          <td style="text-align: right"><strong>100.0</strong></td>
-          <td style="text-align: right"><strong>100.0</strong></td>
-          <td style="text-align: right"><strong>31.5</strong></td>
-          <td style="text-align: right"><strong>77.2</strong></td>
-          <td style="text-align: right"><strong>77.8</strong></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Method</th>
+					<th style="text-align: right">SD1.4 <code>M/G</code></th>
+					<th style="text-align: right">SD1.4 <code>N/G</code></th>
+					<th style="text-align: right">SD1.4 <code>M/N</code></th>
+					<th style="text-align: right">SD1.4 Avg</th>
+					<th style="text-align: right">SD2.1 <code>M/G</code></th>
+					<th style="text-align: right">SD2.1 <code>N/G</code></th>
+					<th style="text-align: right">SD2.1 <code>M/N</code></th>
+					<th style="text-align: right">SD2.1 Avg</th>
+					<th style="text-align: right">Overall</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>CLiD</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">88.2</td>
+					<td style="text-align: right"><strong>36.2</strong></td>
+					<td style="text-align: right">41.5</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">82.2</td>
+					<td style="text-align: right"><strong>31.5</strong></td>
+					<td style="text-align: right">37.9</td>
+					<td style="text-align: right">39.7</td>
+			</tr>
+			<tr>
+					<td>ICAS</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">87.8</td>
+					<td style="text-align: right">35.7</td>
+					<td style="text-align: right">41.2</td>
+					<td style="text-align: right">0.0</td>
+					<td style="text-align: right">82.1</td>
+					<td style="text-align: right"><strong>31.5</strong></td>
+					<td style="text-align: right">37.9</td>
+					<td style="text-align: right">39.5</td>
+			</tr>
+			<tr>
+					<td>PRADA</td>
+					<td style="text-align: right">0.7</td>
+					<td style="text-align: right">0.4</td>
+					<td style="text-align: right">0.4</td>
+					<td style="text-align: right">0.5</td>
+					<td style="text-align: right">0.7</td>
+					<td style="text-align: right">0.3</td>
+					<td style="text-align: right">0.4</td>
+					<td style="text-align: right">0.4</td>
+					<td style="text-align: right">0.5</td>
+			</tr>
+			<tr>
+					<td>Ours</td>
+					<td style="text-align: right"><strong>99.9</strong></td>
+					<td style="text-align: right"><strong>99.8</strong></td>
+					<td style="text-align: right">35.7</td>
+					<td style="text-align: right"><strong>78.5</strong></td>
+					<td style="text-align: right"><strong>100.0</strong></td>
+					<td style="text-align: right"><strong>100.0</strong></td>
+					<td style="text-align: right"><strong>31.5</strong></td>
+					<td style="text-align: right"><strong>77.2</strong></td>
+					<td style="text-align: right"><strong>77.8</strong></td>
+			</tr>
+	</tbody>
 </table>
 <h2 id="take-aways">What Are the Main Takeaways?</h2>
 <ol>

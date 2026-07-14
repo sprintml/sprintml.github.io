@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Phd Life, Decision, Advisor, Junior vs Senior on SprintML</title>
-    <link>https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/</link>
-    <description>Recent content in Phd Life, Decision, Advisor, Junior vs Senior on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>96 days to go: Senior or Junior Advisor?</title>
-      <link>https://sprintml.com/phd_life/2023-05-29-senior-vs-junior-advisor/</link>
-      <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/phd_life/2023-05-29-senior-vs-junior-advisor/</guid>
-      <description>&lt;p&gt;Should I work with a more or less senior advisor? Of course, every faculty is different and has different ways of running their labs. But over the years we noted some similarities between advisors of different levels of seniority that can affect a Ph.D.’s life. Let’s talk!&lt;/p&gt;&#xA;&lt;p&gt;Let’s start with what’s great about working with very established and senior faculties: 1) they are well-known in the field. Therefore, they can help you build connections with other researchers easily. They know the conferences, can introduce you to important folks, get you internships, and establish collaborations. They are also usually very valuable reference letter writers. 2) Their labs might be better funded, given that they have a long history of grant writing. This can reflect in better equipment or more people to work with. They might even have postdocs that can support you in your research. In fact, some quite senior faculty might put your advising entirely on the shoulders of their postdocs and you won’t really interact with the prof much. 3) The following is very dependent on the person, but a well-established advisor might put less pressure on you because they are established enough in their careers.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Phd Life, Decision, Advisor, Junior vs Senior on SprintML</title>
+		<link>https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/</link>
+		<description>Recent content in Phd Life, Decision, Advisor, Junior vs Senior on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/phd-life-decision-advisor-junior-vs-senior/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>96 days to go: Senior or Junior Advisor?</title>
+				<link>https://sprintml.com/phd_life/2023-05-29-senior-vs-junior-advisor/</link>
+				<pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/phd_life/2023-05-29-senior-vs-junior-advisor/</guid>
+				<description>&lt;p&gt;Should I work with a more or less senior advisor? Of course, every faculty is different and has different ways of running their labs. But over the years we noted some similarities between advisors of different levels of seniority that can affect a Ph.D.’s life. Let’s talk!&lt;/p&gt;&#xA;&lt;p&gt;Let’s start with what’s great about working with very established and senior faculties: 1) they are well-known in the field. Therefore, they can help you build connections with other researchers easily. They know the conferences, can introduce you to important folks, get you internships, and establish collaborations. They are also usually very valuable reference letter writers. 2) Their labs might be better funded, given that they have a long history of grant writing. This can reflect in better equipment or more people to work with. They might even have postdocs that can support you in your research. In fact, some quite senior faculty might put your advising entirely on the shoulders of their postdocs and you won’t really interact with the prof much. 3) The following is very dependent on the person, but a well-established advisor might put less pressure on you because they are established enough in their careers.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

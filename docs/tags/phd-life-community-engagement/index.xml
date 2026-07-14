@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Phd Life, Community, Engagement on SprintML</title>
-    <link>https://sprintml.com/tags/phd-life-community-engagement/</link>
-    <description>Recent content in Phd Life, Community, Engagement on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/phd-life-community-engagement/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>79 days to go: How to get engaged in the community?</title>
-      <link>https://sprintml.com/phd_life/2023-06-15-engage-in-community/</link>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/phd_life/2023-06-15-engage-in-community/</guid>
-      <description>&lt;p&gt;After having started as a Ph.D., you naturally get to interact with some researchers: your advisor, your lab mates, other students in your institution. However, the community is larger than that. We share a few tips with you on how you can get engaged with larger parts of your community.&lt;/p&gt;&#xA;&lt;p&gt;The first place to get engaged is by visiting conferences. Therefore, it will, of course, be crucial to identify what conferences “your community” submits to. You can either do this by asking your advisor, more senior Ph.D. students, or postdocs, or by just looking at the papers that seem most relevant to your current project and understanding where these have been published. If your institution does not have the funding to send you to a conference when you don’t have an accepted paper, look out for sponsoring and scholarships. Many conferences actually have programs that provide financial support for students. Once you made it to a conference, talk to many people, go to poster sessions to identify people whose work is most related to yours, and even attend the social events.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Phd Life, Community, Engagement on SprintML</title>
+		<link>https://sprintml.com/tags/phd-life-community-engagement/</link>
+		<description>Recent content in Phd Life, Community, Engagement on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/phd-life-community-engagement/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>79 days to go: How to get engaged in the community?</title>
+				<link>https://sprintml.com/phd_life/2023-06-15-engage-in-community/</link>
+				<pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/phd_life/2023-06-15-engage-in-community/</guid>
+				<description>&lt;p&gt;After having started as a Ph.D., you naturally get to interact with some researchers: your advisor, your lab mates, other students in your institution. However, the community is larger than that. We share a few tips with you on how you can get engaged with larger parts of your community.&lt;/p&gt;&#xA;&lt;p&gt;The first place to get engaged is by visiting conferences. Therefore, it will, of course, be crucial to identify what conferences “your community” submits to. You can either do this by asking your advisor, more senior Ph.D. students, or postdocs, or by just looking at the papers that seem most relevant to your current project and understanding where these have been published. If your institution does not have the funding to send you to a conference when you don’t have an accepted paper, look out for sponsoring and scholarships. Many conferences actually have programs that provide financial support for students. Once you made it to a conference, talk to many people, go to poster sessions to identify people whose work is most related to yours, and even attend the social events.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

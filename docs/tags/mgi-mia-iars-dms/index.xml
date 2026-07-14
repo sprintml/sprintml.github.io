@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MGI, MIA, IARs, DMs on SprintML</title>
-    <link>https://sprintml.com/tags/mgi-mia-iars-dms/</link>
-    <description>Recent content in MGI, MIA, IARs, DMs on SprintML</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://sprintml.com/tags/mgi-mia-iars-dms/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MGI: Member vs Generated Inference</title>
-      <link>https://sprintml.com/blog/2026-07-04-mgi/</link>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://sprintml.com/blog/2026-07-04-mgi/</guid>
-      <description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;https://sprintml.com/assets/blog/mgi/ECCV.jpg&#34; alt=&#34;ECCV logo&#34; width=&#34;178&#34;&gt;&#xA;  &lt;br&gt;&#xA;  &lt;strong&gt;Accepted at ECCV 2026&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;h1 align=&#34;center&#34;&gt;&#xA;MGI: Member vs Generated Inference&#xA;&lt;/h1&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  Bihe Zhao, Michel Meintz, Juangui Xu, &#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  CISPA Helmholtz Center for Information Security&#xA;&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2606.23872&#34;&gt;Paper&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://github.com/sprintml/mgi&#34;&gt;Code&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;#citation&#34;&gt;BibTeX&lt;/a&gt;&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;h2 id=&#34;on-this-page&#34;&gt;On This Page&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt; ·&#xA;&lt;a href=&#34;#motivation&#34;&gt;Motivation&lt;/a&gt; ·&#xA;&lt;a href=&#34;#extension&#34;&gt;Extension&lt;/a&gt; ·&#xA;&lt;a href=&#34;#solution&#34;&gt;Solution&lt;/a&gt; ·&#xA;&lt;a href=&#34;#results&#34;&gt;Results&lt;/a&gt; ·&#xA;&lt;a href=&#34;#attacks&#34;&gt;Attacks&lt;/a&gt; ·&#xA;&lt;a href=&#34;#take-aways&#34;&gt;Take-Aways&lt;/a&gt; ·&#xA;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;We introduce a new task MGI (Member vs Generated Inference): given a sample and a target generative model, infer whether the sample is a true training member or a generated output of that model. In the era of the powerful generative models, this new MGI task is a natural extension to the MIA (Membership Inference Attack) that distinguishes between a true training member and a non-member sample.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>MGI, MIA, IARs, DMs on SprintML</title>
+		<link>https://sprintml.com/tags/mgi-mia-iars-dms/</link>
+		<description>Recent content in MGI, MIA, IARs, DMs on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/mgi-mia-iars-dms/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>MGI: Member vs Generated Inference</title>
+				<link>https://sprintml.com/blog/2026-07-04-mgi/</link>
+				<pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2026-07-04-mgi/</guid>
+				<description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;https://sprintml.com/assets/blog/mgi/ECCV.jpg&#34; alt=&#34;ECCV logo&#34; width=&#34;178&#34;&gt;&#xA;  &lt;br&gt;&#xA;  &lt;strong&gt;Accepted at ECCV 2026&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;h1 align=&#34;center&#34;&gt;&#xA;MGI: Member vs Generated Inference&#xA;&lt;/h1&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  Bihe Zhao, Michel Meintz, Juangui Xu, &#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  CISPA Helmholtz Center for Information Security&#xA;&lt;/p&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2606.23872&#34;&gt;Paper&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://github.com/sprintml/mgi&#34;&gt;Code&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;#citation&#34;&gt;BibTeX&lt;/a&gt;&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;h2 id=&#34;on-this-page&#34;&gt;On This Page&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt; ·&#xA;&lt;a href=&#34;#motivation&#34;&gt;Motivation&lt;/a&gt; ·&#xA;&lt;a href=&#34;#extension&#34;&gt;Extension&lt;/a&gt; ·&#xA;&lt;a href=&#34;#solution&#34;&gt;Solution&lt;/a&gt; ·&#xA;&lt;a href=&#34;#results&#34;&gt;Results&lt;/a&gt; ·&#xA;&lt;a href=&#34;#attacks&#34;&gt;Attacks&lt;/a&gt; ·&#xA;&lt;a href=&#34;#take-aways&#34;&gt;Take-Aways&lt;/a&gt; ·&#xA;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;We introduce a new task MGI (Member vs Generated Inference): given a sample and a target generative model, infer whether the sample is a true training member or a generated output of that model. In the era of the powerful generative models, this new MGI task is a natural extension to the MIA (Membership Inference Attack) that distinguishes between a true training member and a non-member sample.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
