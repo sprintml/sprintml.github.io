@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Llm Privacy Differential-Privacy Iclr2026 Dataset-Inference Natural-Identifiers on SprintML</title>
+		<link>https://sprintml.com/tags/llm-privacy-differential-privacy-iclr2026-dataset-inference-natural-identifiers/</link>
+		<description>Recent content in Llm Privacy Differential-Privacy Iclr2026 Dataset-Inference Natural-Identifiers on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/llm-privacy-differential-privacy-iclr2026-dataset-inference-natural-identifiers/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Natural Identifiers for Privacy and Data Audits in LLMs</title>
+				<link>https://sprintml.com/blog/2026-04-28-nid_for_privacy_and_data_audits/</link>
+				<pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2026-04-28-nid_for_privacy_and_data_audits/</guid>
+				<description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;https://sprintml.com/assets/blog/nids/iclr_logo.svg&#34; alt=&#34;ICLR logo&#34; width=&#34;320&#34;&gt;&#xA;  &lt;br&gt;&#xA;  &lt;strong&gt;Accepted at ICLR 2026&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;center&gt;&#xA;  &lt;a href=&#34;https://tpoppo.github.io/&#34;&gt;Lorenzo Rossi&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://bartlomiejmarek.github.io/&#34;&gt;Bartłomiej Marek&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;/a&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  CISPA Helmholtz Center for Information Security&#xA;  &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2606.24408&#34;&gt;Paper&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/pdf/2606.24408&#34;&gt;PDF&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://github.com/sprintml/natural_identifiers_for_privacy_and_data_audits_in_LLMs&#34;&gt;Code&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;#bibtex&#34;&gt;BibTeX&lt;/a&gt;&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; We introduce natural identifiers (NIDs) to make post-hoc auditing practical for already-trained LLMs, enabling both &lt;strong&gt;Differential Privacy (DP)&lt;/strong&gt; auditing and &lt;strong&gt;dataset inference&lt;/strong&gt; without retraining.&lt;/p&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;Assessing the privacy of large language models (LLMs) presents significant challenges. In particular, most existing methods for auditing differential privacy require the insertion of specially crafted canary data during training, making them impractical for auditing already-trained models without costly retraining. Additionally, dataset inference, which audits whether a suspect dataset was used to train a model, is infeasible without access to a private non-member held-out dataset. Yet, such held-out datasets are often unavailable or difficult to construct for real-world cases since they have to be from the same distribution (IID) as the suspect data. These limitations severely hinder the ability to conduct scalable, post-hoc audits. To enable such audits, this work introduces natural identifiers (NIDs) as a novel solution to the above-mentioned challenges. NIDs are structured random strings, such as cryptographic hashes and shortened URLs, naturally occurring in common LLM training datasets. Their format enables the generation of unlimited additional random strings from the same distribution, which can act as alternative canaries for audits and as same-distribution held-out data for dataset inference. Our evaluation highlights that indeed, using NIDs, we can facilitate post-hoc differential privacy auditing without any retraining and enable dataset inference for any suspect dataset containing NIDs without the need for a private non-member held-out dataset.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Llm Privacy Differential-Privacy Iclr2026 Lora Membership-Inference on SprintML</title>
+		<link>https://sprintml.com/tags/llm-privacy-differential-privacy-iclr2026-lora-membership-inference/</link>
+		<description>Recent content in Llm Privacy Differential-Privacy Iclr2026 Lora Membership-Inference on SprintML</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://sprintml.com/tags/llm-privacy-differential-privacy-iclr2026-lora-membership-inference/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Benchmarking Empirical Privacy Protection for Adaptations of LLMs</title>
+				<link>https://sprintml.com/blog/2026-04-28-benchmarking_empirical_privacy_protection_for_adaptation_of_llms/</link>
+				<pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>https://sprintml.com/blog/2026-04-28-benchmarking_empirical_privacy_protection_for_adaptation_of_llms/</guid>
+				<description>&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;img src=&#34;https://sprintml.com/assets/blog/benchmarking-private-adaptation/iclr_logo.svg&#34; alt=&#34;ICLR logo&#34; width=&#34;320&#34;&gt;&#xA;  &lt;br&gt;&#xA;  &lt;strong&gt;Accepted for the oral presentation at ICLR 2026&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;center&gt;&#xA;  &lt;a href=&#34;https://bartlomiejmarek.github.io/&#34;&gt;Bartłomiej Marek*&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://tpoppo.github.io/&#34;&gt;Lorenzo Rossi*&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://scholar.google.com/citations?user=QAilX5kAAAAJ&amp;hl=en&amp;oi=ao&#34;&gt;Vincent Hanke&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://stephen016.github.io/&#34;&gt;Xun Wang&lt;/a&gt;,&#xA;  &lt;br&gt;&#xA;  &lt;a href=&#34;https://michaelbackes.eu/&#34;&gt;Michael Backes&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://franziska-boenisch.de/&#34;&gt;Franziska Boenisch&lt;/a&gt;,&#xA;  &lt;a href=&#34;https://adam-dziedzic.com/&#34;&gt;Adam Dziedzic&lt;/a&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;  CISPA Helmholtz Center for Information Security&lt;br&gt;&#xA;  &lt;em&gt;*Equal contribution&lt;/em&gt;&#xA;  &lt;br&gt;&lt;br&gt;&#xA;&lt;/center&gt;&#xA;&lt;p align=&#34;center&#34;&gt;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/abs/2606.09401&#34;&gt;Paper&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://arxiv.org/pdf/2606.09401&#34;&gt;PDF&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;https://github.com/sprintml/benchmarking_private_adaptation&#34;&gt;Code&lt;/a&gt;&lt;/strong&gt;&#xA;  &amp;nbsp;|&amp;nbsp;&#xA;  &lt;strong&gt;&lt;a href=&#34;#bibtex&#34;&gt;BibTeX&lt;/a&gt;&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; We benchmark empirical privacy risks in DP-adapted LLMs, revealing that distributional closeness to pretraining data and adaptation method critically impact practical privacy protection, even under the same formal guarantee, and that &lt;strong&gt;LoRA&lt;/strong&gt; offers the strongest empirical protection most consistently. We also propose a structured &lt;strong&gt;four-stage framework&lt;/strong&gt; for holistic privacy auditing of the full pretrain-adapt pipeline.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

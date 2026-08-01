@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Natural Identifiers for Privacy and Data Audits in LLMs</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  
+<script>
+  window.MathJax = {
+    tex: {
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"]
+      ],
+      inlineMath: [["\\(", "\\)"]],
+      processEscapes: true
+    },
+    svg: {
+      fontCache: "global"
+    }
+  };
+</script>
+<script
+  defer
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+></script>
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82472331-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+    
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <a href="/">
+        <img
+          id="navbar-logo"
+          src="/assets/img/sprintml-logo-black.svg"
+          alt="SprintML"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      
+      <ul>
+        <li><a class="" href="/">Home</a></li>
+        
+        <li><a class="" href="/team/">Team</a></li>
+        
+        <li><a class="" href="/blog/">Blog</a></li>
+        
+        <li><a class="" href="/phd_life/">PhD Life</a></li>
+        
+        <li><a class="" href="/outreach/">Outreach</a></li>
+        
+        <li><a class="" href="/publications/">Publications</a></li>
+        
+        <li><a class="" href="/teaching/">Teaching</a></li>
+        
+        <li><a class="" href="/applications/">Applications</a></li>
+        
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    
+  </div>
+</header>
+
+
+
+    <main id="main">
+      
+
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="blog-box">
+          <h2>Natural Identifiers for Privacy and Data Audits in LLMs</h2>
+          <div class="meta-box">
+            <ul>
+              <li>
+                <p>
+                  <i class="bi bi-calendar-week"></i>
+                  Apr. 28, 2026
+                </p>
+              </li>
+              <li>
+                
+                
+
+                
+                
+                
+                
+                <p>
+                  <i class="bi bi-clock"></i> 7
+                  
+                  min
+                  9
+                  
+                  sec.
+                </p>
+              </li>
+              <li>
+                <p><i class="bi bi-person"></i> SprintML</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content"><p align="center">
+  <img src="/assets/blog/nids/iclr_logo.svg" alt="ICLR logo" width="320">
+  <br>
+  <strong>Accepted at ICLR 2026</strong>
+</p>
+<center>
+  <a href="https://tpoppo.github.io/">Lorenzo Rossi</a>,
+  <a href="https://bartlomiejmarek.github.io/">Bartłomiej Marek</a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch</a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic</a>
+  <br><br>
+  CISPA Helmholtz Center for Information Security
+  <br><br>
+</center>
+<p align="center">
+  <strong><a href="https://arxiv.org/abs/2606.24408">Paper</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://arxiv.org/pdf/2606.24408">PDF</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://github.com/sprintml/natural_identifiers_for_privacy_and_data_audits_in_LLMs">Code</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="#bibtex">BibTeX</a></strong>
+</p>
+<hr>
+<p><strong>TL;DR:</strong> We introduce natural identifiers (NIDs) to make post-hoc auditing practical for already-trained LLMs, enabling both <strong>Differential Privacy (DP)</strong> auditing and <strong>dataset inference</strong> without retraining.</p>
+<h2 id="abstract">Abstract</h2>
+<p>Assessing the privacy of large language models (LLMs) presents significant challenges. In particular, most existing methods for auditing differential privacy require the insertion of specially crafted canary data during training, making them impractical for auditing already-trained models without costly retraining. Additionally, dataset inference, which audits whether a suspect dataset was used to train a model, is infeasible without access to a private non-member held-out dataset. Yet, such held-out datasets are often unavailable or difficult to construct for real-world cases since they have to be from the same distribution (IID) as the suspect data. These limitations severely hinder the ability to conduct scalable, post-hoc audits. To enable such audits, this work introduces natural identifiers (NIDs) as a novel solution to the above-mentioned challenges. NIDs are structured random strings, such as cryptographic hashes and shortened URLs, naturally occurring in common LLM training datasets. Their format enables the generation of unlimited additional random strings from the same distribution, which can act as alternative canaries for audits and as same-distribution held-out data for dataset inference. Our evaluation highlights that indeed, using NIDs, we can facilitate post-hoc differential privacy auditing without any retraining and enable dataset inference for any suspect dataset containing NIDs without the need for a private non-member held-out dataset.</p>
+<h2 id="summary-of-contributions-and-findings">Summary of Contributions and Findings</h2>
+<p>We show that <strong>post-hoc auditing</strong> of already-trained LLMs is feasible with Natural Identifiers (NIDs). The same NID-based framework supports both differential privacy auditing and dataset inference.</p>
+<ol>
+<li><strong>Post-hoc DP auditing:</strong> NIDs act as natural canaries in existing models, enabling estimation of privacy leakage (lower bounds on \(\varepsilon\)) without retraining.</li>
+<li><strong>Post-hoc dataset inference:</strong> NIDs and generated counterparts let us audit suspect datasets without a private non-member held-out set.</li>
+<li><strong>What NIDs are:</strong> naturally occurring, high-entropy structured strings in pretraining corpora (e.g., hashes, Ethereum addresses, Java serialization identifiers).</li>
+<li><strong>What GIDs are:</strong> synthetic identifiers sampled from the same templates/distributions as NIDs; due to high entropy, they are expected to be non-members and are suitable for auditing.</li>
+<li><strong>Sharper DP bounds:</strong> increasing canary-set cardinality with NIDs/GIDs improves statistical power and tightens privacy estimates.</li>
+</ol>
+<h2 id="how-nids-and-gids-work">How NIDs and GIDs Work</h2>
+<p><strong>Motivation:</strong> For <strong>post-hoc auditing</strong>, we need strings that are already in the <strong>same distribution</strong> as training data, and we need many matched <strong>non-members</strong> without retraining the model.</p>
+<p>A <strong>Natural Identifier (NID)</strong> is a structured high-entropy string that naturally appears in data, such as an MD5/SHA hash, an Ethereum address, or a Java serialization identifier. A <strong>Generated Identifier (GID)</strong> is a fresh string sampled from the same format. Because these spaces are huge, GIDs are overwhelmingly likely to be <strong>non-members</strong> while still matching the exact format.</p>
+<p>In our experiments, we focus on three canary families: <strong>hash canaries</strong> (MD5, SHA-1, SHA-256, SHA-512), <strong>blockchain canaries</strong> (Ethereum addresses), and <strong>serialization canaries</strong> (Java serialization identifiers). For each family, we generate matching GIDs with the same format constraints.</p>
+<p>NIDs are <strong>pervasive</strong> in real pretraining corpora: our paper reports <strong>30,637 different NID types in Pile</strong> and <strong>23,571 in Dolma</strong> (Table 6). Even filtered or smaller slices still contain many NIDs, e.g., <strong>16,989 NIDs in RefinedWeb</strong> and <strong>293 NIDs</strong> in Pile validation+test (about <strong>0.2%</strong> of the full Pile dataset).</p>
+<p>For each found NID \(\hat{v}_i\), we create a candidate set with one NID and \(c-1\) matched GIDs:</p>
+$$
+V_i = \{\hat{v}_i\} \cup \{c - 1 \text{ GIDs}\}
+$$<p>Here, \(|V_i| = c\). In <strong>DP auditing</strong>, larger \(c\) makes random guessing harder and improves statistical power. In <strong>dataset inference</strong>, NID-vs-GID comparisons keep format/distribution fixed so the key difference is <strong>membership</strong>.</p>
+<div markdown="0" style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+  <div style="flex: 1; min-width: 280px; background-color: #f5f7fa; padding: 2rem; border-radius: .75rem;">
+    <h3 style="text-align: center; font-size: 1.1rem;">Example of NID</h3>
+    <hr style="border: 0; height: 2px; background: #333; margin: 1.5rem 0;">
+    <p style="font-size: 0.95rem;">
+      For a future birthday party – fairy party favors. But I want to figure out a different fairy, not
+      Disney...<b>34d42a69a258fa51222a2e94b4563007.jpg</b> 300×300 pixels
+      A quick, easy project for the kids: playful, pom-pom covered trees.
+      Carrot and Apple Cinnamon Streusel Muffins | a cup of mascarpone
+      Strawberry Banana Muffins recipe
+      PaperVine: Got Kids? Make your own Dinosaur Fossils!
+      Use modeling clay and some plastic dinosaurs to create dinosaur fossils. Made this last
+      night to test it out. Turned out pretty cool. Trying to see if this would work for a kids event
+      at work. I think it will! You only need 1 oz. of modeling clay per fossil.
+    </p>
+  </div>
+  <div style="flex: 1; min-width: 280px; background-color: #e9fbe8; padding: 2rem; border-radius: .75rem;">
+    <h3 style="text-align: center; font-size: 1.1rem;">Example of corresponding GID</h3>
+    <hr style="border: 0; height: 2px; background: #333; margin: 1.5rem 0;">
+    <p style="font-size: 0.95rem;">
+      For a future birthday party – fairy party favors. But I want to figure out a different fairy, not
+      Disney...<b>9659875b92ba8fa639ba476aedbb73b9.jpg</b> 300×300 pixels
+      A quick, easy project for the kids: playful, pom-pom covered trees.
+      Carrot and Apple Cinnamon Streusel Muffins | a cup of mascarpone
+      Strawberry Banana Muffins recipe
+      PaperVine: Got Kids? Make your own Dinosaur Fossils!
+      Use modeling clay and some plastic dinosaurs to create dinosaur fossils. Made this last
+      night to test it out. Turned out pretty cool. Trying to see if this would work for a kids event
+      at work. I think it will! You only need 1 oz. of modeling clay per fossil.
+    </p>
+  </div>
+</div>
+<h2 id="dp-auditing-with-nids">DP Auditing with NIDs</h2>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/nids/schema_iclrpptx.gif" alt="DP Auditing with NIDs" width="800"/>
+  <p style="margin-top: 8px; font-size: 0.9em;"><em>Figure 1: Illustration of DP auditing with NIDs as natural canaries. The approach enables privacy estimation without retraining, leveraging NIDs and generated GIDs for greater statistical power.</em></p>
+</div>
+<p>DP auditing aims to empirically estimate the <strong>privacy budget</strong> (\(\varepsilon\)) of a model. Traditional DP auditing requires training at least one <strong>additional model</strong>. This is <strong>prohibitively expensive</strong> for LLMs. In contrast, we treat the NIDs present in the training data as <strong>natural canaries</strong>, making this effectively a <strong>zero-run DP auditing</strong> workflow for the auditor.</p>
+<div markdown="0" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1.5rem 0;">
+  <figure style="text-align: center; flex: 1; min-width: 240px; max-width: 500px;">
+    <img src="/assets/blog/nids/1b.png" alt="Chart showing estimated varepsilon for Pythia-1b" style="width: 100%;">
+    <figcaption style="margin-top: 8px; font-size: 0.9em;">(a) Pythia-1b</figcaption>
+  </figure>
+  <figure style="text-align: center; flex: 1; min-width: 240px; max-width: 500px;">
+    <img src="/assets/blog/nids/410m.png" alt="Chart showing estimated varepsilon for Pythia-410m" style="width: 100%;">
+    <figcaption style="margin-top: 8px; font-size: 0.9em;">(b) Pythia-410m</figcaption>
+  </figure>
+</div>
+<p style="font-size: 0.9em;"><em>Figure 2: Estimated privacy parameter (\(\varepsilon\)) for Pythia-1b and Pythia-410m using DP auditing with NIDs. Increasing the canary set cardinality using NIDs enables sharper privacy bounds with fewer canaries.</em></p>
+<p>Our approach fundamentally improves upon the standard DP auditing framework. Firstly, with our framework, we can perform DP auditing <strong>post-hoc</strong>, without the necessity of <strong>retraining</strong> the model. Secondly, with our framework, we can leverage NIDs to increase the cardinality of the canary set, making the task of guessing the correct canary much harder. Particularly, the standard binary formulation relies on an &ldquo;in or out&rdquo; canary game, effectively a cardinality of \(c=2\). Because guessing the correct canary out of two has a 50% random probability, an auditor needs thousands of samples to confidently establish a tight lower bound for the privacy parameter \(\varepsilon\).</p>
+<p>By leveraging NIDs, we can expand to a higher cardinality, e.g., \(c=32\) (one NID and 31 GIDs). Guessing the correct identifier among 32 choices is much harder and, as shown in Figure 2, yields <strong>tighter estimates</strong> with fewer canaries.</p>
+<h2 id="dataset-inference-with-nids">Dataset Inference with NIDs</h2>
+<p><strong>Dataset Inference (DI)</strong> aims to determine whether a specific dataset was utilized during pretraining. Our framework solves the major bottleneck of DI: the lack of an <strong>IID held-out set</strong> that follows exactly the same distribution as the training set. By using NIDs from the suspect dataset and generating corresponding GIDs, we can post-hoc construct both the suspect set and the held-out set with the <strong>same distribution</strong>.</p>
+<p>To show the effectiveness of our framework, we conduct a thorough audit on the <strong>open-source</strong> OLMo and Pythia models. We successfully demonstrate that our framework can conduct DI with <strong>perfect IID held-out sets</strong>, making dataset inference scalable and practical for existing Foundation Models. As shown in Table 1, our framework can successfully detect the dataset membership for all the models and datasets.</p>
+<p>A natural question concerns the behavior of our approach on smaller, task-specific datasets. We addressed this by successfully performing task-specific DI on the <strong>GSM8K</strong> dataset by perturbing names and numerical values while maintaining syntactic structure. This means that our framework is not only applicable to large, general datasets, but also to much smaller, specific datasets. Therefore, we can use our method to statistically prove <strong>dataset contamination</strong>.</p>
+<style>
+  .pile-table {
+    border-collapse: collapse;
+    font-family: serif;
+    width: 80%;
+    margin: 20px auto;
+  }
+  .pile-table th, .pile-table td {
+    padding: 3px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .pile-table thead th {
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+  }
+  .pile-table tfoot td {
+    border-top: 1px solid black;
+    text-align: left;
+    font-size: 0.9em;
+  }
+  .pile-tick {
+    color: #28a745;
+    font-weight: bold;
+    margin-left: 2px;
+  }
+</style>
+<p style="font-size: 0.9em;"><strong>Table 1: P-values for DI on the Pile Dataset with 100 suspect samples.</strong> We use a 0.01 p-value threshold. We reject the null for all training subsets (<em>p</em> &le; 0.01) and do not reject it for the test set (<em>p</em> &gt; 0.01). All outcomes are correct (<span class="pile-tick">&check;</span>).</p>
+<table class="pile-table">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>GH</th>
+      <th>SE</th>
+      <th>HN</th>
+      <th>CC</th>
+      <th>AX</th>
+      <th>PM</th>
+      <th>IRC</th>
+      <th>Full</th>
+      <th>GH (Test)</th>
+      <th>Full (Test)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Pythia 12B</td>
+      <td>0.0031 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.8182 <span class="pile-tick">&check;</span></td>
+      <td>0.2847 <span class="pile-tick">&check;</span></td>
+    </tr>
+    <tr>
+      <td>Pythia 6.9B</td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0002 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.6139 <span class="pile-tick">&check;</span></td>
+      <td>0.0811 <span class="pile-tick">&check;</span></td>
+    </tr>
+    <tr>
+      <td>Pythia 2.8B</td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.0001 <span class="pile-tick">&check;</span></td>
+      <td>0.9632 <span class="pile-tick">&check;</span></td>
+      <td>0.0660 <span class="pile-tick">&check;</span></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="11">Notation: GH = GitHub, SE = StackExchange, HN = HackerNews, CC = Pile-CC, AX = ArXiv, PM = PubMedCentral, IRC = UbuntuIRC</td>
+    </tr>
+  </tfoot>
+</table>
+<h2 id="conclusions">Conclusions</h2>
+<p>Natural Identifiers make <strong>post-hoc auditing</strong> of pretrained LLMs practical. The same NID/GID framework supports both privacy and data provenance checks on already-trained models.</p>
+<ol>
+<li><strong>DP auditing:</strong> use NIDs as natural canaries and GIDs to tighten \(\varepsilon\) estimates without retraining.</li>
+<li><strong>Dataset inference:</strong> perform same-distribution NID/GID comparisons without requiring private non-member held-out data.</li>
+</ol>
+<p>Because NIDs are <strong>widespread</strong> across real corpora, this approach is broadly applicable in practice. In short, NIDs and matched GIDs provide an <strong>efficient</strong>, <strong>scalable</strong>, and <strong>statistically grounded</strong> path to audit existing models.</p>
+<h2 id="bibtex">BibTeX</h2>
+<p>
+  <button class="copy-button" type="button" data-copy-bibtex>Copy BibTeX</button>
+</p>
+<pre id="bibtex" tabindex="0" role="button" aria-label="Copy BibTeX citation" title="Click to copy BibTeX"><code>@inproceedings{rossi2026natural,
+  title = {Natural Identifiers for Privacy and Data Audits in Large Language Models},
+  author = {Lorenzo Rossi and Bart{\l}omiej Marek and Franziska Boenisch and Adam Dziedzic},
+  booktitle = {The Fourteenth International Conference on Learning Representations},
+  year = {2026},
+  url = {https://arxiv.org/abs/2606.24408}
+}</code></pre>
+<script>
+(() => {
+  const target = document.getElementById("bibtex");
+  const copyButton = document.querySelector("[data-copy-bibtex]");
+  if (!target || !copyButton) return;
+  const resetButton = () => {
+    window.setTimeout(() => { copyButton.textContent = "Copy BibTeX"; }, 1600);
+  };
+  const copyBibtex = async () => {
+    const text = target.innerText.trim();
+    try {
+      await navigator.clipboard.writeText(text);
+      copyButton.textContent = "Copied";
+      resetButton();
+    } catch {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(target);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      copyButton.textContent = "Selected";
+      resetButton();
+    }
+  };
+  copyButton.addEventListener("click", copyBibtex);
+  target.addEventListener("click", copyBibtex);
+  target.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      copyBibtex();
+    }
+  });
+})();
+</script>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Recent Blogs</h2>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Concept Removal for Frontier Image Generative Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-06-block-concept-removal/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 6, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>8
+              
+              min
+              41
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>MGI: Member vs Generated Inference</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-04-mgi/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 4, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>7
+              
+              min
+              7
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>MultiMem: Measuring and Mitigating Memorization in Multi-Modal Contrastive Learning</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-06-26-multimem/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jun. 25, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>6
+              
+              min
+              56
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <div class="row box" style="background-color: rgba(16, 11, 11, 0.3);  border-radius: 10px;">
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1912500338306793902?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423651334889493?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423195485335945?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</section>
+ 
+    </main>
+    
+
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div
+        class="col-md-9 d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          src="/assets/img/sprintml-logo-white.svg"
+          alt="SprintML"
+          class="footer-logo"
+          width="180"
+          height="60"
+        />
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://x.com/SprintML" target="_blank" aria-label="X (Twitter)">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/in/sprintml-group-at-cispa-327769397/" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.youtube.com/@SprintML-Lab" target="_blank" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="text-center">
+          <span
+            >© 2026 SprintML Lab
+            </span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+
+<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>

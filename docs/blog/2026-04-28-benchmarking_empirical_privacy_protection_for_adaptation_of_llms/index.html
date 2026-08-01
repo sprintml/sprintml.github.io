@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Benchmarking Empirical Privacy Protection for Adaptations of LLMs</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  
+  <link href="/assets/img/favicon.png" rel="icon" />
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="/assets/vendor/glightbox/css/glightbox.min.css"
+    rel="stylesheet"
+  />
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  
+  <link href="/assets/css/style.css" rel="stylesheet" />
+
+  
+<script>
+  window.MathJax = {
+    tex: {
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"]
+      ],
+      inlineMath: [["\\(", "\\)"]],
+      processEscapes: true
+    },
+    svg: {
+      fontCache: "global"
+    }
+  };
+</script>
+<script
+  defer
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+></script>
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82472331-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+    
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <a href="/">
+        <img
+          id="navbar-logo"
+          src="/assets/img/sprintml-logo-black.svg"
+          alt="SprintML"
+          class="img-fluid"
+        />
+      </a>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      
+      <ul>
+        <li><a class="" href="/">Home</a></li>
+        
+        <li><a class="" href="/team/">Team</a></li>
+        
+        <li><a class="" href="/blog/">Blog</a></li>
+        
+        <li><a class="" href="/phd_life/">PhD Life</a></li>
+        
+        <li><a class="" href="/outreach/">Outreach</a></li>
+        
+        <li><a class="" href="/publications/">Publications</a></li>
+        
+        <li><a class="" href="/teaching/">Teaching</a></li>
+        
+        <li><a class="" href="/applications/">Applications</a></li>
+        
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    
+  </div>
+</header>
+
+
+
+    <main id="main">
+      
+
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="blog-box">
+          <h2>Benchmarking Empirical Privacy Protection for Adaptations of LLMs</h2>
+          <div class="meta-box">
+            <ul>
+              <li>
+                <p>
+                  <i class="bi bi-calendar-week"></i>
+                  Apr. 28, 2026
+                </p>
+              </li>
+              <li>
+                
+                
+
+                
+                
+                
+                
+                <p>
+                  <i class="bi bi-clock"></i> 8
+                  
+                  min
+                  6
+                  
+                  sec.
+                </p>
+              </li>
+              <li>
+                <p><i class="bi bi-person"></i> SprintML</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content"><p align="center">
+  <img src="/assets/blog/benchmarking-private-adaptation/iclr_logo.svg" alt="ICLR logo" width="320">
+  <br>
+  <strong>Accepted for the oral presentation at ICLR 2026</strong>
+</p>
+<center>
+  <a href="https://bartlomiejmarek.github.io/">Bartłomiej Marek*</a>,
+  <a href="https://tpoppo.github.io/">Lorenzo Rossi*</a>,
+  <a href="https://scholar.google.com/citations?user=QAilX5kAAAAJ&hl=en&oi=ao">Vincent Hanke</a>,
+  <a href="https://stephen016.github.io/">Xun Wang</a>,
+  <br>
+  <a href="https://michaelbackes.eu/">Michael Backes</a>,
+  <a href="https://franziska-boenisch.de/">Franziska Boenisch</a>,
+  <a href="https://adam-dziedzic.com/">Adam Dziedzic</a>
+  <br><br>
+  CISPA Helmholtz Center for Information Security<br>
+  <em>*Equal contribution</em>
+  <br><br>
+</center>
+<p align="center">
+  <strong><a href="https://arxiv.org/abs/2606.09401">Paper</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://arxiv.org/pdf/2606.09401">PDF</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="https://github.com/sprintml/benchmarking_private_adaptation">Code</a></strong>
+  &nbsp;|&nbsp;
+  <strong><a href="#bibtex">BibTeX</a></strong>
+</p>
+<hr>
+<p><strong>TL;DR:</strong> We benchmark empirical privacy risks in DP-adapted LLMs, revealing that distributional closeness to pretraining data and adaptation method critically impact practical privacy protection, even under the same formal guarantee, and that <strong>LoRA</strong> offers the strongest empirical protection most consistently. We also propose a structured <strong>four-stage framework</strong> for holistic privacy auditing of the full pretrain-adapt pipeline.</p>
+<h2 id="abstract">Abstract</h2>
+<p>Recent work has applied <strong>differential privacy (DP)</strong> to adapt large language models (LLMs) for sensitive applications, offering theoretical guarantees. However, its practical effectiveness remains unclear, partly due to LLM pretraining, where overlaps and interdependencies with adaptation data can undermine privacy despite DP efforts. To analyze this issue in practice, we investigate privacy risks under DP adaptations in LLMs using state-of-the-art attacks such as <em>robust membership inference</em> (RMIA) and <em>canary data extraction</em>. We benchmark these risks by systematically varying the adaptation data distribution, from exact overlaps with pretraining data, through in-distribution (IID) cases, to entirely out-of-distribution (OOD) examples. Additionally, we evaluate how different adaptation methods and different privacy regimes impact the vulnerability. Our results show that <strong>distribution shifts strongly influence privacy vulnerability</strong>: the closer the adaptation data is to the pretraining distribution, the higher the practical privacy risk at the same theoretical guarantee, even without direct data overlap. We find that parameter-efficient fine-tuning methods, such as <strong>LoRA</strong>, achieve the highest empirical privacy protection for OOD data. Our benchmark identifies key factors for achieving practical privacy in DP LLM adaptation, providing actionable insights for deploying customized models in sensitive settings. Looking forward, we propose a structured framework for <em>holistic</em> privacy assessment beyond adaptation privacy, to identify and evaluate risks across the full pretrain-adapt pipeline of LLMs.</p>
+<h2 id="summary-of-contributions-and-findings">Summary of Contributions and Findings</h2>
+<p>We provide the first comprehensive benchmark of empirical privacy risks under DP adaptations of LLMs in the <strong>pretrain-adapt paradigm</strong>, spanning 6 datasets, 4 adaptation methods, and 7 pretrained models of varying sizes and architectures.</p>
+<ol>
+<li><strong>Distribution drives leakage:</strong> Privacy risk increases as adaptation data becomes distributionally closer to pretraining data. Crucially, IID validation data leaks as much as directly overlapping pretraining data, confirming distributional closeness, not just overlap, as the root cause.</li>
+<li><strong>Adaptation method matters:</strong> LoRA (DP-LoRA) consistently provides the strongest empirical protection under the DP regime while maintaining competitive utility.</li>
+<li><strong>Prefix Tuning reduces pretraining leakage:</strong> Private Prefix Tuning can reduce leakage of pretraining data post-adaptation.</li>
+<li><strong>Tight privacy regimes are necessary:</strong> Moderate budgets (e.g., \(\varepsilon = 8\)) still leave IID adaptation data exposed. Effective practical protection requires strict DP values.</li>
+<li><strong>Holistic audit framework:</strong> We formalize a four-stage framework for privacy auditing: (1) pretraining, (2) adaptation, (3) joint pretraining and adaptation, (4) post-adaptation auditing of pretraining, and define the corresponding membership inference games for each stage.</li>
+</ol>
+<h2 id="setup">Setup</h2>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/benchmarking-private-adaptation/schema_iclrpptx_gif.gif" alt="Setup for Privacy Auditing of Private LLM Adaptations" width="800"/>
+  <p style="margin-top: 8px; font-size: 0.9em;"><em>Figure 1: Setup for privacy auditing of private LLM adaptations. Audits are performed via robust membership inference (RMIA) against the adapted model's outputs, and via data extraction attacks using canary data inserted into the adaptation set.</em></p>
+</div>
+<p>We evaluate a wide range of private adaptation strategies: <strong>Full Fine-Tuning</strong>, <strong>Last-Layer (Head) Fine-Tuning</strong>, parameter-efficient <strong>LoRA</strong>, and <strong>Prefix Tuning</strong>, all trained with <strong>DP-SGD</strong>. For a fair comparison, we ensure similar final validation losses across methods and datasets.</p>
+<p><strong>Models and pretraining data.</strong> We primarily benchmark the <strong>Pythia</strong> family (70M–1.4B) and <strong>GPT-Neo</strong> (125M, 1.3B), both trained on the <strong>Pile</strong> dataset. We also include the fully open-source <strong>OLMo 1B</strong> and <strong>OLMo2 1B</strong> models. We focus on the Pythia 1B model as the default model.</p>
+<p><strong>Adaptation datasets.</strong> We distinguish three settings:</p>
+<ul>
+<li><strong>Overlap:</strong> Directly using the training data of the pretraining dataset for the adaptation.</li>
+<li><strong>IID:</strong> We use the validation data of the pretraining dataset for the adaptation. For both IID and Overlap, we use the following Pile subsets: Bookcorpus2, GitHub, and Enron Emails.</li>
+<li><strong>OOD:</strong> We use SAMSum (English dialogue) and GermanWiki as OOD datasets.</li>
+</ul>
+<p><strong>Attacks.</strong> We rely on the state-of-the-art membership inference attack, <strong>RMIA</strong> (Robust Membership Inference Attack), and complement it with <strong>canary data extraction</strong> to evaluate more severe forms of leakage.</p>
+<h2 id="how-does-the-relationship-between-adaptation-and-pretraining-data-drive-privacy-leakage">How Does The Relationship Between Adaptation and Pretraining Data Drive Privacy Leakage?</h2>
+<style>
+  .bench-table {
+    border-collapse: collapse;
+    font-family: serif;
+    width: 90%;
+    margin: 20px auto;
+    font-size: 0.85em;
+  }
+  .bench-table th, .bench-table td {
+    padding: 4px 6px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .bench-table thead tr:first-child th {
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+  }
+  .bench-table thead tr:last-child th {
+    border-bottom: 1px solid black;
+  }
+</style>
+<p style="font-size: 0.9em; font-style: italic;"><strong>Table 1:</strong> Membership Inference AUC (RMIA, shadow model) for Pythia 1B across datasets and privacy budgets. IID settings consistently yield higher leakage than OOD at the same \(\varepsilon\). Overlapping (Train) and non-overlapping (Val) IID data show near-identical leakage, confirming that distributional closeness, even without direct overlap, drives the risk.</p>
+<table class="bench-table">
+  <thead>
+    <tr>
+      <th rowspan="2" style="text-align:left;">Adaptation</th>
+      <th colspan="3">Bookcorpus2 IID</th>
+      <th colspan="3">Bookcorpus2 Overlap</th>
+      <th colspan="3">SAMSum (OOD)</th>
+      <th colspan="3">GermanWiki (OOD)</th>
+    </tr>
+    <tr>
+      <th>\(\varepsilon=\infty\)</th><th>\(\varepsilon=8\)</th><th>\(\varepsilon=0.1\)</th>
+      <th>\(\varepsilon=\infty\)</th><th>\(\varepsilon=8\)</th><th>\(\varepsilon=0.1\)</th>
+      <th>\(\varepsilon=\infty\)</th><th>\(\varepsilon=8\)</th><th>\(\varepsilon=0.1\)</th>
+      <th>\(\varepsilon=\infty\)</th><th>\(\varepsilon=8\)</th><th>\(\varepsilon=0.1\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left;">Prefix Tuning</td>
+      <td>1.00</td><td>0.89</td><td>0.56</td>
+      <td>1.00</td><td>0.90</td><td>0.55</td>
+      <td>1.00</td><td>0.62</td><td>0.63</td>
+      <td>1.00</td><td>0.64</td><td>0.61</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">LoRA</td>
+      <td>1.00</td><td>0.70</td><td>0.52</td>
+      <td>1.00</td><td>0.69</td><td>0.53</td>
+      <td>0.86</td><td>0.69</td><td>0.50</td>
+      <td>1.00</td><td>0.59</td><td>0.66</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Full Fine-Tune</td>
+      <td>1.00</td><td>0.75</td><td>0.77</td>
+      <td>1.00</td><td>0.75</td><td>0.76</td>
+      <td>1.00</td><td>0.82</td><td>0.62</td>
+      <td>1.00</td><td>0.71</td><td>0.55</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">Head Fine-Tune</td>
+      <td>1.00</td><td>0.72</td><td>0.73</td>
+      <td>1.00</td><td>0.72</td><td>0.72</td>
+      <td>1.00</td><td>0.98</td><td>0.62</td>
+      <td>1.00</td><td>0.76</td><td>0.70</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Core finding:</strong> Privacy risk scales with distributional closeness to the pretraining data, regardless of whether there is direct overlap. IID validation data, which was <em>never</em> seen during pretraining, leaks as severely as data drawn directly from the pretraining corpus. This pinpoints distributional similarity, not membership overlap, as the primary risk factor.</p>
+<p>Concretely, with RMIA (shadow) at \(\varepsilon = 8\), average AUC scores on IID data range from 0.70–0.90, compared to 0.63–0.87 on OOD data. Under no-privacy (\(\varepsilon = \infty\)) all IID settings achieve AUC = 1.00, confirming that IID data is trivially exposed before any DP protection is even applied. The effect is most pronounced for PEFT methods like LoRA, where the gap between IID and OOD leakage is especially clear.</p>
+<p>This finding empirically confirms the theoretical concern of Tramèr et al. (2022): privately adapting an LLM that was pretrained on similar data does <em>not</em> provide the privacy protection that formal DP guarantees might suggest.</p>
+<h2 id="which-adaptation-method-offers-the-best-privacy">Which Adaptation Method Offers the Best Privacy?</h2>
+<p><strong>Membership inference.</strong> Across privacy regimes and datasets, <strong>LoRA consistently achieves the lowest AUC</strong>. At \(\varepsilon = 0.1\) on IID data, LoRA reaches AUC = 0.52, near random guessing, while Full Fine-Tune and Head Fine-Tune remain above 0.70. This gap persists across datasets and attack configurations, making LoRA the de-facto recommended method when empirical privacy is a concern.</p>
+<p>The relative ordering of methods depends on the data regime. For OOD data at moderate privacy (\(\varepsilon = 8\)), Head Fine-Tune becomes the most vulnerable (AUC up to 0.98 on SAMSum), while LoRA stays closest to 0.5. Full Fine-Tune occupies the middle ground.</p>
+<p><strong>Data extraction.</strong> Against canary extraction attacks, <strong>Prefix Tuning is the most vulnerable</strong> adaptation method. LoRA and Head Fine-Tune both exhibit strong resistance against extraction regardless of canary type, privacy budget, or data distribution. At \(\varepsilon = 0.1\), all methods show exposure close to the random-guessing baseline (≈ 1.44), confirming that tight DP constraints do suppress extraction risk. The adversarial prefix is the dominant source of leakage; the interaction between prefix and the canary sample itself plays a secondary role.</p>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/benchmarking-private-adaptation/rq2.png" alt="Results for the data extraction attack" width="800"/>
+  <p style="margin-top: 8px; font-size: 0.9em;"><em>Figure 2: Results for the data extraction attack across datasets, adaptation methods, and privacy budgets.</em></p>
+</div>
+<h2 id="a-holistic-framework-for-pretrain-adapt-privacy-auditing">A Holistic Framework for Pretrain-Adapt Privacy Auditing</h2>
+<style>
+  .bench-figure-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: sans-serif;
+  }
+  .bench-figure-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  .bench-number-circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    background-color: #000000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .bench-figcaption-stages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem 0.65rem;
+    margin-top: 0.5rem;
+  }
+  .bench-figcaption-stage {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    white-space: nowrap;
+  }
+  .bench-number-circle--caption {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-top: 0;
+    font-size: 0.65rem;
+  }
+  .bench-item-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  .bench-item-caption {
+    font-size: 0.9rem;
+    color: #555;
+  }
+</style>
+<div markdown="0" style="text-align: center;">
+  <img src="/assets/blog/benchmarking-private-adaptation/fixed-audit-pretrain-stages.png" alt="Four-stage framework for privacy auditing" width="600"/>
+  <p style="margin-top: 8px; font-size: 0.9em;"><em>Figure 3: Our four-stage framework for privacy auditing of private LLM adaptations.</em></p>
+  <p style="font-size: 0.85em;">
+    <span class="bench-figcaption-stage"><span class="bench-number-circle bench-number-circle--caption">1</span> Auditing pretraining</span>
+    <span class="bench-figcaption-stage"><span class="bench-number-circle bench-number-circle--caption">2</span> Auditing adaptation</span>
+    <span class="bench-figcaption-stage"><span class="bench-number-circle bench-number-circle--caption">3</span> Joint auditing</span>
+    <span class="bench-figcaption-stage"><span class="bench-number-circle bench-number-circle--caption">4</span> Post-adaptation auditing of pretraining</span>
+  </p>
+</div>
+<p>Examining pretraining and adaptation privacy in isolation yields a dangerously incomplete picture. The strong interdependence between these stages demands a unified view. We formalize the <strong>pretrain-adapt adversarial game</strong> and identify four distinct auditing stages, each with its own threat model and membership inference hypothesis:</p>
+<div class="bench-figure-container">
+  <div class="bench-figure-item">
+    <div class="bench-number-circle">1</div>
+    <div>
+      <div class="bench-item-title">Auditing pretraining (Stage 1)</div>
+      <div class="bench-item-caption">Standard ML auditing applied to the pretrained model \(\theta\). The attacker guesses whether target sample \(x\) was included in the pretraining set \(S\).</div>
+    </div>
+  </div>
+  <div class="bench-figure-item">
+    <div class="bench-number-circle">2</div>
+    <div>
+      <div class="bench-item-title">Auditing adaptation (Stage 2)</div>
+      <div class="bench-item-caption">The attacker observes only the adapted model \(\theta'\) and guesses whether \(x\) was part of the adaptation set \(D\). This is the primary focus of our benchmark.</div>
+    </div>
+  </div>
+  <div class="bench-figure-item">
+    <div class="bench-number-circle">3</div>
+    <div>
+      <div class="bench-item-title">Joint auditing (Stage 3)</div>
+      <div class="bench-item-caption">The attacker has access to both \(\theta\) and \(\theta'\) and can leverage knowledge of the pretraining set to attack the adaptation data more effectively. Three sub-cases arise depending on the attacker's prior knowledge about \(x\)'s membership in \(S\).</div>
+    </div>
+  </div>
+  <div class="bench-figure-item">
+    <div class="bench-number-circle">4</div>
+    <div>
+      <div class="bench-item-title">Post-adaptation auditing of pretraining (Stage 4)</div>
+      <div class="bench-item-caption">Private adaptations introduce noise that may impact the privacy risks of the pretraining data. Here the attacker knows \(x \notin D\) and uses the adapted model to infer membership in the pretraining set.</div>
+    </div>
+  </div>
+</div>
+<p>Formalizing these stages enables a <strong>systematic framework</strong> for privacy measurement across the full pipeline, supports structured reasoning about what privacy risks each method introduces, and motivates future work on joint auditing tools that match the complexity of modern LLM deployments.</p>
+<h2 id="practical-guidelines-for-deploying-private-llms">Practical Guidelines for Deploying Private LLMs</h2>
+<p>Our benchmark surfaces actionable guidelines for practitioners deploying DP-adapted LLMs in sensitive settings:</p>
+<ol>
+<li><strong>Avoid distributional overlap with pretraining data.</strong> Even validation splits of pretraining-domain datasets carry near-identical empirical risk to directly reusing training data. If the private adaptation task naturally falls in-distribution (e.g., adapting a model trained on web text to clinical notes that resemble web text), expect elevated leakage and compensate with tighter \(\varepsilon\).</li>
+<li><strong>Prefer LoRA for private adaptation.</strong> LoRA the most consistently achieves the lowest membership inference AUC while matching the performance, or similar privacy protection with a notably better performance, making it the method of choice when empirical privacy is a priority.</li>
+<li><strong>Use high-privacy regimes (\(\varepsilon &lt; 0.1\)).</strong> Moderate budgets (e.g., \(\varepsilon = 8\)) fail to suppress leakage even for OOD data under strong attacks. Effective practical protection requires operating at low \(\varepsilon\), despite the associated utility cost.</li>
+<li><strong>Audit before deployment.</strong> Use RMIA with a shadow model instantiated from the same pretrained base to estimate empirical leakage. Attackers with access to the public pretrained model, an increasingly common scenario, enjoy a substantial advantage; pre-deployment auditing surfaces this risk before it can be exploited.</li>
+</ol>
+<h2 id="conclusions">Conclusions</h2>
+<p>We benchmark the practical privacy risks that arise under DP adaptations of LLMs within the pretrain-adapt paradigm. Our comprehensive empirical analysis confirms the theoretical concern that pretraining significantly amplifies the privacy risks associated with the <strong>adaptation data</strong>.</p>
+<ol>
+<li><strong>Distribution over overlap:</strong> Distributional closeness between adaptation and pretraining data is the primary driver of empirical leakage, even without any data overlap between the two sets.</li>
+<li><strong>Method choice matters:</strong> LoRA offers the strongest empirical protection under the DP regime. Prefix Tuning can additionally reduce leakage of pretraining data post-adaptation.</li>
+<li><strong>Tight DP is non-negotiable:</strong> Moderate privacy budgets leave sensitive adaptation data exposed. The privacy protection requires strict \(\varepsilon\) values.</li>
+<li><strong>Holistic auditing is essential:</strong> Pretraining and adaptation privacy cannot be assessed in isolation. Our four-stage framework and formal membership inference games lay a foundation for comprehensive privacy assessments of future LLM pipelines in the pretrain-adapt paradigm.</li>
+</ol>
+<h2 id="bibtex">BibTeX</h2>
+<p>
+  <button class="copy-button" type="button" data-copy-bibtex>Copy BibTeX</button>
+</p>
+<pre id="bibtex" tabindex="0" role="button" aria-label="Copy BibTeX citation" title="Click to copy BibTeX"><code>@inproceedings{marek2026benchmarking,
+  title = {Benchmarking Empirical Privacy Protection for Adaptations of Large Language Models},
+  author = {Bart{\l}omiej Marek and Lorenzo Rossi and Vincent Hanke and Xun Wang and Michael Backes and Franziska Boenisch and Adam Dziedzic},
+  booktitle = {The Fourteenth International Conference on Learning Representations},
+  year = {2026},
+  url = {https://arxiv.org/abs/2606.09401}
+}</code></pre>
+<script>
+(() => {
+  const target = document.getElementById("bibtex");
+  const copyButton = document.querySelector("[data-copy-bibtex]");
+  if (!target || !copyButton) return;
+  const resetButton = () => {
+    window.setTimeout(() => { copyButton.textContent = "Copy BibTeX"; }, 1600);
+  };
+  const copyBibtex = async () => {
+    const text = target.innerText.trim();
+    try {
+      await navigator.clipboard.writeText(text);
+      copyButton.textContent = "Copied";
+      resetButton();
+    } catch {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(target);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      copyButton.textContent = "Selected";
+      resetButton();
+    }
+  };
+  copyButton.addEventListener("click", copyBibtex);
+  target.addEventListener("click", copyBibtex);
+  target.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      copyBibtex();
+    }
+  });
+})();
+</script>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recent-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Recent Blogs</h2>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>Concept Removal for Frontier Image Generative Models</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-06-block-concept-removal/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 6, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>8
+              
+              min
+              41
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>MGI: Member vs Generated Inference</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-07-04-mgi/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jul. 4, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>7
+              
+              min
+              7
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <h4>MultiMem: Measuring and Mitigating Memorization in Multi-Modal Contrastive Learning</h4>
+          <hr />
+          <p></p>
+          <a href="https://sprintml.com/blog/2026-06-26-multimem/"
+            >Read More <i class="bi bi-arrow-right"></i
+          ></a>
+          <div class="meta-content">
+            <p>
+              <i class="bi bi-calendar-week"></i>
+              Jun. 25, 2026
+            </p>
+            
+            
+
+            
+            
+            
+            
+            <p>
+              <i class="bi bi-clock"></i>6
+              
+              min
+              56
+              
+              sec.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <div class="row box" style="background-color: rgba(16, 11, 11, 0.3);  border-radius: 10px;">
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1912500338306793902?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423651334889493?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+
+      <div class="col-lg-4">
+        <blockquote class="twitter-tweet">
+          <a href="https://twitter.com/SprintML/status/1891423195485335945?ref_src=twsrc%5Etfw">
+            View this SprintML post on X
+          </a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <script
+    async
+    src="https://platform.twitter.com/widgets.js"
+    charset="utf-8"
+  ></script>
+</section>
+ 
+    </main>
+    
+
+    
+    <footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div
+        class="col-md-9 d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          src="/assets/img/sprintml-logo-white.svg"
+          alt="SprintML"
+          class="footer-logo"
+          width="180"
+          height="60"
+        />
+        <ul class="social-icons">
+          
+          <li>
+            <a href="https://x.com/SprintML" target="_blank" aria-label="X (Twitter)">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/in/sprintml-group-at-cispa-327769397/" target="_blank" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.youtube.com/@SprintML-Lab" target="_blank" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="text-center">
+          <span
+            >© 2026 SprintML Lab
+            </span
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+    
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+
+<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>
